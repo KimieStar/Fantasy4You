@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using Xceed.Wpf.Toolkit;
 
 namespace DAL
 {
     public class ConnectionToDatabase
     {
         private MySqlConnection connection = null;
+        private MySqlCommand command = null;
+        private MySqlDataReader dreader = null;
         private string server_adress = null;
         private string database_name = null;
         private string username = null;
         private string password = null;
         private string port = null;
+        
 
 
 
@@ -86,6 +88,33 @@ namespace DAL
                 return false;
             }
         }
+
+
+        /// <summary>
+        /// Checking user information to login
+        /// </summary>
+        public bool CheckUserInfo(string username,string password, bool read)
+        {
+            
+            command = new MySqlCommand();
+            this.connection.Open();
+            command.Connection = connection;
+            command.CommandText = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'";
+            dreader = command.ExecuteReader();
+            if (dreader.Read())
+            {
+                return  true;
+            }
+            else
+            {
+                return false;
+            }
+            connection.Close();
+
+        }
+
+
+
 
 
         /// <summary>

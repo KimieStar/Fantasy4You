@@ -38,5 +38,11 @@ namespace LOGIC
             string firstName = connection.SelectFirstName();
             return firstName;
         }
+
+        public bool CheckName(string username, string password, bool check)
+        {
+            bool checkName = connection.CheckUserInfo( username, password, check);
+            return checkName;
+        }
     }
 }
