@@ -1,6 +1,6 @@
 ﻿namespace Fantasy4You
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,6 +38,7 @@
             this.HidePassword = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoggingInLabel = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -125,7 +126,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(227, 254);
+            this.LoginButton.Location = new System.Drawing.Point(226, 277);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(221, 47);
             this.LoginButton.TabIndex = 11;
@@ -136,7 +137,7 @@
             // LoggingInLabel
             // 
             this.LoggingInLabel.AutoSize = true;
-            this.LoggingInLabel.Location = new System.Drawing.Point(300, 313);
+            this.LoggingInLabel.Location = new System.Drawing.Point(304, 336);
             this.LoggingInLabel.Name = "LoggingInLabel";
             this.LoggingInLabel.Size = new System.Drawing.Size(76, 15);
             this.LoggingInLabel.TabIndex = 12;
@@ -144,11 +145,23 @@
             this.LoggingInLabel.Visible = false;
             this.LoggingInLabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // Form1
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(212, 252);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 19);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Remember Me";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 430);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.LoggingInLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.HidePassword);
@@ -159,7 +172,7 @@
             this.Controls.Add(this.UsernameTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Fantasy4You";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -179,5 +192,6 @@
         private Button ShowPassword;
         private Button HidePassword;
         private Label LoggingInLabel;
+        private CheckBox checkBox1;
     }
 }

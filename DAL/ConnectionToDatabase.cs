@@ -89,10 +89,45 @@ namespace DAL
             }
         }
 
+        public void CloseConn()
+        {
+            connection.Close();
+        }
 
+        public void OpenCon()
+        {
+            connection.Open();
+        }
         /// <summary>
         /// Checking user information to login
         /// </summary>
+        
+        public int  SelectUserId(int id,string username)
+        {
+            string query = "select * from userinfo where userinfo.username='" + username +"'";
+
+            
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    id = (int)dataReader["id"];
+                }
+
+                dataReader.Close();
+                this.CloseConnection();
+                return id;
+            }
+            else
+            {
+                return id;
+            }
+        }
+
         public bool CheckUserInfo(string username,string password, bool read)
         {
             
@@ -113,9 +148,31 @@ namespace DAL
 
         }
 
+        public string SelectUsername()
+        {
+            string query = "select * from userinfo where userinfo.id = 1";
 
+            string username = null;
 
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
 
+                while (dataReader.Read())
+                {
+                    username = dataReader["username"] + "";
+                }
+
+                dataReader.Close();
+                this.CloseConnection();
+                return username;
+            }
+            else
+            {
+                return username;
+            }
+        }
 
         /// <summary>
         /// Example for Inserting Values into the DB
