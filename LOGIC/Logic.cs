@@ -32,10 +32,18 @@ namespace LOGIC
 
         }
 
+        public string SelectUsername(string username)
+        {
+            
+            string uname = connection.SelectUsername(username);
+            return uname;
+
+        }
+
         public void SaveCredentials(string username,string password)
         {
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory+@"\F4Y\");
+            var newDirPath = (roamingDirectory+ @"\F4Y\DONT TOUCH\");
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, "crd.txt");
             var filestream = File.Create(newFilePath);
@@ -49,7 +57,7 @@ namespace LOGIC
         public void SaveUsername(string username)
         {
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\");
+            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, "uid.txt");
             var filestream = File.Create(newFilePath);
@@ -62,7 +70,7 @@ namespace LOGIC
         public string ReadUID(string username)
         {
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\");
+            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, "uid.txt");
             var sr = new StreamReader(newFilePath);
@@ -82,10 +90,9 @@ namespace LOGIC
 
         public string ReadUsername(string username)
         {
-            var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\");
-            Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, "crd.txt");
+            
+            Directory.CreateDirectory(uinfo.crdDir);
+            var newFilePath = Path.Combine(uinfo.crdDir, "crd.txt");
             var sr = new StreamReader(newFilePath);
 
             try
@@ -104,7 +111,7 @@ namespace LOGIC
         public string ReadPassword(string password)
         {
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\");
+            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, "crd.txt");
             var sr = new StreamReader(newFilePath);
@@ -124,6 +131,37 @@ namespace LOGIC
 
         }
 
+        public void DeleteSavedCredentials()
+        {
+           
+            var CredentialPath = (uinfo.crdPath);
+            var UsernamePath = (uinfo.uidPath);
+
+            File.Delete(CredentialPath);
+            File.Delete(UsernamePath);
+        }
+
+        public bool CredentialsExist()
+        {
+            if (File.Exists(uinfo.crdPath))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void InsertUsernameAndPassword(string username,string password, string email)
+        {
+            connection.InsertUsernameAndPassword(username,password, email);
+        }
+        public bool CheckIfUsernameExists(string username, bool chk)
+        {
+            bool check = connection.CheckIfUsernameExists(username,chk);
+            return check;
+        }
 
         public void CloseConnection()
         {
@@ -135,11 +173,8 @@ namespace LOGIC
             connection.OpenCon();
         }
 
-        public string SelectUsername()
-        {
-           string username = connection.SelectUsername();
-            return username;
-        }
+        
+        
 
         /// <summary>
         /// Test functions - To be removed

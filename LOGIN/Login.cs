@@ -7,6 +7,8 @@ using System.Threading;
 using LOGIC;
 using MAIN_INTERFACE;
 using WELCOME;
+using REGISTER;
+using LOGINSETTINGS;
 
 namespace Fantasy4You
 {
@@ -19,9 +21,17 @@ namespace Fantasy4You
         UserInfo1 uinfo1 = new UserInfo1();
         WelcomeScreen welc = new WelcomeScreen();
         MainInterface mainInterface = new MainInterface();
+        Register register = new Register();
+        LoginSettings LoginSettings = new LoginSettings();
+
         Thread WelcomeScreen;
+        Thread Register;
+        Thread loginsettings;
         string getusername;
         string getpassword;
+        bool checkCredentialsExist;
+
+
 
         public Login()
         {
@@ -42,11 +52,20 @@ namespace Fantasy4You
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string getuid = log1.ReadUsername(getusername);
-            UsernameTextbox.Text = getuid;
+            checkCredentialsExist = log1.CredentialsExist();
+            if (checkCredentialsExist == true)
+            {
+                string getuid = log1.ReadUsername(getusername);
+                UsernameTextbox.Text = getuid;
 
-            string getpwd = log1.ReadPassword(getpassword);
-            PasswordTextbox.Text = getpwd;
+                string getpwd = log1.ReadPassword(getpassword);
+                PasswordTextbox.Text = getpwd;
+            }
+            else
+            {
+                UsernameTextbox.Text = null;
+                PasswordTextbox.Text = null;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -61,20 +80,20 @@ namespace Fantasy4You
 
         private void PasswordTextbox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void UsernameTextbox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
-        
+
         private void ShowPassword_Click(object sender, EventArgs e)
         {
             PasswordTextbox.UseSystemPasswordChar = false;
             ShowPassword.Visible = false;
             HidePassword.Visible = true;
-            
+
 
         }
 
@@ -90,18 +109,18 @@ namespace Fantasy4You
             string usr = UsernameTextbox.Text;
             string pwd = PasswordTextbox.Text;
             bool chk = false;
-               
-                if (UsernameTextbox.Text == "" || PasswordTextbox.Text == "")
-                {
-                    MessageBox.Show("Please fill in your credentials");
 
-                }
+            if (UsernameTextbox.Text == "" || PasswordTextbox.Text == "")
+            {
+                MessageBox.Show("Please fill in your credentials");
 
-                else if (UsernameTextbox.Text != "" || PasswordTextbox.Text != "")
+            }
+
+            else if (UsernameTextbox.Text != "" || PasswordTextbox.Text != "")
+            {
+                LoggingInLabel.Visible = true;
+                if (log1.CheckName(usr, pwd, chk) == true)
                 {
-                    LoggingInLabel.Visible = true;
-                    if (log1.CheckName(usr, pwd, chk) == true)
-                    {
 
                     if (checkBox1.Checked == true)
                     {
@@ -111,24 +130,24 @@ namespace Fantasy4You
                     {
                         string no;
                     }
-                    
+
                     MessageBox.Show("Login successful");
-                        log1.SaveUsername(usr);
-                        log1.CloseConnection();
-                        WelcomeScreen = new Thread(OpenWelcomeScreen);
-                        WelcomeScreen.SetApartmentState(ApartmentState.STA);
-                        WelcomeScreen.Start();
-                        this.Close();
-                    }
-
-                    else
-                    {
-                        log1.CloseConnection();
-                        LoggingInLabel.Visible = false;
-                        MessageBox.Show("Invalid Credentials");
-
-                    }
+                    log1.SaveUsername(usr);
+                    log1.CloseConnection();
+                    WelcomeScreen = new Thread(OpenWelcomeScreen);
+                    WelcomeScreen.SetApartmentState(ApartmentState.STA);
+                    WelcomeScreen.Start();
+                    this.Close();
                 }
+
+                else
+                {
+                    log1.CloseConnection();
+                    LoggingInLabel.Visible = false;
+                    MessageBox.Show("Invalid Credentials");
+
+                }
+            }
         }
 
         private void OpenWelcomeScreen(object? obj)
@@ -143,7 +162,38 @@ namespace Fantasy4You
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
+
+        private void DontHaveAnAccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register = new Thread(OpenRegisterForm);
+            Register.SetApartmentState(ApartmentState.STA);
+            Register.Start();
+        }
+
+        private void OpenRegisterForm(object? obj)
+        {
+            Application.Run(new Register());
+        }
+
+        private void RefreshFormButton_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, EventArgs.Empty);
+        }
+
+        private void LoginSettingsButton_Click(object sender, EventArgs e)
+        {
+            //loginsettings = new Thread(OpenLoginSettings);
+            //loginsettings.SetApartmentState(ApartmentState.STA);
+            //loginsettings.Start();
+            LoginSettings.ShowDialog();
+        }
+
+        //private void OpenLoginSettings(object? obj)
+        //{
+        //    Application.Run(new LoginSettings());
+        //}
     }
+       
 }

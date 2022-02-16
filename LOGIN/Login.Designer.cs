@@ -39,6 +39,9 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.LoggingInLabel = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DontHaveAnAccountLabel = new System.Windows.Forms.LinkLabel();
+            this.RefreshFormButton = new System.Windows.Forms.Button();
+            this.LoginSettingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -156,11 +159,46 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // DontHaveAnAccountLabel
+            // 
+            this.DontHaveAnAccountLabel.AutoSize = true;
+            this.DontHaveAnAccountLabel.LinkColor = System.Drawing.Color.Black;
+            this.DontHaveAnAccountLabel.Location = new System.Drawing.Point(453, 309);
+            this.DontHaveAnAccountLabel.Name = "DontHaveAnAccountLabel";
+            this.DontHaveAnAccountLabel.Size = new System.Drawing.Size(128, 15);
+            this.DontHaveAnAccountLabel.TabIndex = 14;
+            this.DontHaveAnAccountLabel.TabStop = true;
+            this.DontHaveAnAccountLabel.Text = "Dont have an account?";
+            this.DontHaveAnAccountLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DontHaveAnAccountLabel_LinkClicked);
+            // 
+            // RefreshFormButton
+            // 
+            this.RefreshFormButton.Location = new System.Drawing.Point(640, 395);
+            this.RefreshFormButton.Name = "RefreshFormButton";
+            this.RefreshFormButton.Size = new System.Drawing.Size(75, 23);
+            this.RefreshFormButton.TabIndex = 15;
+            this.RefreshFormButton.Text = "Refresh";
+            this.RefreshFormButton.UseVisualStyleBackColor = true;
+            this.RefreshFormButton.Click += new System.EventHandler(this.RefreshFormButton_Click);
+            // 
+            // LoginSettingsButton
+            // 
+            this.LoginSettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LoginSettingsButton.Location = new System.Drawing.Point(605, 395);
+            this.LoginSettingsButton.Name = "LoginSettingsButton";
+            this.LoginSettingsButton.Size = new System.Drawing.Size(29, 23);
+            this.LoginSettingsButton.TabIndex = 16;
+            this.LoginSettingsButton.UseVisualStyleBackColor = true;
+            this.LoginSettingsButton.Click += new System.EventHandler(this.LoginSettingsButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 430);
+            this.Controls.Add(this.LoginSettingsButton);
+            this.Controls.Add(this.RefreshFormButton);
+            this.Controls.Add(this.DontHaveAnAccountLabel);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.LoggingInLabel);
             this.Controls.Add(this.LoginButton);
@@ -193,5 +231,8 @@
         private Button HidePassword;
         private Label LoggingInLabel;
         private CheckBox checkBox1;
+        private LinkLabel DontHaveAnAccountLabel;
+        private Button RefreshFormButton;
+        private Button LoginSettingsButton;
     }
 }

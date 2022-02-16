@@ -128,31 +128,9 @@ namespace DAL
             }
         }
 
-        public bool CheckUserInfo(string username,string password, bool read)
+        public string SelectUsername(string username)
         {
-            
-            command = new MySqlCommand();
-            this.connection.Open();
-            command.Connection = connection;
-            command.CommandText = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'";
-            dreader = command.ExecuteReader();
-            if (dreader.Read())
-            {
-                return  true;
-            }
-            else
-            {
-                return false;
-            }
-            connection.Close();
-
-        }
-
-        public string SelectUsername()
-        {
-            string query = "select * from userinfo where userinfo.id = 1";
-
-            string username = null;
+            string query = "select * from userinfo where userinfo.username='" + username + "'";
 
             if (this.OpenConnection() == true)
             {
@@ -174,6 +152,71 @@ namespace DAL
             }
         }
 
+        public bool CheckIfUsernameExists(string username,bool chk)
+        {
+            string query = "SELECT COUNT(*) FROM userinfo WHERE username ='"+ username + "'";
+            
+            
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                this.OpenConnection();
+                //MySqlDataReader dataReader = cmd.ExecuteReader();
+                //string dbusername = dataReader["username"] + "";
+
+                cmd.Parameters.AddWithValue(username,username);
+                var result = Convert.ToInt32(cmd.ExecuteScalar());
+                if (result > 0)
+                {
+                    chk = true;
+                    
+                }
+                else
+                {
+                    chk=false;
+                    
+                }
+                return chk;
+               connection.Close();
+        }
+
+        public bool CheckUserInfo(string username,string password, bool read)
+        {
+            
+            command = new MySqlCommand();
+            this.connection.Open();
+            command.Connection = connection;
+            command.CommandText = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'";
+            dreader = command.ExecuteReader();
+            if (dreader.Read())
+            {
+                return  true;
+            }
+            else
+            {
+                return false;
+            }
+            connection.Close();
+
+        }
+
+        public void InsertUsernameAndPassword(string username, string password,string email)
+        {
+            string query = "INSERT INTO userinfo (username, password, email) VALUES('" +username +"','"+ password+"','" + email +"');";
+
+
+            if (this.OpenConnection() == true)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+
+                cmd.ExecuteNonQuery();
+
+
+                this.CloseConnection();
+            }
+        }
+
+
         /// <summary>
         /// Example for Inserting Values into the DB
         /// </summary>
@@ -181,16 +224,16 @@ namespace DAL
         {
             string query = "INSERT INTO people (firstName, lastName) VALUES('Egg', 'Benedict')";
 
-            //open connection
+            
             if (this.OpenConnection() == true)
             {
-                //create command and assign the query and connection from the constructor
+                
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                //Execute command
+                
                 cmd.ExecuteNonQuery();
 
-                //close connection
+                
                 this.CloseConnection();
             }
         }
