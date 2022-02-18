@@ -38,6 +38,8 @@
             this.RegisterButton = new System.Windows.Forms.Button();
             this.RememberMeCheckBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ShowPasswordButton = new System.Windows.Forms.Button();
+            this.HidePasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +66,7 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(211, 23);
             this.PasswordTextBox.TabIndex = 2;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // EmailTextBox
@@ -141,11 +144,36 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Join up on the fun!";
             // 
+            // ShowPasswordButton
+            // 
+            this.ShowPasswordButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ShowPasswordButton.Location = new System.Drawing.Point(392, 224);
+            this.ShowPasswordButton.Name = "ShowPasswordButton";
+            this.ShowPasswordButton.Size = new System.Drawing.Size(27, 23);
+            this.ShowPasswordButton.TabIndex = 10;
+            this.ShowPasswordButton.Text = "X";
+            this.ShowPasswordButton.UseVisualStyleBackColor = true;
+            this.ShowPasswordButton.Click += new System.EventHandler(this.ShowPasswordButton_Click);
+            // 
+            // HidePasswordButton
+            // 
+            this.HidePasswordButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HidePasswordButton.Location = new System.Drawing.Point(392, 224);
+            this.HidePasswordButton.Name = "HidePasswordButton";
+            this.HidePasswordButton.Size = new System.Drawing.Size(27, 23);
+            this.HidePasswordButton.TabIndex = 11;
+            this.HidePasswordButton.Text = "X";
+            this.HidePasswordButton.UseVisualStyleBackColor = true;
+            this.HidePasswordButton.Visible = false;
+            this.HidePasswordButton.Click += new System.EventHandler(this.HidePasswordButton_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 470);
+            this.Controls.Add(this.HidePasswordButton);
+            this.Controls.Add(this.ShowPasswordButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.RememberMeCheckBox);
             this.Controls.Add(this.RegisterButton);
@@ -176,5 +204,7 @@
         private Button RegisterButton;
         private CheckBox RememberMeCheckBox;
         private Label label5;
+        private Button ShowPasswordButton;
+        private Button HidePasswordButton;
     }
 }

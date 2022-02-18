@@ -13,39 +13,24 @@ namespace LOGIC
     public class Logic
     {
         ConnectionToDatabase connection = new ConnectionToDatabase();
-        UserInfo uinfo = new UserInfo(); 
-
-        /// <summary>
-        /// Test functions - To be removed
-        /// </summary>
-        public void ConTry()
-        {
-            connection.Insert();
-            
-        }
+        ImportantInfo importantInfo = new ImportantInfo(); 
 
         public int SelectUserId(int id,string username)
         {
-            string username1 = ReadUID(username);
-            int iid= connection.SelectUserId(id,username1);
+            string username1 = ReadUsernameFromUsernameFile(username);
+            int iid= connection.SelectUserIdFromDB(id,username1);
             return iid;
 
         }
-
-        public string SelectUsername(string username)
+        
+        public void SaveCredentialsToFile(string username,string password)
         {
-            
-            string uname = connection.SelectUsername(username);
-            return uname;
-
-        }
-
-        public void SaveCredentials(string username,string password)
-        {
+            string path = importantInfo.Path;
+            string fileName = importantInfo.fileName;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory+ @"\F4Y\DONT TOUCH\");
+            var newDirPath = (roamingDirectory+ path);
             Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, "crd.txt");
+            var newFilePath = Path.Combine(newDirPath, fileName);
             var filestream = File.Create(newFilePath);
 
             var sw = new StreamWriter(filestream);
@@ -54,25 +39,29 @@ namespace LOGIC
             sw.Close();
         }
 
-        public void SaveUsername(string username)
+        public void SaveUsernameToFile(string username)
         {
+            string path = importantInfo.Path;
+            string fileName = importantInfo.fileName;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
+            var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, "uid.txt");
-            var filestream = File.Create(newFilePath);
+            var newFilePath = Path.Combine(newDirPath, fileName);
+            var fileStream = File.Create(newFilePath);
 
-            var sw = new StreamWriter(filestream);
+            var sw = new StreamWriter(fileStream);
             sw.WriteLine(username);
             sw.Close();
         }
 
-        public string ReadUID(string username)
+        public string ReadUsernameFromUsernameFile(string username)
         {
+            string path = importantInfo.Path;
+            string fileName = importantInfo.fileName;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
+            var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, "uid.txt");
+            var newFilePath = Path.Combine(newDirPath, fileName);
             var sr = new StreamReader(newFilePath);
 
             try
@@ -88,11 +77,11 @@ namespace LOGIC
             return username;
         }
 
-        public string ReadUsername(string username)
+        public string ReadUsernameFromCredentialsFile(string username)
         {
-            
-            Directory.CreateDirectory(uinfo.crdDir);
-            var newFilePath = Path.Combine(uinfo.crdDir, "crd.txt");
+            string fileName = importantInfo.fileName;
+            Directory.CreateDirectory(importantInfo.crdDir);
+            var newFilePath = Path.Combine(importantInfo.crdDir, fileName);
             var sr = new StreamReader(newFilePath);
 
             try
@@ -108,12 +97,14 @@ namespace LOGIC
             return username;
         }
 
-        public string ReadPassword(string password)
+        public string ReadPasswordFromCredentialsFile(string password)
         {
+            string path = importantInfo.Path;
+            string fileName = importantInfo.fileName;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var newDirPath = (roamingDirectory + @"\F4Y\DONT TOUCH\");
+            var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, "crd.txt");
+            var newFilePath = Path.Combine(newDirPath, fileName);
             var sr = new StreamReader(newFilePath);
 
             try
@@ -131,19 +122,19 @@ namespace LOGIC
 
         }
 
-        public void DeleteSavedCredentials()
+        public void DeleteSavedCredentialsFiles()
         {
            
-            var CredentialPath = (uinfo.crdPath);
-            var UsernamePath = (uinfo.uidPath);
+            var credentialPath = (importantInfo.crdPath);
+            var usernamePath = (importantInfo.uidPath);
 
-            File.Delete(CredentialPath);
-            File.Delete(UsernamePath);
+            File.Delete(credentialPath);
+            File.Delete(usernamePath);
         }
 
-        public bool CredentialsExist()
+        public bool CheckIfCredentialsFileExist()
         {
-            if (File.Exists(uinfo.crdPath))
+            if (File.Exists(importantInfo.crdPath))
             {
                 return true;
             }
@@ -153,10 +144,11 @@ namespace LOGIC
             }
         }
 
-        public void InsertUsernameAndPassword(string username,string password, string email)
+        public void InsertUsernameAndPasswordIntoDB(string username,string password, string email)
         {
-            connection.InsertUsernameAndPassword(username,password, email);
+            connection.InsertUsernameAndPasswordIntoDB(username,password, email);
         }
+
         public bool CheckIfUsernameExists(string username, bool chk)
         {
             bool check = connection.CheckIfUsernameExists(username,chk);
@@ -173,32 +165,13 @@ namespace LOGIC
             connection.OpenCon();
         }
 
-        
-        
-
-        /// <summary>
-        /// Test functions - To be removed
-        /// </summary>
-        public List<string>[] RetrieveList()
+        public bool CheckUserCredentials(string username, string password, bool check)
         {
-            List<string>[] list = connection.Select();
-            return list;
-        }
-
-        /// <summary>
-        /// Test functions - To be removed
-        /// </summary>
-        public string firstName()
-        {
-            string firstName = connection.SelectFirstName();
-            return firstName;
-        }
-
-        public bool CheckName(string username, string password, bool check)
-        {
-            bool checkName = connection.CheckUserInfo(username, password, check);
+            bool checkName = connection.CheckUserCredentials(username, password, check);
             return checkName;
             
         }
+
+
     }
 }

@@ -10,17 +10,10 @@ namespace DAL
 {
     public class ConnectionToDatabase
     {
+        DBCredentials credAndQuereis = new DBCredentials();
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         private MySqlDataReader dreader = null;
-        private string server_adress = null;
-        private string database_name = null;
-        private string username = null;
-        private string password = null;
-        private string port = null;
-        
-
-
 
         public ConnectionToDatabase()
         {
@@ -33,21 +26,20 @@ namespace DAL
         /// </summary>
         private void Initialize()
         {
-            server_adress = "sql11.freesqldatabase.com";
-            database_name = "sql11468912";
-            username = "sql11468912";
-            password = "Z4Rt4tjQW5";
+            string serverAdress = credAndQuereis.ServerAdress;
+            string databaseName = credAndQuereis.DatabaseName;
+            string username = credAndQuereis.Username;
+            string password = credAndQuereis.Password;
+            
             string connectionString;
-            connectionString = "SERVER=" + server_adress + ";" + "DATABASE=" +
-            database_name + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+            connectionString = "SERVER=" + serverAdress + ";" + "DATABASE=" +
+            databaseName + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
         }
 
 
-        /// <summary>
-        /// Opening a connection to the DB
-        /// </summary>
+      
         private bool OpenConnection()
         {
             try
@@ -72,9 +64,7 @@ namespace DAL
         }
 
         
-        /// <summary>
-        /// Closing the connection to the DB
-        /// </summary>
+      
         private bool CloseConnection()
         {
             try
@@ -89,6 +79,9 @@ namespace DAL
             }
         }
 
+
+
+
         public void CloseConn()
         {
             connection.Close();
@@ -98,11 +91,9 @@ namespace DAL
         {
             connection.Open();
         }
-        /// <summary>
-        /// Checking user information to login
-        /// </summary>
+
         
-        public int  SelectUserId(int id,string username)
+        public int  SelectUserIdFromDB(int id,string username)
         {
             string query = "select * from userinfo where userinfo.username='" + username +"'";
 
@@ -128,77 +119,72 @@ namespace DAL
             }
         }
 
-        public string SelectUsername(string username)
-        {
-            string query = "select * from userinfo where userinfo.username='" + username + "'";
-
-            if (this.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    username = dataReader["username"] + "";
-                }
-
-                dataReader.Close();
-                this.CloseConnection();
-                return username;
-            }
-            else
-            {
-                return username;
-            }
-        }
+        
 
         public bool CheckIfUsernameExists(string username,bool chk)
         {
             string query = "SELECT COUNT(*) FROM userinfo WHERE username ='"+ username + "'";
-            
-            
+
+            if (this.OpenConnection() == true)
+            {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 this.OpenConnection();
                 //MySqlDataReader dataReader = cmd.ExecuteReader();
                 //string dbusername = dataReader["username"] + "";
 
-                cmd.Parameters.AddWithValue(username,username);
+                cmd.Parameters.AddWithValue(username, username);
                 var result = Convert.ToInt32(cmd.ExecuteScalar());
                 if (result > 0)
                 {
                     chk = true;
-                    
+
                 }
                 else
                 {
-                    chk=false;
-                    
-                }
-                return chk;
-               connection.Close();
-        }
+                    chk = false;
 
-        public bool CheckUserInfo(string username,string password, bool read)
-        {
-            
-            command = new MySqlCommand();
-            this.connection.Open();
-            command.Connection = connection;
-            command.CommandText = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'";
-            dreader = command.ExecuteReader();
-            if (dreader.Read())
-            {
-                return  true;
+                }
+                this.CloseConnection();
+                return chk;
+                
             }
             else
             {
-                return false;
+                return chk;
             }
-            connection.Close();
+            
+                
+        }
+
+        public bool CheckUserCredentials(string username,string password, bool read)
+        {
+            if (this.OpenConnection() == true)
+            {
+                string table = credAndQuereis.Table;
+                string query = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'"; ;
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                this.connection.Open();
+                dreader = cmd.ExecuteReader();
+                if (dreader.Read())
+                {
+                    this.CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    this.CloseConnection();
+                    return false;
+                }
+                
+            }
+            else
+            {
+                return false ;
+            }
 
         }
 
-        public void InsertUsernameAndPassword(string username, string password,string email)
+        public void InsertUsernameAndPasswordIntoDB(string username, string password,string email)
         {
             string query = "INSERT INTO userinfo (username, password, email) VALUES('" +username +"','"+ password+"','" + email +"');";
 
@@ -249,89 +235,6 @@ namespace DAL
         }
 
 
-        /// <summary>
-        /// Example for Selecting a single Value(string) from DB
-        /// </summary>
-        public string SelectFirstName()
-        {
-            string query = "select * from people where people.id = 1";
-
-            string firstName = null;
-
-            if (this.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                while (dataReader.Read())
-                {
-                    firstName = dataReader["firstName"] + "";
-                }
-
-                dataReader.Close();
-                this.CloseConnection();
-                return firstName;
-            }
-            else
-            {
-                return firstName;
-            }
-        }
-
-
-
-       /// <summary>
-       /// Example for Selecting a list of Values from DB
-       /// </summary>
-       public List<string>[] Select()
-       {
-            string query = "SELECT * FROM people";
-           
-
-            //Create a list to store the result
-            List<string>[] list = new List<string>[3];
-            list[0] = new List<string>();
-            list[1] = new List<string>();
-            list[2] = new List<string>();
-
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
-                while (dataReader.Read())
-                {
-                    list[0].Add(dataReader["firstName"] + "");
-                    list[1].Add(dataReader["lastName"] + "");
-                    list[2].Add(dataReader["age"] + "");
-                }
-
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
-                
-                return list;
-            }
-            else
-            {
-                return list;
-            }
-
-            
-        }
-
-
-
-     
     }
 
 }

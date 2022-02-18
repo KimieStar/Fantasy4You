@@ -10,8 +10,8 @@ namespace REGISTER
     public partial class Register : Form
     {
 
-        Logic log = new Logic();
-        bool chk;
+        Logic logic = new Logic();
+        bool check;
 
 
         public Register()
@@ -49,8 +49,8 @@ namespace REGISTER
             string usr = UsernameTextBox.Text;
             string pwd = PasswordTextBox.Text;
             string email = EmailTextBox.Text;
-            string dbusernamecheck = log.SelectUsername(usr);
-            bool usernamecheck = log.CheckIfUsernameExists(usr, chk);
+            //TO BE REMOVED//string dbusernamecheck = log.SelectUsername(usr);
+            bool usernameCheck = logic.CheckIfUsernameExists(usr, check);
 
 
 
@@ -62,28 +62,28 @@ namespace REGISTER
             }
             else if (usr != "" || pwd != "")
             {
-                if (usernamecheck == false)
+                if (usernameCheck == false)
                 {
                     if (RememberMeCheckBox.Checked == true)
                     {
-                        log.SaveCredentials(usr, pwd);
+                        logic.SaveCredentialsToFile(usr, pwd);
                     }
                     else
                     {
                         string no;
                     }
 
-                    log.CloseConnection();
-                    log.InsertUsernameAndPassword(usr, pwd, email);
+                    logic.CloseConnection();
+                    logic.InsertUsernameAndPasswordIntoDB(usr, pwd, email);
                     MessageBox.Show("Registration Complete!");
                     this.Close();
 
 
                 }
-                else if (usernamecheck == true)
+                else if (usernameCheck == true)
                 {
                     MessageBox.Show("Username already exists!");
-                    log.CloseConnection();
+                    logic.CloseConnection();
                 }
                 
                 
@@ -93,6 +93,20 @@ namespace REGISTER
         private void RememberMeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowPasswordButton_Click(object sender, EventArgs e)
+        {
+            PasswordTextBox.UseSystemPasswordChar = false;
+            ShowPasswordButton.Visible = false;
+            HidePasswordButton.Visible = true;
+        }
+
+        private void HidePasswordButton_Click(object sender, EventArgs e)
+        {
+            PasswordTextBox.UseSystemPasswordChar = true;
+            ShowPasswordButton.Visible = true;
+            HidePasswordButton.Visible = false;
         }
     }
 }

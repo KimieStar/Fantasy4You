@@ -63,9 +63,49 @@ namespace LOGIN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap color_29465B {
+            get {
+                object obj = ResourceManager.GetObject("color_29465B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Combust_Free_Trial {
+            get {
+                object obj = ResourceManager.GetObject("Combust_Free_Trial", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Combust_Free_Trial1 {
+            get {
+                object obj = ResourceManager.GetObject("Combust_Free_Trial1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gear_vector_graphics_glyph_icon_260nw_1505448758_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("gear-vector-graphics-glyph-icon-260nw-1505448758-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starter1 {
+            get {
+                object obj = ResourceManager.GetObject("starter1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

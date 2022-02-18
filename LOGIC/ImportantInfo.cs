@@ -7,18 +7,19 @@ using DAL;
 
 namespace LOGIC
 {
-    public class UserInfo
+    public class ImportantInfo
     {
         ConnectionToDatabase connection = new ConnectionToDatabase();
 
-        private string username = null;
-        private string password = null;
+        
         public string roamingpath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string CredentialsPath = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\crd.txt");
         private string UsernamePath = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\uid.txt");
         private string CredentialsDir = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\");
+        private string path = @"\F4Y\DONT TOUCH\";
+        private string filename = "crd.txt";
 
-       
+
         public string crdPath
         {
             get
@@ -55,30 +56,30 @@ namespace LOGIC
             }
         }
 
-        public string Username
+        public string Path
         {
             get 
-            {
-                return this.username;
+            { 
+                return path; 
             }
-            set 
-            {
-                this.username = value; 
+            set
+            { 
+                path = value; 
             }
         }
-
-        public string Password
+      
+        public string fileName
         {
-            get 
+            get
             {
-                return this.password;
+                return filename;
             }
-            set 
+
+            set
             {
-                this.password = value; 
+                filename = value;
             }
         }
-
 
     }
 }

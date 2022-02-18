@@ -21,7 +21,7 @@ namespace MAIN_INTERFACE
     {
 
         Logic log = new Logic();
-        UserInfo uinfo = new UserInfo();
+        ImportantInfo uinfo = new ImportantInfo();
         string username;
         string username1;
         int id1;
@@ -51,10 +51,10 @@ namespace MAIN_INTERFACE
         {
             
             
-            string uname = log.ReadUID(username);
+            string uname = log.ReadUsernameFromUsernameFile(username);
             label2.Text = uname;
 
-            string usernamee = log.ReadUID(username1);
+            string usernamee = log.ReadUsernameFromUsernameFile(username1);
             int id = log.SelectUserId(id1, usernamee);
 
 

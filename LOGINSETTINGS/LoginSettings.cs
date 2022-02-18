@@ -11,7 +11,7 @@ namespace LOGINSETTINGS
     
     public partial class LoginSettings : Form
     {
-        Logic log = new Logic();
+        Logic logic = new Logic();
         public LoginSettings()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace LOGINSETTINGS
 
         private void ClearCacheButton_Click(object sender, EventArgs e)
         {
-            log.DeleteSavedCredentials();
+            logic.DeleteSavedCredentialsFiles();
             Application.Restart();
             Environment.Exit(0);
         }

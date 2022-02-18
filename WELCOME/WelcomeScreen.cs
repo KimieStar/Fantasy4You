@@ -33,7 +33,7 @@ namespace WELCOME
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string uname = log.ReadUID(username);
+            string uname = log.ReadUsernameFromUsernameFile(username);
             label2.Text = uname;
         }
 
