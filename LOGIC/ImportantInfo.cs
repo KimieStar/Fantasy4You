@@ -18,6 +18,7 @@ namespace LOGIC
         private string CredentialsDir = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\");
         private string path = @"\F4Y\DONT TOUCH\";
         private string filename = "crd.txt";
+        private string usernameFilename = "usr.txt";
 
 
         public string crdPath
@@ -81,5 +82,16 @@ namespace LOGIC
             }
         }
 
+        public string UsernameFilename
+        {
+            get
+            {
+                return usernameFilename;
+            }
+            set
+            {
+                usernameFilename = value;
+            }
+        }
     }
 }

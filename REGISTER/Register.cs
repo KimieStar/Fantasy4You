@@ -73,7 +73,7 @@ namespace REGISTER
                         string no;
                     }
 
-                    logic.CloseConnection();
+                    
                     logic.InsertUsernameAndPasswordIntoDB(usr, pwd, email);
                     MessageBox.Show("Registration Complete!");
                     this.Close();
@@ -83,7 +83,7 @@ namespace REGISTER
                 else if (usernameCheck == true)
                 {
                     MessageBox.Show("Username already exists!");
-                    logic.CloseConnection();
+                    
                 }
                 
                 

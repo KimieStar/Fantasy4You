@@ -23,26 +23,56 @@ namespace LOGIC
 
         }
         
+
+        public void SavePassword(string password)
+        {
+            string path = importantInfo.Path;
+            string fileName = importantInfo.fileName;
+            var roaming = importantInfo.roamingpath;
+            var newdir = (roaming + path);
+            Directory.CreateDirectory(newdir);
+            var newfilepath = Path.Combine(newdir, fileName);
+            var filename1 = File.Create(newfilepath);
+            var sw = new StreamWriter(filename1);
+            sw.WriteLine(password);
+            sw.Close();
+        }
+
         public void SaveCredentialsToFile(string username,string password)
         {
             string path = importantInfo.Path;
             string fileName = importantInfo.fileName;
-            var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var roamingDirectory = importantInfo.roamingpath;
             var newDirPath = (roamingDirectory+ path);
-            Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, fileName);
-            var filestream = File.Create(newFilePath);
+            
+            if (Directory.Exists(newDirPath))
+            {
+                var newFilePath = Path.Combine(newDirPath, fileName);
+                var filestream = File.Create(newFilePath);
 
-            var sw = new StreamWriter(filestream);
-            sw.WriteLine(username);
-            sw.WriteLine(password);
-            sw.Close();
+                var sw = new StreamWriter(filestream);
+                sw.WriteLine(username);
+                sw.WriteLine(password);
+                sw.Close();
+            }
+            else 
+            {
+                Directory.CreateDirectory(newDirPath);
+                var newFilePath = Path.Combine(newDirPath, fileName);
+                var filestream = File.Create(newFilePath);
+
+                var sw = new StreamWriter(filestream);
+                sw.WriteLine(username);
+                sw.WriteLine(password);
+                sw.Close();
+            }
+            
         }
 
         public void SaveUsernameToFile(string username)
         {
             string path = importantInfo.Path;
-            string fileName = importantInfo.fileName;
+            string fileName = importantInfo.UsernameFilename;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);

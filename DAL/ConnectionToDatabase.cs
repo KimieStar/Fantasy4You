@@ -128,7 +128,7 @@ namespace DAL
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                this.OpenConnection();
+                
                 //MySqlDataReader dataReader = cmd.ExecuteReader();
                 //string dbusername = dataReader["username"] + "";
 
@@ -163,7 +163,7 @@ namespace DAL
                 string table = credAndQuereis.Table;
                 string query = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'"; ;
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                this.connection.Open();
+                
                 dreader = cmd.ExecuteReader();
                 if (dreader.Read())
                 {
@@ -177,9 +177,29 @@ namespace DAL
                 }
                 
             }
+            else if (this.OpenConnection() == false)
+            {
+                this.OpenConnection();
+                string table = credAndQuereis.Table;
+                string query = "SELECT * FROM userinfo where username='" + username + "' AND password='" + password + "'"; ;
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                dreader = cmd.ExecuteReader();
+                if (dreader.Read())
+                {
+                    this.CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    this.CloseConnection();
+                    return false;
+                }
+
+            }
             else
             {
-                return false ;
+                return false;
             }
 
         }

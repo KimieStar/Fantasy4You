@@ -29,7 +29,10 @@ namespace Fantasy4You
         public Login()
         {
             InitializeComponent();
+            
         }
+
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -61,6 +64,10 @@ namespace Fantasy4You
             pictureBox1.BackColor = Color.FromArgb(125, Color.Black);
             label4.BackColor = Color.FromArgb(125, Color.Black);
             LoggingInLabel.BackColor = Color.FromArgb(125, Color.Black);
+            LoginButton.BackColor = Color.FromArgb(125, Color.Black);
+            
+            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -196,6 +203,8 @@ namespace Fantasy4You
         {
 
         }
+
+
 
         //private void OpenLoginSettings(object? obj)
         //{
