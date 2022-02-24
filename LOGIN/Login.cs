@@ -65,8 +65,8 @@ namespace Fantasy4You
             label4.BackColor = Color.FromArgb(125, Color.Black);
             LoggingInLabel.BackColor = Color.FromArgb(125, Color.Black);
             LoginButton.BackColor = Color.FromArgb(125, Color.Black);
-            
-            
+            LoginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(125, Color.Black);
+
 
         }
 
@@ -111,6 +111,8 @@ namespace Fantasy4You
             string usr = UsernameTextbox.Text;
             string pwd = PasswordTextbox.Text;
             bool chk = false;
+
+            
 
             if (UsernameTextbox.Text == "" || PasswordTextbox.Text == "")
             {
@@ -202,6 +204,11 @@ namespace Fantasy4You
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            
         }
 
 

@@ -5,12 +5,11 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    
-    <ProjectReference Include="..\CHARACTERS\CHARACTERS.csproj" />
-    
+    <ProjectReference Include="..\CHARACTERS_REGISTRATION\CHARACTERS_REGISTRATTION.csproj" />
     <ProjectReference Include="..\LOGIC\LOGIC.csproj" />
   </ItemGroup>
 

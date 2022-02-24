@@ -9,6 +9,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LOGIC;
+using CHARACTER;
+
 
 
 namespace MAIN_INTERFACE
@@ -21,10 +23,8 @@ namespace MAIN_INTERFACE
     {
 
         Logic log = new Logic();
-        ImportantInfo uinfo = new ImportantInfo();
-        string username;
-        string username1;
-        int id1;
+        Thread characters;
+        
        
 
         
@@ -51,11 +51,10 @@ namespace MAIN_INTERFACE
         {
             
             
-            string uname = log.ReadUsernameFromUsernameFile(username);
+            string uname = log.ReadUsernameFromUsernameFile();
             label2.Text = uname;
 
-            string usernamee = log.ReadUsernameFromUsernameFile(username1);
-            int id = log.SelectUserId(id1, usernamee);
+           int id = log.SelectUserId();
 
 
             label4.Text = id.ToString();
@@ -69,6 +68,19 @@ namespace MAIN_INTERFACE
         private void label4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            characters = new Thread(OpenCharacters);
+            characters.SetApartmentState(ApartmentState.STA);
+            characters.Start();
+            this.Close();
+        }
+
+        private void OpenCharacters(object? obj)
+        {
+           Application.Run(new Characters());
         }
     }
 }

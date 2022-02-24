@@ -15,15 +15,19 @@ namespace LOGIC
         ConnectionToDatabase connection = new ConnectionToDatabase();
         ImportantInfo importantInfo = new ImportantInfo(); 
 
-        public int SelectUserId(int id,string username)
+        public int SelectUserId()
         {
-            string username1 = ReadUsernameFromUsernameFile(username);
-            int iid= connection.SelectUserIdFromDB(id,username1);
-            return iid;
+            string username = ReadUsernameFromUsernameFile();
+            int id= connection.SelectUserIdFromDB(username);
+            return id;
 
         }
         
-
+        public void InsertCharacterDetails(string characterName, string classs, int level, string race, string backgroundStory, int xpPoints, string alignment)
+        {
+            string username = ReadUsernameFromUsernameFile();
+            connection.InsertCharacterDetails(username, characterName, classs, level, race, backgroundStory, xpPoints, alignment);
+        }
         public void SavePassword(string password)
         {
             string path = importantInfo.Path;
@@ -69,6 +73,14 @@ namespace LOGIC
             
         }
 
+       public int NumberOfCharactersCreated()
+       {
+           int id = SelectUserId();
+           int numbersOfCharacters;
+           numbersOfCharacters = connection.NumberOfCharactersCreated(id);
+           return numbersOfCharacters;
+       }
+
         public void SaveUsernameToFile(string username)
         {
             string path = importantInfo.Path;
@@ -84,16 +96,17 @@ namespace LOGIC
             sw.Close();
         }
 
-        public string ReadUsernameFromUsernameFile(string username)
+        public string ReadUsernameFromUsernameFile()
         {
+            string username = null;
             string path = importantInfo.Path;
-            string fileName = importantInfo.fileName;
+            string fileName = importantInfo.UsernameFilename;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, fileName);
             var sr = new StreamReader(newFilePath);
-
+            
             try
             {
                 string line = sr.ReadLine();
@@ -179,9 +192,17 @@ namespace LOGIC
             connection.InsertUsernameAndPasswordIntoDB(username,password, email);
         }
 
-        public bool CheckIfUsernameExists(string username, bool chk)
+        public bool CheckIfUsernameExists(string username)
         {
-            bool check = connection.CheckIfUsernameExists(username,chk);
+            bool check = connection.CheckIfUsernameExists(username);
+            return check;
+        }
+
+        public bool CheckCharacterNameExistForUser(string characterName)
+        {
+            string username = ReadUsernameFromUsernameFile();
+            int id = connection.SelectUserIdFromDB(username);
+            bool check = connection.CheckCharacterNameExistForUser(characterName, id);
             return check;
         }
 
@@ -202,6 +223,19 @@ namespace LOGIC
             
         }
 
+        public bool CheckIfTextBoxOnlyNumbers(string textBoxText)
+        {
+            bool chk = false;
 
+            if (Int32.TryParse(textBoxText, out int value))
+            {
+                chk = true;
+            }
+            else
+            {
+                chk = false;
+            }
+            return chk;
+        }
     }
 }

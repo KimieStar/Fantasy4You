@@ -247,6 +247,7 @@
             this.LoginButton.TextColor = System.Drawing.Color.White;
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.LoginButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LoginButton_MouseClick);
             // 
             // Login
             // 

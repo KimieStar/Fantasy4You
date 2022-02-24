@@ -14,6 +14,8 @@ namespace DAL
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         private MySqlDataReader dreader = null;
+        int idi;
+        
 
         public ConnectionToDatabase()
         {
@@ -30,6 +32,7 @@ namespace DAL
             string databaseName = credAndQuereis.DatabaseName;
             string username = credAndQuereis.Username;
             string password = credAndQuereis.Password;
+            
             
             string connectionString;
             connectionString = "SERVER=" + serverAdress + ";" + "DATABASE=" +
@@ -93,11 +96,12 @@ namespace DAL
         }
 
         
-        public int  SelectUserIdFromDB(int id,string username)
+        public int  SelectUserIdFromDB(string username)
         {
             string query = "select * from userinfo where userinfo.username='" + username +"'";
+            int id = 0;
 
-            
+
 
             if (this.OpenConnection() == true)
             {
@@ -121,9 +125,10 @@ namespace DAL
 
         
 
-        public bool CheckIfUsernameExists(string username,bool chk)
+        public bool CheckIfUsernameExists(string username)
         {
             string query = "SELECT COUNT(*) FROM userinfo WHERE username ='"+ username + "'";
+            bool chk = true;
 
             if (this.OpenConnection() == true)
             {
@@ -154,6 +159,44 @@ namespace DAL
             }
             
                 
+        }
+
+        public int NumberOfCharactersCreated(int id)
+        {
+            string query = "SELECT COUNT(*) FROM characters WHERE id='" + id + "'";
+            int numbersOfCharacters;
+            if (this.OpenConnection() == true)
+            {
+                
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                int result = Convert.ToInt32(cmd.ExecuteScalar());
+                if(result > 0)
+                {
+                    numbersOfCharacters = result;
+                }
+                else
+                {
+                    numbersOfCharacters = 0;
+                }
+                this.CloseConnection();
+                return numbersOfCharacters;
+            }
+            else
+            {
+                this.OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                int result = (int)cmd.ExecuteScalar();
+                if (result > 0)
+                {
+                    numbersOfCharacters = result;
+                }
+                else
+                {
+                    numbersOfCharacters = 0;
+                }
+                this.CloseConnection();
+                return numbersOfCharacters;
+            }
         }
 
         public bool CheckUserCredentials(string username,string password, bool read)
@@ -219,6 +262,50 @@ namespace DAL
 
 
                 this.CloseConnection();
+            }
+        }
+
+
+        public void InsertCharacterDetails(string username, string characterName, string classs,int level, string race, string backgroundStory, int xpPoints, string alignment)
+        {
+
+            
+            int id = SelectUserIdFromDB(username);
+            string query = "INSERT INTO characters (id, characterName, class, level, race, backgroundStory, experiencePoints, alignment) VALUES('" + id + "','" + characterName + "','" + classs + "','" + level + "','" + race + "','" + backgroundStory + "','" + xpPoints + "','" + alignment + "')";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }       
+        
+        }
+
+        public bool CheckCharacterNameExistForUser(string characterName,int id)
+        {
+            string query = "SELECT COUNT(*) FROM characters WHERE characterName='" + characterName + "' AND id='" + id + "'";
+            bool chk = true;
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                int result = Convert.ToInt32(cmd.ExecuteScalar());
+                if (result > 0)
+                {
+                    chk = true;
+
+                }
+                else
+                {
+                    chk = false;
+
+                }
+                this.CloseConnection();
+                return chk;
+
+            }
+            else
+            {
+                return chk;
             }
         }
 

@@ -50,7 +50,7 @@ namespace REGISTER
             string pwd = PasswordTextBox.Text;
             string email = EmailTextBox.Text;
             //TO BE REMOVED//string dbusernamecheck = log.SelectUsername(usr);
-            bool usernameCheck = logic.CheckIfUsernameExists(usr, check);
+            bool usernameCheck = logic.CheckIfUsernameExists(usr);
 
 
 
