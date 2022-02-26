@@ -60,7 +60,7 @@ namespace NUNIT_TESTS
         [Test]
         public void CheckUserCredentials()
         {
-            username = "Tester";
+            username = "Tester"; 
             password = "test";
             bool result = connection.CheckUserCredentials(username, password);
             Assert.IsTrue(result);
