@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,21 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="PresentationLayer\CharacterDisplayer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PresentationLayer\Characters.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PresentationLayer\CharactersRegistration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PresentationLayer\LoginSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PresentationLayer\MainInterface.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="PresentationLayer\CharacterDisplayer.cs" />
+    <Compile Update="PresentationLayer\Characters.cs" />
+    <Compile Update="PresentationLayer\CharactersRegistration.cs" />
+    <Compile Update="PresentationLayer\LoginSettings.cs" />
+    <Compile Update="PresentationLayer\MainInterface.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -44,12 +34,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Update="PresentationLayer\Register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PresentationLayer\WelcomeScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="PresentationLayer\Register.cs" />
+    <Compile Update="PresentationLayer\WelcomeScreen.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -22,7 +22,7 @@ namespace FANTASY4YOU
         {
 
 
-            int characterNumber = 1;
+            
             string numberOfCharacters = logic.NumberOfCharactersCreated().ToString();
             int numberOfCharecters1 = logic.NumberOfCharactersCreated();
             CharactersNumbers.Text = numberOfCharacters;
@@ -32,8 +32,16 @@ namespace FANTASY4YOU
             CharacterPannel4.BackColor = Color.FromArgb(125, Color.Black);
             CharacterPannel5.BackColor = Color.FromArgb(125, Color.Black);
             
-            //List<string>[] list = logic.SelectCharacterInformation(characterNumber);
-            //CharacterPannelLabel1.Text = list[0].ToString();
+            List<string>[] list = logic.SelectCharacterInformation(1);
+            CharacterPannelLabel1.Text = string.Join("", list[0].ToArray());
+            List<string>[] list2 = logic.SelectCharacterInformation(2);
+            CharacterPannelLabel2.Text = string.Join("", list2[0].ToArray());
+            List<string>[] list3 = logic.SelectCharacterInformation(3);
+            CharacterPannelLabel3.Text = string.Join("", list3[0].ToArray());
+            List<string>[] list4 = logic.SelectCharacterInformation(4);
+            CharacterPannelLabel4.Text = string.Join("", list4[0].ToArray());
+            List<string>[] list5 = logic.SelectCharacterInformation(5);
+            CharacterPannelLabel5.Text = string.Join("", list5[0].ToArray());
 
             switch (numberOfCharecters1)
             {
@@ -152,6 +160,9 @@ namespace FANTASY4YOU
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             Form1_Load(sender, EventArgs.Empty);
+            RefreshButton.Enabled = false;
+            System.Threading.Thread.Sleep(3000);
+            RefreshButton.Enabled = true;
         }
 
         private void CharacterPannel1_Paint(object sender, PaintEventArgs e)

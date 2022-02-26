@@ -13,8 +13,9 @@ namespace FANTASY4YOU
     public class Logic
     {
         ConnectionToDatabase connection = new ConnectionToDatabase();
-        ImportantInfo importantInfo = new ImportantInfo(); 
+        ImportantInfo importantInfo = new ImportantInfo();
 
+        //Has NunitTest
         public int SelectUserId()
         {
             string username = ReadUsernameFromUsernameFile();
@@ -22,7 +23,8 @@ namespace FANTASY4YOU
             return id;
 
         }
-        
+
+        //Cannot be tested
         public void InsertCharacterDetails(string characterName, string classs, int level, string race, string backgroundStory, int xpPoints, string alignment)
         {
             int numberOfCharacter = NumberOfCharactersCreated();
@@ -52,6 +54,8 @@ namespace FANTASY4YOU
             string username = ReadUsernameFromUsernameFile();
             connection.InsertCharacterDetails(username, characterName, classs, level, race, backgroundStory, xpPoints, alignment, characterNumber);
         }
+
+        //Cannot be tested
         public void SavePassword(string password)
         {
             string path = importantInfo.Path;
@@ -66,6 +70,7 @@ namespace FANTASY4YOU
             sw.Close();
         }
 
+        //Has NunitTest
         public List<string>[] SelectCharacterInformation(int characterNumber)
         {
             string username = ReadUsernameFromUsernameFile();
@@ -73,6 +78,7 @@ namespace FANTASY4YOU
             return list;
         }
 
+        //Cannot be tested
         public void SaveCredentialsToFile(string username,string password)
         {
             string path = importantInfo.Path;
@@ -104,7 +110,8 @@ namespace FANTASY4YOU
             
         }
 
-       public int NumberOfCharactersCreated()
+        //Has NunitTest
+        public int NumberOfCharactersCreated()
        {
            int id = SelectUserId();
            int numbersOfCharacters;
@@ -112,6 +119,7 @@ namespace FANTASY4YOU
            return numbersOfCharacters;
        }
 
+        //Cannot be tested
         public void SaveUsernameToFile(string username)
         {
             string path = importantInfo.Path;
@@ -127,6 +135,7 @@ namespace FANTASY4YOU
             sw.Close();
         }
 
+        //Has NunitTest
         public string ReadUsernameFromUsernameFile()
         {
             string username = null;
@@ -151,8 +160,10 @@ namespace FANTASY4YOU
             return username;
         }
 
-        public string ReadUsernameFromCredentialsFile(string username)
+        //Has NunitTest
+        public string ReadUsernameFromCredentialsFile()
         {
+            string username = null;
             string fileName = importantInfo.fileName;
             Directory.CreateDirectory(importantInfo.crdDir);
             var newFilePath = Path.Combine(importantInfo.crdDir, fileName);
@@ -171,8 +182,10 @@ namespace FANTASY4YOU
             return username;
         }
 
-        public string ReadPasswordFromCredentialsFile(string password)
+        //Has NunitTest
+        public string ReadPasswordFromCredentialsFile()
         {
+            string password = null;
             string path = importantInfo.Path;
             string fileName = importantInfo.fileName;
             var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -196,6 +209,7 @@ namespace FANTASY4YOU
 
         }
 
+        //Cannot be tested
         public void DeleteSavedCredentialsFiles()
         {
            
@@ -206,6 +220,7 @@ namespace FANTASY4YOU
             File.Delete(usernamePath);
         }
 
+        //Cannot be tested
         public bool CheckIfCredentialsFileExist()
         {
             if (File.Exists(importantInfo.crdPath))
@@ -218,17 +233,20 @@ namespace FANTASY4YOU
             }
         }
 
+        //Cannot be tested
         public void InsertUsernameAndPasswordIntoDB(string username,string password, string email)
         {
             connection.InsertUsernameAndPasswordIntoDB(username,password, email);
         }
 
+        //Has NunitTest
         public bool CheckIfUsernameExists(string username)
         {
             bool check = connection.CheckIfUsernameExists(username);
             return check;
         }
 
+        //Has NunitTest
         public bool CheckCharacterNameExistForUser(string characterName)
         {
             string username = ReadUsernameFromUsernameFile();
@@ -237,20 +255,11 @@ namespace FANTASY4YOU
             return check;
         }
 
-        public void CloseConnection()
+        //Has NunitTest
+        public bool CheckUserCredentials(string username, string password)
         {
-            connection.CloseConn();
-        }
-
-        public void OpenConnection()
-        {
-            connection.OpenCon();
-        }
-
-        public bool CheckUserCredentials(string username, string password, bool check)
-        {
-            bool checkName = connection.CheckUserCredentials(username, password, check);
-            return checkName;
+            bool checkCred = connection.CheckUserCredentials(username, password);
+            return checkCred;
             
         }
 

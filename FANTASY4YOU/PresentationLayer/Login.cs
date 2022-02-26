@@ -17,8 +17,6 @@ namespace FANTASY4YOU
         LoginSettings LoginSettings = new LoginSettings();
         Thread WelcomeScreen;
         Thread Register;
-        string getUsernameFromFile;
-        string getPasswordFromFile;
         bool checkCredentialsExist;
 
 
@@ -41,10 +39,10 @@ namespace FANTASY4YOU
             checkCredentialsExist = logic.CheckIfCredentialsFileExist();
             if (checkCredentialsExist == true)
             {
-                string getUsername = logic.ReadUsernameFromCredentialsFile(getUsernameFromFile);
+                string getUsername = logic.ReadUsernameFromCredentialsFile();
                 UsernameTextbox.Text = getUsername;
 
-                string getPassword = logic.ReadPasswordFromCredentialsFile(getPasswordFromFile);
+                string getPassword = logic.ReadPasswordFromCredentialsFile();
                 PasswordTextbox.Text = getPassword;
             }
             else
@@ -107,7 +105,6 @@ namespace FANTASY4YOU
         {
             string usr = UsernameTextbox.Text;
             string pwd = PasswordTextbox.Text;
-            bool chk = false;
 
             
 
@@ -120,7 +117,7 @@ namespace FANTASY4YOU
             else if (UsernameTextbox.Text != "" || PasswordTextbox.Text != "")
             {
                 LoggingInLabel.Visible = true;
-                if (logic.CheckUserCredentials(usr, pwd, chk) == true)
+                if (logic.CheckUserCredentials(usr, pwd) == true)
                 {
 
                     if (checkBox1.Checked == true)
@@ -130,7 +127,6 @@ namespace FANTASY4YOU
 
                     MessageBox.Show("Login successful");
                     logic.SaveUsernameToFile(usr);
-                    logic.CloseConnection();
                     WelcomeScreen = new Thread(OpenWelcomeScreen);
                     WelcomeScreen.SetApartmentState(ApartmentState.STA);
                     WelcomeScreen.Start();
@@ -139,7 +135,7 @@ namespace FANTASY4YOU
 
                 else
                 {
-                    logic.CloseConnection();
+                    
                     LoggingInLabel.Visible = false;
                     MessageBox.Show("Invalid Credentials");
 

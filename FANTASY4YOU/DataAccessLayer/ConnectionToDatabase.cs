@@ -27,6 +27,7 @@ namespace FANTASY4YOU
         /// <summary>
         /// Connecting Credentials for the DB
         /// </summary>
+       //Cannot be tested
         private void Initialize()
         {
             string serverAdress = credAndQuereis.ServerAdress;
@@ -43,7 +44,7 @@ namespace FANTASY4YOU
         }
 
 
-      
+        //Cannot be tested
         private bool OpenConnection()
         {
             try
@@ -67,8 +68,8 @@ namespace FANTASY4YOU
             }
         }
 
-        
-      
+
+        //Cannot be tested
         private bool CloseConnection()
         {
             try
@@ -83,20 +84,7 @@ namespace FANTASY4YOU
             }
         }
 
-
-
-
-        public void CloseConn()
-        {
-            connection.Close();
-        }
-
-        public void OpenCon()
-        {
-            connection.Open();
-        }
-
-        
+        //Has NunitTest
         public int  SelectUserIdFromDB(string username)
         {
             string query = "select * from userinfo where userinfo.username='" + username +"'";
@@ -124,8 +112,7 @@ namespace FANTASY4YOU
             }
         }
 
-        
-
+        //Has NunitTest
         public bool CheckIfUsernameExists(string username)
         {
             string query = "SELECT COUNT(*) FROM userinfo WHERE username ='"+ username + "'";
@@ -145,7 +132,7 @@ namespace FANTASY4YOU
                     chk = true;
 
                 }
-                else
+                else if (result == 0)
                 {
                     chk = false;
 
@@ -162,6 +149,7 @@ namespace FANTASY4YOU
                 
         }
 
+        //Has NunitTest
         public int NumberOfCharactersCreated(int id)
         {
             string query = "SELECT COUNT(*) FROM characters WHERE id='" + id + "'";
@@ -200,7 +188,8 @@ namespace FANTASY4YOU
             }
         }
 
-        public bool CheckUserCredentials(string username,string password, bool read)
+        //Has NunitTest
+        public bool CheckUserCredentials(string username,string password)
         {
             if (this.OpenConnection() == true)
             {
@@ -248,6 +237,7 @@ namespace FANTASY4YOU
 
         }
 
+        //Cannot be tested
         public void InsertUsernameAndPasswordIntoDB(string username, string password,string email)
         {
             string query = "INSERT INTO userinfo (username, password, email) VALUES('" +username +"','"+ password+"','" + email +"');";
@@ -266,7 +256,7 @@ namespace FANTASY4YOU
             }
         }
 
-
+        //Cannot be tested
         public void InsertCharacterDetails(string username, string characterName, string classs,int level, string race, string backgroundStory, int xpPoints, string alignment, int characterNumber)
         {
 
@@ -282,7 +272,7 @@ namespace FANTASY4YOU
         
         }
 
-
+        //Has NunitTest
         public List<string>[] SelectCharacterInformation(string username,int characterNumber)
         {
             int id = SelectUserIdFromDB(username);
@@ -324,7 +314,7 @@ namespace FANTASY4YOU
             }
         }
 
-
+        //Has NunitTest
         public bool CheckCharacterNameExistForUser(string characterName,int id)
         {
             string query = "SELECT COUNT(*) FROM characters WHERE characterName='" + characterName + "' AND id='" + id + "'";
@@ -338,7 +328,7 @@ namespace FANTASY4YOU
                     chk = true;
 
                 }
-                else
+                else if (result == 0)
                 {
                     chk = false;
 
@@ -357,6 +347,7 @@ namespace FANTASY4YOU
         /// <summary>
         /// Example for Inserting Values into the DB
         /// </summary>
+        //A tester to be removed
         public void Insert()
         {
             string query = "INSERT INTO people (firstName, lastName) VALUES('Egg', 'Benedict')";
