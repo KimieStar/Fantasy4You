@@ -5,18 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using LOGIC;
-using MAIN_INTERFACE;
-using WELCOME;
-using REGISTER;
-using LOGINSETTINGS;
+using FANTASY4YOU;
 
-namespace Fantasy4You
+namespace FANTASY4YOU
 {
     public partial class Login : Form
 
 
     {
         Logic logic = new Logic();
+        // LoginSettings LoginSettings = new LoginSettings();
         LoginSettings LoginSettings = new LoginSettings();
         Thread WelcomeScreen;
         Thread Register;
@@ -66,7 +64,7 @@ namespace Fantasy4You
             LoggingInLabel.BackColor = Color.FromArgb(125, Color.Black);
             LoginButton.BackColor = Color.FromArgb(125, Color.Black);
             LoginButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(125, Color.Black);
-
+            
 
         }
 
@@ -183,32 +181,14 @@ namespace Fantasy4You
             //loginsettings = new Thread(OpenLoginSettings);
             //loginsettings.SetApartmentState(ApartmentState.STA);
             //loginsettings.Start();
+            
             LoginSettings.ShowDialog();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void LoggingInLabel_Click(object sender, EventArgs e)
-        {
             
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void LoginButton_MouseClick(object sender, MouseEventArgs e)
-        {
-            
         }
 
 

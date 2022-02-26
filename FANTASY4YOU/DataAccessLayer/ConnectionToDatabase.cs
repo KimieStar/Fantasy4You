@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using FANTASY4YOU;
 
-namespace DAL
+namespace FANTASY4YOU
 {
     public class ConnectionToDatabase
     {

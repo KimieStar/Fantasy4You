@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using FANTASY4YOU;
 
 
-namespace LOGIC
+namespace FANTASY4YOU
     
 {
     public class Logic

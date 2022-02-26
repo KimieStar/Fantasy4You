@@ -1,4 +1,5 @@
-﻿namespace Fantasy4You
+﻿using FANTASY4YOU;
+namespace FANTASY4YOU
 {
     partial class Login
     {
@@ -105,7 +106,6 @@
             this.label4.Size = new System.Drawing.Size(99, 27);
             this.label4.TabIndex = 6;
             this.label4.Text = "Password";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // PasswordTextbox
             // 
@@ -166,7 +166,6 @@
             this.LoggingInLabel.TabIndex = 12;
             this.LoggingInLabel.Text = "Please Wait...";
             this.LoggingInLabel.Visible = false;
-            this.LoggingInLabel.Click += new System.EventHandler(this.LoggingInLabel_Click);
             // 
             // checkBox1
             // 
@@ -247,14 +246,13 @@
             this.LoginButton.TextColor = System.Drawing.Color.White;
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            this.LoginButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LoginButton_MouseClick);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::LOGIN.Properties.Resources.starter1;
+            this.BackgroundImage = global::FANTASY4YOU.Properties.Resources.starter1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(727, 430);
             this.Controls.Add(this.LoginButton);

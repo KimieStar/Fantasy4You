@@ -20,13 +20,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LOGIC\LOGIC.csproj" />
-    <ProjectReference Include="..\LOGINSETTINGS\LOGINSETTINGS.csproj" />
-    <ProjectReference Include="..\MAIN_INTERFACE\MAIN_INTERFACE.csproj" />
-    <ProjectReference Include="..\REGISTER\REGISTER.csproj" />
-    <ProjectReference Include="..\WELCOME\WELCOME.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PresentationLayer\CharacterDisplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\Characters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\CharactersRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\LoginSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\MainInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -36,6 +47,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="PresentationLayer\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PresentationLayer\WelcomeScreen.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 

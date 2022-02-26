@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using LOGIC;
-using CHARACTERS_REGISTRATION;
-using Timer = System.Windows.Forms.Timer;
+using FANTASY4YOU;
 
-namespace CHARACTER
+namespace FANTASY4YOU
 {
     public partial class Characters : Form
     {

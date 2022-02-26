@@ -1,4 +1,5 @@
-﻿namespace CHARACTER
+﻿using FANTASY4YOU;
+namespace FANTASY4YOU
 {
     partial class Characters
     {
