@@ -96,6 +96,16 @@ namespace NUNIT_TESTS
         }
 
         [Test]
+        public void SelectCharacterInformation3()
+        {
+            username = "Tester";
+            characterNumber = 1;
+            List<string>[] list = connection.SelectCharacterInformation2(username, characterNumber);
+            string result = string.Join("", list[0].ToArray());
+            Assert.AreEqual(result, "0");
+        }
+
+        [Test]
         public void CheckCharacterNameExistForUser()
         {
             characterName = "Tester";

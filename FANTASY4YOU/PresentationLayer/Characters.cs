@@ -12,7 +12,13 @@ namespace FANTASY4YOU
     {
         Logic logic = new Logic();
         CharacterRegistration chr = new CharacterRegistration();
+        CharacterCustomizationChar1 customization1 = new CharacterCustomizationChar1();
+        CharacterCustomizationChar2 customization2 = new CharacterCustomizationChar2();
+        CharacterCustomizationChar3 customization3 = new CharacterCustomizationChar3();
+        CharacterCustomizationChar4 customization4 = new CharacterCustomizationChar4();
+        CharacterCustomizationChar5 customization5 = new CharacterCustomizationChar5();
         Thread registerCharacter;
+        //public int characterNumberSelectedToCustomize;
         public Characters()
         {
             InitializeComponent();
@@ -196,6 +202,31 @@ namespace FANTASY4YOU
         private void CharacterPannel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void CharacterCustomizationButton1_Click(object sender, EventArgs e)
+        {
+            customization1.ShowDialog();
+        }
+
+        private void CharacterCustomizationButton2_Click(object sender, EventArgs e)
+        {
+            customization2.ShowDialog();
+        }
+
+        private void CharacterCustomizationButton3_Click(object sender, EventArgs e)
+        {
+            customization3.ShowDialog();
+        }
+
+        private void CharacterCustomizationButton4_Click(object sender, EventArgs e)
+        {
+            customization4.ShowDialog();
+        }
+
+        private void CharacterCustomizationButton5_Click(object sender, EventArgs e)
+        {
+            customization5.ShowDialog();
         }
     }
 }

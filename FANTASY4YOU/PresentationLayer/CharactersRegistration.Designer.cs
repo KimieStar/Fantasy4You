@@ -165,6 +165,7 @@ namespace FANTASY4YOU
             this.label7.Size = new System.Drawing.Size(63, 15);
             this.label7.TabIndex = 13;
             this.label7.Text = "Alignment";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // alignmentComboBox
             // 
@@ -189,7 +190,7 @@ namespace FANTASY4YOU
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CharactersRegistration
+            // CharacterRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -209,7 +210,7 @@ namespace FANTASY4YOU
             this.Controls.Add(this.levelBox);
             this.Controls.Add(this.classComboBox);
             this.Controls.Add(this.characterNameTextBox);
-            this.Name = "CharactersRegistration";
+            this.Name = "CharacterRegistration";
             this.Text = "CharactersRegistration";
             this.Load += new System.EventHandler(this.CharactersRegistration_Load);
             this.ResumeLayout(false);

@@ -18,4 +18,10 @@
     <ProjectReference Include="..\FANTASY4YOU\FANTASY4YOU.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="CharactersRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

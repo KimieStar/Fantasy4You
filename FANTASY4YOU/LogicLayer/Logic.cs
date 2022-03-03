@@ -55,6 +55,42 @@ namespace FANTASY4YOU
             connection.InsertCharacterDetails(username, characterName, classs, level, race, backgroundStory, xpPoints, alignment, characterNumber);
         }
 
+        public void UpdateCharacterDetails(int chNumber, int strenght, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        {
+            int id = SelectUserId();
+            connection.UpdateCharacterDetails(chNumber, id, strenght, dexterity, constitution, intelligence, wisdom, charisma);
+        }
+
+        public void InsertCharacterDetails2(string characterName, string classs, int level, string race, string backgroundStory, int xpPoints, string alignment)
+        {
+            int numberOfCharacter = NumberOfCharactersCreated();
+            int characterNumber = 0;
+            switch (numberOfCharacter)
+            {
+                case 0:
+                    characterNumber = 1;
+                    break;
+                case 1:
+                    characterNumber = 2;
+                    break;
+                case 2:
+                    characterNumber = 3;
+                    break;
+                case 3:
+                    characterNumber = 4;
+                    break;
+                case 4:
+                    characterNumber = 5;
+                    break;
+                    //case 5:
+                    //    characterNumber = 5;
+                    //    break;
+            }
+
+            string username = ReadUsernameFromUsernameFile();
+            connection.InsertCharacterDetails(username, characterName, classs, level, race, backgroundStory, xpPoints, alignment, characterNumber);
+        }
+
         //Cannot be tested
         public void SavePassword(string password)
         {
@@ -75,6 +111,13 @@ namespace FANTASY4YOU
         {
             string username = ReadUsernameFromUsernameFile();
             List<string>[] list = connection.SelectCharacterInformation(username,characterNumber);
+            return list;
+        }
+
+        public List<string>[] SelectCharacterInformation2(int characterNumber)
+        {
+            string username = ReadUsernameFromUsernameFile();
+            List<string>[] list = connection.SelectCharacterInformation2(username, characterNumber);
             return list;
         }
 

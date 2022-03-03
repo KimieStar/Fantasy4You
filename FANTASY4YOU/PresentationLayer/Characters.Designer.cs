@@ -33,6 +33,7 @@ namespace FANTASY4YOU
             this.CharactersNumbers = new System.Windows.Forms.Label();
             this.CreateCharacterButton = new System.Windows.Forms.Button();
             this.CharacterPannel1 = new System.Windows.Forms.Panel();
+            this.CharacterCustomizationButton1 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterNameNameLabel1 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannel2 = new System.Windows.Forms.Panel();
+            this.CharacterCustomizationButton2 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel2 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel2 = new System.Windows.Forms.Label();
             this.CharacterNameNameLabel2 = new System.Windows.Forms.Label();
@@ -68,6 +70,9 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel5 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel5 = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.CharacterCustomizationButton3 = new System.Windows.Forms.Button();
+            this.CharacterCustomizationButton4 = new System.Windows.Forms.Button();
+            this.CharacterCustomizationButton5 = new System.Windows.Forms.Button();
             this.CharacterPannel1.SuspendLayout();
             this.CharacterPannel2.SuspendLayout();
             this.CharacterPannel3.SuspendLayout();
@@ -111,6 +116,7 @@ namespace FANTASY4YOU
             // CharacterPannel1
             // 
             this.CharacterPannel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel1.Controls.Add(this.CharacterCustomizationButton1);
             this.CharacterPannel1.Controls.Add(this.CharacterRacePannelLabel1);
             this.CharacterPannel1.Controls.Add(this.CharacterLevelPannelLabel1);
             this.CharacterPannel1.Controls.Add(this.CharacterNameNameLabel1);
@@ -122,6 +128,16 @@ namespace FANTASY4YOU
             this.CharacterPannel1.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel1.TabIndex = 3;
             this.CharacterPannel1.Paint += new System.Windows.Forms.PaintEventHandler(this.CharacterPannel1_Paint);
+            // 
+            // CharacterCustomizationButton1
+            // 
+            this.CharacterCustomizationButton1.Location = new System.Drawing.Point(166, 3);
+            this.CharacterCustomizationButton1.Name = "CharacterCustomizationButton1";
+            this.CharacterCustomizationButton1.Size = new System.Drawing.Size(31, 23);
+            this.CharacterCustomizationButton1.TabIndex = 6;
+            this.CharacterCustomizationButton1.Text = "...";
+            this.CharacterCustomizationButton1.UseVisualStyleBackColor = true;
+            this.CharacterCustomizationButton1.Click += new System.EventHandler(this.CharacterCustomizationButton1_Click);
             // 
             // CharacterRacePannelLabel1
             // 
@@ -186,6 +202,7 @@ namespace FANTASY4YOU
             // CharacterPannel2
             // 
             this.CharacterPannel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel2.Controls.Add(this.CharacterCustomizationButton2);
             this.CharacterPannel2.Controls.Add(this.CharacterRacePannelLabel2);
             this.CharacterPannel2.Controls.Add(this.CharacterLevelPannelLabel2);
             this.CharacterPannel2.Controls.Add(this.CharacterNameNameLabel2);
@@ -196,6 +213,16 @@ namespace FANTASY4YOU
             this.CharacterPannel2.Name = "CharacterPannel2";
             this.CharacterPannel2.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel2.TabIndex = 4;
+            // 
+            // CharacterCustomizationButton2
+            // 
+            this.CharacterCustomizationButton2.Location = new System.Drawing.Point(166, 3);
+            this.CharacterCustomizationButton2.Name = "CharacterCustomizationButton2";
+            this.CharacterCustomizationButton2.Size = new System.Drawing.Size(31, 23);
+            this.CharacterCustomizationButton2.TabIndex = 8;
+            this.CharacterCustomizationButton2.Text = "...";
+            this.CharacterCustomizationButton2.UseVisualStyleBackColor = true;
+            this.CharacterCustomizationButton2.Click += new System.EventHandler(this.CharacterCustomizationButton2_Click);
             // 
             // CharacterRacePannelLabel2
             // 
@@ -260,6 +287,7 @@ namespace FANTASY4YOU
             // CharacterPannel3
             // 
             this.CharacterPannel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel3.Controls.Add(this.CharacterCustomizationButton3);
             this.CharacterPannel3.Controls.Add(this.CharacterRacePannelLabel3);
             this.CharacterPannel3.Controls.Add(this.CharacterLevelPannelLabel3);
             this.CharacterPannel3.Controls.Add(this.CharacterNameNameLabel3);
@@ -334,6 +362,7 @@ namespace FANTASY4YOU
             // CharacterPannel4
             // 
             this.CharacterPannel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel4.Controls.Add(this.CharacterCustomizationButton4);
             this.CharacterPannel4.Controls.Add(this.CharacterRacePannelLabel4);
             this.CharacterPannel4.Controls.Add(this.CharacterLevelPannelLabel4);
             this.CharacterPannel4.Controls.Add(this.CharacterNameNameLabel4);
@@ -408,6 +437,7 @@ namespace FANTASY4YOU
             // CharacterPannel5
             // 
             this.CharacterPannel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel5.Controls.Add(this.CharacterCustomizationButton5);
             this.CharacterPannel5.Controls.Add(this.CharacterRacePannelLabel5);
             this.CharacterPannel5.Controls.Add(this.CharacterLevelPannelLabel5);
             this.CharacterPannel5.Controls.Add(this.CharacterNameNameLabel5);
@@ -489,6 +519,36 @@ namespace FANTASY4YOU
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
+            // CharacterCustomizationButton3
+            // 
+            this.CharacterCustomizationButton3.Location = new System.Drawing.Point(166, 3);
+            this.CharacterCustomizationButton3.Name = "CharacterCustomizationButton3";
+            this.CharacterCustomizationButton3.Size = new System.Drawing.Size(31, 23);
+            this.CharacterCustomizationButton3.TabIndex = 10;
+            this.CharacterCustomizationButton3.Text = "...";
+            this.CharacterCustomizationButton3.UseVisualStyleBackColor = true;
+            this.CharacterCustomizationButton3.Click += new System.EventHandler(this.CharacterCustomizationButton3_Click);
+            // 
+            // CharacterCustomizationButton4
+            // 
+            this.CharacterCustomizationButton4.Location = new System.Drawing.Point(166, 3);
+            this.CharacterCustomizationButton4.Name = "CharacterCustomizationButton4";
+            this.CharacterCustomizationButton4.Size = new System.Drawing.Size(31, 23);
+            this.CharacterCustomizationButton4.TabIndex = 10;
+            this.CharacterCustomizationButton4.Text = "...";
+            this.CharacterCustomizationButton4.UseVisualStyleBackColor = true;
+            this.CharacterCustomizationButton4.Click += new System.EventHandler(this.CharacterCustomizationButton4_Click);
+            // 
+            // CharacterCustomizationButton5
+            // 
+            this.CharacterCustomizationButton5.Location = new System.Drawing.Point(166, 3);
+            this.CharacterCustomizationButton5.Name = "CharacterCustomizationButton5";
+            this.CharacterCustomizationButton5.Size = new System.Drawing.Size(31, 23);
+            this.CharacterCustomizationButton5.TabIndex = 10;
+            this.CharacterCustomizationButton5.Text = "...";
+            this.CharacterCustomizationButton5.UseVisualStyleBackColor = true;
+            this.CharacterCustomizationButton5.Click += new System.EventHandler(this.CharacterCustomizationButton5_Click);
+            // 
             // Characters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -562,5 +622,10 @@ namespace FANTASY4YOU
         private Label CharacterNameNameLabel5;
         private Label CharacterRaceRaceLabel5;
         private Label CharacterLevelLevelLabel5;
+        private Button CharacterCustomizationButton1;
+        private Button CharacterCustomizationButton2;
+        private Button CharacterCustomizationButton3;
+        private Button CharacterCustomizationButton4;
+        private Button CharacterCustomizationButton5;
     }
 }

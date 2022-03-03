@@ -160,6 +160,7 @@ namespace FANTASY4YOU
             // 
             this.LoggingInLabel.AutoSize = true;
             this.LoggingInLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LoggingInLabel.ForeColor = System.Drawing.Color.SandyBrown;
             this.LoggingInLabel.Location = new System.Drawing.Point(304, 336);
             this.LoggingInLabel.Name = "LoggingInLabel";
             this.LoggingInLabel.Size = new System.Drawing.Size(76, 15);

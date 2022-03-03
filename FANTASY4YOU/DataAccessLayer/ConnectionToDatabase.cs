@@ -272,6 +272,18 @@ namespace FANTASY4YOU
         
         }
 
+        public void UpdateCharacterDetails(int chNum,int id, int strenght, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        {
+            string query = "UPDATE characters SET strenght = '"+ strenght + "', dexterity = '" + dexterity + "', constitution = '" + constitution + "', intelligence = '" + intelligence + "', wisdom = '" + wisdom + "', charisma= '" + charisma + "' WHERE characterNumber='" + chNum +"' AND id='"+ id +"'";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+
+        }
+
         //Has NunitTest
         public List<string>[] SelectCharacterInformation(string username,int characterNumber)
         {
@@ -301,6 +313,46 @@ namespace FANTASY4YOU
                     list[4].Add(dataReader["backgroundStory"] + "");
                     list[5].Add(dataReader["experiencePoints"] + "");
                     list[6].Add(dataReader["alignment"] + "");
+                }
+
+                dataReader.Close();
+                this.CloseConnection();
+                return list;
+                //string list1 = list[1].ToString();
+            }
+            else
+            {
+                return list;
+            }
+        }
+
+        public List<string>[] SelectCharacterInformation2(string username, int characterNumber)
+        {
+            int id = SelectUserIdFromDB(username);
+            string query = "SELECT * FROM characters WHERE id='" + id + "'AND characterNumber='" + characterNumber + "'";
+
+            List<string>[] list = new List<string>[7];
+            list[0] = new List<string>();
+            list[1] = new List<string>();
+            list[2] = new List<string>();
+            list[3] = new List<string>();
+            list[4] = new List<string>();
+            list[5] = new List<string>();
+            list[6] = new List<string>();
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["strenght"] + "");
+                    list[1].Add(dataReader["dexterity"] + "");
+                    list[2].Add(dataReader["constitution"] + "");
+                    list[3].Add(dataReader["intelligence"] + "");
+                    list[4].Add(dataReader["wisdom"] + "");
+                    list[5].Add(dataReader["charisma"] + "");
                 }
 
                 dataReader.Close();
