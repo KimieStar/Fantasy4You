@@ -32,6 +32,7 @@ namespace FANTASY4YOU
             CharacterPannel4.BackColor = Color.FromArgb(125, Color.Black);
             CharacterPannel5.BackColor = Color.FromArgb(125, Color.Black);
             
+            //Character Name Label
             List<string>[] list = logic.SelectCharacterInformation(1);
             CharacterPannelLabel1.Text = string.Join("", list[0].ToArray());
             List<string>[] list2 = logic.SelectCharacterInformation(2);
@@ -42,6 +43,33 @@ namespace FANTASY4YOU
             CharacterPannelLabel4.Text = string.Join("", list4[0].ToArray());
             List<string>[] list5 = logic.SelectCharacterInformation(5);
             CharacterPannelLabel5.Text = string.Join("", list5[0].ToArray());
+
+
+            //Character Level Label
+            List<string>[] list6 = logic.SelectCharacterInformation(1);
+            CharacterLevelPannelLabel1.Text = String.Join("", list6[2].ToArray());
+            List<string>[] list7 = logic.SelectCharacterInformation(2);
+            CharacterLevelPannelLabel2.Text = String.Join("", list7[2].ToArray());
+            List<string>[] list8 = logic.SelectCharacterInformation(3);
+            CharacterLevelPannelLabel3.Text = String.Join("", list8[2].ToArray());
+            List<string>[] list9 = logic.SelectCharacterInformation(4);
+            CharacterLevelPannelLabel4.Text = String.Join("", list9[2].ToArray());
+            List<string>[] list10 = logic.SelectCharacterInformation(5);
+            CharacterLevelPannelLabel5.Text = String.Join("", list10[2].ToArray());
+
+            //Character Race Label
+            List<string>[] list11 = logic.SelectCharacterInformation(1);
+            CharacterRacePannelLabel1.Text = String.Join("", list11[3].ToArray());
+            List<string>[] list12 = logic.SelectCharacterInformation(2);
+            CharacterRacePannelLabel2.Text = String.Join("", list12[3].ToArray());
+            List<string>[] list13 = logic.SelectCharacterInformation(3);
+            CharacterRacePannelLabel3.Text = String.Join("", list13[3].ToArray());
+            List<string>[] list14 = logic.SelectCharacterInformation(4);
+            CharacterRacePannelLabel4.Text = String.Join("", list14[3].ToArray());
+            List<string>[] list15 = logic.SelectCharacterInformation(5);
+            CharacterRacePannelLabel5.Text = String.Join("", list15[3].ToArray());
+
+
 
             switch (numberOfCharecters1)
             {

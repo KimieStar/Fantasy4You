@@ -33,14 +33,39 @@ namespace FANTASY4YOU
             this.CharactersNumbers = new System.Windows.Forms.Label();
             this.CreateCharacterButton = new System.Windows.Forms.Button();
             this.CharacterPannel1 = new System.Windows.Forms.Panel();
+            this.CharacterRacePannelLabel1 = new System.Windows.Forms.Label();
+            this.CharacterLevelPannelLabel1 = new System.Windows.Forms.Label();
+            this.CharacterNameNameLabel1 = new System.Windows.Forms.Label();
+            this.CharacterRaceRaceLabel1 = new System.Windows.Forms.Label();
+            this.CharacterLevelLevelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannel2 = new System.Windows.Forms.Panel();
+            this.CharacterRacePannelLabel2 = new System.Windows.Forms.Label();
+            this.CharacterLevelPannelLabel2 = new System.Windows.Forms.Label();
+            this.CharacterNameNameLabel2 = new System.Windows.Forms.Label();
+            this.CharacterRaceRaceLabel2 = new System.Windows.Forms.Label();
+            this.CharacterLevelLevelLabel2 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel2 = new System.Windows.Forms.Label();
             this.CharacterPannel3 = new System.Windows.Forms.Panel();
+            this.CharacterRacePannelLabel3 = new System.Windows.Forms.Label();
+            this.CharacterLevelPannelLabel3 = new System.Windows.Forms.Label();
+            this.CharacterNameNameLabel3 = new System.Windows.Forms.Label();
+            this.CharacterRaceRaceLabel3 = new System.Windows.Forms.Label();
+            this.CharacterLevelLevelLabel3 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel3 = new System.Windows.Forms.Label();
             this.CharacterPannel4 = new System.Windows.Forms.Panel();
+            this.CharacterRacePannelLabel4 = new System.Windows.Forms.Label();
+            this.CharacterLevelPannelLabel4 = new System.Windows.Forms.Label();
+            this.CharacterNameNameLabel4 = new System.Windows.Forms.Label();
+            this.CharacterRaceRaceLabel4 = new System.Windows.Forms.Label();
+            this.CharacterLevelLevelLabel4 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel4 = new System.Windows.Forms.Label();
             this.CharacterPannel5 = new System.Windows.Forms.Panel();
+            this.CharacterRacePannelLabel5 = new System.Windows.Forms.Label();
+            this.CharacterLevelPannelLabel5 = new System.Windows.Forms.Label();
+            this.CharacterNameNameLabel5 = new System.Windows.Forms.Label();
+            this.CharacterRaceRaceLabel5 = new System.Windows.Forms.Label();
+            this.CharacterLevelLevelLabel5 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel5 = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.Button();
             this.CharacterPannel1.SuspendLayout();
@@ -86,6 +111,11 @@ namespace FANTASY4YOU
             // CharacterPannel1
             // 
             this.CharacterPannel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel1.Controls.Add(this.CharacterRacePannelLabel1);
+            this.CharacterPannel1.Controls.Add(this.CharacterLevelPannelLabel1);
+            this.CharacterPannel1.Controls.Add(this.CharacterNameNameLabel1);
+            this.CharacterPannel1.Controls.Add(this.CharacterRaceRaceLabel1);
+            this.CharacterPannel1.Controls.Add(this.CharacterLevelLevelLabel1);
             this.CharacterPannel1.Controls.Add(this.CharacterPannelLabel1);
             this.CharacterPannel1.Location = new System.Drawing.Point(12, 115);
             this.CharacterPannel1.Name = "CharacterPannel1";
@@ -93,11 +123,61 @@ namespace FANTASY4YOU
             this.CharacterPannel1.TabIndex = 3;
             this.CharacterPannel1.Paint += new System.Windows.Forms.PaintEventHandler(this.CharacterPannel1_Paint);
             // 
+            // CharacterRacePannelLabel1
+            // 
+            this.CharacterRacePannelLabel1.AutoSize = true;
+            this.CharacterRacePannelLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRacePannelLabel1.Location = new System.Drawing.Point(54, 58);
+            this.CharacterRacePannelLabel1.Name = "CharacterRacePannelLabel1";
+            this.CharacterRacePannelLabel1.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRacePannelLabel1.TabIndex = 5;
+            this.CharacterRacePannelLabel1.Text = "label1";
+            // 
+            // CharacterLevelPannelLabel1
+            // 
+            this.CharacterLevelPannelLabel1.AutoSize = true;
+            this.CharacterLevelPannelLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelPannelLabel1.Location = new System.Drawing.Point(54, 32);
+            this.CharacterLevelPannelLabel1.Name = "CharacterLevelPannelLabel1";
+            this.CharacterLevelPannelLabel1.Size = new System.Drawing.Size(38, 15);
+            this.CharacterLevelPannelLabel1.TabIndex = 4;
+            this.CharacterLevelPannelLabel1.Text = "label1";
+            // 
+            // CharacterNameNameLabel1
+            // 
+            this.CharacterNameNameLabel1.AutoSize = true;
+            this.CharacterNameNameLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameNameLabel1.Location = new System.Drawing.Point(3, 7);
+            this.CharacterNameNameLabel1.Name = "CharacterNameNameLabel1";
+            this.CharacterNameNameLabel1.Size = new System.Drawing.Size(45, 15);
+            this.CharacterNameNameLabel1.TabIndex = 3;
+            this.CharacterNameNameLabel1.Text = "Name :";
+            // 
+            // CharacterRaceRaceLabel1
+            // 
+            this.CharacterRaceRaceLabel1.AutoSize = true;
+            this.CharacterRaceRaceLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceRaceLabel1.Location = new System.Drawing.Point(4, 58);
+            this.CharacterRaceRaceLabel1.Name = "CharacterRaceRaceLabel1";
+            this.CharacterRaceRaceLabel1.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRaceRaceLabel1.TabIndex = 2;
+            this.CharacterRaceRaceLabel1.Text = "Race :";
+            // 
+            // CharacterLevelLevelLabel1
+            // 
+            this.CharacterLevelLevelLabel1.AutoSize = true;
+            this.CharacterLevelLevelLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLevelLabel1.Location = new System.Drawing.Point(4, 32);
+            this.CharacterLevelLevelLabel1.Name = "CharacterLevelLevelLabel1";
+            this.CharacterLevelLevelLabel1.Size = new System.Drawing.Size(40, 15);
+            this.CharacterLevelLevelLabel1.TabIndex = 1;
+            this.CharacterLevelLevelLabel1.Text = "Level :";
+            // 
             // CharacterPannelLabel1
             // 
             this.CharacterPannelLabel1.AutoSize = true;
             this.CharacterPannelLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.CharacterPannelLabel1.Location = new System.Drawing.Point(4, 7);
+            this.CharacterPannelLabel1.Location = new System.Drawing.Point(54, 7);
             this.CharacterPannelLabel1.Name = "CharacterPannelLabel1";
             this.CharacterPannelLabel1.Size = new System.Drawing.Size(38, 15);
             this.CharacterPannelLabel1.TabIndex = 0;
@@ -105,16 +185,73 @@ namespace FANTASY4YOU
             // 
             // CharacterPannel2
             // 
+            this.CharacterPannel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel2.Controls.Add(this.CharacterRacePannelLabel2);
+            this.CharacterPannel2.Controls.Add(this.CharacterLevelPannelLabel2);
+            this.CharacterPannel2.Controls.Add(this.CharacterNameNameLabel2);
+            this.CharacterPannel2.Controls.Add(this.CharacterRaceRaceLabel2);
+            this.CharacterPannel2.Controls.Add(this.CharacterLevelLevelLabel2);
             this.CharacterPannel2.Controls.Add(this.CharacterPannelLabel2);
             this.CharacterPannel2.Location = new System.Drawing.Point(281, 115);
             this.CharacterPannel2.Name = "CharacterPannel2";
             this.CharacterPannel2.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel2.TabIndex = 4;
             // 
+            // CharacterRacePannelLabel2
+            // 
+            this.CharacterRacePannelLabel2.AutoSize = true;
+            this.CharacterRacePannelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRacePannelLabel2.Location = new System.Drawing.Point(39, 58);
+            this.CharacterRacePannelLabel2.Name = "CharacterRacePannelLabel2";
+            this.CharacterRacePannelLabel2.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRacePannelLabel2.TabIndex = 7;
+            this.CharacterRacePannelLabel2.Text = "label1";
+            // 
+            // CharacterLevelPannelLabel2
+            // 
+            this.CharacterLevelPannelLabel2.AutoSize = true;
+            this.CharacterLevelPannelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelPannelLabel2.Location = new System.Drawing.Point(39, 32);
+            this.CharacterLevelPannelLabel2.Name = "CharacterLevelPannelLabel2";
+            this.CharacterLevelPannelLabel2.Size = new System.Drawing.Size(38, 15);
+            this.CharacterLevelPannelLabel2.TabIndex = 6;
+            this.CharacterLevelPannelLabel2.Text = "label1";
+            // 
+            // CharacterNameNameLabel2
+            // 
+            this.CharacterNameNameLabel2.AutoSize = true;
+            this.CharacterNameNameLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameNameLabel2.Location = new System.Drawing.Point(-3, 7);
+            this.CharacterNameNameLabel2.Name = "CharacterNameNameLabel2";
+            this.CharacterNameNameLabel2.Size = new System.Drawing.Size(45, 15);
+            this.CharacterNameNameLabel2.TabIndex = 4;
+            this.CharacterNameNameLabel2.Text = "Name :";
+            // 
+            // CharacterRaceRaceLabel2
+            // 
+            this.CharacterRaceRaceLabel2.AutoSize = true;
+            this.CharacterRaceRaceLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceRaceLabel2.Location = new System.Drawing.Point(-2, 58);
+            this.CharacterRaceRaceLabel2.Name = "CharacterRaceRaceLabel2";
+            this.CharacterRaceRaceLabel2.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRaceRaceLabel2.TabIndex = 3;
+            this.CharacterRaceRaceLabel2.Text = "Race :";
+            // 
+            // CharacterLevelLevelLabel2
+            // 
+            this.CharacterLevelLevelLabel2.AutoSize = true;
+            this.CharacterLevelLevelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLevelLabel2.Location = new System.Drawing.Point(-2, 32);
+            this.CharacterLevelLevelLabel2.Name = "CharacterLevelLevelLabel2";
+            this.CharacterLevelLevelLabel2.Size = new System.Drawing.Size(40, 15);
+            this.CharacterLevelLevelLabel2.TabIndex = 2;
+            this.CharacterLevelLevelLabel2.Text = "Level :";
+            // 
             // CharacterPannelLabel2
             // 
             this.CharacterPannelLabel2.AutoSize = true;
-            this.CharacterPannelLabel2.Location = new System.Drawing.Point(4, 7);
+            this.CharacterPannelLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterPannelLabel2.Location = new System.Drawing.Point(39, 7);
             this.CharacterPannelLabel2.Name = "CharacterPannelLabel2";
             this.CharacterPannelLabel2.Size = new System.Drawing.Size(38, 15);
             this.CharacterPannelLabel2.TabIndex = 0;
@@ -122,16 +259,73 @@ namespace FANTASY4YOU
             // 
             // CharacterPannel3
             // 
+            this.CharacterPannel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel3.Controls.Add(this.CharacterRacePannelLabel3);
+            this.CharacterPannel3.Controls.Add(this.CharacterLevelPannelLabel3);
+            this.CharacterPannel3.Controls.Add(this.CharacterNameNameLabel3);
+            this.CharacterPannel3.Controls.Add(this.CharacterRaceRaceLabel3);
+            this.CharacterPannel3.Controls.Add(this.CharacterLevelLevelLabel3);
             this.CharacterPannel3.Controls.Add(this.CharacterPannelLabel3);
             this.CharacterPannel3.Location = new System.Drawing.Point(557, 115);
             this.CharacterPannel3.Name = "CharacterPannel3";
             this.CharacterPannel3.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel3.TabIndex = 4;
             // 
+            // CharacterRacePannelLabel3
+            // 
+            this.CharacterRacePannelLabel3.AutoSize = true;
+            this.CharacterRacePannelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRacePannelLabel3.Location = new System.Drawing.Point(50, 58);
+            this.CharacterRacePannelLabel3.Name = "CharacterRacePannelLabel3";
+            this.CharacterRacePannelLabel3.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRacePannelLabel3.TabIndex = 9;
+            this.CharacterRacePannelLabel3.Text = "label1";
+            // 
+            // CharacterLevelPannelLabel3
+            // 
+            this.CharacterLevelPannelLabel3.AutoSize = true;
+            this.CharacterLevelPannelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelPannelLabel3.Location = new System.Drawing.Point(50, 32);
+            this.CharacterLevelPannelLabel3.Name = "CharacterLevelPannelLabel3";
+            this.CharacterLevelPannelLabel3.Size = new System.Drawing.Size(38, 15);
+            this.CharacterLevelPannelLabel3.TabIndex = 8;
+            this.CharacterLevelPannelLabel3.Text = "label1";
+            // 
+            // CharacterNameNameLabel3
+            // 
+            this.CharacterNameNameLabel3.AutoSize = true;
+            this.CharacterNameNameLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameNameLabel3.Location = new System.Drawing.Point(-1, 7);
+            this.CharacterNameNameLabel3.Name = "CharacterNameNameLabel3";
+            this.CharacterNameNameLabel3.Size = new System.Drawing.Size(45, 15);
+            this.CharacterNameNameLabel3.TabIndex = 7;
+            this.CharacterNameNameLabel3.Text = "Name :";
+            // 
+            // CharacterRaceRaceLabel3
+            // 
+            this.CharacterRaceRaceLabel3.AutoSize = true;
+            this.CharacterRaceRaceLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceRaceLabel3.Location = new System.Drawing.Point(0, 58);
+            this.CharacterRaceRaceLabel3.Name = "CharacterRaceRaceLabel3";
+            this.CharacterRaceRaceLabel3.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRaceRaceLabel3.TabIndex = 6;
+            this.CharacterRaceRaceLabel3.Text = "Race :";
+            // 
+            // CharacterLevelLevelLabel3
+            // 
+            this.CharacterLevelLevelLabel3.AutoSize = true;
+            this.CharacterLevelLevelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLevelLabel3.Location = new System.Drawing.Point(0, 32);
+            this.CharacterLevelLevelLabel3.Name = "CharacterLevelLevelLabel3";
+            this.CharacterLevelLevelLabel3.Size = new System.Drawing.Size(40, 15);
+            this.CharacterLevelLevelLabel3.TabIndex = 5;
+            this.CharacterLevelLevelLabel3.Text = "Level :";
+            // 
             // CharacterPannelLabel3
             // 
             this.CharacterPannelLabel3.AutoSize = true;
-            this.CharacterPannelLabel3.Location = new System.Drawing.Point(4, 7);
+            this.CharacterPannelLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterPannelLabel3.Location = new System.Drawing.Point(50, 7);
             this.CharacterPannelLabel3.Name = "CharacterPannelLabel3";
             this.CharacterPannelLabel3.Size = new System.Drawing.Size(38, 15);
             this.CharacterPannelLabel3.TabIndex = 0;
@@ -139,16 +333,73 @@ namespace FANTASY4YOU
             // 
             // CharacterPannel4
             // 
+            this.CharacterPannel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel4.Controls.Add(this.CharacterRacePannelLabel4);
+            this.CharacterPannel4.Controls.Add(this.CharacterLevelPannelLabel4);
+            this.CharacterPannel4.Controls.Add(this.CharacterNameNameLabel4);
+            this.CharacterPannel4.Controls.Add(this.CharacterRaceRaceLabel4);
+            this.CharacterPannel4.Controls.Add(this.CharacterLevelLevelLabel4);
             this.CharacterPannel4.Controls.Add(this.CharacterPannelLabel4);
             this.CharacterPannel4.Location = new System.Drawing.Point(12, 302);
             this.CharacterPannel4.Name = "CharacterPannel4";
             this.CharacterPannel4.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel4.TabIndex = 4;
             // 
+            // CharacterRacePannelLabel4
+            // 
+            this.CharacterRacePannelLabel4.AutoSize = true;
+            this.CharacterRacePannelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRacePannelLabel4.Location = new System.Drawing.Point(50, 62);
+            this.CharacterRacePannelLabel4.Name = "CharacterRacePannelLabel4";
+            this.CharacterRacePannelLabel4.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRacePannelLabel4.TabIndex = 9;
+            this.CharacterRacePannelLabel4.Text = "label1";
+            // 
+            // CharacterLevelPannelLabel4
+            // 
+            this.CharacterLevelPannelLabel4.AutoSize = true;
+            this.CharacterLevelPannelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelPannelLabel4.Location = new System.Drawing.Point(50, 36);
+            this.CharacterLevelPannelLabel4.Name = "CharacterLevelPannelLabel4";
+            this.CharacterLevelPannelLabel4.Size = new System.Drawing.Size(38, 15);
+            this.CharacterLevelPannelLabel4.TabIndex = 8;
+            this.CharacterLevelPannelLabel4.Text = "label1";
+            // 
+            // CharacterNameNameLabel4
+            // 
+            this.CharacterNameNameLabel4.AutoSize = true;
+            this.CharacterNameNameLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameNameLabel4.Location = new System.Drawing.Point(-1, 11);
+            this.CharacterNameNameLabel4.Name = "CharacterNameNameLabel4";
+            this.CharacterNameNameLabel4.Size = new System.Drawing.Size(45, 15);
+            this.CharacterNameNameLabel4.TabIndex = 7;
+            this.CharacterNameNameLabel4.Text = "Name :";
+            // 
+            // CharacterRaceRaceLabel4
+            // 
+            this.CharacterRaceRaceLabel4.AutoSize = true;
+            this.CharacterRaceRaceLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceRaceLabel4.Location = new System.Drawing.Point(0, 62);
+            this.CharacterRaceRaceLabel4.Name = "CharacterRaceRaceLabel4";
+            this.CharacterRaceRaceLabel4.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRaceRaceLabel4.TabIndex = 6;
+            this.CharacterRaceRaceLabel4.Text = "Race :";
+            // 
+            // CharacterLevelLevelLabel4
+            // 
+            this.CharacterLevelLevelLabel4.AutoSize = true;
+            this.CharacterLevelLevelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLevelLabel4.Location = new System.Drawing.Point(0, 36);
+            this.CharacterLevelLevelLabel4.Name = "CharacterLevelLevelLabel4";
+            this.CharacterLevelLevelLabel4.Size = new System.Drawing.Size(40, 15);
+            this.CharacterLevelLevelLabel4.TabIndex = 5;
+            this.CharacterLevelLevelLabel4.Text = "Level :";
+            // 
             // CharacterPannelLabel4
             // 
             this.CharacterPannelLabel4.AutoSize = true;
-            this.CharacterPannelLabel4.Location = new System.Drawing.Point(4, 7);
+            this.CharacterPannelLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterPannelLabel4.Location = new System.Drawing.Point(50, 11);
             this.CharacterPannelLabel4.Name = "CharacterPannelLabel4";
             this.CharacterPannelLabel4.Size = new System.Drawing.Size(38, 15);
             this.CharacterPannelLabel4.TabIndex = 0;
@@ -156,16 +407,73 @@ namespace FANTASY4YOU
             // 
             // CharacterPannel5
             // 
+            this.CharacterPannel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel5.Controls.Add(this.CharacterRacePannelLabel5);
+            this.CharacterPannel5.Controls.Add(this.CharacterLevelPannelLabel5);
+            this.CharacterPannel5.Controls.Add(this.CharacterNameNameLabel5);
+            this.CharacterPannel5.Controls.Add(this.CharacterRaceRaceLabel5);
+            this.CharacterPannel5.Controls.Add(this.CharacterLevelLevelLabel5);
             this.CharacterPannel5.Controls.Add(this.CharacterPannelLabel5);
             this.CharacterPannel5.Location = new System.Drawing.Point(281, 302);
             this.CharacterPannel5.Name = "CharacterPannel5";
             this.CharacterPannel5.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel5.TabIndex = 4;
             // 
+            // CharacterRacePannelLabel5
+            // 
+            this.CharacterRacePannelLabel5.AutoSize = true;
+            this.CharacterRacePannelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRacePannelLabel5.Location = new System.Drawing.Point(50, 62);
+            this.CharacterRacePannelLabel5.Name = "CharacterRacePannelLabel5";
+            this.CharacterRacePannelLabel5.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRacePannelLabel5.TabIndex = 9;
+            this.CharacterRacePannelLabel5.Text = "label1";
+            // 
+            // CharacterLevelPannelLabel5
+            // 
+            this.CharacterLevelPannelLabel5.AutoSize = true;
+            this.CharacterLevelPannelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelPannelLabel5.Location = new System.Drawing.Point(50, 36);
+            this.CharacterLevelPannelLabel5.Name = "CharacterLevelPannelLabel5";
+            this.CharacterLevelPannelLabel5.Size = new System.Drawing.Size(38, 15);
+            this.CharacterLevelPannelLabel5.TabIndex = 8;
+            this.CharacterLevelPannelLabel5.Text = "label1";
+            // 
+            // CharacterNameNameLabel5
+            // 
+            this.CharacterNameNameLabel5.AutoSize = true;
+            this.CharacterNameNameLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameNameLabel5.Location = new System.Drawing.Point(-1, 11);
+            this.CharacterNameNameLabel5.Name = "CharacterNameNameLabel5";
+            this.CharacterNameNameLabel5.Size = new System.Drawing.Size(45, 15);
+            this.CharacterNameNameLabel5.TabIndex = 7;
+            this.CharacterNameNameLabel5.Text = "Name :";
+            // 
+            // CharacterRaceRaceLabel5
+            // 
+            this.CharacterRaceRaceLabel5.AutoSize = true;
+            this.CharacterRaceRaceLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceRaceLabel5.Location = new System.Drawing.Point(0, 62);
+            this.CharacterRaceRaceLabel5.Name = "CharacterRaceRaceLabel5";
+            this.CharacterRaceRaceLabel5.Size = new System.Drawing.Size(38, 15);
+            this.CharacterRaceRaceLabel5.TabIndex = 6;
+            this.CharacterRaceRaceLabel5.Text = "Race :";
+            // 
+            // CharacterLevelLevelLabel5
+            // 
+            this.CharacterLevelLevelLabel5.AutoSize = true;
+            this.CharacterLevelLevelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLevelLabel5.Location = new System.Drawing.Point(0, 36);
+            this.CharacterLevelLevelLabel5.Name = "CharacterLevelLevelLabel5";
+            this.CharacterLevelLevelLabel5.Size = new System.Drawing.Size(40, 15);
+            this.CharacterLevelLevelLabel5.TabIndex = 5;
+            this.CharacterLevelLevelLabel5.Text = "Level :";
+            // 
             // CharacterPannelLabel5
             // 
             this.CharacterPannelLabel5.AutoSize = true;
-            this.CharacterPannelLabel5.Location = new System.Drawing.Point(4, 7);
+            this.CharacterPannelLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterPannelLabel5.Location = new System.Drawing.Point(50, 11);
             this.CharacterPannelLabel5.Name = "CharacterPannelLabel5";
             this.CharacterPannelLabel5.Size = new System.Drawing.Size(38, 15);
             this.CharacterPannelLabel5.TabIndex = 0;
@@ -229,5 +537,30 @@ namespace FANTASY4YOU
         private Panel CharacterPannel5;
         private Label CharacterPannelLabel5;
         private Button RefreshButton;
+        private Label CharacterRacePannelLabel1;
+        private Label CharacterLevelPannelLabel1;
+        private Label CharacterNameNameLabel1;
+        private Label CharacterRaceRaceLabel1;
+        private Label CharacterLevelLevelLabel1;
+        private Label CharacterRacePannelLabel2;
+        private Label CharacterLevelPannelLabel2;
+        private Label CharacterNameNameLabel2;
+        private Label CharacterRaceRaceLabel2;
+        private Label CharacterLevelLevelLabel2;
+        private Label CharacterRacePannelLabel3;
+        private Label CharacterLevelPannelLabel3;
+        private Label CharacterNameNameLabel3;
+        private Label CharacterRaceRaceLabel3;
+        private Label CharacterLevelLevelLabel3;
+        private Label CharacterRacePannelLabel4;
+        private Label CharacterLevelPannelLabel4;
+        private Label CharacterNameNameLabel4;
+        private Label CharacterRaceRaceLabel4;
+        private Label CharacterLevelLevelLabel4;
+        private Label CharacterRacePannelLabel5;
+        private Label CharacterLevelPannelLabel5;
+        private Label CharacterNameNameLabel5;
+        private Label CharacterRaceRaceLabel5;
+        private Label CharacterLevelLevelLabel5;
     }
 }
