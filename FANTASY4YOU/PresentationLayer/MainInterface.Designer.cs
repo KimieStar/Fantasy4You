@@ -117,7 +117,7 @@ namespace FANTASY4YOU
             this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(202, 376);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 37);
+            this.label5.Size = new System.Drawing.Size(201, 37);
             this.label5.TabIndex = 7;
             this.label5.Text = "Your Characters";
             // 
@@ -158,6 +158,7 @@ namespace FANTASY4YOU
             this.Controls.Add(this.label1);
             this.Name = "MainInterface";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainInterface_FormClosing);
             this.Load += new System.EventHandler(this.MainInterface_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

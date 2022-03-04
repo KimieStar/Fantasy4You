@@ -21,7 +21,7 @@ namespace FANTASY4YOU
     public partial class MainInterface : Form
     {
 
-        Logic log = new Logic();
+        Logic logic = new Logic();
         Thread characters;
         
        
@@ -50,10 +50,10 @@ namespace FANTASY4YOU
         {
             
             
-            string uname = log.ReadUsernameFromUsernameFile();
+            string uname = logic.ReadUsernameFromUsernameFile();
             label2.Text = uname;
 
-           int id = log.SelectUserId();
+           int id = logic.SelectUserId();
 
 
             label4.Text = id.ToString();
@@ -80,6 +80,11 @@ namespace FANTASY4YOU
         private void OpenCharacters(object? obj)
         {
            Application.Run(new Characters());
+        }
+
+        private void MainInterface_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            logic.deleteCharSelectedToEdit();
         }
     }
 }

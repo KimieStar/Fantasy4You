@@ -12,12 +12,9 @@ namespace FANTASY4YOU
     {
         Logic logic = new Logic();
         CharacterRegistration chr = new CharacterRegistration();
-        CharacterCustomizationChar1 customization1 = new CharacterCustomizationChar1();
-        CharacterCustomizationChar2 customization2 = new CharacterCustomizationChar2();
-        CharacterCustomizationChar3 customization3 = new CharacterCustomizationChar3();
-        CharacterCustomizationChar4 customization4 = new CharacterCustomizationChar4();
-        CharacterCustomizationChar5 customization5 = new CharacterCustomizationChar5();
+        CharacterCustomizationChar customization = new CharacterCustomizationChar();
         Thread registerCharacter;
+        Thread mainInerface;
         //public int characterNumberSelectedToCustomize;
         public Characters()
         {
@@ -206,27 +203,44 @@ namespace FANTASY4YOU
 
         private void CharacterCustomizationButton1_Click(object sender, EventArgs e)
         {
-            customization1.ShowDialog();
+            logic.saveCharSelectedToEdit(1);
+            customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton2_Click(object sender, EventArgs e)
         {
-            customization2.ShowDialog();
+            logic.saveCharSelectedToEdit(2);
+            customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton3_Click(object sender, EventArgs e)
         {
-            customization3.ShowDialog();
+            logic.saveCharSelectedToEdit(3);
+            customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton4_Click(object sender, EventArgs e)
         {
-            customization4.ShowDialog();
+            logic.saveCharSelectedToEdit(4);
+            customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton5_Click(object sender, EventArgs e)
         {
-            customization5.ShowDialog();
+            logic.saveCharSelectedToEdit(5);
+            customization.ShowDialog();
+        }
+
+        private void Characters_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mainInerface = new Thread(OpenMainInterface);
+            mainInerface.SetApartmentState(ApartmentState.STA);
+            mainInerface.Start();
+        }
+
+        private void OpenMainInterface(object? obj)
+        {
+            Application.Run(new MainInterface());
         }
     }
 }

@@ -13,9 +13,7 @@ namespace FANTASY4YOU
     {
         DBCredentials credAndQuereis = new DBCredentials();
         private MySqlConnection connection = null;
-        private MySqlCommand command = null;
         private MySqlDataReader dreader = null;
-        int idi;
         
 
         public ConnectionToDatabase()

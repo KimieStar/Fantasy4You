@@ -106,6 +106,57 @@ namespace FANTASY4YOU
             sw.Close();
         }
 
+        public void saveCharSelectedToEdit(int charNumber)
+        {
+            if (!File.Exists(importantInfo.CharNumPath) || charNumber != readCharSelectedToEdit())
+            {
+                string path = importantInfo.Path;
+                string fileName = importantInfo.CharSelectedTempFilename;
+                var roaming = importantInfo.roamingpath;
+                var newdir = (roaming + path);
+                var filePath = Path.Combine(newdir, fileName);
+                var file = File.Create(filePath);
+                var sw = new StreamWriter(file);
+                sw.Write(charNumber);
+                sw.Close();
+            }
+            
+        }
+
+        public int readCharSelectedToEdit()
+        {
+            int charNum;
+            string path = importantInfo.Path;
+            string fileName = importantInfo.CharSelectedTempFilename;
+            var roaming = importantInfo.roamingpath;
+            var newdir = (roaming + path);
+            var filePath = Path.Combine(newdir, fileName);
+            var sr = new StreamReader(filePath);
+
+            try
+            {
+                string line = sr.ReadLine();
+                charNum = Int32.Parse(line); ;
+                sr.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return charNum;
+        }
+
+        public void deleteCharSelectedToEdit()
+        {
+            var CharNumPath = (importantInfo.CharNumPath);
+            if (File.Exists(CharNumPath))
+            {
+                File.Delete(CharNumPath);
+            }
+            
+        }
+
         //Has NunitTest
         public List<string>[] SelectCharacterInformation(int characterNumber)
         {
@@ -184,7 +235,7 @@ namespace FANTASY4YOU
             string username = null;
             string path = importantInfo.Path;
             string fileName = importantInfo.UsernameFilename;
-            var roamingDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var roamingDirectory = importantInfo.roamingpath;
             var newDirPath = (roamingDirectory + path);
             Directory.CreateDirectory(newDirPath);
             var newFilePath = Path.Combine(newDirPath, fileName);

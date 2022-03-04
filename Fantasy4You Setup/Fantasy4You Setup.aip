@@ -7,55 +7,6 @@
     <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
     <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_INTERNET_CONNECTION"/>
     <ROW Property="AI_PRODUCTNAME_ARP" Value="Fantasy4You"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Crypto.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Dapper.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.deps.json" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.dll_1" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.runtimeconfig.json" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Google.Protobuf.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_K4os.Compression.LZ4.Streams.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_K4os.Compression.LZ4.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_K4os.Hash.xxHash.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.EntityFrameworkCore.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Caching.Memory.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Options.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Primitives.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Microsoft.Windows.SDK.NET.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MySql.Data.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_Ubiety.Dns.Core.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_WinRT.Runtime.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ZstdNet.dll" Value="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll" Value="BouncyCastle.Crypto.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Dapper.dll" Value="Dapper.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.deps.json" Value="FANTASY4YOU.deps.json"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.dll_1" Value="FANTASY4YOU.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe" Value="FANTASY4YOU.exe"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.runtimeconfig.json" Value="FANTASY4YOU.runtimeconfig.json"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Google.Protobuf.dll" Value="Google.Protobuf.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.Streams.dll" Value="K4os.Compression.LZ4.Streams.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.dll" Value="K4os.Compression.LZ4.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_K4os.Hash.xxHash.dll" Value="K4os.Hash.xxHash.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll" Value="Microsoft.EntityFrameworkCore.Abstractions.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.dll" Value="Microsoft.EntityFrameworkCore.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll" Value="Microsoft.Extensions.Caching.Abstractions.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Memory.dll" Value="Microsoft.Extensions.Caching.Memory.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Value="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Value="Microsoft.Extensions.DependencyInjection.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Value="Microsoft.Extensions.Logging.Abstractions.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll" Value="Microsoft.Extensions.Logging.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll" Value="Microsoft.Extensions.Options.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll" Value="Microsoft.Extensions.Primitives.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Windows.SDK.NET.dll" Value="Microsoft.Windows.SDK.NET.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MySql.Data.dll" Value="MySql.Data.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_Ubiety.Dns.Core.dll" Value="Ubiety.Dns.Core.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_WinRT.Runtime.dll" Value="WinRT.Runtime.dll"/>
-    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ZstdNet.dll" Value="ZstdNet.dll"/>
     <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
@@ -63,10 +14,10 @@
     <ROW Property="ARPPRODUCTICON" Value="_adventuretimepixelarthdpngdownload_256x256.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="Manufacturer" Value="Kimiegg Entertainment"/>
-    <ROW Property="ProductCode" Value="1033:{A5BC8116-AD37-49E0-8A8B-7CE27A87A1D0} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F3F5A91A-E620-49E5-B463-F08BC5212A78} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Fantasy4You"/>
-    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="ProductVersion" Value="1.0.1"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{59F169DA-B25B-4306-A95A-4C9AC11A870D}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -81,18 +32,40 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="CommonFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="FANTASY4YOU_Dir" Directory_Parent="APPDIR" DefaultDir="FANTAS~1|FANTASY4YOU"/>
     <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{17901E6B-0402-4100-8679-3E65E4F87405}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{D001FC36-9DEB-4FD9-A7F0-F1288A6F9493}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{A0596DAB-9D34-482B-8178-A07EFABFB2CD}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
-    <ROW Component="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe" ComponentId="{268EDE93-D6AA-41F9-942A-A8D3A17DD46A}" Directory_="FANTASY4YOU_Dir" Attributes="256" KeyPath="FANTASY4YOU.exe"/>
     <ROW Component="APPDIR" ComponentId="{29DEE02A-54C4-4555-96BF-35E40965855F}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="FANTASY4YOU_PublishOutput" ComponentId="{FAE13077-54F9-47BB-8448-BE148884CB05}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="FANTASY4YOU.dll_1"/>
+    <ROW Component="BouncyCastle.Crypto.dll" ComponentId="{3B50AF6A-0625-4F34-A88E-A7837A84FDBA}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="BouncyCastle.Crypto.dll"/>
+    <ROW Component="Dapper.dll" ComponentId="{1032C355-5717-41BF-9069-5B221555FA75}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Dapper.dll"/>
+    <ROW Component="FANTASY4YOU.dll" ComponentId="{6FAF484D-AFED-4F14-AC87-C36F44CA9C75}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="FANTASY4YOU.dll"/>
+    <ROW Component="FANTASY4YOU.exe" ComponentId="{C17D9B7C-2003-4689-93AE-281236017C53}" Directory_="FANTASY4YOU_Dir" Attributes="256" KeyPath="FANTASY4YOU.exe"/>
+    <ROW Component="Google.Protobuf.dll" ComponentId="{4A2D5616-AABC-476A-9040-FD67E4982781}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Google.Protobuf.dll"/>
+    <ROW Component="K4os.Compression.LZ4.Streams.dll" ComponentId="{43504871-DB2A-414C-9B96-D24D5BDDD896}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.Streams.dll"/>
+    <ROW Component="K4os.Compression.LZ4.dll" ComponentId="{03CD4CD5-E1F9-4C69-8EA1-B05836E41132}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.dll"/>
+    <ROW Component="K4os.Hash.xxHash.dll" ComponentId="{1C433FEE-8EC8-4029-A560-DC61232EB4D4}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Hash.xxHash.dll"/>
+    <ROW Component="Microsoft.EntityFrameworkCore.Abstractions.dll" ComponentId="{8620B1E6-D9DA-49F2-8889-FE84C7134FDA}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.EntityFrameworkCore.Abstractions.dll"/>
+    <ROW Component="Microsoft.EntityFrameworkCore.dll" ComponentId="{77013A8F-E51F-427B-BF80-A63343A0B630}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.EntityFrameworkCore.dll"/>
+    <ROW Component="Microsoft.Extensions.Caching.Abstractions.dll" ComponentId="{DF9E7FC4-D269-42F9-9932-1F88CB2C1C03}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Caching.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Caching.Memory.dll" ComponentId="{60E8978D-7529-4B63-B778-A09B6098C304}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Caching.Memory.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInjection.Abstractions.dll" ComponentId="{8166A60F-7ECC-4133-871E-0B4EA8788549}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.DependencyInjection.dll" ComponentId="{2CB4BE35-8FDC-4089-ACB9-415F9D80C1C3}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.Abstractions.dll" ComponentId="{9DAAF52A-2422-454C-9664-E88BE7E3C402}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Component="Microsoft.Extensions.Logging.dll" ComponentId="{6D40AFA2-9F53-4E72-8224-E371A2677BBE}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Logging.dll"/>
+    <ROW Component="Microsoft.Extensions.Options.dll" ComponentId="{44F1350F-D977-4244-9FD9-6D10FDD7D1C2}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Options.dll"/>
+    <ROW Component="Microsoft.Extensions.Primitives.dll" ComponentId="{C249FD26-A5F2-4A4C-BCCB-9D6DEAB52A1B}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Component="Microsoft.Windows.SDK.NET.dll" ComponentId="{3CE63ADE-29B0-41DB-AA19-035C3DE6CFB0}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Windows.SDK.NET.dll"/>
+    <ROW Component="MySql.Data.dll" ComponentId="{671EB022-762C-4DCC-951D-E72E258ADF29}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="MySql.Data.dll"/>
     <ROW Component="Olondon_.otf" ComponentId="{007601BC-F7C4-48BA-8254-A324747DFF4C}" Directory_="CommonFilesFolder" Attributes="0" KeyPath="Olondon_.otf" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{3FE3A938-8995-4097-BE7B-F225C436928A}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Ubiety.Dns.Core.dll" ComponentId="{536CC8AF-93FF-4D15-80F6-8FEAB0B86E45}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Ubiety.Dns.Core.dll"/>
+    <ROW Component="WinRT.Runtime.dll" ComponentId="{BD5AF39F-3651-4331-906F-70CE10D076BF}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="WinRT.Runtime.dll"/>
+    <ROW Component="ZstdNet.dll" ComponentId="{F7E96C7F-1CC8-40BF-937B-6711019306D8}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="ZstdNet.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -100,57 +73,30 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="Olondon_.otf" Component_="Olondon_.otf" FileName="Olondon_.otf" Attributes="0" SourcePath="..\..\..\..\Downloads\Olondon_.otf" SelfReg="false"/>
-    <ROW File="BouncyCastle.Crypto.dll" Component_="FANTASY4YOU_PublishOutput" FileName="BOUNCY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_BouncyCastle.Crypto.dll&gt;" SelfReg="false"/>
-    <ROW File="Dapper.dll" Component_="FANTASY4YOU_PublishOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_Dapper.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Dapper.dll&gt;" SelfReg="false"/>
-    <ROW File="FANTASY4YOU.deps.json" Component_="FANTASY4YOU_PublishOutput" FileName="FANTAS~2.JSO|[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.deps.json]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FANTASY4YOU.deps.json&gt;" SelfReg="false"/>
-    <ROW File="FANTASY4YOU.dll_1" Component_="FANTASY4YOU_PublishOutput" FileName="FANTAS~1.DLL|FANTASY4YOU.dll" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FANTASY4YOU.dll_1&gt;" SelfReg="false"/>
-    <ROW File="FANTASY4YOU.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe" FileName="FANTAS~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe]" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\FANTASY4YOU.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="FANTASY4YOU.runtimeconfig.json" Component_="FANTASY4YOU_PublishOutput" FileName="FANTAS~3.JSO|[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.runtimeconfig.json]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_FANTASY4YOU.runtimeconfig.json&gt;" SelfReg="false"/>
-    <ROW File="Google.Protobuf.dll" Component_="FANTASY4YOU_PublishOutput" FileName="GOOGLE~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Google.Protobuf.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Google.Protobuf.dll&gt;" SelfReg="false"/>
-    <ROW File="K4os.Compression.LZ4.dll" Component_="FANTASY4YOU_PublishOutput" FileName="K4OSCO~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_K4os.Compression.LZ4.dll&gt;" SelfReg="false"/>
-    <ROW File="K4os.Compression.LZ4.Streams.dll" Component_="FANTASY4YOU_PublishOutput" FileName="K4OSCO~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.Streams.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_K4os.Compression.LZ4.Streams.dll&gt;" SelfReg="false"/>
-    <ROW File="K4os.Hash.xxHash.dll" Component_="FANTASY4YOU_PublishOutput" FileName="K4OSHA~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Hash.xxHash.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_K4os.Hash.xxHash.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.EntityFrameworkCore.Abstractions.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.EntityFrameworkCore.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.EntityFrameworkCore.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Caching.Abstractions.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Caching.Memory.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~5.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Memory.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Caching.Memory.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~6.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.DependencyInjection.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~7.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~8.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Logging.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICROS~9.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Options.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICRO~10.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Options.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICRO~11.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Extensions.Primitives.dll&gt;" SelfReg="false"/>
-    <ROW File="Microsoft.Windows.SDK.NET.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MICRO~12.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Windows.SDK.NET.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Microsoft.Windows.SDK.NET.dll&gt;" SelfReg="false"/>
-    <ROW File="MySql.Data.dll" Component_="FANTASY4YOU_PublishOutput" FileName="MYSQLD~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_MySql.Data.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MySql.Data.dll&gt;" SelfReg="false"/>
-    <ROW File="Ubiety.Dns.Core.dll" Component_="FANTASY4YOU_PublishOutput" FileName="UBIETY~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_Ubiety.Dns.Core.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_Ubiety.Dns.Core.dll&gt;" SelfReg="false"/>
-    <ROW File="WinRT.Runtime.dll" Component_="FANTASY4YOU_PublishOutput" FileName="WINRTR~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_WinRT.Runtime.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_WinRT.Runtime.dll&gt;" SelfReg="false"/>
-    <ROW File="ZstdNet.dll" Component_="FANTASY4YOU_PublishOutput" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ZstdNet.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ZstdNet.dll&gt;" SelfReg="false"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
-    <ROW Name="AI_APPPATH_PERBUILD_BouncyCastle.Crypto.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_BouncyCastle.Crypto.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_BouncyCastle.Crypto.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Dapper.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Dapper.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Dapper.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_FANTASY4YOU.deps.json" Path="[|AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.deps.json]\[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.deps.json]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_FANTASY4YOU.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.dll_1]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_FANTASY4YOU.runtimeconfig.json" Path="[|AI_PROPPATH_DIR_PERBUILD_FANTASY4YOU.runtimeconfig.json]\[|AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.runtimeconfig.json]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Google.Protobuf.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Google.Protobuf.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Google.Protobuf.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_K4os.Compression.LZ4.Streams.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_K4os.Compression.LZ4.Streams.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.Streams.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_K4os.Compression.LZ4.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_K4os.Compression.LZ4.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Compression.LZ4.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_K4os.Hash.xxHash.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_K4os.Hash.xxHash.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_K4os.Hash.xxHash.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.Abstractions.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.EntityFrameworkCore.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.EntityFrameworkCore.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.EntityFrameworkCore.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Abstractions.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Caching.Memory.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Caching.Memory.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Caching.Memory.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.Abstractions.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.DependencyInjection.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.DependencyInjection.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.Abstractions.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Logging.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Logging.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Logging.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Options.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Options.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Options.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Extensions.Primitives.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Extensions.Primitives.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Extensions.Primitives.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Microsoft.Windows.SDK.NET.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Microsoft.Windows.SDK.NET.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Microsoft.Windows.SDK.NET.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_MySql.Data.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_MySql.Data.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_MySql.Data.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_Ubiety.Dns.Core.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_Ubiety.Dns.Core.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_Ubiety.Dns.Core.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_WinRT.Runtime.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_WinRT.Runtime.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_WinRT.Runtime.dll]" Type="2" Content="0"/>
-    <ROW Name="AI_APPPATH_PERBUILD_ZstdNet.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_ZstdNet.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_ZstdNet.dll]" Type="2" Content="0"/>
+    <ROW File="Google.Protobuf.dll" Component_="Google.Protobuf.dll" FileName="GOOGLE~1.DLL|Google.Protobuf.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Google.Protobuf.dll" SelfReg="false"/>
+    <ROW File="K4os.Compression.LZ4.dll" Component_="K4os.Compression.LZ4.dll" FileName="K4OSCO~1.DLL|K4os.Compression.LZ4.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\K4os.Compression.LZ4.dll" SelfReg="false"/>
+    <ROW File="K4os.Compression.LZ4.Streams.dll" Component_="K4os.Compression.LZ4.Streams.dll" FileName="K4OSCO~2.DLL|K4os.Compression.LZ4.Streams.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\K4os.Compression.LZ4.Streams.dll" SelfReg="false"/>
+    <ROW File="K4os.Hash.xxHash.dll" Component_="K4os.Hash.xxHash.dll" FileName="K4OSHA~1.DLL|K4os.Hash.xxHash.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\K4os.Hash.xxHash.dll" SelfReg="false"/>
+    <ROW File="Microsoft.EntityFrameworkCore.Abstractions.dll" Component_="Microsoft.EntityFrameworkCore.Abstractions.dll" FileName="MICROS~1.DLL|Microsoft.EntityFrameworkCore.Abstractions.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.EntityFrameworkCore.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.EntityFrameworkCore.dll" Component_="Microsoft.EntityFrameworkCore.dll" FileName="MICROS~2.DLL|Microsoft.EntityFrameworkCore.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.EntityFrameworkCore.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Caching.Abstractions.dll" Component_="Microsoft.Extensions.Caching.Abstractions.dll" FileName="MICROS~3.DLL|Microsoft.Extensions.Caching.Abstractions.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Caching.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Caching.Memory.dll" Component_="Microsoft.Extensions.Caching.Memory.dll" FileName="MICROS~4.DLL|Microsoft.Extensions.Caching.Memory.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Caching.Memory.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.Abstractions.dll" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll" FileName="MICROS~5.DLL|Microsoft.Extensions.DependencyInjection.Abstractions.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.DependencyInjection.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.DependencyInjection.dll" Component_="Microsoft.Extensions.DependencyInjection.dll" FileName="MICROS~6.DLL|Microsoft.Extensions.DependencyInjection.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.DependencyInjection.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.Abstractions.dll" Component_="Microsoft.Extensions.Logging.Abstractions.dll" FileName="MICROS~7.DLL|Microsoft.Extensions.Logging.Abstractions.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Logging.Abstractions.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Logging.dll" Component_="Microsoft.Extensions.Logging.dll" FileName="MICROS~8.DLL|Microsoft.Extensions.Logging.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Logging.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Options.dll" Component_="Microsoft.Extensions.Options.dll" FileName="MICROS~9.DLL|Microsoft.Extensions.Options.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Options.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="Microsoft.Extensions.Primitives.dll" FileName="MICRO~10.DLL|Microsoft.Extensions.Primitives.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Extensions.Primitives.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Windows.SDK.NET.dll" Component_="Microsoft.Windows.SDK.NET.dll" FileName="MICRO~11.DLL|Microsoft.Windows.SDK.NET.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Microsoft.Windows.SDK.NET.dll" SelfReg="false"/>
+    <ROW File="MySql.Data.dll" Component_="MySql.Data.dll" FileName="MYSQLD~1.DLL|MySql.Data.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\MySql.Data.dll" SelfReg="false"/>
+    <ROW File="Ubiety.Dns.Core.dll" Component_="Ubiety.Dns.Core.dll" FileName="UBIETY~1.DLL|Ubiety.Dns.Core.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Ubiety.Dns.Core.dll" SelfReg="false"/>
+    <ROW File="WinRT.Runtime.dll" Component_="WinRT.Runtime.dll" FileName="WINRTR~1.DLL|WinRT.Runtime.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\WinRT.Runtime.dll" SelfReg="false"/>
+    <ROW File="ZstdNet.dll" Component_="ZstdNet.dll" FileName="ZstdNet.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\ZstdNet.dll" SelfReg="false"/>
+    <ROW File="BouncyCastle.Crypto.dll" Component_="BouncyCastle.Crypto.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Crypto.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\BouncyCastle.Crypto.dll" SelfReg="false"/>
+    <ROW File="Dapper.dll" Component_="Dapper.dll" FileName="Dapper.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\Dapper.dll" SelfReg="false"/>
+    <ROW File="FANTASY4YOU.dll" Component_="FANTASY4YOU.dll" FileName="FANTAS~1.DLL|FANTASY4YOU.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\FANTASY4YOU.dll" SelfReg="false"/>
+    <ROW File="FANTASY4YOU.exe" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.EXE|FANTASY4YOU.exe" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\FANTASY4YOU.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="FANTASY4YOU.pdb" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.PDB|FANTASY4YOU.pdb" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish-new\FANTASY4YOU.pdb" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -183,11 +129,442 @@
     <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\VerifyRepairDlg.aip"/>
     <ROW Fragment="WelcomePrereqDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\WelcomePrereqDlg.aip"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.JsonFileComponent">
+    <ROW JsonFile="FANTASY4YOU.deps.json" FileName="FANTAS~2.JSO|FANTASY4YOU.deps.json" DirProperty="FANTASY4YOU_Dir" Component="Microsoft.Extensions.Logging.Abstractions.dll" RootProperty="Root_1" Flags="22" IndentUnits="2"/>
+    <ROW JsonFile="FANTASY4YOU.runtimeconfig.json" FileName="FANTAS~1.JSO|FANTASY4YOU.runtimeconfig.json" DirProperty="FANTASY4YOU_Dir" Component="Microsoft.Extensions.Logging.Abstractions.dll" RootProperty="Root" Flags="22" IndentUnits="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.JsonPropertyComponent">
+    <ROW JsonProperty="BouncyCastle.NetCore" Parent="dependencies_13" Name="BouncyCastle.NetCore" Condition="1" Order="0" Flags="57" Value="1.8.5"/>
+    <ROW JsonProperty="BouncyCastle.NetCore1.8.5" Parent="libraries" Name="BouncyCastle.NetCore/1.8.5" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="BouncyCastle.NetCore1.8.5_1" Parent="NETCoreAppVersionv6.0" Name="BouncyCastle.NetCore/1.8.5" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="Dapper" Parent="dependencies" Name="Dapper" Condition="1" Order="0" Flags="57" Value="2.0.123"/>
+    <ROW JsonProperty="Dapper2.0.123" Parent="libraries" Name="Dapper/2.0.123" Condition="1" Order="3" Flags="60"/>
+    <ROW JsonProperty="Dapper2.0.123_1" Parent="NETCoreAppVersionv6.0" Name="Dapper/2.0.123" Condition="1" Order="3" Flags="60"/>
+    <ROW JsonProperty="FANTASY4YOU.dll" Parent="runtime" Name="FANTASY4YOU.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="FANTASY4YOU1.0.0" Parent="libraries" Name="FANTASY4YOU/1.0.0" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="FANTASY4YOU1.0.0_1" Parent="NETCoreAppVersionv6.0" Name="FANTASY4YOU/1.0.0" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="Google.Protobuf" Parent="dependencies_13" Name="Google.Protobuf" Condition="1" Order="1" Flags="57" Value="3.14.0"/>
+    <ROW JsonProperty="Google.Protobuf3.14.0" Parent="libraries" Name="Google.Protobuf/3.14.0" Condition="1" Order="4" Flags="60"/>
+    <ROW JsonProperty="Google.Protobuf3.14.0_1" Parent="NETCoreAppVersionv6.0" Name="Google.Protobuf/3.14.0" Condition="1" Order="4" Flags="60"/>
+    <ROW JsonProperty="K4os.Compression.LZ4" Parent="dependencies_3" Name="K4os.Compression.LZ4" Condition="1" Order="0" Flags="57" Value="1.2.6"/>
+    <ROW JsonProperty="K4os.Compression.LZ4.Streams" Parent="dependencies_13" Name="K4os.Compression.LZ4.Streams" Condition="1" Order="2" Flags="57" Value="1.2.6"/>
+    <ROW JsonProperty="K4os.Compression.LZ4.Streams1.2.6" Parent="libraries" Name="K4os.Compression.LZ4.Streams/1.2.6" Condition="1" Order="6" Flags="60"/>
+    <ROW JsonProperty="K4os.Compression.LZ4.Streams1.2.6_1" Parent="NETCoreAppVersionv6.0" Name="K4os.Compression.LZ4.Streams/1.2.6" Condition="1" Order="6" Flags="60"/>
+    <ROW JsonProperty="K4os.Compression.LZ41.2.6" Parent="libraries" Name="K4os.Compression.LZ4/1.2.6" Condition="1" Order="5" Flags="60"/>
+    <ROW JsonProperty="K4os.Compression.LZ41.2.6_1" Parent="NETCoreAppVersionv6.0" Name="K4os.Compression.LZ4/1.2.6" Condition="1" Order="5" Flags="60"/>
+    <ROW JsonProperty="K4os.Hash.xxHash" Parent="dependencies_3" Name="K4os.Hash.xxHash" Condition="1" Order="1" Flags="57" Value="1.0.6"/>
+    <ROW JsonProperty="K4os.Hash.xxHash1.0.6" Parent="libraries" Name="K4os.Hash.xxHash/1.0.6" Condition="1" Order="7" Flags="60"/>
+    <ROW JsonProperty="K4os.Hash.xxHash1.0.6_1" Parent="NETCoreAppVersionv6.0" Name="K4os.Hash.xxHash/1.0.6" Condition="1" Order="7" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore" Parent="dependencies" Name="Microsoft.EntityFrameworkCore" Condition="1" Order="1" Flags="57" Value="6.0.2"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Abs_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.EntityFrameworkCore.Abstractions/6.0.2" Condition="1" Order="9" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Abs_2" Parent="dependencies_5" Name="Microsoft.EntityFrameworkCore.Abstractions" Condition="1" Order="0" Flags="57" Value="6.0.2"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Abstr" Parent="libraries" Name="Microsoft.EntityFrameworkCore.Abstractions/6.0.2" Condition="1" Order="9" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Ana_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.EntityFrameworkCore.Analyzers/6.0.2" Condition="1" Order="10" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Ana_2" Parent="dependencies_5" Name="Microsoft.EntityFrameworkCore.Analyzers" Condition="1" Order="1" Flags="57" Value="6.0.2"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore.Analy" Parent="libraries" Name="Microsoft.EntityFrameworkCore.Analyzers/6.0.2" Condition="1" Order="10" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore6.0.2" Parent="libraries" Name="Microsoft.EntityFrameworkCore/6.0.2" Condition="1" Order="8" Flags="60"/>
+    <ROW JsonProperty="Microsoft.EntityFrameworkCore6.0._1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.EntityFrameworkCore/6.0.2" Condition="1" Order="8" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Abst_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Caching.Abstractions/6.0.0" Condition="1" Order="11" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Abst_2" Parent="dependencies_7" Name="Microsoft.Extensions.Caching.Abstractions" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Abstra" Parent="libraries" Name="Microsoft.Extensions.Caching.Abstractions/6.0.0" Condition="1" Order="11" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Memo_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Caching.Memory/6.0.1" Condition="1" Order="12" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Memo_2" Parent="dependencies_5" Name="Microsoft.Extensions.Caching.Memory" Condition="1" Order="2" Flags="57" Value="6.0.1"/>
+    <ROW JsonProperty="Microsoft.Extensions.Caching.Memory" Parent="libraries" Name="Microsoft.Extensions.Caching.Memory/6.0.1" Condition="1" Order="12" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_1" Parent="libraries" Name="Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0" Condition="1" Order="14" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_2" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.DependencyInjection/6.0.0" Condition="1" Order="13" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_3" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0" Condition="1" Order="14" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_4" Parent="dependencies_5" Name="Microsoft.Extensions.DependencyInjection" Condition="1" Order="3" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_5" Parent="dependencies_7" Name="Microsoft.Extensions.DependencyInjection.Abstractions" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_6" Parent="dependencies_8" Name="Microsoft.Extensions.DependencyInjection.Abstractions" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_7" Parent="dependencies_9" Name="Microsoft.Extensions.DependencyInjection" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_8" Parent="dependencies_9" Name="Microsoft.Extensions.DependencyInjection.Abstractions" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyIn_9" Parent="dependencies_10" Name="Microsoft.Extensions.DependencyInjection.Abstractions" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.DependencyInje" Parent="libraries" Name="Microsoft.Extensions.DependencyInjection/6.0.0" Condition="1" Order="13" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging" Parent="dependencies_5" Name="Microsoft.Extensions.Logging" Condition="1" Order="4" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging.Abst_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Logging.Abstractions/6.0.0" Condition="1" Order="16" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging.Abst_2" Parent="dependencies_7" Name="Microsoft.Extensions.Logging.Abstractions" Condition="1" Order="2" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging.Abst_3" Parent="dependencies_9" Name="Microsoft.Extensions.Logging.Abstractions" Condition="1" Order="2" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging.Abstra" Parent="libraries" Name="Microsoft.Extensions.Logging.Abstractions/6.0.0" Condition="1" Order="16" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging6.0.0" Parent="libraries" Name="Microsoft.Extensions.Logging/6.0.0" Condition="1" Order="15" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Logging6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Logging/6.0.0" Condition="1" Order="15" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Options" Parent="dependencies_7" Name="Microsoft.Extensions.Options" Condition="1" Order="3" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Options6.0.0" Parent="libraries" Name="Microsoft.Extensions.Options/6.0.0" Condition="1" Order="17" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Options6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Options/6.0.0" Condition="1" Order="17" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Options_1" Parent="dependencies_9" Name="Microsoft.Extensions.Options" Condition="1" Order="3" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Primitives" Parent="dependencies_6" Name="Microsoft.Extensions.Primitives" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Primitives6.0." Parent="libraries" Name="Microsoft.Extensions.Primitives/6.0.0" Condition="1" Order="18" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Primitives6._1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Extensions.Primitives/6.0.0" Condition="1" Order="18" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Extensions.Primitives_1" Parent="dependencies_7" Name="Microsoft.Extensions.Primitives" Condition="1" Order="4" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Extensions.Primitives_2" Parent="dependencies_10" Name="Microsoft.Extensions.Primitives" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms" Parent="dependencies_12" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms3.1.0" Parent="libraries" Name="Microsoft.NETCore.Platforms/3.1.0" Condition="1" Order="19" Flags="60"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms3.1.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.NETCore.Platforms/3.1.0" Condition="1" Order="19" Flags="60"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms_1" Parent="dependencies_17" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms_2" Parent="dependencies_18" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms_3" Parent="dependencies_20" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents" Parent="dependencies_17" Name="Microsoft.Win32.SystemEvents" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents4.7.0" Parent="libraries" Name="Microsoft.Win32.SystemEvents/4.7.0" Condition="1" Order="20" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Win32.SystemEvents/4.7.0" Condition="1" Order="20" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Windows.SDK.NET.dll" Parent="runtime_1" Name="Microsoft.Windows.SDK.NET.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="MySql.Data" Parent="dependencies" Name="MySql.Data" Condition="1" Order="2" Flags="57" Value="8.0.28"/>
+    <ROW JsonProperty="MySql.Data8.0.28" Parent="libraries" Name="MySql.Data/8.0.28" Condition="1" Order="21" Flags="60"/>
+    <ROW JsonProperty="MySql.Data8.0.28_1" Parent="NETCoreAppVersionv6.0" Name="MySql.Data/8.0.28" Condition="1" Order="21" Flags="60"/>
+    <ROW JsonProperty="NETCoreAppVersionv6.0" Parent="targets" Name=".NETCoreApp,Version=v6.0" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="Root" Name="Root" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="Root_1" Name="Root" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="System.Buffers" Parent="dependencies_13" Name="System.Buffers" Condition="1" Order="3" Flags="57" Value="4.5.1"/>
+    <ROW JsonProperty="System.Buffers4.5.1" Parent="libraries" Name="System.Buffers/4.5.1" Condition="1" Order="22" Flags="60"/>
+    <ROW JsonProperty="System.Buffers4.5.1_1" Parent="NETCoreAppVersionv6.0" Name="System.Buffers/4.5.1" Condition="1" Order="22" Flags="60"/>
+    <ROW JsonProperty="System.Collections.Immutable" Parent="dependencies_5" Name="System.Collections.Immutable" Condition="1" Order="5" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Collections.Immutable6.0.0" Parent="libraries" Name="System.Collections.Immutable/6.0.0" Condition="1" Order="23" Flags="60"/>
+    <ROW JsonProperty="System.Collections.Immutable6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Collections.Immutable/6.0.0" Condition="1" Order="23" Flags="60"/>
+    <ROW JsonProperty="System.Configuration.Configuratio_1" Parent="NETCoreAppVersionv6.0" Name="System.Configuration.ConfigurationManager/4.4.1" Condition="1" Order="24" Flags="60"/>
+    <ROW JsonProperty="System.Configuration.Configuratio_2" Parent="dependencies_13" Name="System.Configuration.ConfigurationManager" Condition="1" Order="4" Flags="57" Value="4.4.1"/>
+    <ROW JsonProperty="System.Configuration.ConfigurationM" Parent="libraries" Name="System.Configuration.ConfigurationManager/4.4.1" Condition="1" Order="24" Flags="60"/>
+    <ROW JsonProperty="System.Diagnostics.DiagnosticSour_1" Parent="NETCoreAppVersionv6.0" Name="System.Diagnostics.DiagnosticSource/6.0.0" Condition="1" Order="25" Flags="60"/>
+    <ROW JsonProperty="System.Diagnostics.DiagnosticSour_2" Parent="dependencies_5" Name="System.Diagnostics.DiagnosticSource" Condition="1" Order="6" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Diagnostics.DiagnosticSour_3" Parent="dependencies_9" Name="System.Diagnostics.DiagnosticSource" Condition="1" Order="4" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Diagnostics.DiagnosticSource" Parent="libraries" Name="System.Diagnostics.DiagnosticSource/6.0.0" Condition="1" Order="25" Flags="60"/>
+    <ROW JsonProperty="System.Drawing.Common" Parent="dependencies_21" Name="System.Drawing.Common" Condition="1" Order="0" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="System.Drawing.Common4.7.0" Parent="libraries" Name="System.Drawing.Common/4.7.0" Condition="1" Order="26" Flags="60"/>
+    <ROW JsonProperty="System.Drawing.Common4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Drawing.Common/4.7.0" Condition="1" Order="26" Flags="60"/>
+    <ROW JsonProperty="System.Memory" Parent="dependencies_1" Name="System.Memory" Condition="1" Order="0" Flags="57" Value="4.5.4"/>
+    <ROW JsonProperty="System.Memory4.5.4" Parent="libraries" Name="System.Memory/4.5.4" Condition="1" Order="27" Flags="60"/>
+    <ROW JsonProperty="System.Memory4.5.4_1" Parent="NETCoreAppVersionv6.0" Name="System.Memory/4.5.4" Condition="1" Order="27" Flags="60"/>
+    <ROW JsonProperty="System.Memory_1" Parent="dependencies_2" Name="System.Memory" Condition="1" Order="0" Flags="57" Value="4.5.4"/>
+    <ROW JsonProperty="System.Memory_2" Parent="dependencies_4" Name="System.Memory" Condition="1" Order="0" Flags="57" Value="4.5.4"/>
+    <ROW JsonProperty="System.Reflection.Metadata.Metadata" Parent="configProperties" Name="System.Reflection.Metadata.MetadataUpdater.IsSupported" Condition="1" Order="0" Flags="58" Value="false"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_1" Parent="NETCoreAppVersionv6.0" Name="System.Runtime.CompilerServices.Unsafe/6.0.0" Condition="1" Order="28" Flags="60"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_2" Parent="dependencies_1" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_3" Parent="dependencies_8" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_4" Parent="dependencies_11" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_5" Parent="dependencies_13" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="5" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_6" Parent="dependencies_14" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_7" Parent="dependencies_16" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.Uns" Parent="libraries" Name="System.Runtime.CompilerServices.Unsafe/6.0.0" Condition="1" Order="28" Flags="60"/>
+    <ROW JsonProperty="System.Security.AccessControl" Parent="dependencies_19" Name="System.Security.AccessControl" Condition="1" Order="0" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="System.Security.AccessControl4.7.0" Parent="libraries" Name="System.Security.AccessControl/4.7.0" Condition="1" Order="29" Flags="60"/>
+    <ROW JsonProperty="System.Security.AccessControl4.7._1" Parent="NETCoreAppVersionv6.0" Name="System.Security.AccessControl/4.7.0" Condition="1" Order="29" Flags="60"/>
+    <ROW JsonProperty="System.Security.Cryptography.Prot_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Cryptography.ProtectedData/4.4.0" Condition="1" Order="30" Flags="60"/>
+    <ROW JsonProperty="System.Security.Cryptography.Prot_2" Parent="dependencies_15" Name="System.Security.Cryptography.ProtectedData" Condition="1" Order="0" Flags="57" Value="4.4.0"/>
+    <ROW JsonProperty="System.Security.Cryptography.Protec" Parent="libraries" Name="System.Security.Cryptography.ProtectedData/4.4.0" Condition="1" Order="30" Flags="60"/>
+    <ROW JsonProperty="System.Security.Permissions" Parent="dependencies_13" Name="System.Security.Permissions" Condition="1" Order="6" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="System.Security.Permissions4.7.0" Parent="libraries" Name="System.Security.Permissions/4.7.0" Condition="1" Order="31" Flags="60"/>
+    <ROW JsonProperty="System.Security.Permissions4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Permissions/4.7.0" Condition="1" Order="31" Flags="60"/>
+    <ROW JsonProperty="System.Security.Principal.Windows" Parent="dependencies_18" Name="System.Security.Principal.Windows" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="System.Security.Principal.Windows4." Parent="libraries" Name="System.Security.Principal.Windows/4.7.0" Condition="1" Order="32" Flags="60"/>
+    <ROW JsonProperty="System.Security.Principal.Windows_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Principal.Windows/4.7.0" Condition="1" Order="32" Flags="60"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages" Parent="dependencies_13" Name="System.Text.Encoding.CodePages" Condition="1" Order="7" Flags="57" Value="4.4.0"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages4.4.0" Parent="libraries" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="33" Flags="60"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages4.4_1" Parent="NETCoreAppVersionv6.0" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="33" Flags="60"/>
+    <ROW JsonProperty="System.Windows.Extensions" Parent="dependencies_19" Name="System.Windows.Extensions" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
+    <ROW JsonProperty="System.Windows.Extensions4.7.0" Parent="libraries" Name="System.Windows.Extensions/4.7.0" Condition="1" Order="34" Flags="60"/>
+    <ROW JsonProperty="System.Windows.Extensions4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Windows.Extensions/4.7.0" Condition="1" Order="34" Flags="60"/>
+    <ROW JsonProperty="WinRT.Runtime.dll" Parent="runtime_1" Name="WinRT.Runtime.dll" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="_" Parent="frameworks" Name="0" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="__1" Parent="frameworks" Name="1" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="assemblyVersion" Parent="Microsoft.Windows.SDK.NET.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="10.0.22000.22"/>
+    <ROW JsonProperty="assemblyVersion_1" Parent="WinRT.Runtime.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.4.0.0"/>
+    <ROW JsonProperty="assemblyVersion_10" Parent="libnetstandard2.0Microsoft.Extensio" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_11" Parent="libnetstandard2.0Microsoft.Extens_1" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_12" Parent="libnet6.0Microsoft.Extensions.Depen" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_13" Parent="libnet6.0Microsoft.Extensions.Dep_1" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_14" Parent="libnetstandard2.1Microsoft.Extensio" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_15" Parent="libnet6.0Microsoft.Extensions.Loggi" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_16" Parent="libnetstandard2.1Microsoft.Extens_1" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_17" Parent="libnet6.0Microsoft.Extensions.Primi" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_18" Parent="libnet6.0MySql.Data.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="8.0.28.0"/>
+    <ROW JsonProperty="assemblyVersion_19" Parent="libnet6.0Ubiety.Dns.Core.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="2.2.1.0"/>
+    <ROW JsonProperty="assemblyVersion_2" Parent="libnetstandard2.0BouncyCastle.Crypt" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.8.5.0"/>
+    <ROW JsonProperty="assemblyVersion_20" Parent="libnet6.0ZstdNet.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.4.5.0"/>
+    <ROW JsonProperty="assemblyVersion_3" Parent="libnet5.0Dapper.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="2.0.0.0"/>
+    <ROW JsonProperty="assemblyVersion_4" Parent="libnetstandard2.0Google.Protobuf.dl" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="3.14.0.0"/>
+    <ROW JsonProperty="assemblyVersion_5" Parent="libnetstandard2.0K4os.Compression.L" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.2.6.0"/>
+    <ROW JsonProperty="assemblyVersion_6" Parent="libnetstandard2.1K4os.Compression.L" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.2.6.0"/>
+    <ROW JsonProperty="assemblyVersion_7" Parent="libnetstandard2.0K4os.Hash.xxHash.d" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.0.6.0"/>
+    <ROW JsonProperty="assemblyVersion_8" Parent="libnet6.0Microsoft.EntityFrameworkC" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.2.0"/>
+    <ROW JsonProperty="assemblyVersion_9" Parent="libnet6.0Microsoft.EntityFramewor_1" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="6.0.2.0"/>
+    <ROW JsonProperty="compilationOptions" Parent="Root_1" Name="compilationOptions" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="configProperties" Parent="runtimeOptions" Name="configProperties" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="dependencies" Parent="FANTASY4YOU1.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_1" Parent="Google.Protobuf3.14.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_10" Parent="Microsoft.Extensions.Options6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_11" Parent="Microsoft.Extensions.Primitives6._1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_12" Parent="Microsoft.Win32.SystemEvents4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_13" Parent="MySql.Data8.0.28_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_14" Parent="System.Collections.Immutable6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_15" Parent="System.Configuration.Configuratio_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_16" Parent="System.Diagnostics.DiagnosticSour_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_17" Parent="System.Drawing.Common4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_18" Parent="System.Security.AccessControl4.7._1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_19" Parent="System.Security.Permissions4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_2" Parent="K4os.Compression.LZ41.2.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_20" Parent="System.Text.Encoding.CodePages4.4_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_21" Parent="System.Windows.Extensions4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_3" Parent="K4os.Compression.LZ4.Streams1.2.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_4" Parent="K4os.Hash.xxHash1.0.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_5" Parent="Microsoft.EntityFrameworkCore6.0._1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_6" Parent="Microsoft.Extensions.Caching.Abst_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_7" Parent="Microsoft.Extensions.Caching.Memo_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_8" Parent="Microsoft.Extensions.DependencyIn_2" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_9" Parent="Microsoft.Extensions.Logging6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="fileVersion" Parent="Microsoft.Windows.SDK.NET.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="10.0.22000.22"/>
+    <ROW JsonProperty="fileVersion_1" Parent="WinRT.Runtime.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.4.0.37231"/>
+    <ROW JsonProperty="fileVersion_10" Parent="libnetstandard2.0Microsoft.Extensio" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_11" Parent="libnetstandard2.0Microsoft.Extens_1" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.222.6406"/>
+    <ROW JsonProperty="fileVersion_12" Parent="libnet6.0Microsoft.Extensions.Depen" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_13" Parent="libnet6.0Microsoft.Extensions.Dep_1" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_14" Parent="libnetstandard2.1Microsoft.Extensio" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_15" Parent="libnet6.0Microsoft.Extensions.Loggi" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_16" Parent="libnetstandard2.1Microsoft.Extens_1" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_17" Parent="libnet6.0Microsoft.Extensions.Primi" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.21.52210"/>
+    <ROW JsonProperty="fileVersion_18" Parent="libnet6.0MySql.Data.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="8.0.28.0"/>
+    <ROW JsonProperty="fileVersion_19" Parent="libnet6.0Ubiety.Dns.Core.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="2.2.1.0"/>
+    <ROW JsonProperty="fileVersion_2" Parent="libnetstandard2.0BouncyCastle.Crypt" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.8.19031.1"/>
+    <ROW JsonProperty="fileVersion_20" Parent="libnet6.0ZstdNet.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.4.5.0"/>
+    <ROW JsonProperty="fileVersion_3" Parent="libnet5.0Dapper.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="2.0.123.33578"/>
+    <ROW JsonProperty="fileVersion_4" Parent="libnetstandard2.0Google.Protobuf.dl" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="3.14.0.0"/>
+    <ROW JsonProperty="fileVersion_5" Parent="libnetstandard2.0K4os.Compression.L" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.2.6.0"/>
+    <ROW JsonProperty="fileVersion_6" Parent="libnetstandard2.1K4os.Compression.L" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.2.6.0"/>
+    <ROW JsonProperty="fileVersion_7" Parent="libnetstandard2.0K4os.Hash.xxHash.d" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.0.6.0"/>
+    <ROW JsonProperty="fileVersion_8" Parent="libnet6.0Microsoft.EntityFrameworkC" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.222.6404"/>
+    <ROW JsonProperty="fileVersion_9" Parent="libnet6.0Microsoft.EntityFramewor_1" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="6.0.222.6404"/>
+    <ROW JsonProperty="frameworks" Parent="runtimeOptions" Name="frameworks" Condition="1" Order="1" Flags="61"/>
+    <ROW JsonProperty="hashPath" Parent="BouncyCastle.NetCore1.8.5" Name="hashPath" Condition="1" Order="4" Flags="57" Value="bouncycastle.netcore.1.8.5.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_1" Parent="Dapper2.0.123" Name="hashPath" Condition="1" Order="4" Flags="57" Value="dapper.2.0.123.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_10" Parent="Microsoft.Extensions.Caching.Memory" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.caching.memory.6.0.1.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_11" Parent="Microsoft.Extensions.DependencyInje" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_12" Parent="Microsoft.Extensions.DependencyIn_1" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_13" Parent="Microsoft.Extensions.Logging6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.logging.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_14" Parent="Microsoft.Extensions.Logging.Abstra" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_15" Parent="Microsoft.Extensions.Options6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.options.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_16" Parent="Microsoft.Extensions.Primitives6.0." Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.primitives.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_17" Parent="Microsoft.NETCore.Platforms3.1.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.netcore.platforms.3.1.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_18" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.win32.systemevents.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_19" Parent="MySql.Data8.0.28" Name="hashPath" Condition="1" Order="4" Flags="57" Value="mysql.data.8.0.28.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_2" Parent="Google.Protobuf3.14.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="google.protobuf.3.14.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_20" Parent="System.Buffers4.5.1" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.buffers.4.5.1.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_21" Parent="System.Collections.Immutable6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.collections.immutable.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_22" Parent="System.Configuration.ConfigurationM" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.configuration.configurationmanager.4.4.1.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_23" Parent="System.Diagnostics.DiagnosticSource" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_24" Parent="System.Drawing.Common4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.drawing.common.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_25" Parent="System.Memory4.5.4" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.memory.4.5.4.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_26" Parent="System.Runtime.CompilerServices.Uns" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_27" Parent="System.Security.AccessControl4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.accesscontrol.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_28" Parent="System.Security.Cryptography.Protec" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_29" Parent="System.Security.Permissions4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.permissions.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_3" Parent="K4os.Compression.LZ41.2.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.compression.lz4.1.2.6.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_30" Parent="System.Security.Principal.Windows4." Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.principal.windows.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_31" Parent="System.Text.Encoding.CodePages4.4.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.text.encoding.codepages.4.4.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_32" Parent="System.Windows.Extensions4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.windows.extensions.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_4" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.compression.lz4.streams.1.2.6.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_5" Parent="K4os.Hash.xxHash1.0.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.hash.xxhash.1.0.6.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_6" Parent="Microsoft.EntityFrameworkCore6.0.2" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.entityframeworkcore.6.0.2.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_7" Parent="Microsoft.EntityFrameworkCore.Abstr" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.entityframeworkcore.abstractions.6.0.2.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_8" Parent="Microsoft.EntityFrameworkCore.Analy" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.entityframeworkcore.analyzers.6.0.2.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_9" Parent="Microsoft.Extensions.Caching.Abstra" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="libnet5.0Dapper.dll" Parent="runtime_3" Name="lib/net5.0/Dapper.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.EntityFramewor_1" Parent="runtime_9" Name="lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.EntityFrameworkC" Parent="runtime_8" Name="lib/net6.0/Microsoft.EntityFrameworkCore.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.Extensions.Dep_1" Parent="runtime_13" Name="lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.Extensions.Depen" Parent="runtime_12" Name="lib/net6.0/Microsoft.Extensions.DependencyInjection.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.Extensions.Loggi" Parent="runtime_15" Name="lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Microsoft.Extensions.Primi" Parent="runtime_17" Name="lib/net6.0/Microsoft.Extensions.Primitives.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0MySql.Data.dll" Parent="runtime_18" Name="lib/net6.0/MySql.Data.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnet6.0Ubiety.Dns.Core.dll" Parent="runtime_18" Name="lib/net6.0/Ubiety.Dns.Core.dll" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="libnet6.0ZstdNet.dll" Parent="runtime_18" Name="lib/net6.0/ZstdNet.dll" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0BouncyCastle.Crypt" Parent="runtime_2" Name="lib/netstandard2.0/BouncyCastle.Crypto.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0Google.Protobuf.dl" Parent="runtime_4" Name="lib/netstandard2.0/Google.Protobuf.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0K4os.Compression.L" Parent="runtime_5" Name="lib/netstandard2.0/K4os.Compression.LZ4.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0K4os.Hash.xxHash.d" Parent="runtime_7" Name="lib/netstandard2.0/K4os.Hash.xxHash.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0Microsoft.Extens_1" Parent="runtime_11" Name="lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.0Microsoft.Extensio" Parent="runtime_10" Name="lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.1K4os.Compression.L" Parent="runtime_6" Name="lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.1Microsoft.Extens_1" Parent="runtime_16" Name="lib/netstandard2.1/Microsoft.Extensions.Options.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libnetstandard2.1Microsoft.Extensio" Parent="runtime_14" Name="lib/netstandard2.1/Microsoft.Extensions.Logging.dll" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="libraries" Parent="Root_1" Name="libraries" Condition="1" Order="3" Flags="60"/>
+    <ROW JsonProperty="name" Parent="_" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.NETCore.App"/>
+    <ROW JsonProperty="name_1" Parent="__1" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.WindowsDesktop.App"/>
+    <ROW JsonProperty="name_2" Parent="runtimeTarget" Name="name" Condition="1" Order="0" Flags="57" Value=".NETCoreApp,Version=v6.0"/>
+    <ROW JsonProperty="path" Parent="BouncyCastle.NetCore1.8.5" Name="path" Condition="1" Order="3" Flags="57" Value="bouncycastle.netcore/1.8.5"/>
+    <ROW JsonProperty="path_1" Parent="Dapper2.0.123" Name="path" Condition="1" Order="3" Flags="57" Value="dapper/2.0.123"/>
+    <ROW JsonProperty="path_10" Parent="Microsoft.Extensions.Caching.Memory" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.caching.memory/6.0.1"/>
+    <ROW JsonProperty="path_11" Parent="Microsoft.Extensions.DependencyInje" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.dependencyinjection/6.0.0"/>
+    <ROW JsonProperty="path_12" Parent="Microsoft.Extensions.DependencyIn_1" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.dependencyinjection.abstractions/6.0.0"/>
+    <ROW JsonProperty="path_13" Parent="Microsoft.Extensions.Logging6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.logging/6.0.0"/>
+    <ROW JsonProperty="path_14" Parent="Microsoft.Extensions.Logging.Abstra" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.logging.abstractions/6.0.0"/>
+    <ROW JsonProperty="path_15" Parent="Microsoft.Extensions.Options6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.options/6.0.0"/>
+    <ROW JsonProperty="path_16" Parent="Microsoft.Extensions.Primitives6.0." Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.primitives/6.0.0"/>
+    <ROW JsonProperty="path_17" Parent="Microsoft.NETCore.Platforms3.1.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.netcore.platforms/3.1.0"/>
+    <ROW JsonProperty="path_18" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.win32.systemevents/4.7.0"/>
+    <ROW JsonProperty="path_19" Parent="MySql.Data8.0.28" Name="path" Condition="1" Order="3" Flags="57" Value="mysql.data/8.0.28"/>
+    <ROW JsonProperty="path_2" Parent="Google.Protobuf3.14.0" Name="path" Condition="1" Order="3" Flags="57" Value="google.protobuf/3.14.0"/>
+    <ROW JsonProperty="path_20" Parent="System.Buffers4.5.1" Name="path" Condition="1" Order="3" Flags="57" Value="system.buffers/4.5.1"/>
+    <ROW JsonProperty="path_21" Parent="System.Collections.Immutable6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.collections.immutable/6.0.0"/>
+    <ROW JsonProperty="path_22" Parent="System.Configuration.ConfigurationM" Name="path" Condition="1" Order="3" Flags="57" Value="system.configuration.configurationmanager/4.4.1"/>
+    <ROW JsonProperty="path_23" Parent="System.Diagnostics.DiagnosticSource" Name="path" Condition="1" Order="3" Flags="57" Value="system.diagnostics.diagnosticsource/6.0.0"/>
+    <ROW JsonProperty="path_24" Parent="System.Drawing.Common4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.drawing.common/4.7.0"/>
+    <ROW JsonProperty="path_25" Parent="System.Memory4.5.4" Name="path" Condition="1" Order="3" Flags="57" Value="system.memory/4.5.4"/>
+    <ROW JsonProperty="path_26" Parent="System.Runtime.CompilerServices.Uns" Name="path" Condition="1" Order="3" Flags="57" Value="system.runtime.compilerservices.unsafe/6.0.0"/>
+    <ROW JsonProperty="path_27" Parent="System.Security.AccessControl4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.accesscontrol/4.7.0"/>
+    <ROW JsonProperty="path_28" Parent="System.Security.Cryptography.Protec" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.cryptography.protecteddata/4.4.0"/>
+    <ROW JsonProperty="path_29" Parent="System.Security.Permissions4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.permissions/4.7.0"/>
+    <ROW JsonProperty="path_3" Parent="K4os.Compression.LZ41.2.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.compression.lz4/1.2.6"/>
+    <ROW JsonProperty="path_30" Parent="System.Security.Principal.Windows4." Name="path" Condition="1" Order="3" Flags="57" Value="system.security.principal.windows/4.7.0"/>
+    <ROW JsonProperty="path_31" Parent="System.Text.Encoding.CodePages4.4.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.text.encoding.codepages/4.4.0"/>
+    <ROW JsonProperty="path_32" Parent="System.Windows.Extensions4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.windows.extensions/4.7.0"/>
+    <ROW JsonProperty="path_4" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.compression.lz4.streams/1.2.6"/>
+    <ROW JsonProperty="path_5" Parent="K4os.Hash.xxHash1.0.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.hash.xxhash/1.0.6"/>
+    <ROW JsonProperty="path_6" Parent="Microsoft.EntityFrameworkCore6.0.2" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.entityframeworkcore/6.0.2"/>
+    <ROW JsonProperty="path_7" Parent="Microsoft.EntityFrameworkCore.Abstr" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.entityframeworkcore.abstractions/6.0.2"/>
+    <ROW JsonProperty="path_8" Parent="Microsoft.EntityFrameworkCore.Analy" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.entityframeworkcore.analyzers/6.0.2"/>
+    <ROW JsonProperty="path_9" Parent="Microsoft.Extensions.Caching.Abstra" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.extensions.caching.abstractions/6.0.0"/>
+    <ROW JsonProperty="runtime" Parent="FANTASY4YOU1.0.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtimeOptions" Parent="Root" Name="runtimeOptions" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtimeTarget" Parent="Root_1" Name="runtimeTarget" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_1" Parent="runtimepack.Microsoft.Windows.SDK_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_10" Parent="Microsoft.Extensions.Caching.Abst_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_11" Parent="Microsoft.Extensions.Caching.Memo_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_12" Parent="Microsoft.Extensions.DependencyIn_2" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_13" Parent="Microsoft.Extensions.DependencyIn_3" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_14" Parent="Microsoft.Extensions.Logging6.0.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_15" Parent="Microsoft.Extensions.Logging.Abst_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_16" Parent="Microsoft.Extensions.Options6.0.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_17" Parent="Microsoft.Extensions.Primitives6._1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_18" Parent="MySql.Data8.0.28_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_2" Parent="BouncyCastle.NetCore1.8.5_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_3" Parent="Dapper2.0.123_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtime_4" Parent="Google.Protobuf3.14.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_5" Parent="K4os.Compression.LZ41.2.6_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_6" Parent="K4os.Compression.LZ4.Streams1.2.6_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_7" Parent="K4os.Hash.xxHash1.0.6_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_8" Parent="Microsoft.EntityFrameworkCore6.0._1" Name="runtime" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtime_9" Parent="Microsoft.EntityFrameworkCore.Abs_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK.N" Parent="libraries" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.22" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK_1" Parent="NETCoreAppVersionv6.0" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.22" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK_2" Parent="dependencies" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref" Condition="1" Order="3" Flags="57" Value="10.0.22000.22"/>
+    <ROW JsonProperty="serviceable" Parent="FANTASY4YOU1.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="false"/>
+    <ROW JsonProperty="serviceable_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="serviceable" Condition="1" Order="1" Flags="58" Value="false"/>
+    <ROW JsonProperty="serviceable_10" Parent="Microsoft.EntityFrameworkCore.Analy" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_11" Parent="Microsoft.Extensions.Caching.Abstra" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_12" Parent="Microsoft.Extensions.Caching.Memory" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_13" Parent="Microsoft.Extensions.DependencyInje" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_14" Parent="Microsoft.Extensions.DependencyIn_1" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_15" Parent="Microsoft.Extensions.Logging6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_16" Parent="Microsoft.Extensions.Logging.Abstra" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_17" Parent="Microsoft.Extensions.Options6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_18" Parent="Microsoft.Extensions.Primitives6.0." Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_19" Parent="Microsoft.NETCore.Platforms3.1.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_2" Parent="BouncyCastle.NetCore1.8.5" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_20" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_21" Parent="MySql.Data8.0.28" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_22" Parent="System.Buffers4.5.1" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_23" Parent="System.Collections.Immutable6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_24" Parent="System.Configuration.ConfigurationM" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_25" Parent="System.Diagnostics.DiagnosticSource" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_26" Parent="System.Drawing.Common4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_27" Parent="System.Memory4.5.4" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_28" Parent="System.Runtime.CompilerServices.Uns" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_29" Parent="System.Security.AccessControl4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_3" Parent="Dapper2.0.123" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_30" Parent="System.Security.Cryptography.Protec" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_31" Parent="System.Security.Permissions4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_32" Parent="System.Security.Principal.Windows4." Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_33" Parent="System.Text.Encoding.CodePages4.4.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_34" Parent="System.Windows.Extensions4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_4" Parent="Google.Protobuf3.14.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_5" Parent="K4os.Compression.LZ41.2.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_6" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_7" Parent="K4os.Hash.xxHash1.0.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_8" Parent="Microsoft.EntityFrameworkCore6.0.2" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_9" Parent="Microsoft.EntityFrameworkCore.Abstr" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="sha512" Parent="FANTASY4YOU1.0.0" Name="sha512" Condition="1" Order="2" Flags="57"/>
+    <ROW JsonProperty="sha512_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="sha512" Condition="1" Order="2" Flags="57"/>
+    <ROW JsonProperty="sha512_10" Parent="Microsoft.EntityFrameworkCore.Analy" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-pHUMjXPeWqyZS2OfkQsDC1Qdk30JVcPNDUxEVhOTDAJvyUN4EuBFYbnniQ9RLHbWAw8IkEwVAAo6v/ICmT4/dw=="/>
+    <ROW JsonProperty="sha512_11" Parent="Microsoft.Extensions.Caching.Abstra" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw=="/>
+    <ROW JsonProperty="sha512_12" Parent="Microsoft.Extensions.Caching.Memory" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-B4y+Cev05eMcjf1na0v9gza6GUtahXbtY1JCypIgx3B4Ea/KAgsWyXEmW4q6zMbmTMtKzmPVk09rvFJirvMwTg=="/>
+    <ROW JsonProperty="sha512_13" Parent="Microsoft.Extensions.DependencyInje" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw=="/>
+    <ROW JsonProperty="sha512_14" Parent="Microsoft.Extensions.DependencyIn_1" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg=="/>
+    <ROW JsonProperty="sha512_15" Parent="Microsoft.Extensions.Logging6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg=="/>
+    <ROW JsonProperty="sha512_16" Parent="Microsoft.Extensions.Logging.Abstra" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA=="/>
+    <ROW JsonProperty="sha512_17" Parent="Microsoft.Extensions.Options6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ=="/>
+    <ROW JsonProperty="sha512_18" Parent="Microsoft.Extensions.Primitives6.0." Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ=="/>
+    <ROW JsonProperty="sha512_19" Parent="Microsoft.NETCore.Platforms3.1.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w=="/>
+    <ROW JsonProperty="sha512_2" Parent="BouncyCastle.NetCore1.8.5" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-6uxsQw2UXrt82VQAWC2td3oBSJjUZ3P4u4DliagB8wf67KsU53V8sW9xwdF+IwZOOZFR0TCZuv/YKZ2BlrfAag=="/>
+    <ROW JsonProperty="sha512_20" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA=="/>
+    <ROW JsonProperty="sha512_21" Parent="MySql.Data8.0.28" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-7b699tU9ba0r7SBK7K9snGJB9ulnOdwEXG28kpVvaQSN0hHenfoJ/ADOtdfhcvcn1KStBX8pFK5qIl8scdBL2g=="/>
+    <ROW JsonProperty="sha512_22" Parent="System.Buffers4.5.1" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg=="/>
+    <ROW JsonProperty="sha512_23" Parent="System.Collections.Immutable6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA=="/>
+    <ROW JsonProperty="sha512_24" Parent="System.Configuration.ConfigurationM" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ=="/>
+    <ROW JsonProperty="sha512_25" Parent="System.Diagnostics.DiagnosticSource" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw=="/>
+    <ROW JsonProperty="sha512_26" Parent="System.Drawing.Common4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA=="/>
+    <ROW JsonProperty="sha512_27" Parent="System.Memory4.5.4" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw=="/>
+    <ROW JsonProperty="sha512_28" Parent="System.Runtime.CompilerServices.Uns" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg=="/>
+    <ROW JsonProperty="sha512_29" Parent="System.Security.AccessControl4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg=="/>
+    <ROW JsonProperty="sha512_3" Parent="Dapper2.0.123" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ=="/>
+    <ROW JsonProperty="sha512_30" Parent="System.Security.Cryptography.Protec" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog=="/>
+    <ROW JsonProperty="sha512_31" Parent="System.Security.Permissions4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ=="/>
+    <ROW JsonProperty="sha512_32" Parent="System.Security.Principal.Windows4." Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ=="/>
+    <ROW JsonProperty="sha512_33" Parent="System.Text.Encoding.CodePages4.4.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A=="/>
+    <ROW JsonProperty="sha512_34" Parent="System.Windows.Extensions4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ=="/>
+    <ROW JsonProperty="sha512_4" Parent="Google.Protobuf3.14.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-9AkodyGNmLI+wJJPbwpWLmh4BMHoXDQ9+8qvDPhQQi/BNsleqKMBn3OlyLwC6CALwan2kc5+Cenb8fJSITX3nQ=="/>
+    <ROW JsonProperty="sha512_5" Parent="K4os.Compression.LZ41.2.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-4EN8EE6bZG2U8dFfeqn+Om3UNajK3cPYHvyQROCFm4jNFVLuRB7Nl5bDkjBSAjfctS6konm+ay3u5RafBzltDA=="/>
+    <ROW JsonProperty="sha512_6" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-5KMcNFRHeRrnJ9c8k5fZcfAJJEY0FndMiDiHIYa35Mx5KCMkeSNo/PEXu7YmtCoVczJagx+Vt7J/F+//S1PcJQ=="/>
+    <ROW JsonProperty="sha512_7" Parent="K4os.Hash.xxHash1.0.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-jCfNP0inx1sGcP3KSbpiDEH3km2e1sVBjMfKo+V92jr1dL4ZYgA1uhRMl1wAtdGZcbObXIikKqtVlgx3j/CW6g=="/>
+    <ROW JsonProperty="sha512_8" Parent="Microsoft.EntityFrameworkCore6.0.2" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-hoZtatDA6zL/+gMXXkG3UNsF6iWguC9OkJeYUepqyPEF2mjFajga+DxS4H/UODs7HWo9oNCnhi2Q/BE9T0lg2g=="/>
+    <ROW JsonProperty="sha512_9" Parent="Microsoft.EntityFrameworkCore.Abstr" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-71hgKvRpMebTp9bKZB86w3uRXQAJzTeksZ4EyO1/OKj/AoL8/8IU31kHHcIFAfX/D0uefl4rO6jWgh3OaR41pQ=="/>
+    <ROW JsonProperty="signature" Parent="runtimeTarget" Name="signature" Condition="1" Order="1" Flags="57"/>
+    <ROW JsonProperty="targets" Parent="Root_1" Name="targets" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="tfm" Parent="runtimeOptions" Name="tfm" Condition="1" Order="0" Flags="57" Value="net6.0"/>
+    <ROW JsonProperty="type" Parent="FANTASY4YOU1.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="project"/>
+    <ROW JsonProperty="type_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="type" Condition="1" Order="0" Flags="57" Value="runtimepack"/>
+    <ROW JsonProperty="type_10" Parent="Microsoft.EntityFrameworkCore.Analy" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_11" Parent="Microsoft.Extensions.Caching.Abstra" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_12" Parent="Microsoft.Extensions.Caching.Memory" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_13" Parent="Microsoft.Extensions.DependencyInje" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_14" Parent="Microsoft.Extensions.DependencyIn_1" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_15" Parent="Microsoft.Extensions.Logging6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_16" Parent="Microsoft.Extensions.Logging.Abstra" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_17" Parent="Microsoft.Extensions.Options6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_18" Parent="Microsoft.Extensions.Primitives6.0." Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_19" Parent="Microsoft.NETCore.Platforms3.1.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_2" Parent="BouncyCastle.NetCore1.8.5" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_20" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_21" Parent="MySql.Data8.0.28" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_22" Parent="System.Buffers4.5.1" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_23" Parent="System.Collections.Immutable6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_24" Parent="System.Configuration.ConfigurationM" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_25" Parent="System.Diagnostics.DiagnosticSource" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_26" Parent="System.Drawing.Common4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_27" Parent="System.Memory4.5.4" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_28" Parent="System.Runtime.CompilerServices.Uns" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_29" Parent="System.Security.AccessControl4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_3" Parent="Dapper2.0.123" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_30" Parent="System.Security.Cryptography.Protec" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_31" Parent="System.Security.Permissions4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_32" Parent="System.Security.Principal.Windows4." Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_33" Parent="System.Text.Encoding.CodePages4.4.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_34" Parent="System.Windows.Extensions4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_4" Parent="Google.Protobuf3.14.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_5" Parent="K4os.Compression.LZ41.2.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_6" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_7" Parent="K4os.Hash.xxHash1.0.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_8" Parent="Microsoft.EntityFrameworkCore6.0.2" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_9" Parent="Microsoft.EntityFrameworkCore.Abstr" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="version" Parent="_" Name="version" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="version_1" Parent="__1" Name="version" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
     <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
     <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
     <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
     <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_JsonCommit" Description="Committing JSON file configurations." DescriptionLocId="ActionText.Description.AI_JsonCommit" Template="Committing JSON file configurations." TemplateLocId="ActionText.Template.AI_JsonCommit"/>
+    <ROW Action="AI_JsonConfig" Description="Executing JSON file configurations" DescriptionLocId="ActionText.Description.AI_JsonConfig" Template="Configuring JSON file: &quot;[1]&quot;" TemplateLocId="ActionText.Template.AI_JsonConfig"/>
+    <ROW Action="AI_JsonInstall" Description="Generating actions to configure JSON files" DescriptionLocId="ActionText.Description.AI_JsonInstall"/>
+    <ROW Action="AI_JsonRemove" Description="Executing JSON file configurations" DescriptionLocId="ActionText.Description.AI_JsonRemove" Template="Configuring JSON file: &quot;[1]&quot;" TemplateLocId="ActionText.Template.AI_JsonRemove"/>
+    <ROW Action="AI_JsonRollback" Description="Rolling back JSON file configurations." DescriptionLocId="ActionText.Description.AI_JsonRollback" Template="Rolling back JSON file configurations." TemplateLocId="ActionText.Template.AI_JsonRollback"/>
+    <ROW Action="AI_JsonUninstall" Description="Generating actions to configure JSON files" DescriptionLocId="ActionText.Description.AI_JsonUninstall"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
@@ -199,6 +576,7 @@
     <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
     <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="jsonCfg.dll" SourcePath="&lt;AI_CUSTACTS&gt;jsonCfg.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
@@ -332,6 +710,8 @@
     <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="CustomActionData" Target="[~]"/>
+    <ROW Action="AI_DATA_SETTER_2" Type="51" Source="CustomActionData" Target="[~]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -347,6 +727,12 @@
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
     <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_JsonCommit" Type="11777" Source="jsonCfg.dll" Target="OnJsonCommit" WithoutSeq="true"/>
+    <ROW Action="AI_JsonConfig" Type="11265" Source="jsonCfg.dll" Target="OnJsonConfig" WithoutSeq="true"/>
+    <ROW Action="AI_JsonInstall" Type="1" Source="jsonCfg.dll" Target="OnJsonInstall" AdditionalSeq="AI_DATA_SETTER_1"/>
+    <ROW Action="AI_JsonRemove" Type="11265" Source="jsonCfg.dll" Target="OnJsonRemove" WithoutSeq="true"/>
+    <ROW Action="AI_JsonRollback" Type="11521" Source="jsonCfg.dll" Target="OnJsonRollback" WithoutSeq="true"/>
+    <ROW Action="AI_JsonUninstall" Type="1" Source="jsonCfg.dll" Target="OnJsonUninstall" AdditionalSeq="AI_DATA_SETTER_2"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
     <ROW Action="AI_PinShortcuts" Type="1" Source="ShortcutFlags.dll" Target="PinShortcuts"/>
     <ROW Action="AI_PinToStartScreen" Type="1025" Source="ShortcutFlags.dll" Target="PinToStartScreen" WithoutSeq="true"/>
@@ -370,10 +756,31 @@
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
     <ROW Feature_="MainFeature" Component_="Olondon_.otf"/>
-    <ROW Feature_="MainFeature" Component_="FANTASY4YOU_PublishOutput"/>
-    <ROW Feature_="MainFeature" Component_="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe"/>
     <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
     <ROW Feature_="MainFeature" Component_="AI_CustomARPName"/>
+    <ROW Feature_="MainFeature" Component_="Google.Protobuf.dll"/>
+    <ROW Feature_="MainFeature" Component_="K4os.Compression.LZ4.dll"/>
+    <ROW Feature_="MainFeature" Component_="K4os.Compression.LZ4.Streams.dll"/>
+    <ROW Feature_="MainFeature" Component_="K4os.Hash.xxHash.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.EntityFrameworkCore.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.EntityFrameworkCore.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Caching.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Caching.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.DependencyInjection.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.Abstractions.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Logging.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Options.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Windows.SDK.NET.dll"/>
+    <ROW Feature_="MainFeature" Component_="MySql.Data.dll"/>
+    <ROW Feature_="MainFeature" Component_="Ubiety.Dns.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="WinRT.Runtime.dll"/>
+    <ROW Feature_="MainFeature" Component_="ZstdNet.dll"/>
+    <ROW Feature_="MainFeature" Component_="BouncyCastle.Crypto.dll"/>
+    <ROW Feature_="MainFeature" Component_="Dapper.dll"/>
+    <ROW Feature_="MainFeature" Component_="FANTASY4YOU.dll"/>
+    <ROW Feature_="MainFeature" Component_="FANTASY4YOU.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFontsComponent">
     <ROW File_="Olondon_.otf" FontTitle="OldLondon"/>
@@ -406,6 +813,10 @@
     <ROW Action="AI_AppSearchEx" Sequence="101"/>
     <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
     <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+    <ROW Action="AI_JsonInstall" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5102"/>
+    <ROW Action="AI_DATA_SETTER_1" Condition="(REMOVE &lt;&gt; &quot;ALL&quot;)" Sequence="5101"/>
+    <ROW Action="AI_JsonUninstall" Condition="(REMOVE)" Sequence="3102"/>
+    <ROW Action="AI_DATA_SETTER_2" Condition="(REMOVE)" Sequence="3101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -469,7 +880,8 @@
     <ROW Registry="Windows" Root="-1" Key="Software\Microsoft\Windows" Name="\"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="FANTASY4YOU.exe" Directory_="ProgramMenuFolder" Name="FANTAS~1.EXE|FANTASY4YOU.exe" Component_="AI_PROPPATH_FILENAME_PERBUILD_FANTASY4YOU.exe" Target="[#FANTASY4YOU.exe]" Hotkey="0" Icon_="_adventuretimepixelarthdpngdownload_256x256.exe" IconIndex="0" ShowCmd="1" WkDir="FANTASY4YOU_Dir" CustomFlags="1"/>
+    <ROW Shortcut="Fantasy4You" Directory_="DesktopFolder" Name="FANTAS~1|Fantasy4You" Component_="FANTASY4YOU.exe" Target="[#FANTASY4YOU.exe]" Hotkey="0" Icon_="_adventuretimepixelarthdpngdownload_256x256.exe" IconIndex="0" ShowCmd="1" WkDir="FANTASY4YOU_Dir" CustomFlags="1"/>
+    <ROW Shortcut="Fantasy4You_1" Directory_="ProgramMenuFolder" Name="FANTAS~1|Fantasy4You" Component_="FANTASY4YOU.exe" Target="[#FANTASY4YOU.exe]" Hotkey="0" Icon_="_adventuretimepixelarthdpngdownload_256x256.exe" IconIndex="0" ShowCmd="1" WkDir="FANTASY4YOU_Dir" CustomFlags="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiTextStyleComponent">
     <ROW TextStyle="BrandingStyle" FaceName="Segoe UI" Size="8" Color="2171376" MultiBuildColor="DefaultBuild:2565927" StyleBits="0" MsiKey="BrandingStyle"/>
@@ -488,32 +900,5 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
     <ROW SearchKey="FAC9C433D3044829E6669A2C6FF54E6Micr" Prereq="FAC9C433D3044829E6669A2C6FF54E6" SearchType="0" SearchString="[ProgramFiles64Folder]dotnet\shared\Microsoft.WindowsDesktop.App\6.0.2\Microsoft.WindowsDesktop.App.runtimeconfig.json" Order="1" Property="PreReqSearch_FAC9C433D3044829E6669A"/>
-  </COMPONENT>
-  <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="BouncyCastle.Crypto.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Dapper.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="FANTASY4YOU.deps.json"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="FANTASY4YOU.dll_1"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="FANTASY4YOU.exe"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="FANTASY4YOU.runtimeconfig.json"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Google.Protobuf.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="K4os.Compression.LZ4.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="K4os.Compression.LZ4.Streams.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="K4os.Hash.xxHash.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.EntityFrameworkCore.Abstractions.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.EntityFrameworkCore.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Caching.Abstractions.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Caching.Memory.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.DependencyInjection.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Logging.Abstractions.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Logging.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Options.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Extensions.Primitives.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Microsoft.Windows.SDK.NET.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="MySql.Data.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="Ubiety.Dns.Core.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="WinRT.Runtime.dll"/>
-    <ROW ProjectId="{132ccfdd-fdf2-4508-a6bf-c198a15f773c}" ProjectName="FANTASY4YOU" OutputGroup="PublishOutput" OutputFile="ZstdNet.dll"/>
   </COMPONENT>
 </DOCUMENT>

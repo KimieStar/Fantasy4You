@@ -27,7 +27,7 @@
       <Name>FANTASY4YOU</Name>
       <Project>{132ccfdd-fdf2-4508-a6bf-c198a15f773c}</Project>
       <Private>True</Private>
-      <OutputsToImport>PublishOutput#FolderProfile#bin\Release\net6.0-windows10.0.22000.0\publish\#Release#Any CPU#FileSystem######</OutputsToImport>
+      <OutputsToImport>PublishOutput#FolderProfile1#bin\Release\net6.0-windows10.0.22000.0\publish-new\#Release#Any CPU#FileSystem######</OutputsToImport>
     </ProjectReference>
   </ItemGroup>
   <Target Name="Build">

@@ -15,10 +15,12 @@ namespace FANTASY4YOU
         public string roamingpath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string CredentialsPath = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\crd.txt");
         private string UsernamePath = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\uid.txt");
+        private string charNumPath = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\charSelectedTemp.txt");
         private string CredentialsDir = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\F4Y\DONT TOUCH\");
         private string path = @"\F4Y\DONT TOUCH\";
         private string filename = "crd.txt";
         private string usernameFilename = "usr.txt";
+        private string charSelectedTempFilename = "charSelectedTemp.txt";
 
 
         public string crdPath
@@ -91,6 +93,31 @@ namespace FANTASY4YOU
             set
             {
                 usernameFilename = value;
+            }
+        }
+
+        public string CharSelectedTempFilename
+        {
+            get
+            {
+                return charSelectedTempFilename;
+            }
+            set 
+            {
+                charSelectedTempFilename = value; 
+            }
+        }
+
+        public string CharNumPath
+        {
+            get
+            {
+                return charNumPath;
+            }
+
+            set
+            {
+                charNumPath = value; 
             }
         }
     }
