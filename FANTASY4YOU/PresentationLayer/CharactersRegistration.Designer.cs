@@ -52,6 +52,7 @@ namespace FANTASY4YOU
             this.characterNameTextBox.Name = "characterNameTextBox";
             this.characterNameTextBox.Size = new System.Drawing.Size(100, 23);
             this.characterNameTextBox.TabIndex = 0;
+            this.characterNameTextBox.TabStop = false;
             this.characterNameTextBox.TextChanged += new System.EventHandler(this.characterNameTextBox_TextChanged);
             // 
             // classComboBox
@@ -66,6 +67,7 @@ namespace FANTASY4YOU
             this.classComboBox.Name = "classComboBox";
             this.classComboBox.Size = new System.Drawing.Size(121, 23);
             this.classComboBox.TabIndex = 1;
+            this.classComboBox.TabStop = false;
             this.classComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // levelBox
@@ -74,6 +76,7 @@ namespace FANTASY4YOU
             this.levelBox.Name = "levelBox";
             this.levelBox.Size = new System.Drawing.Size(100, 23);
             this.levelBox.TabIndex = 2;
+            this.levelBox.TabStop = false;
             // 
             // label1
             // 
@@ -114,6 +117,7 @@ namespace FANTASY4YOU
             this.raceComboBox.Name = "raceComboBox";
             this.raceComboBox.Size = new System.Drawing.Size(121, 23);
             this.raceComboBox.TabIndex = 6;
+            this.raceComboBox.TabStop = false;
             // 
             // label4
             // 
@@ -131,6 +135,7 @@ namespace FANTASY4YOU
             this.backgroundTextBox.Name = "backgroundTextBox";
             this.backgroundTextBox.Size = new System.Drawing.Size(263, 94);
             this.backgroundTextBox.TabIndex = 8;
+            this.backgroundTextBox.TabStop = false;
             // 
             // label5
             // 
@@ -147,6 +152,7 @@ namespace FANTASY4YOU
             this.xpTextBox.Name = "xpTextBox";
             this.xpTextBox.Size = new System.Drawing.Size(100, 23);
             this.xpTextBox.TabIndex = 10;
+            this.xpTextBox.TabStop = false;
             // 
             // label6
             // 
@@ -179,6 +185,7 @@ namespace FANTASY4YOU
             this.alignmentComboBox.Name = "alignmentComboBox";
             this.alignmentComboBox.Size = new System.Drawing.Size(121, 23);
             this.alignmentComboBox.TabIndex = 14;
+            this.alignmentComboBox.TabStop = false;
             // 
             // button1
             // 

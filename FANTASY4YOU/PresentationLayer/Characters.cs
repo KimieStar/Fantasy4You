@@ -12,7 +12,8 @@ namespace FANTASY4YOU
     {
         Logic logic = new Logic();
         CharacterRegistration chr = new CharacterRegistration();
-        CharacterCustomizationChar customization = new CharacterCustomizationChar();
+        CharacterCustomizationChar customization = new CharacterCustomizationChar(); 
+        CharacterDisplayer characterDisplayer = new CharacterDisplayer();
         Thread registerCharacter;
         Thread mainInerface;
         //public int characterNumberSelectedToCustomize;
@@ -203,31 +204,31 @@ namespace FANTASY4YOU
 
         private void CharacterCustomizationButton1_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEdit(1);
+            logic.saveCharSelectedToEditToFile(1);
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton2_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEdit(2);
+            logic.saveCharSelectedToEditToFile(2);
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton3_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEdit(3);
+            logic.saveCharSelectedToEditToFile(3);
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton4_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEdit(4);
+            logic.saveCharSelectedToEditToFile(4);
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton5_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEdit(5);
+            logic.saveCharSelectedToEditToFile(5);
             customization.ShowDialog();
         }
 
@@ -241,6 +242,36 @@ namespace FANTASY4YOU
         private void OpenMainInterface(object? obj)
         {
             Application.Run(new MainInterface());
+        }
+
+        private void OpenCharacterDisplay1_Click(object sender, EventArgs e)
+        {
+            logic.saveCharSelectedToDisplayToFile(1);
+            characterDisplayer.ShowDialog();
+        }
+
+        private void OpenCharacterDisplay2_Click(object sender, EventArgs e)
+        {
+            logic.saveCharSelectedToDisplayToFile(2);
+            characterDisplayer.ShowDialog();
+        }
+
+        private void OpenCharacterDisplay3_Click(object sender, EventArgs e)
+        {
+            logic.saveCharSelectedToDisplayToFile(3);
+            characterDisplayer.ShowDialog();
+        }
+
+        private void OpenCharacterDisplay4_Click(object sender, EventArgs e)
+        {
+            logic.saveCharSelectedToDisplayToFile(4);
+            characterDisplayer.ShowDialog();
+        }
+
+        private void OpenCharacterDisplay5_Click(object sender, EventArgs e)
+        {
+            logic.saveCharSelectedToDisplayToFile(5);
+            characterDisplayer.ShowDialog();
         }
     }
 }

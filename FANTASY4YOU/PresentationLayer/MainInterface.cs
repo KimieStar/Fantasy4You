@@ -84,7 +84,7 @@ namespace FANTASY4YOU
 
         private void MainInterface_FormClosing(object sender, FormClosingEventArgs e)
         {
-            logic.deleteCharSelectedToEdit();
+            logic.deleteCharSelectedToEditFile();
         }
     }
 }

@@ -14,10 +14,10 @@
     <ROW Property="ARPPRODUCTICON" Value="_adventuretimepixelarthdpngdownload_256x256.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="Manufacturer" Value="Kimiegg Entertainment"/>
-    <ROW Property="ProductCode" Value="1033:{F3F5A91A-E620-49E5-B463-F08BC5212A78} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F1B462C0-4363-480E-8ABD-5BB9AF8C19F0} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Fantasy4You"/>
-    <ROW Property="ProductVersion" Value="1.0.1"/>
+    <ROW Property="ProductVersion" Value="1.0.1.07"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{59F169DA-B25B-4306-A95A-4C9AC11A870D}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -38,7 +38,7 @@
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{D001FC36-9DEB-4FD9-A7F0-F1288A6F9493}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{383FF1DA-23A4-41E3-8A7C-0E33A82164DB}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{A0596DAB-9D34-482B-8178-A07EFABFB2CD}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="APPDIR" ComponentId="{29DEE02A-54C4-4555-96BF-35E40965855F}" Directory_="APPDIR" Attributes="0"/>
     <ROW Component="BouncyCastle.Crypto.dll" ComponentId="{3B50AF6A-0625-4F34-A88E-A7837A84FDBA}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="BouncyCastle.Crypto.dll"/>
@@ -891,7 +891,7 @@
     <ATTRIBUTE name="UsedTheme" value="surface"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
-    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="769" ActionProperty="OLDPRODUCTS"/>
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">

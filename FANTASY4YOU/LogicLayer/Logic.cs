@@ -61,6 +61,19 @@ namespace FANTASY4YOU
             connection.UpdateCharacterDetails(chNumber, id, strenght, dexterity, constitution, intelligence, wisdom, charisma);
         }
 
+        public void UpdateCharacterDetails2(int chNumber, string chName, string classs, int level, string race, int xp, string alignment)
+        {
+            int id = SelectUserId();
+            connection.UpdateCharacterDetails2(chNumber, id, chName, classs, level, race, xp, alignment);
+        }
+
+        public void UpdateCharacterDetails3(int chNumber,string background)
+        {
+            int id = SelectUserId();
+            connection.UpdateCharacterDetails3(chNumber, id, background);
+        }
+
+
         public void InsertCharacterDetails2(string characterName, string classs, int level, string race, string backgroundStory, int xpPoints, string alignment)
         {
             int numberOfCharacter = NumberOfCharactersCreated();
@@ -106,9 +119,9 @@ namespace FANTASY4YOU
             sw.Close();
         }
 
-        public void saveCharSelectedToEdit(int charNumber)
+        public void saveCharSelectedToEditToFile(int charNumber)
         {
-            if (!File.Exists(importantInfo.CharNumPath) || charNumber != readCharSelectedToEdit())
+            if (!File.Exists(importantInfo.CharNumPath) || charNumber != readCharSelectedToEditFile())
             {
                 string path = importantInfo.Path;
                 string fileName = importantInfo.CharSelectedTempFilename;
@@ -123,7 +136,7 @@ namespace FANTASY4YOU
             
         }
 
-        public int readCharSelectedToEdit()
+        public int readCharSelectedToEditFile()
         {
             int charNum;
             string path = importantInfo.Path;
@@ -147,7 +160,7 @@ namespace FANTASY4YOU
             return charNum;
         }
 
-        public void deleteCharSelectedToEdit()
+        public void deleteCharSelectedToEditFile()
         {
             var CharNumPath = (importantInfo.CharNumPath);
             if (File.Exists(CharNumPath))
@@ -157,6 +170,56 @@ namespace FANTASY4YOU
             
         }
 
+        public void saveCharSelectedToDisplayToFile(int charNumber)
+        {
+            if (!File.Exists(importantInfo.CharDispPath) || charNumber != readCharSelectedToDisplayFile())
+            {
+                string path = importantInfo.Path;
+                string fileName = importantInfo.CharSelectedTempDisplayFilename;
+                var roaming = importantInfo.roamingpath;
+                var newdir = (roaming + path);
+                var filePath = Path.Combine(newdir, fileName);
+                var file = File.Create(filePath);
+                var sw = new StreamWriter(file);
+                sw.Write(charNumber);
+                sw.Close();
+            }
+
+        }
+
+        public int readCharSelectedToDisplayFile()
+        {
+            int charNum;
+            string path = importantInfo.Path;
+            string fileName = importantInfo.CharSelectedTempDisplayFilename;
+            var roaming = importantInfo.roamingpath;
+            var newdir = (roaming + path);
+            var filePath = Path.Combine(newdir, fileName);
+            var sr = new StreamReader(filePath);
+
+            try
+            {
+                string line = sr.ReadLine();
+                charNum = Int32.Parse(line); ;
+                sr.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return charNum;
+        }
+
+        public void deleteCharSelectedToDisplayFile()
+        {
+            var CharNumPath = (importantInfo.CharDispPath);
+            if (File.Exists(CharNumPath))
+            {
+                File.Delete(CharNumPath);
+            }
+
+        }
         //Has NunitTest
         public List<string>[] SelectCharacterInformation(int characterNumber)
         {

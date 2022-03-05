@@ -29,10 +29,12 @@ namespace FANTASY4YOU
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Characters));
             this.NumberOfCharactersLabel = new System.Windows.Forms.Label();
             this.CharactersNumbers = new System.Windows.Forms.Label();
             this.CreateCharacterButton = new System.Windows.Forms.Button();
             this.CharacterPannel1 = new System.Windows.Forms.Panel();
+            this.OpenCharacterDisplay1 = new System.Windows.Forms.Button();
             this.CharacterCustomizationButton1 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel1 = new System.Windows.Forms.Label();
@@ -41,6 +43,7 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel1 = new System.Windows.Forms.Label();
             this.CharacterPannel2 = new System.Windows.Forms.Panel();
+            this.OpenCharacterDisplay2 = new System.Windows.Forms.Button();
             this.CharacterCustomizationButton2 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel2 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel2 = new System.Windows.Forms.Label();
@@ -49,6 +52,7 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel2 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel2 = new System.Windows.Forms.Label();
             this.CharacterPannel3 = new System.Windows.Forms.Panel();
+            this.OpenCharacterDisplay3 = new System.Windows.Forms.Button();
             this.CharacterCustomizationButton3 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel3 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel3 = new System.Windows.Forms.Label();
@@ -57,6 +61,7 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel3 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel3 = new System.Windows.Forms.Label();
             this.CharacterPannel4 = new System.Windows.Forms.Panel();
+            this.OpenCharacterDisplay4 = new System.Windows.Forms.Button();
             this.CharacterCustomizationButton4 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel4 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel4 = new System.Windows.Forms.Label();
@@ -65,6 +70,7 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel4 = new System.Windows.Forms.Label();
             this.CharacterPannelLabel4 = new System.Windows.Forms.Label();
             this.CharacterPannel5 = new System.Windows.Forms.Panel();
+            this.OpenCharacterDisplay5 = new System.Windows.Forms.Button();
             this.CharacterCustomizationButton5 = new System.Windows.Forms.Button();
             this.CharacterRacePannelLabel5 = new System.Windows.Forms.Label();
             this.CharacterLevelPannelLabel5 = new System.Windows.Forms.Label();
@@ -116,6 +122,7 @@ namespace FANTASY4YOU
             // CharacterPannel1
             // 
             this.CharacterPannel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel1.Controls.Add(this.OpenCharacterDisplay1);
             this.CharacterPannel1.Controls.Add(this.CharacterCustomizationButton1);
             this.CharacterPannel1.Controls.Add(this.CharacterRacePannelLabel1);
             this.CharacterPannel1.Controls.Add(this.CharacterLevelPannelLabel1);
@@ -128,6 +135,17 @@ namespace FANTASY4YOU
             this.CharacterPannel1.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel1.TabIndex = 3;
             this.CharacterPannel1.Paint += new System.Windows.Forms.PaintEventHandler(this.CharacterPannel1_Paint);
+            // 
+            // OpenCharacterDisplay1
+            // 
+            this.OpenCharacterDisplay1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenCharacterDisplay1.BackgroundImage")));
+            this.OpenCharacterDisplay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenCharacterDisplay1.Location = new System.Drawing.Point(139, 44);
+            this.OpenCharacterDisplay1.Name = "OpenCharacterDisplay1";
+            this.OpenCharacterDisplay1.Size = new System.Drawing.Size(58, 53);
+            this.OpenCharacterDisplay1.TabIndex = 7;
+            this.OpenCharacterDisplay1.UseVisualStyleBackColor = true;
+            this.OpenCharacterDisplay1.Click += new System.EventHandler(this.OpenCharacterDisplay1_Click);
             // 
             // CharacterCustomizationButton1
             // 
@@ -202,6 +220,7 @@ namespace FANTASY4YOU
             // CharacterPannel2
             // 
             this.CharacterPannel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel2.Controls.Add(this.OpenCharacterDisplay2);
             this.CharacterPannel2.Controls.Add(this.CharacterCustomizationButton2);
             this.CharacterPannel2.Controls.Add(this.CharacterRacePannelLabel2);
             this.CharacterPannel2.Controls.Add(this.CharacterLevelPannelLabel2);
@@ -213,6 +232,17 @@ namespace FANTASY4YOU
             this.CharacterPannel2.Name = "CharacterPannel2";
             this.CharacterPannel2.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel2.TabIndex = 4;
+            // 
+            // OpenCharacterDisplay2
+            // 
+            this.OpenCharacterDisplay2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenCharacterDisplay2.BackgroundImage")));
+            this.OpenCharacterDisplay2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenCharacterDisplay2.Location = new System.Drawing.Point(139, 44);
+            this.OpenCharacterDisplay2.Name = "OpenCharacterDisplay2";
+            this.OpenCharacterDisplay2.Size = new System.Drawing.Size(58, 53);
+            this.OpenCharacterDisplay2.TabIndex = 9;
+            this.OpenCharacterDisplay2.UseVisualStyleBackColor = true;
+            this.OpenCharacterDisplay2.Click += new System.EventHandler(this.OpenCharacterDisplay2_Click);
             // 
             // CharacterCustomizationButton2
             // 
@@ -287,6 +317,7 @@ namespace FANTASY4YOU
             // CharacterPannel3
             // 
             this.CharacterPannel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel3.Controls.Add(this.OpenCharacterDisplay3);
             this.CharacterPannel3.Controls.Add(this.CharacterCustomizationButton3);
             this.CharacterPannel3.Controls.Add(this.CharacterRacePannelLabel3);
             this.CharacterPannel3.Controls.Add(this.CharacterLevelPannelLabel3);
@@ -298,6 +329,17 @@ namespace FANTASY4YOU
             this.CharacterPannel3.Name = "CharacterPannel3";
             this.CharacterPannel3.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel3.TabIndex = 4;
+            // 
+            // OpenCharacterDisplay3
+            // 
+            this.OpenCharacterDisplay3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenCharacterDisplay3.BackgroundImage")));
+            this.OpenCharacterDisplay3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenCharacterDisplay3.Location = new System.Drawing.Point(139, 44);
+            this.OpenCharacterDisplay3.Name = "OpenCharacterDisplay3";
+            this.OpenCharacterDisplay3.Size = new System.Drawing.Size(58, 53);
+            this.OpenCharacterDisplay3.TabIndex = 11;
+            this.OpenCharacterDisplay3.UseVisualStyleBackColor = true;
+            this.OpenCharacterDisplay3.Click += new System.EventHandler(this.OpenCharacterDisplay3_Click);
             // 
             // CharacterCustomizationButton3
             // 
@@ -372,6 +414,7 @@ namespace FANTASY4YOU
             // CharacterPannel4
             // 
             this.CharacterPannel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel4.Controls.Add(this.OpenCharacterDisplay4);
             this.CharacterPannel4.Controls.Add(this.CharacterCustomizationButton4);
             this.CharacterPannel4.Controls.Add(this.CharacterRacePannelLabel4);
             this.CharacterPannel4.Controls.Add(this.CharacterLevelPannelLabel4);
@@ -383,6 +426,17 @@ namespace FANTASY4YOU
             this.CharacterPannel4.Name = "CharacterPannel4";
             this.CharacterPannel4.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel4.TabIndex = 4;
+            // 
+            // OpenCharacterDisplay4
+            // 
+            this.OpenCharacterDisplay4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenCharacterDisplay4.BackgroundImage")));
+            this.OpenCharacterDisplay4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenCharacterDisplay4.Location = new System.Drawing.Point(139, 44);
+            this.OpenCharacterDisplay4.Name = "OpenCharacterDisplay4";
+            this.OpenCharacterDisplay4.Size = new System.Drawing.Size(58, 53);
+            this.OpenCharacterDisplay4.TabIndex = 11;
+            this.OpenCharacterDisplay4.UseVisualStyleBackColor = true;
+            this.OpenCharacterDisplay4.Click += new System.EventHandler(this.OpenCharacterDisplay4_Click);
             // 
             // CharacterCustomizationButton4
             // 
@@ -457,6 +511,7 @@ namespace FANTASY4YOU
             // CharacterPannel5
             // 
             this.CharacterPannel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.CharacterPannel5.Controls.Add(this.OpenCharacterDisplay5);
             this.CharacterPannel5.Controls.Add(this.CharacterCustomizationButton5);
             this.CharacterPannel5.Controls.Add(this.CharacterRacePannelLabel5);
             this.CharacterPannel5.Controls.Add(this.CharacterLevelPannelLabel5);
@@ -468,6 +523,17 @@ namespace FANTASY4YOU
             this.CharacterPannel5.Name = "CharacterPannel5";
             this.CharacterPannel5.Size = new System.Drawing.Size(200, 100);
             this.CharacterPannel5.TabIndex = 4;
+            // 
+            // OpenCharacterDisplay5
+            // 
+            this.OpenCharacterDisplay5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OpenCharacterDisplay5.BackgroundImage")));
+            this.OpenCharacterDisplay5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OpenCharacterDisplay5.Location = new System.Drawing.Point(139, 44);
+            this.OpenCharacterDisplay5.Name = "OpenCharacterDisplay5";
+            this.OpenCharacterDisplay5.Size = new System.Drawing.Size(58, 53);
+            this.OpenCharacterDisplay5.TabIndex = 11;
+            this.OpenCharacterDisplay5.UseVisualStyleBackColor = true;
+            this.OpenCharacterDisplay5.Click += new System.EventHandler(this.OpenCharacterDisplay5_Click);
             // 
             // CharacterCustomizationButton5
             // 
@@ -628,5 +694,10 @@ namespace FANTASY4YOU
         private Button CharacterCustomizationButton3;
         private Button CharacterCustomizationButton4;
         private Button CharacterCustomizationButton5;
+        private Button OpenCharacterDisplay1;
+        private Button OpenCharacterDisplay2;
+        private Button OpenCharacterDisplay3;
+        private Button OpenCharacterDisplay4;
+        private Button OpenCharacterDisplay5;
     }
 }

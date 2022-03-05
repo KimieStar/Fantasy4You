@@ -12,8 +12,8 @@ namespace FANTASY4YOU
     public class ConnectionToDatabase
     {
         DBCredentials credAndQuereis = new DBCredentials();
-        private MySqlConnection connection = null;
-        private MySqlDataReader dreader = null;
+        private MySqlConnection connection;
+        private MySqlDataReader dreader;
         
 
         public ConnectionToDatabase()
@@ -273,6 +273,30 @@ namespace FANTASY4YOU
         public void UpdateCharacterDetails(int chNum,int id, int strenght, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
         {
             string query = "UPDATE characters SET strenght = '"+ strenght + "', dexterity = '" + dexterity + "', constitution = '" + constitution + "', intelligence = '" + intelligence + "', wisdom = '" + wisdom + "', charisma= '" + charisma + "' WHERE characterNumber='" + chNum +"' AND id='"+ id +"'";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+
+        }
+
+        public void UpdateCharacterDetails2(int chNum, int id, string chName, string classs, int level, string race, int xp, string alignment)
+        {
+            string query = "UPDATE characters SET characterName = '" + chName + "', class = '" + classs + "', level = '" + level + "', race = '" + race + "', experiencePoints = '" + xp + "',alignment='"+ alignment +"'WHERE characterNumber='" + chNum + "' AND id='" + id + "'";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+
+        }
+
+        public void UpdateCharacterDetails3(int chNum, int id,string background)
+        {
+            string query = "UPDATE characters SET backgroundStory = '" + background + "'WHERE characterNumber='" + chNum + "' AND id='" + id + "'";
             if (this.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);

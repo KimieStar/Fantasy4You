@@ -80,6 +80,7 @@ namespace FANTASY4YOU
             this.UsernameTextbox.Name = "UsernameTextbox";
             this.UsernameTextbox.Size = new System.Drawing.Size(152, 23);
             this.UsernameTextbox.TabIndex = 3;
+            this.UsernameTextbox.TabStop = false;
             this.UsernameTextbox.TextChanged += new System.EventHandler(this.UsernameTextbox_TextChanged);
             // 
             // label3
@@ -113,6 +114,7 @@ namespace FANTASY4YOU
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.Size = new System.Drawing.Size(152, 23);
             this.PasswordTextbox.TabIndex = 8;
+            this.PasswordTextbox.TabStop = false;
             this.PasswordTextbox.UseSystemPasswordChar = true;
             this.PasswordTextbox.TextChanged += new System.EventHandler(this.PasswordTextbox_TextChanged);
             // 
