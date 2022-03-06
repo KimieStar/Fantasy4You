@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using FANTASY4YOU;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace NUNIT_TESTS
 {
@@ -12,13 +14,15 @@ namespace NUNIT_TESTS
         int characterNumber;
         string characterName;
         int characterCreated;
-        ConnectionToDatabase connection = new ConnectionToDatabase();
-        Logic logic = new Logic();
+        DatabaseController connection;
+        LogicController logic;
         
         [SetUp]
         public void Setup()
         {
-            
+           
+            connection = new DatabaseController();
+            logic = new LogicController();
         }
         /// <summary>
         /// Tests for DataAccessLayer
@@ -53,6 +57,7 @@ namespace NUNIT_TESTS
         public void NumberOfCharactersCreated()
         {
             id = 3;
+            
             int result = connection.NumberOfCharactersCreated(id);
             Assert.AreEqual(result,1);
         }
@@ -76,36 +81,6 @@ namespace NUNIT_TESTS
         }
 
         [Test]
-        public void SelectCharacterInformation()
-        {
-            username = "Tester";
-            characterNumber = 1;
-            List<string>[] list = connection.SelectCharacterInformation(username,characterNumber);
-            string result = string.Join("",list[0].ToArray());
-            Assert.AreEqual(result, "Tester");
-        }
-
-        [Test]
-        public void SelectCharacterInformation2()
-        {
-            username = "Tester";
-            characterNumber = 1;
-            List<string>[] list = connection.SelectCharacterInformation(username, characterNumber);
-            string result = string.Join("", list[1].ToArray());
-            Assert.AreEqual(result, "Class1");
-        }
-
-        [Test]
-        public void SelectCharacterInformation3()
-        {
-            username = "Tester";
-            characterNumber = 1;
-            List<string>[] list = connection.SelectCharacterInformation2(username, characterNumber);
-            string result = string.Join("", list[0].ToArray());
-            Assert.AreEqual(result, "0");
-        }
-
-        [Test]
         public void CheckCharacterNameExistForUser()
         {
             characterName = "Tester";
@@ -117,7 +92,7 @@ namespace NUNIT_TESTS
         [Test]
         public void CheckCharacterNameExistForUser2()
         {
-            characterName = "Tester2";
+            characterName = "Alex";
             id = 3;
             bool result = connection.CheckCharacterNameExistForUser(characterName, id);
             Assert.IsFalse(result);
@@ -138,30 +113,10 @@ namespace NUNIT_TESTS
 
         //!!!!Warning Check File for Username and Credentials before test!!!!
         [Test]
-        public void SelectCharacterInformationLogic()
-        {
-            characterNumber = 1;
-            List<string>[] list = logic.SelectCharacterInformation(characterNumber);
-            string result = string.Join("", list[0].ToArray());
-            Assert.AreEqual(result, "Tester");
-        }
-
-        //!!!!Warning Check File for Username and Credentials before test!!!!
-        [Test]
-        public void SelectCharacterInformationLogic2()
-        {
-            characterNumber = 1;
-            List<string>[] list = logic.SelectCharacterInformation(characterNumber);
-            string result = string.Join("", list[1].ToArray());
-            Assert.AreEqual(result, "Class1");
-        }
-
-        //!!!!Warning Check File for Username and Credentials before test!!!!
-        [Test]
         public void NumberOfCharactersCreatedLogic()
         {
             characterCreated = logic.NumberOfCharactersCreated();
-            Assert.AreEqual(characterCreated, 1);
+            Assert.AreEqual(characterCreated, 2);
         }
 
         //!!!!Warning Check File for Username and Credentials before test!!!!
