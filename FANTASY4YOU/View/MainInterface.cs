@@ -52,8 +52,8 @@ namespace FANTASY4YOU
 
         private void MainInterface_Load(object sender, EventArgs e)
         {
-            FormSizeOriginalSize = new Rectangle(this.Location.X,this.Location.Y,this.Width,this.Height);
-            buttonCharacterOriginal = new Rectangle(YourCharactersButton.Location.X, YourCharactersButton.Location.Y, YourCharactersButton.Width,YourCharactersButton.Height);
+            //FormSizeOriginalSize = new Rectangle(this.Location.X,this.Location.Y,this.Width,this.Height);
+            //buttonCharacterOriginal = new Rectangle(YourCharactersButton.Location.X, YourCharactersButton.Location.Y, YourCharactersButton.Width,YourCharactersButton.Height);
             string uname = logic.ReadUsernameFromUsernameFile();
             label2.Text = uname;
 
@@ -93,23 +93,23 @@ namespace FANTASY4YOU
             logic.deleteCharSelectedToEditFile();
         }
 
-        private void ResizeControl(Rectangle r, Control c)
-        {
-            float xRatio = (float)(this.Width) / (float)(FormSizeOriginalSize.Width);
-            float yRatio = (float)(this.Height) / (float)(FormSizeOriginalSize.Height);
-
-            int newX = (int)(r.Location.X * xRatio);
-            int newY = (int)(r.Location.Y * yRatio);
-
-            int newWidth = (int)(r.Width * xRatio);
-            int newHeight = (int)(r.Height * yRatio);
-                
-            c.Location = new Point(newX, newY);
-            c.Size = new Size(newWidth, newHeight);
-        }
-        private void MainInterface_Resize(object sender, EventArgs e)
-        {
-            ResizeControl(buttonCharacterOriginal, YourCharactersButton);
-        }
+        //private void ResizeControl(Rectangle r, Control c)
+        //{
+        //    float xRatio = (float)(this.Width) / (float)(FormSizeOriginalSize.Width);
+        //    float yRatio = (float)(this.Height) / (float)(FormSizeOriginalSize.Height);
+        //
+        //    int newX = (int)(r.Location.X * xRatio);
+        //    int newY = (int)(r.Location.Y * yRatio);
+        //
+        //    int newWidth = (int)(r.Width * xRatio);
+        //    int newHeight = (int)(r.Height * yRatio);
+        //        
+        //    c.Location = new Point(newX, newY);
+        //    c.Size = new Size(newWidth, newHeight);
+        //}
+        //private void MainInterface_Resize(object sender, EventArgs e)
+        //{
+        //    ResizeControl(buttonCharacterOriginal, YourCharactersButton);
+        //}
     }
 }
