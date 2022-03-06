@@ -168,7 +168,6 @@ namespace FANTASY4YOU
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainInterface_FormClosing);
             this.Load += new System.EventHandler(this.MainInterface_Load);
-            this.Resize += new System.EventHandler(this.MainInterface_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
