@@ -88,7 +88,6 @@ namespace FANTASY4YOU
             this.YourCharactersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.YourCharactersButton.AutoSize = true;
             this.YourCharactersButton.Location = new System.Drawing.Point(249, 279);
             this.YourCharactersButton.Name = "YourCharactersButton";
             this.YourCharactersButton.Size = new System.Drawing.Size(93, 74);
@@ -163,6 +162,8 @@ namespace FANTASY4YOU
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "MainInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
