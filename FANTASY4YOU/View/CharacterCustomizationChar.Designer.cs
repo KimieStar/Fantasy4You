@@ -29,8 +29,6 @@ namespace FANTASY4YOU
         /// </summary>
         private void InitializeComponent()
         {
-            this.CharacterStrenghtStrenghtLabel = new System.Windows.Forms.Label();
-            this.CharacterDexterityDexterityLabel = new System.Windows.Forms.Label();
             this.CharacterConstitutionConstitutionLabel = new System.Windows.Forms.Label();
             this.CharacterIntelligenceIntelligenceLabel = new System.Windows.Forms.Label();
             this.CharacterCharismaCharismaLabel = new System.Windows.Forms.Label();
@@ -62,47 +60,34 @@ namespace FANTASY4YOU
             this.CharacterBackgroundCustomizeTextbox = new System.Windows.Forms.TextBox();
             this.CharacterBackgroundCustomizeButton = new System.Windows.Forms.Button();
             this.MoreCustomizations3 = new System.Windows.Forms.Button();
+            this.BackgroundPannel = new System.Windows.Forms.Panel();
+            this.CharNamePannel = new System.Windows.Forms.Panel();
+            this.StrenghtPanel = new System.Windows.Forms.Panel();
+            this.CharacterDexterityDexterityLabel = new System.Windows.Forms.Label();
+            this.CharacterStrenghtStrenghtLabel = new System.Windows.Forms.Label();
+            this.BackgroundPannel.SuspendLayout();
+            this.CharNamePannel.SuspendLayout();
+            this.StrenghtPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CharacterStrenghtStrenghtLabel
-            // 
-            this.CharacterStrenghtStrenghtLabel.AutoSize = true;
-            this.CharacterStrenghtStrenghtLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CharacterStrenghtStrenghtLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterStrenghtStrenghtLabel.Location = new System.Drawing.Point(-4, 9);
-            this.CharacterStrenghtStrenghtLabel.Name = "CharacterStrenghtStrenghtLabel";
-            this.CharacterStrenghtStrenghtLabel.Size = new System.Drawing.Size(176, 48);
-            this.CharacterStrenghtStrenghtLabel.TabIndex = 0;
-            this.CharacterStrenghtStrenghtLabel.Text = "Strenght :";
-            // 
-            // CharacterDexterityDexterityLabel
-            // 
-            this.CharacterDexterityDexterityLabel.AutoSize = true;
-            this.CharacterDexterityDexterityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CharacterDexterityDexterityLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterDexterityDexterityLabel.Location = new System.Drawing.Point(0, 70);
-            this.CharacterDexterityDexterityLabel.Name = "CharacterDexterityDexterityLabel";
-            this.CharacterDexterityDexterityLabel.Size = new System.Drawing.Size(181, 48);
-            this.CharacterDexterityDexterityLabel.TabIndex = 1;
-            this.CharacterDexterityDexterityLabel.Text = "Dexterity :";
             // 
             // CharacterConstitutionConstitutionLabel
             // 
             this.CharacterConstitutionConstitutionLabel.AutoSize = true;
             this.CharacterConstitutionConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterConstitutionConstitutionLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterConstitutionConstitutionLabel.Location = new System.Drawing.Point(0, 132);
+            this.CharacterConstitutionConstitutionLabel.Location = new System.Drawing.Point(7, 123);
             this.CharacterConstitutionConstitutionLabel.Name = "CharacterConstitutionConstitutionLabel";
             this.CharacterConstitutionConstitutionLabel.Size = new System.Drawing.Size(223, 48);
             this.CharacterConstitutionConstitutionLabel.TabIndex = 2;
             this.CharacterConstitutionConstitutionLabel.Text = "Constitution :";
+            this.CharacterConstitutionConstitutionLabel.Click += new System.EventHandler(this.CharacterConstitutionConstitutionLabel_Click);
             // 
             // CharacterIntelligenceIntelligenceLabel
             // 
             this.CharacterIntelligenceIntelligenceLabel.AutoSize = true;
             this.CharacterIntelligenceIntelligenceLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterIntelligenceIntelligenceLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterIntelligenceIntelligenceLabel.Location = new System.Drawing.Point(0, 198);
+            this.CharacterIntelligenceIntelligenceLabel.Location = new System.Drawing.Point(7, 189);
             this.CharacterIntelligenceIntelligenceLabel.Name = "CharacterIntelligenceIntelligenceLabel";
             this.CharacterIntelligenceIntelligenceLabel.Size = new System.Drawing.Size(216, 48);
             this.CharacterIntelligenceIntelligenceLabel.TabIndex = 3;
@@ -113,7 +98,7 @@ namespace FANTASY4YOU
             this.CharacterCharismaCharismaLabel.AutoSize = true;
             this.CharacterCharismaCharismaLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterCharismaCharismaLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterCharismaCharismaLabel.Location = new System.Drawing.Point(0, 324);
+            this.CharacterCharismaCharismaLabel.Location = new System.Drawing.Point(7, 315);
             this.CharacterCharismaCharismaLabel.Name = "CharacterCharismaCharismaLabel";
             this.CharacterCharismaCharismaLabel.Size = new System.Drawing.Size(185, 48);
             this.CharacterCharismaCharismaLabel.TabIndex = 4;
@@ -124,7 +109,7 @@ namespace FANTASY4YOU
             this.CharacterWisdomWisdomLabel.AutoSize = true;
             this.CharacterWisdomWisdomLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterWisdomWisdomLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterWisdomWisdomLabel.Location = new System.Drawing.Point(0, 263);
+            this.CharacterWisdomWisdomLabel.Location = new System.Drawing.Point(7, 254);
             this.CharacterWisdomWisdomLabel.Name = "CharacterWisdomWisdomLabel";
             this.CharacterWisdomWisdomLabel.Size = new System.Drawing.Size(175, 48);
             this.CharacterWisdomWisdomLabel.TabIndex = 5;
@@ -132,7 +117,7 @@ namespace FANTASY4YOU
             // 
             // CharacterStrenghtTextbox
             // 
-            this.CharacterStrenghtTextbox.Location = new System.Drawing.Point(175, 24);
+            this.CharacterStrenghtTextbox.Location = new System.Drawing.Point(173, 17);
             this.CharacterStrenghtTextbox.Name = "CharacterStrenghtTextbox";
             this.CharacterStrenghtTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterStrenghtTextbox.TabIndex = 6;
@@ -140,7 +125,7 @@ namespace FANTASY4YOU
             // 
             // CharacterIntelligenceTextbox
             // 
-            this.CharacterIntelligenceTextbox.Location = new System.Drawing.Point(215, 216);
+            this.CharacterIntelligenceTextbox.Location = new System.Drawing.Point(214, 206);
             this.CharacterIntelligenceTextbox.Name = "CharacterIntelligenceTextbox";
             this.CharacterIntelligenceTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterIntelligenceTextbox.TabIndex = 7;
@@ -148,7 +133,7 @@ namespace FANTASY4YOU
             // 
             // CharacterConstitutionTextbox
             // 
-            this.CharacterConstitutionTextbox.Location = new System.Drawing.Point(224, 152);
+            this.CharacterConstitutionTextbox.Location = new System.Drawing.Point(224, 139);
             this.CharacterConstitutionTextbox.Name = "CharacterConstitutionTextbox";
             this.CharacterConstitutionTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterConstitutionTextbox.TabIndex = 8;
@@ -156,7 +141,7 @@ namespace FANTASY4YOU
             // 
             // CharacterDexterityTextbox
             // 
-            this.CharacterDexterityTextbox.Location = new System.Drawing.Point(175, 88);
+            this.CharacterDexterityTextbox.Location = new System.Drawing.Point(178, 76);
             this.CharacterDexterityTextbox.Name = "CharacterDexterityTextbox";
             this.CharacterDexterityTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterDexterityTextbox.TabIndex = 9;
@@ -164,7 +149,7 @@ namespace FANTASY4YOU
             // 
             // CharacterWisdomTextbox
             // 
-            this.CharacterWisdomTextbox.Location = new System.Drawing.Point(175, 280);
+            this.CharacterWisdomTextbox.Location = new System.Drawing.Point(172, 271);
             this.CharacterWisdomTextbox.Name = "CharacterWisdomTextbox";
             this.CharacterWisdomTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterWisdomTextbox.TabIndex = 10;
@@ -172,7 +157,7 @@ namespace FANTASY4YOU
             // 
             // CharacterCharismaTextbox
             // 
-            this.CharacterCharismaTextbox.Location = new System.Drawing.Point(191, 340);
+            this.CharacterCharismaTextbox.Location = new System.Drawing.Point(184, 332);
             this.CharacterCharismaTextbox.Name = "CharacterCharismaTextbox";
             this.CharacterCharismaTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterCharismaTextbox.TabIndex = 11;
@@ -201,102 +186,93 @@ namespace FANTASY4YOU
             // 
             // CharacterXpCustomizeTextBox
             // 
-            this.CharacterXpCustomizeTextBox.Location = new System.Drawing.Point(80, 280);
+            this.CharacterXpCustomizeTextBox.Location = new System.Drawing.Point(89, 272);
             this.CharacterXpCustomizeTextBox.Name = "CharacterXpCustomizeTextBox";
             this.CharacterXpCustomizeTextBox.Size = new System.Drawing.Size(136, 23);
             this.CharacterXpCustomizeTextBox.TabIndex = 24;
             this.CharacterXpCustomizeTextBox.TabStop = false;
-            this.CharacterXpCustomizeTextBox.Visible = false;
             // 
             // CharacterLevelCustomizeTextbox
             // 
-            this.CharacterLevelCustomizeTextbox.Location = new System.Drawing.Point(128, 152);
+            this.CharacterLevelCustomizeTextbox.Location = new System.Drawing.Point(137, 144);
             this.CharacterLevelCustomizeTextbox.Name = "CharacterLevelCustomizeTextbox";
             this.CharacterLevelCustomizeTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterLevelCustomizeTextbox.TabIndex = 22;
             this.CharacterLevelCustomizeTextbox.TabStop = false;
-            this.CharacterLevelCustomizeTextbox.Visible = false;
             // 
             // CharacterNameCustomizeTextbox
             // 
-            this.CharacterNameCustomizeTextbox.Location = new System.Drawing.Point(272, 24);
+            this.CharacterNameCustomizeTextbox.Location = new System.Drawing.Point(281, 16);
             this.CharacterNameCustomizeTextbox.Name = "CharacterNameCustomizeTextbox";
             this.CharacterNameCustomizeTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterNameCustomizeTextbox.TabIndex = 20;
             this.CharacterNameCustomizeTextbox.TabStop = false;
-            this.CharacterNameCustomizeTextbox.Visible = false;
             // 
             // CharacterXpCustomizeLabel
             // 
             this.CharacterXpCustomizeLabel.AutoSize = true;
             this.CharacterXpCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterXpCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterXpCustomizeLabel.Location = new System.Drawing.Point(4, 263);
+            this.CharacterXpCustomizeLabel.Location = new System.Drawing.Point(13, 255);
             this.CharacterXpCustomizeLabel.Name = "CharacterXpCustomizeLabel";
             this.CharacterXpCustomizeLabel.Size = new System.Drawing.Size(83, 48);
             this.CharacterXpCustomizeLabel.TabIndex = 19;
             this.CharacterXpCustomizeLabel.Text = "Xp :";
-            this.CharacterXpCustomizeLabel.Visible = false;
             // 
             // CharacterAlignmentCustomizeLabel
             // 
             this.CharacterAlignmentCustomizeLabel.AutoSize = true;
             this.CharacterAlignmentCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterAlignmentCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterAlignmentCustomizeLabel.Location = new System.Drawing.Point(4, 324);
+            this.CharacterAlignmentCustomizeLabel.Location = new System.Drawing.Point(13, 316);
             this.CharacterAlignmentCustomizeLabel.Name = "CharacterAlignmentCustomizeLabel";
             this.CharacterAlignmentCustomizeLabel.Size = new System.Drawing.Size(183, 48);
             this.CharacterAlignmentCustomizeLabel.TabIndex = 18;
             this.CharacterAlignmentCustomizeLabel.Text = "Alignment:";
-            this.CharacterAlignmentCustomizeLabel.Visible = false;
             // 
             // CharacterRaceCustomizeLabel
             // 
             this.CharacterRaceCustomizeLabel.AutoSize = true;
             this.CharacterRaceCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterRaceCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterRaceCustomizeLabel.Location = new System.Drawing.Point(4, 198);
+            this.CharacterRaceCustomizeLabel.Location = new System.Drawing.Point(13, 190);
             this.CharacterRaceCustomizeLabel.Name = "CharacterRaceCustomizeLabel";
             this.CharacterRaceCustomizeLabel.Size = new System.Drawing.Size(116, 48);
             this.CharacterRaceCustomizeLabel.TabIndex = 17;
             this.CharacterRaceCustomizeLabel.Text = "Race :";
-            this.CharacterRaceCustomizeLabel.Visible = false;
             // 
             // CharacterLevelCustomizeLabel
             // 
             this.CharacterLevelCustomizeLabel.AutoSize = true;
             this.CharacterLevelCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterLevelCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterLevelCustomizeLabel.Location = new System.Drawing.Point(4, 132);
+            this.CharacterLevelCustomizeLabel.Location = new System.Drawing.Point(13, 124);
             this.CharacterLevelCustomizeLabel.Name = "CharacterLevelCustomizeLabel";
             this.CharacterLevelCustomizeLabel.Size = new System.Drawing.Size(123, 48);
             this.CharacterLevelCustomizeLabel.TabIndex = 16;
             this.CharacterLevelCustomizeLabel.Text = "Level :";
-            this.CharacterLevelCustomizeLabel.Visible = false;
             // 
             // CharacterClassCustomizeLabel
             // 
             this.CharacterClassCustomizeLabel.AutoSize = true;
             this.CharacterClassCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterClassCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterClassCustomizeLabel.Location = new System.Drawing.Point(4, 70);
+            this.CharacterClassCustomizeLabel.Location = new System.Drawing.Point(13, 62);
             this.CharacterClassCustomizeLabel.Name = "CharacterClassCustomizeLabel";
             this.CharacterClassCustomizeLabel.Size = new System.Drawing.Size(128, 48);
             this.CharacterClassCustomizeLabel.TabIndex = 15;
             this.CharacterClassCustomizeLabel.Text = "Class :";
-            this.CharacterClassCustomizeLabel.Visible = false;
             // 
             // CharacterNameCustomizeLabel
             // 
             this.CharacterNameCustomizeLabel.AutoSize = true;
             this.CharacterNameCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterNameCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterNameCustomizeLabel.Location = new System.Drawing.Point(0, 9);
+            this.CharacterNameCustomizeLabel.Location = new System.Drawing.Point(9, 1);
             this.CharacterNameCustomizeLabel.Name = "CharacterNameCustomizeLabel";
             this.CharacterNameCustomizeLabel.Size = new System.Drawing.Size(273, 48);
             this.CharacterNameCustomizeLabel.TabIndex = 14;
             this.CharacterNameCustomizeLabel.Text = "Character Name:";
-            this.CharacterNameCustomizeLabel.Visible = false;
             // 
             // mySqlCommand1
             // 
@@ -313,11 +289,10 @@ namespace FANTASY4YOU
             "Class1",
             "Class2",
             "Class3"});
-            this.CharacterClassCustomizeTextbox.Location = new System.Drawing.Point(128, 88);
+            this.CharacterClassCustomizeTextbox.Location = new System.Drawing.Point(137, 80);
             this.CharacterClassCustomizeTextbox.Name = "CharacterClassCustomizeTextbox";
             this.CharacterClassCustomizeTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterClassCustomizeTextbox.TabIndex = 26;
-            this.CharacterClassCustomizeTextbox.Visible = false;
             // 
             // CharacterRaceCustomizeCombobox
             // 
@@ -327,11 +302,10 @@ namespace FANTASY4YOU
             "Race1",
             "Race2",
             "Race3"});
-            this.CharacterRaceCustomizeCombobox.Location = new System.Drawing.Point(113, 216);
+            this.CharacterRaceCustomizeCombobox.Location = new System.Drawing.Point(122, 208);
             this.CharacterRaceCustomizeCombobox.Name = "CharacterRaceCustomizeCombobox";
             this.CharacterRaceCustomizeCombobox.Size = new System.Drawing.Size(136, 23);
             this.CharacterRaceCustomizeCombobox.TabIndex = 27;
-            this.CharacterRaceCustomizeCombobox.Visible = false;
             // 
             // CharacterAlignmentCustomizeCombobox
             // 
@@ -341,11 +315,10 @@ namespace FANTASY4YOU
             "Alignment1",
             "Alignment2",
             "Alignment3"});
-            this.CharacterAlignmentCustomizeCombobox.Location = new System.Drawing.Point(191, 340);
+            this.CharacterAlignmentCustomizeCombobox.Location = new System.Drawing.Point(200, 332);
             this.CharacterAlignmentCustomizeCombobox.Name = "CharacterAlignmentCustomizeCombobox";
             this.CharacterAlignmentCustomizeCombobox.Size = new System.Drawing.Size(136, 23);
             this.CharacterAlignmentCustomizeCombobox.TabIndex = 28;
-            this.CharacterAlignmentCustomizeCombobox.Visible = false;
             // 
             // UpdateCharacterDetailsButton2
             // 
@@ -367,7 +340,6 @@ namespace FANTASY4YOU
             this.MoreCustomizations2.TabIndex = 30;
             this.MoreCustomizations2.Text = ">";
             this.MoreCustomizations2.UseVisualStyleBackColor = true;
-            this.MoreCustomizations2.Visible = false;
             this.MoreCustomizations2.Click += new System.EventHandler(this.MoreCustomizations2_Click);
             // 
             // CharacterBackgroundCustomizeLabel
@@ -375,95 +347,142 @@ namespace FANTASY4YOU
             this.CharacterBackgroundCustomizeLabel.AutoSize = true;
             this.CharacterBackgroundCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterBackgroundCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacterBackgroundCustomizeLabel.Location = new System.Drawing.Point(138, 70);
+            this.CharacterBackgroundCustomizeLabel.Location = new System.Drawing.Point(53, 20);
             this.CharacterBackgroundCustomizeLabel.Name = "CharacterBackgroundCustomizeLabel";
             this.CharacterBackgroundCustomizeLabel.Size = new System.Drawing.Size(223, 48);
             this.CharacterBackgroundCustomizeLabel.TabIndex = 31;
             this.CharacterBackgroundCustomizeLabel.Text = "Background :";
-            this.CharacterBackgroundCustomizeLabel.Visible = false;
             // 
             // CharacterBackgroundCustomizeTextbox
             // 
-            this.CharacterBackgroundCustomizeTextbox.Location = new System.Drawing.Point(113, 121);
+            this.CharacterBackgroundCustomizeTextbox.Location = new System.Drawing.Point(58, 71);
             this.CharacterBackgroundCustomizeTextbox.Multiline = true;
             this.CharacterBackgroundCustomizeTextbox.Name = "CharacterBackgroundCustomizeTextbox";
             this.CharacterBackgroundCustomizeTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CharacterBackgroundCustomizeTextbox.Size = new System.Drawing.Size(265, 93);
             this.CharacterBackgroundCustomizeTextbox.TabIndex = 32;
-            this.CharacterBackgroundCustomizeTextbox.Visible = false;
             // 
             // CharacterBackgroundCustomizeButton
             // 
-            this.CharacterBackgroundCustomizeButton.Location = new System.Drawing.Point(137, 242);
+            this.CharacterBackgroundCustomizeButton.Location = new System.Drawing.Point(83, 182);
             this.CharacterBackgroundCustomizeButton.Name = "CharacterBackgroundCustomizeButton";
             this.CharacterBackgroundCustomizeButton.Size = new System.Drawing.Size(193, 61);
             this.CharacterBackgroundCustomizeButton.TabIndex = 33;
             this.CharacterBackgroundCustomizeButton.Text = "Confirm";
             this.CharacterBackgroundCustomizeButton.UseVisualStyleBackColor = true;
-            this.CharacterBackgroundCustomizeButton.Visible = false;
             this.CharacterBackgroundCustomizeButton.Click += new System.EventHandler(this.CharacterBackgroundCustomizeButton_Click);
             // 
             // MoreCustomizations3
             // 
             this.MoreCustomizations3.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MoreCustomizations3.Location = new System.Drawing.Point(483, 132);
+            this.MoreCustomizations3.Location = new System.Drawing.Point(408, 82);
             this.MoreCustomizations3.Name = "MoreCustomizations3";
             this.MoreCustomizations3.Size = new System.Drawing.Size(34, 67);
             this.MoreCustomizations3.TabIndex = 34;
             this.MoreCustomizations3.Text = ">";
             this.MoreCustomizations3.UseVisualStyleBackColor = true;
-            this.MoreCustomizations3.Visible = false;
             this.MoreCustomizations3.Click += new System.EventHandler(this.MoreCustomizations3_Click);
+            // 
+            // BackgroundPannel
+            // 
+            this.BackgroundPannel.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeLabel);
+            this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeButton);
+            this.BackgroundPannel.Controls.Add(this.MoreCustomizations3);
+            this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeTextbox);
+            this.BackgroundPannel.Location = new System.Drawing.Point(474, 28);
+            this.BackgroundPannel.Name = "BackgroundPannel";
+            this.BackgroundPannel.Size = new System.Drawing.Size(454, 301);
+            this.BackgroundPannel.TabIndex = 35;
+            this.BackgroundPannel.Visible = false;
+            // 
+            // CharNamePannel
+            // 
+            this.CharNamePannel.Controls.Add(this.CharacterNameCustomizeTextbox);
+            this.CharNamePannel.Controls.Add(this.CharacterAlignmentCustomizeCombobox);
+            this.CharNamePannel.Controls.Add(this.CharacterXpCustomizeTextBox);
+            this.CharNamePannel.Controls.Add(this.CharacterRaceCustomizeCombobox);
+            this.CharNamePannel.Controls.Add(this.CharacterLevelCustomizeTextbox);
+            this.CharNamePannel.Controls.Add(this.CharacterClassCustomizeTextbox);
+            this.CharNamePannel.Controls.Add(this.CharacterAlignmentCustomizeLabel);
+            this.CharNamePannel.Controls.Add(this.CharacterNameCustomizeLabel);
+            this.CharNamePannel.Controls.Add(this.MoreCustomizations2);
+            this.CharNamePannel.Controls.Add(this.UpdateCharacterDetailsButton2);
+            this.CharNamePannel.Controls.Add(this.CharacterClassCustomizeLabel);
+            this.CharNamePannel.Controls.Add(this.CharacterLevelCustomizeLabel);
+            this.CharNamePannel.Controls.Add(this.CharacterRaceCustomizeLabel);
+            this.CharNamePannel.Controls.Add(this.CharacterXpCustomizeLabel);
+            this.CharNamePannel.Location = new System.Drawing.Point(451, 162);
+            this.CharNamePannel.Name = "CharNamePannel";
+            this.CharNamePannel.Size = new System.Drawing.Size(528, 396);
+            this.CharNamePannel.TabIndex = 36;
+            this.CharNamePannel.Visible = false;
+            // 
+            // StrenghtPanel
+            // 
+            this.StrenghtPanel.Controls.Add(this.CharacterCharismaTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterWisdomTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterIntelligenceTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterConstitutionTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterDexterityTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterStrenghtTextbox);
+            this.StrenghtPanel.Controls.Add(this.CharacterConstitutionConstitutionLabel);
+            this.StrenghtPanel.Controls.Add(this.CharacterDexterityDexterityLabel);
+            this.StrenghtPanel.Controls.Add(this.MoreCustomizations);
+            this.StrenghtPanel.Controls.Add(this.CharacterStrenghtStrenghtLabel);
+            this.StrenghtPanel.Controls.Add(this.CharacterIntelligenceIntelligenceLabel);
+            this.StrenghtPanel.Controls.Add(this.UpdateCharacterDetailsButton);
+            this.StrenghtPanel.Controls.Add(this.CharacterCharismaCharismaLabel);
+            this.StrenghtPanel.Controls.Add(this.CharacterWisdomWisdomLabel);
+            this.StrenghtPanel.Location = new System.Drawing.Point(13, 335);
+            this.StrenghtPanel.Name = "StrenghtPanel";
+            this.StrenghtPanel.Size = new System.Drawing.Size(534, 399);
+            this.StrenghtPanel.TabIndex = 37;
+            // 
+            // CharacterDexterityDexterityLabel
+            // 
+            this.CharacterDexterityDexterityLabel.AutoSize = true;
+            this.CharacterDexterityDexterityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterDexterityDexterityLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterDexterityDexterityLabel.Location = new System.Drawing.Point(4, 61);
+            this.CharacterDexterityDexterityLabel.Name = "CharacterDexterityDexterityLabel";
+            this.CharacterDexterityDexterityLabel.Size = new System.Drawing.Size(181, 48);
+            this.CharacterDexterityDexterityLabel.TabIndex = 1;
+            this.CharacterDexterityDexterityLabel.Text = "Dexterity :";
+            // 
+            // CharacterStrenghtStrenghtLabel
+            // 
+            this.CharacterStrenghtStrenghtLabel.AutoSize = true;
+            this.CharacterStrenghtStrenghtLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterStrenghtStrenghtLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterStrenghtStrenghtLabel.Location = new System.Drawing.Point(4, 0);
+            this.CharacterStrenghtStrenghtLabel.Name = "CharacterStrenghtStrenghtLabel";
+            this.CharacterStrenghtStrenghtLabel.Size = new System.Drawing.Size(176, 48);
+            this.CharacterStrenghtStrenghtLabel.TabIndex = 0;
+            this.CharacterStrenghtStrenghtLabel.Text = "Strenght :";
             // 
             // CharacterCustomizationChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 393);
-            this.Controls.Add(this.CharacterBackgroundCustomizeButton);
-            this.Controls.Add(this.CharacterXpCustomizeTextBox);
-            this.Controls.Add(this.CharacterRaceCustomizeCombobox);
-            this.Controls.Add(this.CharacterBackgroundCustomizeTextbox);
-            this.Controls.Add(this.CharacterLevelCustomizeTextbox);
-            this.Controls.Add(this.CharacterNameCustomizeTextbox);
-            this.Controls.Add(this.CharacterBackgroundCustomizeLabel);
-            this.Controls.Add(this.CharacterClassCustomizeTextbox);
-            this.Controls.Add(this.CharacterDexterityTextbox);
-            this.Controls.Add(this.MoreCustomizations3);
-            this.Controls.Add(this.MoreCustomizations2);
-            this.Controls.Add(this.CharacterAlignmentCustomizeCombobox);
-            this.Controls.Add(this.UpdateCharacterDetailsButton2);
-            this.Controls.Add(this.CharacterXpCustomizeLabel);
-            this.Controls.Add(this.CharacterAlignmentCustomizeLabel);
-            this.Controls.Add(this.CharacterRaceCustomizeLabel);
-            this.Controls.Add(this.CharacterLevelCustomizeLabel);
-            this.Controls.Add(this.CharacterClassCustomizeLabel);
-            this.Controls.Add(this.CharacterNameCustomizeLabel);
-            this.Controls.Add(this.MoreCustomizations);
-            this.Controls.Add(this.UpdateCharacterDetailsButton);
-            this.Controls.Add(this.CharacterCharismaTextbox);
-            this.Controls.Add(this.CharacterWisdomTextbox);
-            this.Controls.Add(this.CharacterConstitutionTextbox);
-            this.Controls.Add(this.CharacterIntelligenceTextbox);
-            this.Controls.Add(this.CharacterStrenghtTextbox);
-            this.Controls.Add(this.CharacterWisdomWisdomLabel);
-            this.Controls.Add(this.CharacterCharismaCharismaLabel);
-            this.Controls.Add(this.CharacterIntelligenceIntelligenceLabel);
-            this.Controls.Add(this.CharacterConstitutionConstitutionLabel);
-            this.Controls.Add(this.CharacterDexterityDexterityLabel);
-            this.Controls.Add(this.CharacterStrenghtStrenghtLabel);
+            this.Controls.Add(this.CharNamePannel);
+            this.Controls.Add(this.StrenghtPanel);
+            this.Controls.Add(this.BackgroundPannel);
             this.Name = "CharacterCustomizationChar";
             this.Text = "/";
             this.Load += new System.EventHandler(this.CharacterCustomization_Load);
+            this.BackgroundPannel.ResumeLayout(false);
+            this.BackgroundPannel.PerformLayout();
+            this.CharNamePannel.ResumeLayout(false);
+            this.CharNamePannel.PerformLayout();
+            this.StrenghtPanel.ResumeLayout(false);
+            this.StrenghtPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label CharacterStrenghtStrenghtLabel;
-        private Label CharacterDexterityDexterityLabel;
         private Label CharacterConstitutionConstitutionLabel;
         private Label CharacterIntelligenceIntelligenceLabel;
         private Label CharacterCharismaCharismaLabel;
@@ -497,5 +516,10 @@ namespace FANTASY4YOU
         private TextBox CharacterBackgroundCustomizeTextbox;
         private Button CharacterBackgroundCustomizeButton;
         private Button MoreCustomizations3;
+        private Panel BackgroundPannel;
+        private Panel CharNamePannel;
+        private Panel StrenghtPanel;
+        private Label CharacterDexterityDexterityLabel;
+        private Label CharacterStrenghtStrenghtLabel;
     }
 }

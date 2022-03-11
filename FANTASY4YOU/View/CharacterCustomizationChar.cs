@@ -25,6 +25,7 @@ namespace FANTASY4YOU
 
         private void CharacterCustomization_Load(object sender, EventArgs e)
         {
+            StrenghtPanel.Location = new Point(0,0);
             int charNum = User.CharSelected;
             Character character = logic.SelectCharInfo(charNum);
             CharacterNameCustomizeTextbox.Text = character.CharacterName;
@@ -54,35 +55,11 @@ namespace FANTASY4YOU
 
         private void MoreCustomizations_Click(object sender, EventArgs e)
         {
-            CharacterStrenghtStrenghtLabel.Visible = false;
-            CharacterDexterityDexterityLabel.Visible = false;
-            CharacterConstitutionConstitutionLabel.Visible = false;
-            CharacterIntelligenceIntelligenceLabel.Visible = false;
-            CharacterWisdomWisdomLabel.Visible = false;
-            CharacterCharismaCharismaLabel.Visible = false;
-            CharacterStrenghtTextbox.Visible = false;
-            CharacterDexterityTextbox.Visible=false;
-            CharacterConstitutionTextbox.Visible=false;
-            CharacterIntelligenceTextbox.Visible = false;
-            CharacterWisdomTextbox.Visible = false;
-            CharacterCharismaTextbox.Visible = false;
-            UpdateCharacterDetailsButton.Visible = false;
-            MoreCustomizations.Visible = false;
+            StrenghtPanel.Visible = false;
 
-            CharacterNameCustomizeLabel.Visible = true;
-            CharacterClassCustomizeLabel.Visible = true;
-            CharacterLevelCustomizeLabel.Visible = true;
-            CharacterRaceCustomizeLabel.Visible = true;
-            CharacterXpCustomizeLabel.Visible = true;
-            CharacterAlignmentCustomizeLabel.Visible = true;
-            CharacterNameCustomizeTextbox.Visible = true;
-            CharacterClassCustomizeTextbox.Visible = true;
-            CharacterLevelCustomizeTextbox.Visible = true;
-            CharacterRaceCustomizeCombobox.Visible = true;
-            CharacterXpCustomizeTextBox.Visible = true;
-            CharacterAlignmentCustomizeCombobox.Visible = true;
-            UpdateCharacterDetailsButton2.Visible = true;
-            MoreCustomizations2.Visible = true;
+            CharNamePannel.Location = new Point(0, 0);
+            CharNamePannel.Visible = true;
+            
         }
 
         private void UpdateCharacterDetailsButton2_Click(object sender, EventArgs e)
@@ -96,25 +73,11 @@ namespace FANTASY4YOU
 
         private void MoreCustomizations2_Click(object sender, EventArgs e)
         {
-            CharacterNameCustomizeLabel.Visible = false;
-            CharacterClassCustomizeLabel.Visible = false;
-            CharacterLevelCustomizeLabel.Visible = false;
-            CharacterRaceCustomizeLabel.Visible = false;
-            CharacterXpCustomizeLabel.Visible = false;
-            CharacterAlignmentCustomizeLabel.Visible = false;
-            CharacterNameCustomizeTextbox.Visible = false;
-            CharacterClassCustomizeTextbox.Visible = false;
-            CharacterLevelCustomizeTextbox.Visible = false;
-            CharacterRaceCustomizeCombobox.Visible = false;
-            CharacterXpCustomizeTextBox.Visible = false;
-            CharacterAlignmentCustomizeCombobox.Visible = false;
-            UpdateCharacterDetailsButton2.Visible = false;
-            MoreCustomizations2.Visible = false;
+            CharNamePannel.Visible = false;
 
-            CharacterBackgroundCustomizeLabel.Visible = true;
-            CharacterBackgroundCustomizeTextbox.Visible = true;
-            CharacterBackgroundCustomizeButton.Visible = true;
-            MoreCustomizations3.Visible = true;
+            BackgroundPannel.Location = new Point(75, 50);
+            BackgroundPannel.Visible = true;
+            
         }
 
         private void CharacterBackgroundCustomizeButton_Click(object sender, EventArgs e)
@@ -125,26 +88,34 @@ namespace FANTASY4YOU
 
         private void MoreCustomizations3_Click(object sender, EventArgs e)
         {
-            CharacterBackgroundCustomizeLabel.Visible = false;
-            CharacterBackgroundCustomizeTextbox.Visible = false;
-            CharacterBackgroundCustomizeButton.Visible = false;
-            MoreCustomizations3.Visible = false;
+            BackgroundPannel.Visible = false;
 
-            CharacterStrenghtStrenghtLabel.Visible = true;
-            CharacterDexterityDexterityLabel.Visible = true;
-            CharacterConstitutionConstitutionLabel.Visible = true;
-            CharacterIntelligenceIntelligenceLabel.Visible = true;
-            CharacterWisdomWisdomLabel.Visible = true;
-            CharacterCharismaCharismaLabel.Visible = true;
-            CharacterStrenghtTextbox.Visible = true;
-            CharacterDexterityTextbox.Visible = true;
-            CharacterConstitutionTextbox.Visible = true;
-            CharacterIntelligenceTextbox.Visible = true;
-            CharacterWisdomTextbox.Visible = true;
-            CharacterCharismaTextbox.Visible = true;
-            UpdateCharacterDetailsButton.Visible = true;
-            MoreCustomizations.Visible = true;
+            StrenghtPanel.Visible = true;
         }
-        
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CharacterConstitutionConstitutionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

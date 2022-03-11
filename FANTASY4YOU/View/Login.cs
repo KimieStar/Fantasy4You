@@ -110,8 +110,7 @@ namespace FANTASY4YOU
 
                     if (connection.SelectIsUserNew() == true)
                     {
-                        welcomeScreen.ShowDialog();
-
+                        connection.UpdateIsUserNew();
                         Welcome = new Thread(OpenWelcomeScreen);
                         Welcome.SetApartmentState(ApartmentState.STA);
                         Welcome.Start();

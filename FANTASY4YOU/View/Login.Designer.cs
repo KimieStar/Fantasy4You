@@ -46,8 +46,8 @@ namespace FANTASY4YOU
             this.LoginSettingsButton = new FontAwesome.Sharp.IconButton();
             this.CloseHelperPannel2 = new System.Windows.Forms.Panel();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.CloseHelperPannel1 = new System.Windows.Forms.Panel();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
+            this.CloseHelperPannel1 = new System.Windows.Forms.Panel();
             this.LoginPanel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@ namespace FANTASY4YOU
             this.WelcomeLabel.AutoSize = true;
             this.WelcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.WelcomeLabel.Font = new System.Drawing.Font("Old London", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.WelcomeLabel.ForeColor = System.Drawing.Color.Orange;
+            this.WelcomeLabel.ForeColor = System.Drawing.Color.SandyBrown;
             this.WelcomeLabel.Location = new System.Drawing.Point(137, 26);
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(479, 55);
@@ -69,7 +69,7 @@ namespace FANTASY4YOU
             this.WelcomeLabel2.AutoSize = true;
             this.WelcomeLabel2.BackColor = System.Drawing.Color.Transparent;
             this.WelcomeLabel2.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WelcomeLabel2.ForeColor = System.Drawing.Color.Orange;
+            this.WelcomeLabel2.ForeColor = System.Drawing.Color.SandyBrown;
             this.WelcomeLabel2.Location = new System.Drawing.Point(171, 93);
             this.WelcomeLabel2.Name = "WelcomeLabel2";
             this.WelcomeLabel2.Size = new System.Drawing.Size(408, 31);
@@ -190,7 +190,8 @@ namespace FANTASY4YOU
             // 
             this.LoginButton.BackColor = System.Drawing.Color.Transparent;
             this.LoginButton.BorderColor = System.Drawing.Color.Transparent;
-            this.LoginButton.ButtonColor = System.Drawing.Color.Tan;
+            this.LoginButton.ButtonColor = System.Drawing.Color.SandyBrown;
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -200,10 +201,11 @@ namespace FANTASY4YOU
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.OnHoverBackColor = System.Drawing.Color.Transparent;
             this.LoginButton.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.LoginButton.OnHoverButtonColor = System.Drawing.Color.Tan;
-            this.LoginButton.OnHoverTextColor = System.Drawing.Color.SandyBrown;
+            this.LoginButton.OnHoverButtonColor = System.Drawing.Color.SandyBrown;
+            this.LoginButton.OnHoverTextColor = System.Drawing.Color.Coral;
             this.LoginButton.Size = new System.Drawing.Size(221, 56);
             this.LoginButton.TabIndex = 18;
+            this.LoginButton.TabStop = false;
             this.LoginButton.Text = "Login";
             this.LoginButton.TextColor = System.Drawing.Color.White;
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -226,14 +228,18 @@ namespace FANTASY4YOU
             this.LoginPanel.Controls.Add(this.PleaseWaitLabel);
             this.LoginPanel.Controls.Add(this.ShowPassword);
             this.LoginPanel.Controls.Add(this.HidePassword);
-            this.LoginPanel.Location = new System.Drawing.Point(0, 24);
+            this.LoginPanel.Location = new System.Drawing.Point(0, 25);
             this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(760, 425);
+            this.LoginPanel.Size = new System.Drawing.Size(760, 424);
             this.LoginPanel.TabIndex = 19;
             // 
             // RefreshButton
             // 
+            this.RefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.RefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RefreshButton.FlatAppearance.BorderSize = 0;
+            this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.RefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RefreshButton.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
             this.RefreshButton.IconColor = System.Drawing.Color.SandyBrown;
@@ -243,13 +249,9 @@ namespace FANTASY4YOU
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(37, 36);
             this.RefreshButton.TabIndex = 20;
-            this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshFormButton_Click);
             this.RefreshButton.TabStop = false;
-            this.RefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.RefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.RefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.RefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.RefreshButton.UseVisualStyleBackColor = false;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshFormButton_Click);
             // 
             // LoginSettingsButton
             // 
@@ -273,29 +275,22 @@ namespace FANTASY4YOU
             // 
             // CloseHelperPannel2
             // 
-            this.CloseHelperPannel2.Location = new System.Drawing.Point(711, 0);
+            this.CloseHelperPannel2.Location = new System.Drawing.Point(706, 0);
             this.CloseHelperPannel2.Name = "CloseHelperPannel2";
             this.CloseHelperPannel2.Size = new System.Drawing.Size(24, 26);
             this.CloseHelperPannel2.TabIndex = 20;
             // 
             // WindowTopBar
             // 
-            this.WindowTopBar.BackColor = System.Drawing.Color.Transparent;
+            this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
             this.WindowTopBar.Controls.Add(this.CloseHelperPannel2);
-            this.WindowTopBar.Controls.Add(this.CloseHelperPannel1);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
+            this.WindowTopBar.Controls.Add(this.CloseHelperPannel1);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTopBar.Name = "WindowTopBar";
-            this.WindowTopBar.Size = new System.Drawing.Size(763, 29);
+            this.WindowTopBar.Size = new System.Drawing.Size(763, 25);
             this.WindowTopBar.TabIndex = 20;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // CloseHelperPannel1
-            // 
-            this.CloseHelperPannel1.Location = new System.Drawing.Point(710, 21);
-            this.CloseHelperPannel1.Name = "CloseHelperPannel1";
-            this.CloseHelperPannel1.Size = new System.Drawing.Size(69, 23);
-            this.CloseHelperPannel1.TabIndex = 19;
             // 
             // CloseFormButton
             // 
@@ -303,19 +298,29 @@ namespace FANTASY4YOU
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseFormButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloseFormButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CloseFormButton.FlatAppearance.BorderSize = 0;
             this.CloseFormButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.CloseFormButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.CloseFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CloseFormButton.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.CloseFormButton.IconColor = System.Drawing.Color.Snow;
             this.CloseFormButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CloseFormButton.IconSize = 35;
-            this.CloseFormButton.Location = new System.Drawing.Point(733, -1);
+            this.CloseFormButton.IconSize = 40;
+            this.CloseFormButton.Location = new System.Drawing.Point(729, -1);
             this.CloseFormButton.Name = "CloseFormButton";
-            this.CloseFormButton.Size = new System.Drawing.Size(30, 29);
+            this.CloseFormButton.Size = new System.Drawing.Size(30, 33);
             this.CloseFormButton.TabIndex = 0;
+            this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
+            // 
+            // CloseHelperPannel1
+            // 
+            this.CloseHelperPannel1.Location = new System.Drawing.Point(710, 22);
+            this.CloseHelperPannel1.Name = "CloseHelperPannel1";
+            this.CloseHelperPannel1.Size = new System.Drawing.Size(69, 22);
+            this.CloseHelperPannel1.TabIndex = 19;
             // 
             // Login
             // 
