@@ -25,7 +25,7 @@ namespace FANTASY4YOU
 
         private void CharacterCustomization_Load(object sender, EventArgs e)
         {
-            int charNum = logic.readCharSelectedToEditFile();
+            int charNum = User.CharSelected;
             Character character = logic.SelectCharInfo(charNum);
             CharacterNameCustomizeTextbox.Text = character.CharacterName;
             CharacterClassCustomizeTextbox.Text = character.CharacterClass;
@@ -45,9 +45,9 @@ namespace FANTASY4YOU
 
         private void UpdateCharacterDetailsButton_Click(object sender, EventArgs e)
         {
-            logic.UpdateCharacterDetails(logic.readCharSelectedToEditFile(), Int32.Parse(CharacterStrenghtTextbox.Text),
+            logic.UpdateCharacterDetails(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
             Int32.Parse(CharacterDexterityTextbox.Text), Int32.Parse(CharacterConstitutionTextbox.Text),
-            Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text));
+            Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text)); ;
             MessageBox.Show("Success!");
             
         }
@@ -88,7 +88,7 @@ namespace FANTASY4YOU
         private void UpdateCharacterDetailsButton2_Click(object sender, EventArgs e)
         {
             
-            logic.UpdateCharacterDetails2(logic.readCharSelectedToEditFile(), CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
+            logic.UpdateCharacterDetails2(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
             Int32.Parse(CharacterLevelCustomizeTextbox.Text), CharacterRaceCustomizeCombobox.Text,
             Int32.Parse(CharacterXpCustomizeTextBox.Text), CharacterAlignmentCustomizeCombobox.Text);
             MessageBox.Show("Success!");
@@ -119,7 +119,7 @@ namespace FANTASY4YOU
 
         private void CharacterBackgroundCustomizeButton_Click(object sender, EventArgs e)
         {
-            logic.UpdateCharacterDetails3(logic.readCharSelectedToEditFile(), CharacterBackgroundCustomizeTextbox.Text);
+            logic.UpdateCharacterDetails3(User.CharSelected, CharacterBackgroundCustomizeTextbox.Text);
             MessageBox.Show("Success!");
         }
 

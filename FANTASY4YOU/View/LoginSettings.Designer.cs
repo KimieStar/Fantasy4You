@@ -54,10 +54,9 @@ namespace FANTASY4YOU
             // 
             // LoginSettings
             // 
-            
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 178);
+            this.ClientSize = new System.Drawing.Size(240, 88);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ClearCacheButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

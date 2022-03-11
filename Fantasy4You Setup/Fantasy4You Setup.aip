@@ -14,10 +14,10 @@
     <ROW Property="ARPPRODUCTICON" Value="_adventuretimepixelarthdpngdownload_256x256.exe" Type="8"/>
     <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
     <ROW Property="Manufacturer" Value="Kimiegg Entertainment"/>
-    <ROW Property="ProductCode" Value="1033:{782E7C73-5362-4D86-A701-AAB261BF3B95} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{469121CC-AFEB-4B03-B644-A407AC1179F3} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Fantasy4You"/>
-    <ROW Property="ProductVersion" Value="1.0.1.08"/>
+    <ROW Property="ProductVersion" Value="1.0.1.0961"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{59F169DA-B25B-4306-A95A-4C9AC11A870D}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -32,28 +32,29 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="CommonFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="FANTASY4YOU_Dir" Directory_Parent="APPDIR" DefaultDir="FANTAS~1|FANTASY4YOU"/>
     <ROW Directory="ProgramMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{E8C6D086-51E0-418A-9591-5DA99007D93F}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_CustomARPName" ComponentId="{D1F6C454-0730-4FDF-AB3C-3211605E8ECB}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
     <ROW Component="AI_ExePath" ComponentId="{A0596DAB-9D34-482B-8178-A07EFABFB2CD}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="APPDIR" ComponentId="{29DEE02A-54C4-4555-96BF-35E40965855F}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="BouncyCastle.Crypto.dll" ComponentId="{AF69BFDE-F57D-425D-825D-EBAD0D92F930}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="BouncyCastle.Crypto.dll"/>
-    <ROW Component="FANTASY4YOU.dll" ComponentId="{E55CDAF7-D806-4688-BB3A-681283EA1A0B}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="FANTASY4YOU.dll"/>
-    <ROW Component="FANTASY4YOU.exe" ComponentId="{1BA1C309-DDAC-458D-B4C5-D16962472D7A}" Directory_="FANTASY4YOU_Dir" Attributes="256" KeyPath="FANTASY4YOU.exe"/>
-    <ROW Component="Google.Protobuf.dll" ComponentId="{64E5EE79-A7C2-4D32-9718-E1E43D906169}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Google.Protobuf.dll"/>
-    <ROW Component="K4os.Compression.LZ4.Streams.dll" ComponentId="{DB8A1623-9C19-4B15-A2FC-A05A14F935DC}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.Streams.dll"/>
-    <ROW Component="K4os.Compression.LZ4.dll" ComponentId="{C9B264A7-C217-4819-B5A3-1E763F989EFF}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.dll"/>
-    <ROW Component="K4os.Hash.xxHash.dll" ComponentId="{833BDED6-2877-4512-8B70-864D2733657C}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Hash.xxHash.dll"/>
-    <ROW Component="Microsoft.Windows.SDK.NET.dll" ComponentId="{5D3D2748-B783-4758-8A3F-C70ABEE7AF26}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Windows.SDK.NET.dll"/>
-    <ROW Component="MySql.Data.dll" ComponentId="{5CF27CD0-C541-491E-8E49-29AC39FDD5A8}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="MySql.Data.dll"/>
+    <ROW Component="BouncyCastle.Crypto.dll" ComponentId="{3AC39692-209F-403A-ABDC-780B7D468142}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="BouncyCastle.Crypto.dll"/>
+    <ROW Component="FANTASY4YOU.dll" ComponentId="{D1989AEB-8D16-4D66-A584-3B21FC3CEC54}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="FANTASY4YOU.dll"/>
+    <ROW Component="FANTASY4YOU.exe" ComponentId="{7A369F89-ED08-48D5-97B8-1947141DFA97}" Directory_="FANTASY4YOU_Dir" Attributes="256" KeyPath="FANTASY4YOU.exe"/>
+    <ROW Component="Google.Protobuf.dll" ComponentId="{F4C2A034-F9BE-4D5B-BBEA-E84A22D1AA97}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Google.Protobuf.dll"/>
+    <ROW Component="K4os.Compression.LZ4.Streams.dll" ComponentId="{C7C2ECD4-C32C-484F-AE98-6A459130F2A8}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.Streams.dll"/>
+    <ROW Component="K4os.Compression.LZ4.dll" ComponentId="{D60946B2-442B-433D-B00D-551C10D89013}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Compression.LZ4.dll"/>
+    <ROW Component="K4os.Hash.xxHash.dll" ComponentId="{2DC087E7-9AF0-4254-8C51-0C2D94B54AD3}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="K4os.Hash.xxHash.dll"/>
+    <ROW Component="Microsoft.Windows.SDK.NET.dll" ComponentId="{4CEB91B6-B2F7-4AC0-B55F-3B05FF9A6E2C}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Microsoft.Windows.SDK.NET.dll"/>
+    <ROW Component="MySql.Data.dll" ComponentId="{FC950F93-AFC9-417E-BDD9-51B92F4B312F}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="MySql.Data.dll"/>
     <ROW Component="Olondon_.otf" ComponentId="{007601BC-F7C4-48BA-8254-A324747DFF4C}" Directory_="CommonFilesFolder" Attributes="0" KeyPath="Olondon_.otf" Type="0"/>
     <ROW Component="ProductInformation" ComponentId="{3FE3A938-8995-4097-BE7B-F225C436928A}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="Ubiety.Dns.Core.dll" ComponentId="{D3B9A547-0D5B-4226-93BE-0FFBE8CD61D0}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Ubiety.Dns.Core.dll"/>
-    <ROW Component="WinRT.Runtime.dll" ComponentId="{E56E6ADE-84AA-458D-8837-D6EAD311990C}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="WinRT.Runtime.dll"/>
-    <ROW Component="ZstdNet.dll" ComponentId="{E1884648-584C-4809-812F-D3C0D53DB708}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="ZstdNet.dll"/>
+    <ROW Component="Ubiety.Dns.Core.dll" ComponentId="{8E1703AB-9565-4CC9-B35C-23C902785368}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="Ubiety.Dns.Core.dll"/>
+    <ROW Component="WinRT.Runtime.dll" ComponentId="{9AA55E16-380C-49F7-A6DA-6060BD2637A7}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="WinRT.Runtime.dll"/>
+    <ROW Component="ZstdNet.dll" ComponentId="{6E137C65-D960-4F1F-BAC4-A9B251AE4DE7}" Directory_="FANTASY4YOU_Dir" Attributes="0" KeyPath="ZstdNet.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -61,6 +62,9 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="Olondon_.otf" Component_="Olondon_.otf" FileName="Olondon_.otf" Attributes="0" SourcePath="..\..\..\..\Downloads\Olondon_.otf" SelfReg="false"/>
+    <ROW File="FANTASY4YOU.exe" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.EXE|FANTASY4YOU.exe" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\FANTASY4YOU.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="FANTASY4YOU.pdb" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.PDB|FANTASY4YOU.pdb" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\FANTASY4YOU.pdb" SelfReg="false"/>
+    <ROW File="Google.Protobuf.dll" Component_="Google.Protobuf.dll" FileName="GOOGLE~1.DLL|Google.Protobuf.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\Google.Protobuf.dll" SelfReg="false"/>
     <ROW File="K4os.Compression.LZ4.dll" Component_="K4os.Compression.LZ4.dll" FileName="K4OSCO~1.DLL|K4os.Compression.LZ4.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\K4os.Compression.LZ4.dll" SelfReg="false"/>
     <ROW File="K4os.Compression.LZ4.Streams.dll" Component_="K4os.Compression.LZ4.Streams.dll" FileName="K4OSCO~2.DLL|K4os.Compression.LZ4.Streams.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\K4os.Compression.LZ4.Streams.dll" SelfReg="false"/>
     <ROW File="K4os.Hash.xxHash.dll" Component_="K4os.Hash.xxHash.dll" FileName="K4OSHA~1.DLL|K4os.Hash.xxHash.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\K4os.Hash.xxHash.dll" SelfReg="false"/>
@@ -71,9 +75,6 @@
     <ROW File="ZstdNet.dll" Component_="ZstdNet.dll" FileName="ZstdNet.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\ZstdNet.dll" SelfReg="false"/>
     <ROW File="BouncyCastle.Crypto.dll" Component_="BouncyCastle.Crypto.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Crypto.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\BouncyCastle.Crypto.dll" SelfReg="false"/>
     <ROW File="FANTASY4YOU.dll" Component_="FANTASY4YOU.dll" FileName="FANTAS~1.DLL|FANTASY4YOU.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\FANTASY4YOU.dll" SelfReg="false"/>
-    <ROW File="FANTASY4YOU.exe" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.EXE|FANTASY4YOU.exe" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\FANTASY4YOU.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="FANTASY4YOU.pdb" Component_="FANTASY4YOU.exe" FileName="FANTAS~1.PDB|FANTASY4YOU.pdb" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\FANTASY4YOU.pdb" SelfReg="false"/>
-    <ROW File="Google.Protobuf.dll" Component_="Google.Protobuf.dll" FileName="GOOGLE~1.DLL|Google.Protobuf.dll" Attributes="0" SourcePath="..\FANTASY4YOU\bin\Release\net6.0-windows10.0.22000.0\publish\Google.Protobuf.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -107,21 +108,21 @@
     <ROW Fragment="WelcomePrereqDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\WelcomePrereqDlg.aip"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.JsonFileComponent">
-    <ROW JsonFile="FANTASY4YOU.deps.json" FileName="FANTAS~1.JSO|FANTASY4YOU.deps.json" DirProperty="FANTASY4YOU_Dir" Component="WinRT.Runtime.dll" RootProperty="Root" Flags="22" IndentUnits="2"/>
-    <ROW JsonFile="FANTASY4YOU.runtimeconfig.json" FileName="FANTAS~2.JSO|FANTASY4YOU.runtimeconfig.json" DirProperty="FANTASY4YOU_Dir" Component="WinRT.Runtime.dll" RootProperty="Root_1" Flags="22" IndentUnits="2"/>
+    <ROW JsonFile="FANTASY4YOU.deps.json" FileName="FANTAS~2.JSO|FANTASY4YOU.deps.json" DirProperty="FANTASY4YOU_Dir" Component="WinRT.Runtime.dll" RootProperty="Root_1" Flags="22" IndentUnits="2"/>
+    <ROW JsonFile="FANTASY4YOU.runtimeconfig.json" FileName="FANTAS~1.JSO|FANTASY4YOU.runtimeconfig.json" DirProperty="FANTASY4YOU_Dir" Component="WinRT.Runtime.dll" RootProperty="Root" Flags="22" IndentUnits="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.JsonPropertyComponent">
-    <ROW JsonProperty="BouncyCastle.NetCore" Parent="dependencies_6" Name="BouncyCastle.NetCore" Condition="1" Order="0" Flags="57" Value="1.8.5"/>
+    <ROW JsonProperty="BouncyCastle.NetCore" Parent="dependencies_5" Name="BouncyCastle.NetCore" Condition="1" Order="0" Flags="57" Value="1.8.5"/>
     <ROW JsonProperty="BouncyCastle.NetCore1.8.5" Parent="libraries" Name="BouncyCastle.NetCore/1.8.5" Condition="1" Order="2" Flags="60"/>
     <ROW JsonProperty="BouncyCastle.NetCore1.8.5_1" Parent="NETCoreAppVersionv6.0" Name="BouncyCastle.NetCore/1.8.5" Condition="1" Order="2" Flags="60"/>
     <ROW JsonProperty="FANTASY4YOU.dll" Parent="runtime" Name="FANTASY4YOU.dll" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="FANTASY4YOU1.0.0" Parent="libraries" Name="FANTASY4YOU/1.0.0" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="FANTASY4YOU1.0.0_1" Parent="NETCoreAppVersionv6.0" Name="FANTASY4YOU/1.0.0" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="Google.Protobuf" Parent="dependencies_6" Name="Google.Protobuf" Condition="1" Order="1" Flags="57" Value="3.14.0"/>
+    <ROW JsonProperty="Google.Protobuf" Parent="dependencies_5" Name="Google.Protobuf" Condition="1" Order="1" Flags="57" Value="3.14.0"/>
     <ROW JsonProperty="Google.Protobuf3.14.0" Parent="libraries" Name="Google.Protobuf/3.14.0" Condition="1" Order="3" Flags="60"/>
     <ROW JsonProperty="Google.Protobuf3.14.0_1" Parent="NETCoreAppVersionv6.0" Name="Google.Protobuf/3.14.0" Condition="1" Order="3" Flags="60"/>
     <ROW JsonProperty="K4os.Compression.LZ4" Parent="dependencies_3" Name="K4os.Compression.LZ4" Condition="1" Order="0" Flags="57" Value="1.2.6"/>
-    <ROW JsonProperty="K4os.Compression.LZ4.Streams" Parent="dependencies_6" Name="K4os.Compression.LZ4.Streams" Condition="1" Order="2" Flags="57" Value="1.2.6"/>
+    <ROW JsonProperty="K4os.Compression.LZ4.Streams" Parent="dependencies_5" Name="K4os.Compression.LZ4.Streams" Condition="1" Order="2" Flags="57" Value="1.2.6"/>
     <ROW JsonProperty="K4os.Compression.LZ4.Streams1.2.6" Parent="libraries" Name="K4os.Compression.LZ4.Streams/1.2.6" Condition="1" Order="5" Flags="60"/>
     <ROW JsonProperty="K4os.Compression.LZ4.Streams1.2.6_1" Parent="NETCoreAppVersionv6.0" Name="K4os.Compression.LZ4.Streams/1.2.6" Condition="1" Order="5" Flags="60"/>
     <ROW JsonProperty="K4os.Compression.LZ41.2.6" Parent="libraries" Name="K4os.Compression.LZ4/1.2.6" Condition="1" Order="4" Flags="60"/>
@@ -129,15 +130,12 @@
     <ROW JsonProperty="K4os.Hash.xxHash" Parent="dependencies_3" Name="K4os.Hash.xxHash" Condition="1" Order="1" Flags="57" Value="1.0.6"/>
     <ROW JsonProperty="K4os.Hash.xxHash1.0.6" Parent="libraries" Name="K4os.Hash.xxHash/1.0.6" Condition="1" Order="6" Flags="60"/>
     <ROW JsonProperty="K4os.Hash.xxHash1.0.6_1" Parent="NETCoreAppVersionv6.0" Name="K4os.Hash.xxHash/1.0.6" Condition="1" Order="6" Flags="60"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms" Parent="dependencies_5" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms3.1.0" Parent="libraries" Name="Microsoft.NETCore.Platforms/3.1.0" Condition="1" Order="7" Flags="60"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms3.1.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.NETCore.Platforms/3.1.0" Condition="1" Order="7" Flags="60"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms_1" Parent="dependencies_8" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms_2" Parent="dependencies_9" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
-    <ROW JsonProperty="Microsoft.NETCore.Platforms_3" Parent="dependencies_11" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="3.1.0"/>
-    <ROW JsonProperty="Microsoft.Win32.SystemEvents" Parent="dependencies_8" Name="Microsoft.Win32.SystemEvents" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="Microsoft.Win32.SystemEvents4.7.0" Parent="libraries" Name="Microsoft.Win32.SystemEvents/4.7.0" Condition="1" Order="8" Flags="60"/>
-    <ROW JsonProperty="Microsoft.Win32.SystemEvents4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Win32.SystemEvents/4.7.0" Condition="1" Order="8" Flags="60"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms" Parent="dependencies_9" Name="Microsoft.NETCore.Platforms" Condition="1" Order="0" Flags="57" Value="2.0.0"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms2.0.0" Parent="libraries" Name="Microsoft.NETCore.Platforms/2.0.0" Condition="1" Order="7" Flags="60"/>
+    <ROW JsonProperty="Microsoft.NETCore.Platforms2.0.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.NETCore.Platforms/2.0.0" Condition="1" Order="7" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents" Parent="dependencies_7" Name="Microsoft.Win32.SystemEvents" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents6.0.0" Parent="libraries" Name="Microsoft.Win32.SystemEvents/6.0.0" Condition="1" Order="8" Flags="60"/>
+    <ROW JsonProperty="Microsoft.Win32.SystemEvents6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="Microsoft.Win32.SystemEvents/6.0.0" Condition="1" Order="8" Flags="60"/>
     <ROW JsonProperty="Microsoft.Windows.SDK.NET.dll" Parent="runtime_1" Name="Microsoft.Windows.SDK.NET.dll" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="MySql.Data" Parent="dependencies" Name="MySql.Data" Condition="1" Order="0" Flags="57" Value="8.0.28"/>
     <ROW JsonProperty="MySql.Data8.0.28" Parent="libraries" Name="MySql.Data/8.0.28" Condition="1" Order="9" Flags="60"/>
@@ -145,15 +143,16 @@
     <ROW JsonProperty="NETCoreAppVersionv6.0" Parent="targets" Name=".NETCoreApp,Version=v6.0" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="Root" Name="Root" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="Root_1" Name="Root" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="System.Buffers" Parent="dependencies_6" Name="System.Buffers" Condition="1" Order="3" Flags="57" Value="4.5.1"/>
+    <ROW JsonProperty="System.Buffers" Parent="dependencies_5" Name="System.Buffers" Condition="1" Order="3" Flags="57" Value="4.5.1"/>
     <ROW JsonProperty="System.Buffers4.5.1" Parent="libraries" Name="System.Buffers/4.5.1" Condition="1" Order="10" Flags="60"/>
     <ROW JsonProperty="System.Buffers4.5.1_1" Parent="NETCoreAppVersionv6.0" Name="System.Buffers/4.5.1" Condition="1" Order="10" Flags="60"/>
-    <ROW JsonProperty="System.Configuration.Configuratio_1" Parent="NETCoreAppVersionv6.0" Name="System.Configuration.ConfigurationManager/4.4.1" Condition="1" Order="11" Flags="60"/>
-    <ROW JsonProperty="System.Configuration.Configuratio_2" Parent="dependencies_6" Name="System.Configuration.ConfigurationManager" Condition="1" Order="4" Flags="57" Value="4.4.1"/>
-    <ROW JsonProperty="System.Configuration.ConfigurationM" Parent="libraries" Name="System.Configuration.ConfigurationManager/4.4.1" Condition="1" Order="11" Flags="60"/>
-    <ROW JsonProperty="System.Drawing.Common" Parent="dependencies_12" Name="System.Drawing.Common" Condition="1" Order="0" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="System.Drawing.Common4.7.0" Parent="libraries" Name="System.Drawing.Common/4.7.0" Condition="1" Order="12" Flags="60"/>
-    <ROW JsonProperty="System.Drawing.Common4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Drawing.Common/4.7.0" Condition="1" Order="12" Flags="60"/>
+    <ROW JsonProperty="System.Configuration.Configuratio_1" Parent="NETCoreAppVersionv6.0" Name="System.Configuration.ConfigurationManager/6.0.0" Condition="1" Order="11" Flags="60"/>
+    <ROW JsonProperty="System.Configuration.Configuratio_2" Parent="dependencies" Name="System.Configuration.ConfigurationManager" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Configuration.Configuratio_3" Parent="dependencies_5" Name="System.Configuration.ConfigurationManager" Condition="1" Order="4" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Configuration.ConfigurationM" Parent="libraries" Name="System.Configuration.ConfigurationManager/6.0.0" Condition="1" Order="11" Flags="60"/>
+    <ROW JsonProperty="System.Drawing.Common" Parent="dependencies_10" Name="System.Drawing.Common" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Drawing.Common6.0.0" Parent="libraries" Name="System.Drawing.Common/6.0.0" Condition="1" Order="12" Flags="60"/>
+    <ROW JsonProperty="System.Drawing.Common6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Drawing.Common/6.0.0" Condition="1" Order="12" Flags="60"/>
     <ROW JsonProperty="System.Memory" Parent="dependencies_1" Name="System.Memory" Condition="1" Order="0" Flags="57" Value="4.5.4"/>
     <ROW JsonProperty="System.Memory4.5.4" Parent="libraries" Name="System.Memory/4.5.4" Condition="1" Order="13" Flags="60"/>
     <ROW JsonProperty="System.Memory4.5.4_1" Parent="NETCoreAppVersionv6.0" Name="System.Memory/4.5.4" Condition="1" Order="13" Flags="60"/>
@@ -162,26 +161,24 @@
     <ROW JsonProperty="System.Reflection.Metadata.Metadata" Parent="configProperties" Name="System.Reflection.Metadata.MetadataUpdater.IsSupported" Condition="1" Order="0" Flags="58" Value="false"/>
     <ROW JsonProperty="System.Runtime.CompilerServices.U_1" Parent="NETCoreAppVersionv6.0" Name="System.Runtime.CompilerServices.Unsafe/5.0.0" Condition="1" Order="14" Flags="60"/>
     <ROW JsonProperty="System.Runtime.CompilerServices.U_2" Parent="dependencies_1" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="1" Flags="57" Value="5.0.0"/>
-    <ROW JsonProperty="System.Runtime.CompilerServices.U_3" Parent="dependencies_6" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="5" Flags="57" Value="5.0.0"/>
+    <ROW JsonProperty="System.Runtime.CompilerServices.U_3" Parent="dependencies_5" Name="System.Runtime.CompilerServices.Unsafe" Condition="1" Order="5" Flags="57" Value="5.0.0"/>
     <ROW JsonProperty="System.Runtime.CompilerServices.Uns" Parent="libraries" Name="System.Runtime.CompilerServices.Unsafe/5.0.0" Condition="1" Order="14" Flags="60"/>
-    <ROW JsonProperty="System.Security.AccessControl" Parent="dependencies_10" Name="System.Security.AccessControl" Condition="1" Order="0" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="System.Security.AccessControl4.7.0" Parent="libraries" Name="System.Security.AccessControl/4.7.0" Condition="1" Order="15" Flags="60"/>
-    <ROW JsonProperty="System.Security.AccessControl4.7._1" Parent="NETCoreAppVersionv6.0" Name="System.Security.AccessControl/4.7.0" Condition="1" Order="15" Flags="60"/>
-    <ROW JsonProperty="System.Security.Cryptography.Prot_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Cryptography.ProtectedData/4.4.0" Condition="1" Order="16" Flags="60"/>
-    <ROW JsonProperty="System.Security.Cryptography.Prot_2" Parent="dependencies_7" Name="System.Security.Cryptography.ProtectedData" Condition="1" Order="0" Flags="57" Value="4.4.0"/>
-    <ROW JsonProperty="System.Security.Cryptography.Protec" Parent="libraries" Name="System.Security.Cryptography.ProtectedData/4.4.0" Condition="1" Order="16" Flags="60"/>
-    <ROW JsonProperty="System.Security.Permissions" Parent="dependencies_6" Name="System.Security.Permissions" Condition="1" Order="6" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="System.Security.Permissions4.7.0" Parent="libraries" Name="System.Security.Permissions/4.7.0" Condition="1" Order="17" Flags="60"/>
-    <ROW JsonProperty="System.Security.Permissions4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Permissions/4.7.0" Condition="1" Order="17" Flags="60"/>
-    <ROW JsonProperty="System.Security.Principal.Windows" Parent="dependencies_9" Name="System.Security.Principal.Windows" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="System.Security.Principal.Windows4." Parent="libraries" Name="System.Security.Principal.Windows/4.7.0" Condition="1" Order="18" Flags="60"/>
-    <ROW JsonProperty="System.Security.Principal.Windows_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Principal.Windows/4.7.0" Condition="1" Order="18" Flags="60"/>
-    <ROW JsonProperty="System.Text.Encoding.CodePages" Parent="dependencies_6" Name="System.Text.Encoding.CodePages" Condition="1" Order="7" Flags="57" Value="4.4.0"/>
-    <ROW JsonProperty="System.Text.Encoding.CodePages4.4.0" Parent="libraries" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="19" Flags="60"/>
-    <ROW JsonProperty="System.Text.Encoding.CodePages4.4_1" Parent="NETCoreAppVersionv6.0" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="19" Flags="60"/>
-    <ROW JsonProperty="System.Windows.Extensions" Parent="dependencies_10" Name="System.Windows.Extensions" Condition="1" Order="1" Flags="57" Value="4.7.0"/>
-    <ROW JsonProperty="System.Windows.Extensions4.7.0" Parent="libraries" Name="System.Windows.Extensions/4.7.0" Condition="1" Order="20" Flags="60"/>
-    <ROW JsonProperty="System.Windows.Extensions4.7.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Windows.Extensions/4.7.0" Condition="1" Order="20" Flags="60"/>
+    <ROW JsonProperty="System.Security.AccessControl" Parent="dependencies_8" Name="System.Security.AccessControl" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Security.AccessControl6.0.0" Parent="libraries" Name="System.Security.AccessControl/6.0.0" Condition="1" Order="15" Flags="60"/>
+    <ROW JsonProperty="System.Security.AccessControl6.0._1" Parent="NETCoreAppVersionv6.0" Name="System.Security.AccessControl/6.0.0" Condition="1" Order="15" Flags="60"/>
+    <ROW JsonProperty="System.Security.Cryptography.Prot_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Cryptography.ProtectedData/6.0.0" Condition="1" Order="16" Flags="60"/>
+    <ROW JsonProperty="System.Security.Cryptography.Prot_2" Parent="dependencies_6" Name="System.Security.Cryptography.ProtectedData" Condition="1" Order="0" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Security.Cryptography.Protec" Parent="libraries" Name="System.Security.Cryptography.ProtectedData/6.0.0" Condition="1" Order="16" Flags="60"/>
+    <ROW JsonProperty="System.Security.Permissions" Parent="dependencies_5" Name="System.Security.Permissions" Condition="1" Order="6" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Security.Permissions6.0.0" Parent="libraries" Name="System.Security.Permissions/6.0.0" Condition="1" Order="17" Flags="60"/>
+    <ROW JsonProperty="System.Security.Permissions6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Security.Permissions/6.0.0" Condition="1" Order="17" Flags="60"/>
+    <ROW JsonProperty="System.Security.Permissions_1" Parent="dependencies_6" Name="System.Security.Permissions" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages" Parent="dependencies_5" Name="System.Text.Encoding.CodePages" Condition="1" Order="7" Flags="57" Value="4.4.0"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages4.4.0" Parent="libraries" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="18" Flags="60"/>
+    <ROW JsonProperty="System.Text.Encoding.CodePages4.4_1" Parent="NETCoreAppVersionv6.0" Name="System.Text.Encoding.CodePages/4.4.0" Condition="1" Order="18" Flags="60"/>
+    <ROW JsonProperty="System.Windows.Extensions" Parent="dependencies_8" Name="System.Windows.Extensions" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
+    <ROW JsonProperty="System.Windows.Extensions6.0.0" Parent="libraries" Name="System.Windows.Extensions/6.0.0" Condition="1" Order="19" Flags="60"/>
+    <ROW JsonProperty="System.Windows.Extensions6.0.0_1" Parent="NETCoreAppVersionv6.0" Name="System.Windows.Extensions/6.0.0" Condition="1" Order="19" Flags="60"/>
     <ROW JsonProperty="WinRT.Runtime.dll" Parent="runtime_1" Name="WinRT.Runtime.dll" Condition="1" Order="1" Flags="60"/>
     <ROW JsonProperty="_" Parent="frameworks" Name="0" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="__1" Parent="frameworks" Name="1" Condition="1" Order="1" Flags="60"/>
@@ -195,21 +192,19 @@
     <ROW JsonProperty="assemblyVersion_7" Parent="libnet6.0MySql.Data.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="8.0.28.0"/>
     <ROW JsonProperty="assemblyVersion_8" Parent="libnet6.0Ubiety.Dns.Core.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="2.2.1.0"/>
     <ROW JsonProperty="assemblyVersion_9" Parent="libnet6.0ZstdNet.dll" Name="assemblyVersion" Condition="1" Order="0" Flags="57" Value="1.4.5.0"/>
-    <ROW JsonProperty="compilationOptions" Parent="Root" Name="compilationOptions" Condition="1" Order="1" Flags="60"/>
+    <ROW JsonProperty="compilationOptions" Parent="Root_1" Name="compilationOptions" Condition="1" Order="1" Flags="60"/>
     <ROW JsonProperty="configProperties" Parent="runtimeOptions" Name="configProperties" Condition="1" Order="2" Flags="60"/>
     <ROW JsonProperty="dependencies" Parent="FANTASY4YOU1.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="dependencies_1" Parent="Google.Protobuf3.14.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_10" Parent="System.Security.Permissions4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_11" Parent="System.Text.Encoding.CodePages4.4_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_12" Parent="System.Windows.Extensions4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_10" Parent="System.Windows.Extensions6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="dependencies_2" Parent="K4os.Compression.LZ41.2.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="dependencies_3" Parent="K4os.Compression.LZ4.Streams1.2.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="dependencies_4" Parent="K4os.Hash.xxHash1.0.6_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_5" Parent="Microsoft.Win32.SystemEvents4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_6" Parent="MySql.Data8.0.28_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_7" Parent="System.Configuration.Configuratio_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_8" Parent="System.Drawing.Common4.7.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="dependencies_9" Parent="System.Security.AccessControl4.7._1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_5" Parent="MySql.Data8.0.28_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_6" Parent="System.Configuration.Configuratio_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_7" Parent="System.Drawing.Common6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_8" Parent="System.Security.Permissions6.0.0_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="dependencies_9" Parent="System.Text.Encoding.CodePages4.4_1" Name="dependencies" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="fileVersion" Parent="Microsoft.Windows.SDK.NET.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="10.0.22000.22"/>
     <ROW JsonProperty="fileVersion_1" Parent="WinRT.Runtime.dll" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.4.0.37231"/>
     <ROW JsonProperty="fileVersion_2" Parent="libnetstandard2.0BouncyCastle.Crypt" Name="fileVersion" Condition="1" Order="1" Flags="57" Value="1.8.19031.1"/>
@@ -223,23 +218,22 @@
     <ROW JsonProperty="frameworks" Parent="runtimeOptions" Name="frameworks" Condition="1" Order="1" Flags="61"/>
     <ROW JsonProperty="hashPath" Parent="BouncyCastle.NetCore1.8.5" Name="hashPath" Condition="1" Order="4" Flags="57" Value="bouncycastle.netcore.1.8.5.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_1" Parent="Google.Protobuf3.14.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="google.protobuf.3.14.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_10" Parent="System.Drawing.Common4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.drawing.common.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_10" Parent="System.Drawing.Common6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.drawing.common.6.0.0.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_11" Parent="System.Memory4.5.4" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.memory.4.5.4.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_12" Parent="System.Runtime.CompilerServices.Uns" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_13" Parent="System.Security.AccessControl4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.accesscontrol.4.7.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_14" Parent="System.Security.Cryptography.Protec" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_15" Parent="System.Security.Permissions4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.permissions.4.7.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_16" Parent="System.Security.Principal.Windows4." Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.principal.windows.4.7.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_17" Parent="System.Text.Encoding.CodePages4.4.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.text.encoding.codepages.4.4.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_18" Parent="System.Windows.Extensions4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.windows.extensions.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_13" Parent="System.Security.AccessControl6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.accesscontrol.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_14" Parent="System.Security.Cryptography.Protec" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.cryptography.protecteddata.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_15" Parent="System.Security.Permissions6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.security.permissions.6.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_16" Parent="System.Text.Encoding.CodePages4.4.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.text.encoding.codepages.4.4.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_17" Parent="System.Windows.Extensions6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.windows.extensions.6.0.0.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_2" Parent="K4os.Compression.LZ41.2.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.compression.lz4.1.2.6.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_3" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.compression.lz4.streams.1.2.6.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_4" Parent="K4os.Hash.xxHash1.0.6" Name="hashPath" Condition="1" Order="4" Flags="57" Value="k4os.hash.xxhash.1.0.6.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_5" Parent="Microsoft.NETCore.Platforms3.1.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.netcore.platforms.3.1.0.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_6" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.win32.systemevents.4.7.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_5" Parent="Microsoft.NETCore.Platforms2.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.netcore.platforms.2.0.0.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_6" Parent="Microsoft.Win32.SystemEvents6.0.0" Name="hashPath" Condition="1" Order="4" Flags="57" Value="microsoft.win32.systemevents.6.0.0.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_7" Parent="MySql.Data8.0.28" Name="hashPath" Condition="1" Order="4" Flags="57" Value="mysql.data.8.0.28.nupkg.sha512"/>
     <ROW JsonProperty="hashPath_8" Parent="System.Buffers4.5.1" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.buffers.4.5.1.nupkg.sha512"/>
-    <ROW JsonProperty="hashPath_9" Parent="System.Configuration.ConfigurationM" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.configuration.configurationmanager.4.4.1.nupkg.sha512"/>
+    <ROW JsonProperty="hashPath_9" Parent="System.Configuration.ConfigurationM" Name="hashPath" Condition="1" Order="4" Flags="57" Value="system.configuration.configurationmanager.6.0.0.nupkg.sha512"/>
     <ROW JsonProperty="libnet6.0MySql.Data.dll" Parent="runtime_7" Name="lib/net6.0/MySql.Data.dll" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="libnet6.0Ubiety.Dns.Core.dll" Parent="runtime_7" Name="lib/net6.0/Ubiety.Dns.Core.dll" Condition="1" Order="1" Flags="60"/>
     <ROW JsonProperty="libnet6.0ZstdNet.dll" Parent="runtime_7" Name="lib/net6.0/ZstdNet.dll" Condition="1" Order="2" Flags="60"/>
@@ -248,32 +242,31 @@
     <ROW JsonProperty="libnetstandard2.0K4os.Compression.L" Parent="runtime_4" Name="lib/netstandard2.0/K4os.Compression.LZ4.dll" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="libnetstandard2.0K4os.Hash.xxHash.d" Parent="runtime_6" Name="lib/netstandard2.0/K4os.Hash.xxHash.dll" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="libnetstandard2.1K4os.Compression.L" Parent="runtime_5" Name="lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="libraries" Parent="Root" Name="libraries" Condition="1" Order="3" Flags="60"/>
-    <ROW JsonProperty="name" Parent="runtimeTarget" Name="name" Condition="1" Order="0" Flags="57" Value=".NETCoreApp,Version=v6.0"/>
-    <ROW JsonProperty="name_1" Parent="_" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.NETCore.App"/>
-    <ROW JsonProperty="name_2" Parent="__1" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.WindowsDesktop.App"/>
+    <ROW JsonProperty="libraries" Parent="Root_1" Name="libraries" Condition="1" Order="3" Flags="60"/>
+    <ROW JsonProperty="name" Parent="_" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.NETCore.App"/>
+    <ROW JsonProperty="name_1" Parent="__1" Name="name" Condition="1" Order="0" Flags="57" Value="Microsoft.WindowsDesktop.App"/>
+    <ROW JsonProperty="name_2" Parent="runtimeTarget" Name="name" Condition="1" Order="0" Flags="57" Value=".NETCoreApp,Version=v6.0"/>
     <ROW JsonProperty="path" Parent="BouncyCastle.NetCore1.8.5" Name="path" Condition="1" Order="3" Flags="57" Value="bouncycastle.netcore/1.8.5"/>
     <ROW JsonProperty="path_1" Parent="Google.Protobuf3.14.0" Name="path" Condition="1" Order="3" Flags="57" Value="google.protobuf/3.14.0"/>
-    <ROW JsonProperty="path_10" Parent="System.Drawing.Common4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.drawing.common/4.7.0"/>
+    <ROW JsonProperty="path_10" Parent="System.Drawing.Common6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.drawing.common/6.0.0"/>
     <ROW JsonProperty="path_11" Parent="System.Memory4.5.4" Name="path" Condition="1" Order="3" Flags="57" Value="system.memory/4.5.4"/>
     <ROW JsonProperty="path_12" Parent="System.Runtime.CompilerServices.Uns" Name="path" Condition="1" Order="3" Flags="57" Value="system.runtime.compilerservices.unsafe/5.0.0"/>
-    <ROW JsonProperty="path_13" Parent="System.Security.AccessControl4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.accesscontrol/4.7.0"/>
-    <ROW JsonProperty="path_14" Parent="System.Security.Cryptography.Protec" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.cryptography.protecteddata/4.4.0"/>
-    <ROW JsonProperty="path_15" Parent="System.Security.Permissions4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.permissions/4.7.0"/>
-    <ROW JsonProperty="path_16" Parent="System.Security.Principal.Windows4." Name="path" Condition="1" Order="3" Flags="57" Value="system.security.principal.windows/4.7.0"/>
-    <ROW JsonProperty="path_17" Parent="System.Text.Encoding.CodePages4.4.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.text.encoding.codepages/4.4.0"/>
-    <ROW JsonProperty="path_18" Parent="System.Windows.Extensions4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.windows.extensions/4.7.0"/>
+    <ROW JsonProperty="path_13" Parent="System.Security.AccessControl6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.accesscontrol/6.0.0"/>
+    <ROW JsonProperty="path_14" Parent="System.Security.Cryptography.Protec" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.cryptography.protecteddata/6.0.0"/>
+    <ROW JsonProperty="path_15" Parent="System.Security.Permissions6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.security.permissions/6.0.0"/>
+    <ROW JsonProperty="path_16" Parent="System.Text.Encoding.CodePages4.4.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.text.encoding.codepages/4.4.0"/>
+    <ROW JsonProperty="path_17" Parent="System.Windows.Extensions6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="system.windows.extensions/6.0.0"/>
     <ROW JsonProperty="path_2" Parent="K4os.Compression.LZ41.2.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.compression.lz4/1.2.6"/>
     <ROW JsonProperty="path_3" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.compression.lz4.streams/1.2.6"/>
     <ROW JsonProperty="path_4" Parent="K4os.Hash.xxHash1.0.6" Name="path" Condition="1" Order="3" Flags="57" Value="k4os.hash.xxhash/1.0.6"/>
-    <ROW JsonProperty="path_5" Parent="Microsoft.NETCore.Platforms3.1.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.netcore.platforms/3.1.0"/>
-    <ROW JsonProperty="path_6" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.win32.systemevents/4.7.0"/>
+    <ROW JsonProperty="path_5" Parent="Microsoft.NETCore.Platforms2.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.netcore.platforms/2.0.0"/>
+    <ROW JsonProperty="path_6" Parent="Microsoft.Win32.SystemEvents6.0.0" Name="path" Condition="1" Order="3" Flags="57" Value="microsoft.win32.systemevents/6.0.0"/>
     <ROW JsonProperty="path_7" Parent="MySql.Data8.0.28" Name="path" Condition="1" Order="3" Flags="57" Value="mysql.data/8.0.28"/>
     <ROW JsonProperty="path_8" Parent="System.Buffers4.5.1" Name="path" Condition="1" Order="3" Flags="57" Value="system.buffers/4.5.1"/>
-    <ROW JsonProperty="path_9" Parent="System.Configuration.ConfigurationM" Name="path" Condition="1" Order="3" Flags="57" Value="system.configuration.configurationmanager/4.4.1"/>
+    <ROW JsonProperty="path_9" Parent="System.Configuration.ConfigurationM" Name="path" Condition="1" Order="3" Flags="57" Value="system.configuration.configurationmanager/6.0.0"/>
     <ROW JsonProperty="runtime" Parent="FANTASY4YOU1.0.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
-    <ROW JsonProperty="runtimeOptions" Parent="Root_1" Name="runtimeOptions" Condition="1" Order="0" Flags="60"/>
-    <ROW JsonProperty="runtimeTarget" Parent="Root" Name="runtimeTarget" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtimeOptions" Parent="Root" Name="runtimeOptions" Condition="1" Order="0" Flags="60"/>
+    <ROW JsonProperty="runtimeTarget" Parent="Root_1" Name="runtimeTarget" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="runtime_1" Parent="runtimepack.Microsoft.Windows.SDK_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="runtime_2" Parent="BouncyCastle.NetCore1.8.5_1" Name="runtime" Condition="1" Order="0" Flags="60"/>
     <ROW JsonProperty="runtime_3" Parent="Google.Protobuf3.14.0_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
@@ -283,72 +276,69 @@
     <ROW JsonProperty="runtime_7" Parent="MySql.Data8.0.28_1" Name="runtime" Condition="1" Order="1" Flags="60"/>
     <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK.N" Parent="libraries" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.22" Condition="1" Order="1" Flags="60"/>
     <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK_1" Parent="NETCoreAppVersionv6.0" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.22000.22" Condition="1" Order="1" Flags="60"/>
-    <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK_2" Parent="dependencies" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref" Condition="1" Order="1" Flags="57" Value="10.0.22000.22"/>
+    <ROW JsonProperty="runtimepack.Microsoft.Windows.SDK_2" Parent="dependencies" Name="runtimepack.Microsoft.Windows.SDK.NET.Ref" Condition="1" Order="2" Flags="57" Value="10.0.22000.22"/>
     <ROW JsonProperty="serviceable" Parent="FANTASY4YOU1.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="false"/>
     <ROW JsonProperty="serviceable_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="serviceable" Condition="1" Order="1" Flags="58" Value="false"/>
     <ROW JsonProperty="serviceable_10" Parent="System.Buffers4.5.1" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_11" Parent="System.Configuration.ConfigurationM" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_12" Parent="System.Drawing.Common4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_12" Parent="System.Drawing.Common6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_13" Parent="System.Memory4.5.4" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_14" Parent="System.Runtime.CompilerServices.Uns" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_15" Parent="System.Security.AccessControl4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_15" Parent="System.Security.AccessControl6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_16" Parent="System.Security.Cryptography.Protec" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_17" Parent="System.Security.Permissions4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_18" Parent="System.Security.Principal.Windows4." Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_19" Parent="System.Text.Encoding.CodePages4.4.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_17" Parent="System.Security.Permissions6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_18" Parent="System.Text.Encoding.CodePages4.4.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_19" Parent="System.Windows.Extensions6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_2" Parent="BouncyCastle.NetCore1.8.5" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_20" Parent="System.Windows.Extensions4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_3" Parent="Google.Protobuf3.14.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_4" Parent="K4os.Compression.LZ41.2.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_5" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_6" Parent="K4os.Hash.xxHash1.0.6" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_7" Parent="Microsoft.NETCore.Platforms3.1.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
-    <ROW JsonProperty="serviceable_8" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_7" Parent="Microsoft.NETCore.Platforms2.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
+    <ROW JsonProperty="serviceable_8" Parent="Microsoft.Win32.SystemEvents6.0.0" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="serviceable_9" Parent="MySql.Data8.0.28" Name="serviceable" Condition="1" Order="1" Flags="58" Value="true"/>
     <ROW JsonProperty="sha512" Parent="FANTASY4YOU1.0.0" Name="sha512" Condition="1" Order="2" Flags="57"/>
     <ROW JsonProperty="sha512_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="sha512" Condition="1" Order="2" Flags="57"/>
     <ROW JsonProperty="sha512_10" Parent="System.Buffers4.5.1" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg=="/>
-    <ROW JsonProperty="sha512_11" Parent="System.Configuration.ConfigurationM" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ=="/>
-    <ROW JsonProperty="sha512_12" Parent="System.Drawing.Common4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA=="/>
+    <ROW JsonProperty="sha512_11" Parent="System.Configuration.ConfigurationM" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-7T+m0kDSlIPTHIkPMIu6m6tV6qsMqJpvQWW2jIc2qi7sn40qxFo0q+7mEQAhMPXZHMKnWrnv47ntGlM/ejvw3g=="/>
+    <ROW JsonProperty="sha512_12" Parent="System.Drawing.Common6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg=="/>
     <ROW JsonProperty="sha512_13" Parent="System.Memory4.5.4" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw=="/>
     <ROW JsonProperty="sha512_14" Parent="System.Runtime.CompilerServices.Uns" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA=="/>
-    <ROW JsonProperty="sha512_15" Parent="System.Security.AccessControl4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg=="/>
-    <ROW JsonProperty="sha512_16" Parent="System.Security.Cryptography.Protec" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog=="/>
-    <ROW JsonProperty="sha512_17" Parent="System.Security.Permissions4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ=="/>
-    <ROW JsonProperty="sha512_18" Parent="System.Security.Principal.Windows4." Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ=="/>
-    <ROW JsonProperty="sha512_19" Parent="System.Text.Encoding.CodePages4.4.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A=="/>
+    <ROW JsonProperty="sha512_15" Parent="System.Security.AccessControl6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-AUADIc0LIEQe7MzC+I0cl0rAT8RrTAKFHl53yHjEUzNVIaUlhFY11vc2ebiVJzVBuOzun6F7FBA+8KAbGTTedQ=="/>
+    <ROW JsonProperty="sha512_16" Parent="System.Security.Cryptography.Protec" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-rp1gMNEZpvx9vP0JW0oHLxlf8oSiQgtno77Y4PLUBjSiDYoD77Y8uXHr1Ea5XG4/pIKhqAdxZ8v8OTUtqo9PeQ=="/>
+    <ROW JsonProperty="sha512_17" Parent="System.Security.Permissions6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-T/uuc7AklkDoxmcJ7LGkyX1CcSviZuLCa4jg3PekfJ7SU0niF0IVTXwUiNVP9DSpzou2PpxJ+eNY2IfDM90ZCg=="/>
+    <ROW JsonProperty="sha512_18" Parent="System.Text.Encoding.CodePages4.4.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A=="/>
+    <ROW JsonProperty="sha512_19" Parent="System.Windows.Extensions6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog=="/>
     <ROW JsonProperty="sha512_2" Parent="BouncyCastle.NetCore1.8.5" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-6uxsQw2UXrt82VQAWC2td3oBSJjUZ3P4u4DliagB8wf67KsU53V8sW9xwdF+IwZOOZFR0TCZuv/YKZ2BlrfAag=="/>
-    <ROW JsonProperty="sha512_20" Parent="System.Windows.Extensions4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ=="/>
     <ROW JsonProperty="sha512_3" Parent="Google.Protobuf3.14.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-9AkodyGNmLI+wJJPbwpWLmh4BMHoXDQ9+8qvDPhQQi/BNsleqKMBn3OlyLwC6CALwan2kc5+Cenb8fJSITX3nQ=="/>
     <ROW JsonProperty="sha512_4" Parent="K4os.Compression.LZ41.2.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-4EN8EE6bZG2U8dFfeqn+Om3UNajK3cPYHvyQROCFm4jNFVLuRB7Nl5bDkjBSAjfctS6konm+ay3u5RafBzltDA=="/>
     <ROW JsonProperty="sha512_5" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-5KMcNFRHeRrnJ9c8k5fZcfAJJEY0FndMiDiHIYa35Mx5KCMkeSNo/PEXu7YmtCoVczJagx+Vt7J/F+//S1PcJQ=="/>
     <ROW JsonProperty="sha512_6" Parent="K4os.Hash.xxHash1.0.6" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-jCfNP0inx1sGcP3KSbpiDEH3km2e1sVBjMfKo+V92jr1dL4ZYgA1uhRMl1wAtdGZcbObXIikKqtVlgx3j/CW6g=="/>
-    <ROW JsonProperty="sha512_7" Parent="Microsoft.NETCore.Platforms3.1.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w=="/>
-    <ROW JsonProperty="sha512_8" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA=="/>
+    <ROW JsonProperty="sha512_7" Parent="Microsoft.NETCore.Platforms2.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ=="/>
+    <ROW JsonProperty="sha512_8" Parent="Microsoft.Win32.SystemEvents6.0.0" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A=="/>
     <ROW JsonProperty="sha512_9" Parent="MySql.Data8.0.28" Name="sha512" Condition="1" Order="2" Flags="57" Value="sha512-7b699tU9ba0r7SBK7K9snGJB9ulnOdwEXG28kpVvaQSN0hHenfoJ/ADOtdfhcvcn1KStBX8pFK5qIl8scdBL2g=="/>
     <ROW JsonProperty="signature" Parent="runtimeTarget" Name="signature" Condition="1" Order="1" Flags="57"/>
-    <ROW JsonProperty="targets" Parent="Root" Name="targets" Condition="1" Order="2" Flags="60"/>
+    <ROW JsonProperty="targets" Parent="Root_1" Name="targets" Condition="1" Order="2" Flags="60"/>
     <ROW JsonProperty="tfm" Parent="runtimeOptions" Name="tfm" Condition="1" Order="0" Flags="57" Value="net6.0"/>
     <ROW JsonProperty="type" Parent="FANTASY4YOU1.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="project"/>
     <ROW JsonProperty="type_1" Parent="runtimepack.Microsoft.Windows.SDK.N" Name="type" Condition="1" Order="0" Flags="57" Value="runtimepack"/>
     <ROW JsonProperty="type_10" Parent="System.Buffers4.5.1" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_11" Parent="System.Configuration.ConfigurationM" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_12" Parent="System.Drawing.Common4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_12" Parent="System.Drawing.Common6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_13" Parent="System.Memory4.5.4" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_14" Parent="System.Runtime.CompilerServices.Uns" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_15" Parent="System.Security.AccessControl4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_15" Parent="System.Security.AccessControl6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_16" Parent="System.Security.Cryptography.Protec" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_17" Parent="System.Security.Permissions4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_18" Parent="System.Security.Principal.Windows4." Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_19" Parent="System.Text.Encoding.CodePages4.4.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_17" Parent="System.Security.Permissions6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_18" Parent="System.Text.Encoding.CodePages4.4.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_19" Parent="System.Windows.Extensions6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_2" Parent="BouncyCastle.NetCore1.8.5" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_20" Parent="System.Windows.Extensions4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_3" Parent="Google.Protobuf3.14.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_4" Parent="K4os.Compression.LZ41.2.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_5" Parent="K4os.Compression.LZ4.Streams1.2.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_6" Parent="K4os.Hash.xxHash1.0.6" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_7" Parent="Microsoft.NETCore.Platforms3.1.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
-    <ROW JsonProperty="type_8" Parent="Microsoft.Win32.SystemEvents4.7.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_7" Parent="Microsoft.NETCore.Platforms2.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
+    <ROW JsonProperty="type_8" Parent="Microsoft.Win32.SystemEvents6.0.0" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="type_9" Parent="MySql.Data8.0.28" Name="type" Condition="1" Order="0" Flags="57" Value="package"/>
     <ROW JsonProperty="version" Parent="_" Name="version" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
     <ROW JsonProperty="version_1" Parent="__1" Name="version" Condition="1" Order="1" Flags="57" Value="6.0.0"/>
@@ -572,6 +562,8 @@
     <ROW Feature_="MainFeature" Component_="Olondon_.otf"/>
     <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
     <ROW Feature_="MainFeature" Component_="AI_CustomARPName"/>
+    <ROW Feature_="MainFeature" Component_="FANTASY4YOU.exe"/>
+    <ROW Feature_="MainFeature" Component_="Google.Protobuf.dll"/>
     <ROW Feature_="MainFeature" Component_="K4os.Compression.LZ4.dll"/>
     <ROW Feature_="MainFeature" Component_="K4os.Compression.LZ4.Streams.dll"/>
     <ROW Feature_="MainFeature" Component_="K4os.Hash.xxHash.dll"/>
@@ -582,8 +574,6 @@
     <ROW Feature_="MainFeature" Component_="ZstdNet.dll"/>
     <ROW Feature_="MainFeature" Component_="BouncyCastle.Crypto.dll"/>
     <ROW Feature_="MainFeature" Component_="FANTASY4YOU.dll"/>
-    <ROW Feature_="MainFeature" Component_="FANTASY4YOU.exe"/>
-    <ROW Feature_="MainFeature" Component_="Google.Protobuf.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFontsComponent">
     <ROW File_="Olondon_.otf" FontTitle="OldLondon"/>
@@ -686,6 +676,10 @@
     <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#0" Component_="AI_CustomARPName" VirtualValue="#"/>
     <ROW Registry="Windows" Root="-1" Key="Software\Microsoft\Windows" Name="\"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Fantasy4You" Directory_="DesktopFolder" Name="FANTAS~1|Fantasy4You" Component_="FANTASY4YOU.exe" Target="[#FANTASY4YOU.exe]" Hotkey="0" Icon_="_adventuretimepixelarthdpngdownload_256x256.exe" IconIndex="0" ShowCmd="1" WkDir="FANTASY4YOU_Dir" CustomFlags="1"/>
+    <ROW Shortcut="Fantasy4You_1" Directory_="ProgramMenuFolder" Name="FANTAS~1|Fantasy4You" Component_="FANTASY4YOU.exe" Target="[#FANTASY4YOU.exe]" Hotkey="0" Icon_="_adventuretimepixelarthdpngdownload_256x256.exe" IconIndex="0" ShowCmd="1" WkDir="FANTASY4YOU_Dir" CustomFlags="1"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiTextStyleComponent">
     <ROW TextStyle="BrandingStyle" FaceName="Segoe UI" Size="8" Color="2171376" MultiBuildColor="DefaultBuild:2565927" StyleBits="0" MsiKey="BrandingStyle"/>
     <ROW TextStyle="InputCtrlFont" FaceName="Segoe UI" Size="8" Color="16777215" MultiBuildColor="DefaultBuild:14079702" StyleBits="0" MsiKey="InputCtrlFont"/>
@@ -705,22 +699,47 @@
     <ROW SearchKey="FAC9C433D3044829E6669A2C6FF54E6Micr" Prereq="FAC9C433D3044829E6669A2C6FF54E6" SearchType="0" SearchString="[ProgramFiles64Folder]dotnet\shared\Microsoft.WindowsDesktop.App\6.0.2\Microsoft.WindowsDesktop.App.runtimeconfig.json" Order="1" Property="PreReqSearch_FAC9C433D3044829E6669A"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlAttributeComponent">
-    <ROW XmlAttribute="key" XmlElement="add" Name="key" Flags="15" Order="0" Value="databaseServerAdress"/>
-    <ROW XmlAttribute="key_1" XmlElement="add_1" Name="key" Flags="15" Order="0" Value="databaseName"/>
-    <ROW XmlAttribute="key_2" XmlElement="add_2" Name="key" Flags="15" Order="0" Value="databaseUsername"/>
-    <ROW XmlAttribute="key_3" XmlElement="add_3" Name="key" Flags="15" Order="0" Value="databasePassword"/>
-    <ROW XmlAttribute="value" XmlElement="add" Name="value" Flags="14" Order="1" Value="sql11.freesqldatabase.com"/>
-    <ROW XmlAttribute="value_1" XmlElement="add_1" Name="value" Flags="14" Order="1" Value="sql11468912"/>
-    <ROW XmlAttribute="value_2" XmlElement="add_2" Name="value" Flags="14" Order="1" Value="sql11468912"/>
-    <ROW XmlAttribute="value_3" XmlElement="add_3" Name="value" Flags="14" Order="1" Value="Z4Rt4tjQW5"/>
+    <ROW XmlAttribute="connectionString" XmlElement="add_11" Name="connectionString" Flags="14" Order="1" Value="SERVER=34.79.57.9;DATABASE=fantasy4you;UID=petko;PASSWORD=?#qsHyQN8Da!$xssJj&amp;R@N4hXTxJD7xDM#4x$Kz&amp;;"/>
+    <ROW XmlAttribute="key" XmlElement="add" Name="key" Flags="15" Order="0" Value="SelectUserIdFromDBQuery"/>
+    <ROW XmlAttribute="key_1" XmlElement="add_1" Name="key" Flags="15" Order="0" Value="CheckIfUsernameExistsQuery"/>
+    <ROW XmlAttribute="key_10" XmlElement="add_10" Name="key" Flags="15" Order="0" Value="CheckCharacterNameExistForUserQuery"/>
+    <ROW XmlAttribute="key_2" XmlElement="add_2" Name="key" Flags="15" Order="0" Value="NumberOfCharactersCreatedQuery"/>
+    <ROW XmlAttribute="key_3" XmlElement="add_3" Name="key" Flags="15" Order="0" Value="CheckUserCredentialsQuery"/>
+    <ROW XmlAttribute="key_4" XmlElement="add_4" Name="key" Flags="15" Order="0" Value="InsertUsernameAndPasswordIntoDBQuery"/>
+    <ROW XmlAttribute="key_5" XmlElement="add_5" Name="key" Flags="15" Order="0" Value="InsertCharacterDetailsQuery"/>
+    <ROW XmlAttribute="key_6" XmlElement="add_6" Name="key" Flags="15" Order="0" Value="UpdateCharacterDetailsQuery"/>
+    <ROW XmlAttribute="key_7" XmlElement="add_7" Name="key" Flags="15" Order="0" Value="UpdateCharacterDetails2Query"/>
+    <ROW XmlAttribute="key_8" XmlElement="add_8" Name="key" Flags="15" Order="0" Value="UpdateCharacterDetails3Query"/>
+    <ROW XmlAttribute="key_9" XmlElement="add_9" Name="key" Flags="15" Order="0" Value="SelectCharInfoQuery"/>
+    <ROW XmlAttribute="name" XmlElement="add_11" Name="name" Flags="15" Order="0" Value="connectionString"/>
+    <ROW XmlAttribute="value" XmlElement="add" Name="value" Flags="14" Order="1" Value="select * from userinfo where userinfo.username=@username;"/>
+    <ROW XmlAttribute="value_1" XmlElement="add_1" Name="value" Flags="14" Order="1" Value="SELECT COUNT(*) FROM userinfo WHERE username =@username;"/>
+    <ROW XmlAttribute="value_10" XmlElement="add_10" Name="value" Flags="14" Order="1" Value="SELECT COUNT(*) FROM characters WHERE characterName=@characterName AND id=@id;"/>
+    <ROW XmlAttribute="value_2" XmlElement="add_2" Name="value" Flags="14" Order="1" Value="SELECT COUNT(*) FROM characters WHERE id=@id;"/>
+    <ROW XmlAttribute="value_3" XmlElement="add_3" Name="value" Flags="14" Order="1" Value="SELECT * FROM userinfo where username=@username AND password=@password;"/>
+    <ROW XmlAttribute="value_4" XmlElement="add_4" Name="value" Flags="14" Order="1" Value="INSERT INTO userinfo (username, password, email) VALUES(@username,@password,@email);"/>
+    <ROW XmlAttribute="value_5" XmlElement="add_5" Name="value" Flags="14" Order="1" Value="INSERT INTO characters (id, characterName, class, level, race, backgroundStory, experiencePoints, alignment, characterNumber) VALUES(@id,@characterName,@classs,@level,@race,@backgroundStory,@xpPoints,@alignment,@characterNumber);"/>
+    <ROW XmlAttribute="value_6" XmlElement="add_6" Name="value" Flags="14" Order="1" Value="UPDATE characters SET strenght = @strenght, dexterity = @dexterity, constitution = @constitution, intelligence =@intelligence, wisdom = @wisdom, charisma= @charisma WHERE characterNumber=@chNum AND id=@id;"/>
+    <ROW XmlAttribute="value_7" XmlElement="add_7" Name="value" Flags="14" Order="1" Value="UPDATE characters SET characterName = @chName, class = @classs, level = @level, race = @race, experiencePoints = @xp,alignment=@alignment WHERE characterNumber=@chNum AND id=@id;"/>
+    <ROW XmlAttribute="value_8" XmlElement="add_8" Name="value" Flags="14" Order="1" Value="UPDATE characters SET backgroundStory =@background WHERE characterNumber=@chNum AND id=@id;"/>
+    <ROW XmlAttribute="value_9" XmlElement="add_9" Name="value" Flags="14" Order="1" Value="SELECT * FROM characters WHERE id=@id AND characterNumber=@characterNumber;"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlElementComponent">
     <ROW XmlElement="add" ParentElement="appSettings" Name="add" Condition="1" Order="0" Flags="14" UpdateIndexInParent="0"/>
     <ROW XmlElement="add_1" ParentElement="appSettings" Name="add" Condition="1" Order="1" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_10" ParentElement="appSettings" Name="add" Condition="1" Order="10" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_11" ParentElement="connectionStrings" Name="add" Condition="1" Order="0" Flags="14" UpdateIndexInParent="0"/>
     <ROW XmlElement="add_2" ParentElement="appSettings" Name="add" Condition="1" Order="2" Flags="14" UpdateIndexInParent="0"/>
     <ROW XmlElement="add_3" ParentElement="appSettings" Name="add" Condition="1" Order="3" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_4" ParentElement="appSettings" Name="add" Condition="1" Order="4" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_5" ParentElement="appSettings" Name="add" Condition="1" Order="5" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_6" ParentElement="appSettings" Name="add" Condition="1" Order="6" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_7" ParentElement="appSettings" Name="add" Condition="1" Order="7" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_8" ParentElement="appSettings" Name="add" Condition="1" Order="8" Flags="14" UpdateIndexInParent="0"/>
+    <ROW XmlElement="add_9" ParentElement="appSettings" Name="add" Condition="1" Order="9" Flags="14" UpdateIndexInParent="0"/>
     <ROW XmlElement="appSettings" ParentElement="configuration" Name="appSettings" Condition="1" Order="0" Flags="14" UpdateIndexInParent="0"/>
     <ROW XmlElement="configuration" Name="configuration" Condition="1" Order="0" Flags="30" UpdateIndexInParent="0"/>
+    <ROW XmlElement="connectionStrings" ParentElement="configuration" Name="connectionStrings" Condition="1" Order="1" Flags="14" UpdateIndexInParent="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.XmlFileComponent">
     <ROW XmlFile="FANTASY4YOU.dll.config" FileName="FANTAS~1.CON|FANTASY4YOU.dll.config" DirProperty="FANTASY4YOU_Dir" Component="WinRT.Runtime.dll" RootElement="configuration" Flags="89" Version="1.0" Encoding="utf-8" IndentUnits="2"/>

@@ -8,13 +8,13 @@ namespace FANTASY4YOU
 {
     public class Character
     {
-        private string characterName = string.Empty;
-        private string characterClass = string.Empty;
+        private string characterName;
+        private string characterClass;
         private int characterLevel;
-        private string characterRace = string.Empty;
-        private string backgroundStory = string.Empty;
+        private string characterRace;
+        private string backgroundStory;
         private int xp;
-        private string alignment = string.Empty;
+        private string alignment;
         private int strenght;
         private int dexterity;
         private int constitution;

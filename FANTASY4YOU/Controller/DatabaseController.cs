@@ -16,8 +16,6 @@ namespace FANTASY4YOU
         public MySqlConnection connection;
         private MySqlConnection con;
         private MySqlDataReader dreader;
-
-        DBCredentials credentials;
         
 
         public DatabaseController()
@@ -97,7 +95,7 @@ namespace FANTASY4YOU
         public int  SelectUserIdFromDB(string username)
         {
             string? query = ConfigurationManager.AppSettings.Get("SelectUserIdFromDBQuery");
-            int id = new int();
+            int id = 0;
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@username", username);
             
@@ -233,42 +231,39 @@ namespace FANTASY4YOU
         //Has NunitTest
         public bool CheckUserCredentials(string username,string password)
         {
+            int result;
+            bool chk;
             string? query = ConfigurationManager.AppSettings.Get("CheckUserCredentialsQuery");
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@username",username);
             cmd.Parameters.AddWithValue("@password", password);
             if (OpenConnection() == true)
             {
-                dreader = cmd.ExecuteReader();
-                if (dreader.Read())
+                result = Convert.ToInt32(cmd.ExecuteScalar());
+                if (result > 0)
                 {
-                     
                     return true;
                 }
                 else
                 {
-                     
                     return false;
                 }
-                
             }
             else if (OpenConnection() == false)
             {
                 OpenCon();
-                
-            
-                dreader = cmd.ExecuteReader();
-                if (dreader.Read())
+
+
+                result = Convert.ToInt32(cmd.ExecuteScalar());
+                if (result > 0)
                 {
-                     
                     return true;
                 }
                 else
                 {
-                     
                     return false;
                 }
-            
+
             }
             else
             {
@@ -456,6 +451,84 @@ namespace FANTASY4YOU
 
                 return chk;
             }
+        }
+
+        public bool SelectIsUserNew()
+        {
+            string query = "SELECT * from userinfo where username=@username";
+            MySqlCommand cmd = new MySqlCommand(query,connection);
+            cmd.Parameters.AddWithValue("@username", User.Username);
+            int isUserNew = 0;
+            bool chk = false;
+            if (OpenConnection() == true)
+            {
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    isUserNew= (int)dataReader["isUserNew"];
+                }
+
+                dataReader.Close();
+                if (isUserNew == 0)
+                {
+                    chk= true;
+                }
+                else if (isUserNew == 1)
+                {
+                    chk = false;
+                }
+                return chk;
+            }
+            else if (this.OpenConnection() == false)
+            {
+                OpenCon();
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    isUserNew = (int)dataReader["isUserNew"];
+                }
+
+                dataReader.Close();
+                if (isUserNew == 0)
+                {
+                    chk = true;
+                }
+                else if (isUserNew == 1)
+                {
+                    chk = false;
+                }
+                return chk;
+            }
+            else
+            {
+                throw new Exception("No connection to DB");
+            }
+        }
+
+        public void UpdateIsUserNew()
+        {
+            string query = "UPDATE userinfo SET isUserNew =@isUserNew WHERE username=@username;";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            int isUserNew;
+            
+            if (SelectIsUserNew() == true && this.OpenConnection() == true)
+            {
+                isUserNew = 1;
+                cmd.Parameters.AddWithValue("@isUserNew", isUserNew);
+                cmd.Parameters.AddWithValue("@username", User.Username);
+                cmd.ExecuteNonQuery();
+            }
+            else if (SelectIsUserNew() == true && this.OpenConnection() == false)
+            {
+                OpenCon();
+                isUserNew = 1;
+                cmd.Parameters.AddWithValue("@isUserNew", isUserNew);
+                cmd.Parameters.AddWithValue("@username", User.Username);
+                cmd.ExecuteNonQuery();
+            }
+
+            
         }
 
         public void Delete()

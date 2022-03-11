@@ -121,14 +121,6 @@ namespace NUNIT_TESTS
 
         //!!!!Warning Check File for Username and Credentials before test!!!!
         [Test]
-        public void ReadUsernameFromUsernameFile()
-        {
-            username = logic.ReadUsernameFromUsernameFile();
-            Assert.AreEqual(username, "Tester");
-        }
-
-        //!!!!Warning Check File for Username and Credentials before test!!!!
-        [Test]
         public void ReadUsernameFromCredentialsFile()
         {
             username = logic.ReadUsernameFromCredentialsFile();

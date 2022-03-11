@@ -4,6 +4,7 @@ namespace FANTASY4YOU
     public partial class CharacterDisplayer : Form
     {
         LogicController logic = new LogicController();
+        
         public CharacterDisplayer()
         {
             InitializeComponent();
@@ -11,7 +12,7 @@ namespace FANTASY4YOU
 
         private void CharacterDisplayer_Load(object sender, EventArgs e)
         {
-            int chNum = logic.readCharSelectedToDisplayFile();
+            int chNum = User.CharSelected;
             Character character = logic.SelectCharInfo(chNum);
             CharacterName.Text = character.CharacterName;
             CharacterClass.Text = character.CharacterClass;

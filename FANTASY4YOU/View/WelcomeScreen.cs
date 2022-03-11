@@ -10,7 +10,7 @@ namespace FANTASY4YOU
 {
     public partial class WelcomeScreen : Form
     {
-        LogicController log = new LogicController();
+        DatabaseController databaseController = new DatabaseController();
         Thread MainInterface;
 
         public WelcomeScreen()
@@ -30,8 +30,15 @@ namespace FANTASY4YOU
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string uname = log.ReadUsernameFromUsernameFile();
+            string uname = User.Username;
             label2.Text = uname;
+
+
+        }
+
+        private void OpenMainInterface(object? obj)
+        {
+            Application.Run(new MainInterface());
         }
 
         private void WelcomeScreen_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,13 +46,7 @@ namespace FANTASY4YOU
             MainInterface = new Thread(OpenMainInterface);
             MainInterface.SetApartmentState(ApartmentState.STA);
             MainInterface.Start();
+            databaseController.UpdateIsUserNew();
         }
-
-        private void OpenMainInterface(object obj)
-        {
-            Application.Run(new MainInterface());
-        }
-
-        
     }
 }

@@ -12,7 +12,7 @@ namespace FANTASY4YOU
     {
         LogicController logic = new LogicController();
         CharacterCustomizationChar customization = new CharacterCustomizationChar(); 
-        CharacterDisplayer characterDisplayer = new CharacterDisplayer();
+        CharacterDisplayer characterDisplayer;
         Thread registerCharacter;
         Thread mainInerface;
         DatabaseController connection = new DatabaseController();
@@ -31,7 +31,6 @@ namespace FANTASY4YOU
             CharacterPannel3.BackColor = Color.FromArgb(125, Color.Black);
             CharacterPannel4.BackColor = Color.FromArgb(125, Color.Black);
             CharacterPannel5.BackColor = Color.FromArgb(125, Color.Black);
-
             
             //Character name labels
             for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
@@ -390,6 +389,8 @@ namespace FANTASY4YOU
 
 
             }
+            CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
+
         }
         
 
@@ -400,31 +401,31 @@ namespace FANTASY4YOU
 
         private void CharacterCustomizationButton1_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEditToFile(1);
+            User.CharSelected = 1;
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton2_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEditToFile(2);
+            User.CharSelected = 2;
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton3_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEditToFile(3);
+            User.CharSelected = 3;
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton4_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEditToFile(4);
+            User.CharSelected = 4;
             customization.ShowDialog();
         }
 
         private void CharacterCustomizationButton5_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToEditToFile(5);
+            User.CharSelected = 5;
             customization.ShowDialog();
         }
 
@@ -442,31 +443,36 @@ namespace FANTASY4YOU
 
         private void OpenCharacterDisplay1_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToDisplayToFile(1);
+            User.CharSelected = 1;
+            characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
 
         private void OpenCharacterDisplay2_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToDisplayToFile(2);
+            User.CharSelected = 2;
+            characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
 
         private void OpenCharacterDisplay3_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToDisplayToFile(3);
+            User.CharSelected = 3;
+            characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
 
         private void OpenCharacterDisplay4_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToDisplayToFile(4);
+            User.CharSelected = 4;
+            characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
 
         private void OpenCharacterDisplay5_Click(object sender, EventArgs e)
         {
-            logic.saveCharSelectedToDisplayToFile(5);
+            User.CharSelected = 5;
+            characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
 
