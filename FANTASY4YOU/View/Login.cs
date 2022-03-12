@@ -21,18 +21,17 @@ namespace FANTASY4YOU
         Thread Register;
         Thread MainInterface;
         Thread Welcome;
-        WelcomeScreen welcomeScreen = new WelcomeScreen();
         bool checkCredentialsExist;
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+
+
         public Login()
         {
             InitializeComponent();
-            //connection.OpenCon();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -55,8 +54,6 @@ namespace FANTASY4YOU
            
             LoginPanel.BackColor = Color.FromArgb(125, Color.Black);
             WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
-            CloseHelperPannel2.BackColor = Color.Transparent;
-            CloseHelperPannel1.BackColor = Color.Transparent;
 
 
         }
@@ -166,10 +163,6 @@ namespace FANTASY4YOU
 
         private void RefreshFormButton_Click(object sender, EventArgs e)
         {
-           //RefreshButton1.Enabled = false;
-           //RefreshButton1.Text = "Wait";
-           //RefreshButton1.Enabled = true;
-           //RefreshButton1.Text = "Refresh";
             checkCredentialsExist = logic.CheckIfCredentialsFileExist();
             if (checkCredentialsExist == true)
             {
@@ -200,6 +193,16 @@ namespace FANTASY4YOU
         {
             Application.Exit();
         }
+
+        private void MinimizeForm_Click(object sender, EventArgs e)
+        {
+            
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        
+
     }
        
 }

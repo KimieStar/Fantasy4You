@@ -5,12 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using FANTASY4YOU;
+using System.Runtime.InteropServices;
+
 namespace FANTASY4YOU
 {
     public partial class Register : Form
     {
 
         LogicController logic = new LogicController();
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         bool check;
 
 
@@ -21,7 +27,8 @@ namespace FANTASY4YOU
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            RegisterPanel.BackColor = Color.FromArgb(125, Color.Black);
+            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -107,6 +114,22 @@ namespace FANTASY4YOU
             PasswordTextBox.UseSystemPasswordChar = true;
             ShowPasswordButton.Visible = true;
             HidePasswordButton.Visible = false;
+        }
+
+        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

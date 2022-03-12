@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using FANTASY4YOU;
+using System.Runtime.InteropServices;
 
 namespace FANTASY4YOU
 {
@@ -16,7 +17,10 @@ namespace FANTASY4YOU
         Thread registerCharacter;
         Thread mainInerface;
         DatabaseController connection = new DatabaseController();
-        //public int characterNumberSelectedToCustomize;
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public Characters()
         {
             InitializeComponent();
@@ -24,14 +28,16 @@ namespace FANTASY4YOU
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
             CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
-            CharacterPannel1.BackColor = Color.FromArgb(125, Color.Black);
-            CharacterPannel2.BackColor = Color.FromArgb(125, Color.Black);
-            CharacterPannel3.BackColor = Color.FromArgb(125, Color.Black);
-            CharacterPannel4.BackColor = Color.FromArgb(125, Color.Black);
-            CharacterPannel5.BackColor = Color.FromArgb(125, Color.Black);
-            
+            CharacterPannel1.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharacterPannel2.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharacterPannel3.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharacterPannel4.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharacterPannel5.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            NumberOfCharactersLabel.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharactersNumbers.BackColor = Color.FromArgb(190, Color.SteelBlue);
+
             //Character name labels
             for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
             {
@@ -479,6 +485,27 @@ namespace FANTASY4YOU
         private void CharacterNamePannelLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void CloseFormButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MinimizeFormButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

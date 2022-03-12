@@ -44,10 +44,9 @@ namespace FANTASY4YOU
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.RefreshButton = new FontAwesome.Sharp.IconButton();
             this.LoginSettingsButton = new FontAwesome.Sharp.IconButton();
-            this.CloseHelperPannel2 = new System.Windows.Forms.Panel();
+            this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.WindowTopBar = new System.Windows.Forms.Panel();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
-            this.CloseHelperPannel1 = new System.Windows.Forms.Panel();
             this.LoginPanel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -235,6 +234,9 @@ namespace FANTASY4YOU
             // 
             // RefreshButton
             // 
+            this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RefreshButton.BackColor = System.Drawing.Color.Transparent;
             this.RefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RefreshButton.FlatAppearance.BorderSize = 0;
@@ -244,10 +246,10 @@ namespace FANTASY4YOU
             this.RefreshButton.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
             this.RefreshButton.IconColor = System.Drawing.Color.SandyBrown;
             this.RefreshButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.RefreshButton.IconSize = 29;
-            this.RefreshButton.Location = new System.Drawing.Point(680, 388);
+            this.RefreshButton.IconSize = 40;
+            this.RefreshButton.Location = new System.Drawing.Point(663, 377);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(37, 36);
+            this.RefreshButton.Size = new System.Drawing.Size(53, 47);
             this.RefreshButton.TabIndex = 20;
             this.RefreshButton.TabStop = false;
             this.RefreshButton.UseVisualStyleBackColor = false;
@@ -255,6 +257,9 @@ namespace FANTASY4YOU
             // 
             // LoginSettingsButton
             // 
+            this.LoginSettingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LoginSettingsButton.BackColor = System.Drawing.Color.Transparent;
             this.LoginSettingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.LoginSettingsButton.FlatAppearance.BorderSize = 0;
@@ -264,28 +269,43 @@ namespace FANTASY4YOU
             this.LoginSettingsButton.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.LoginSettingsButton.IconColor = System.Drawing.Color.SandyBrown;
             this.LoginSettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.LoginSettingsButton.IconSize = 29;
-            this.LoginSettingsButton.Location = new System.Drawing.Point(721, 388);
+            this.LoginSettingsButton.IconSize = 40;
+            this.LoginSettingsButton.Location = new System.Drawing.Point(710, 377);
             this.LoginSettingsButton.Name = "LoginSettingsButton";
-            this.LoginSettingsButton.Size = new System.Drawing.Size(37, 36);
-            this.LoginSettingsButton.TabIndex = 19;
+            this.LoginSettingsButton.Size = new System.Drawing.Size(53, 47);
+            this.LoginSettingsButton.TabIndex = 0;
             this.LoginSettingsButton.TabStop = false;
             this.LoginSettingsButton.UseVisualStyleBackColor = false;
             this.LoginSettingsButton.Click += new System.EventHandler(this.LoginSettingsButton_Click);
             // 
-            // CloseHelperPannel2
+            // MinimizeForm
             // 
-            this.CloseHelperPannel2.Location = new System.Drawing.Point(706, 0);
-            this.CloseHelperPannel2.Name = "CloseHelperPannel2";
-            this.CloseHelperPannel2.Size = new System.Drawing.Size(24, 26);
-            this.CloseHelperPannel2.TabIndex = 20;
+            this.MinimizeForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MinimizeForm.BackColor = System.Drawing.Color.Transparent;
+            this.MinimizeForm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MinimizeForm.FlatAppearance.BorderSize = 0;
+            this.MinimizeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
+            this.MinimizeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.MinimizeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeForm.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.MinimizeForm.IconColor = System.Drawing.Color.Snow;
+            this.MinimizeForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MinimizeForm.IconSize = 26;
+            this.MinimizeForm.Location = new System.Drawing.Point(701, 0);
+            this.MinimizeForm.Name = "MinimizeForm";
+            this.MinimizeForm.Size = new System.Drawing.Size(30, 25);
+            this.MinimizeForm.TabIndex = 0;
+            this.MinimizeForm.TabStop = false;
+            this.MinimizeForm.UseVisualStyleBackColor = false;
+            this.MinimizeForm.Click += new System.EventHandler(this.MinimizeForm_Click);
             // 
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.CloseHelperPannel2);
+            this.WindowTopBar.Controls.Add(this.MinimizeForm);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
-            this.WindowTopBar.Controls.Add(this.CloseHelperPannel1);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTopBar.Name = "WindowTopBar";
             this.WindowTopBar.Size = new System.Drawing.Size(763, 25);
@@ -307,20 +327,13 @@ namespace FANTASY4YOU
             this.CloseFormButton.IconColor = System.Drawing.Color.Snow;
             this.CloseFormButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CloseFormButton.IconSize = 40;
-            this.CloseFormButton.Location = new System.Drawing.Point(729, -1);
+            this.CloseFormButton.Location = new System.Drawing.Point(730, -1);
             this.CloseFormButton.Name = "CloseFormButton";
             this.CloseFormButton.Size = new System.Drawing.Size(30, 33);
             this.CloseFormButton.TabIndex = 0;
             this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
-            // 
-            // CloseHelperPannel1
-            // 
-            this.CloseHelperPannel1.Location = new System.Drawing.Point(710, 22);
-            this.CloseHelperPannel1.Name = "CloseHelperPannel1";
-            this.CloseHelperPannel1.Size = new System.Drawing.Size(69, 22);
-            this.CloseHelperPannel1.TabIndex = 19;
             // 
             // Login
             // 
@@ -335,7 +348,6 @@ namespace FANTASY4YOU
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(10, 10);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Login";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -365,9 +377,8 @@ namespace FANTASY4YOU
         private Panel LoginPanel;
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton CloseFormButton;
-        private Panel CloseHelperPannel1;
-        private Panel CloseHelperPannel2;
         private FontAwesome.Sharp.IconButton LoginSettingsButton;
         private FontAwesome.Sharp.IconButton RefreshButton;
+        private FontAwesome.Sharp.IconButton MinimizeForm;
     }
 }

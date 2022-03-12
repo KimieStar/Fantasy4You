@@ -111,6 +111,7 @@ namespace FANTASY4YOU
             this.MinimizeBox = false;
             this.Name = "LoginSettings";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LoginSettings_Load);
             this.WindowTopBar.ResumeLayout(false);

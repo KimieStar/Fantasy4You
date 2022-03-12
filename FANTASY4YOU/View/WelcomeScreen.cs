@@ -38,7 +38,6 @@ namespace FANTASY4YOU
         {
             WelcomePannel.BackColor = Color.FromArgb(109, Color.Black);
             WindowTopBar.BackColor = Color.FromArgb(135, Color.Black);
-            CloseHelperPannel.BackColor = Color.Transparent;
             welcomeLabel.BackColor = Color.Transparent;
             nameLabel.BackColor = Color.Transparent;
             GladLabel.BackColor = Color.Transparent;
@@ -71,6 +70,11 @@ namespace FANTASY4YOU
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void MinimizeForm_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
