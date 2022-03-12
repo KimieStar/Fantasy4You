@@ -245,9 +245,9 @@ namespace FANTASY4YOU
             this.RefreshButton.IconColor = System.Drawing.Color.SandyBrown;
             this.RefreshButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RefreshButton.IconSize = 29;
-            this.RefreshButton.Location = new System.Drawing.Point(680, 388);
+            this.RefreshButton.Location = new System.Drawing.Point(673, 378);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(37, 36);
+            this.RefreshButton.Size = new System.Drawing.Size(44, 46);
             this.RefreshButton.TabIndex = 20;
             this.RefreshButton.TabStop = false;
             this.RefreshButton.UseVisualStyleBackColor = false;
@@ -265,9 +265,9 @@ namespace FANTASY4YOU
             this.LoginSettingsButton.IconColor = System.Drawing.Color.SandyBrown;
             this.LoginSettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginSettingsButton.IconSize = 29;
-            this.LoginSettingsButton.Location = new System.Drawing.Point(721, 388);
+            this.LoginSettingsButton.Location = new System.Drawing.Point(710, 378);
             this.LoginSettingsButton.Name = "LoginSettingsButton";
-            this.LoginSettingsButton.Size = new System.Drawing.Size(37, 36);
+            this.LoginSettingsButton.Size = new System.Drawing.Size(48, 46);
             this.LoginSettingsButton.TabIndex = 19;
             this.LoginSettingsButton.TabStop = false;
             this.LoginSettingsButton.UseVisualStyleBackColor = false;
