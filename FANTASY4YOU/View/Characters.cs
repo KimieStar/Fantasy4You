@@ -30,13 +30,13 @@ namespace FANTASY4YOU
         {
             WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
             CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
-            CharacterPannel1.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            CharacterPannel2.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            CharacterPannel3.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            CharacterPannel4.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            CharacterPannel5.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            NumberOfCharactersLabel.BackColor = Color.FromArgb(190, Color.SteelBlue);
-            CharactersNumbers.BackColor = Color.FromArgb(190, Color.SteelBlue);
+            CharacterPannel1.BackColor = Color.FromArgb(165, Color.Black);
+            CharacterPannel2.BackColor = Color.FromArgb(165, Color.Black);
+            CharacterPannel3.BackColor = Color.FromArgb(165, Color.Black);
+            CharacterPannel4.BackColor = Color.FromArgb(165, Color.Black);
+            CharacterPannel5.BackColor = Color.FromArgb(165, Color.Black);
+            NumberOfCharactersLabel.BackColor = Color.FromArgb(165, Color.Black);
+            CharactersNumbers.BackColor = Color.FromArgb(165, Color.Black);
 
             //Character name labels
             for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
@@ -233,9 +233,7 @@ namespace FANTASY4YOU
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             RefreshButton.Enabled = false;
-            RefreshButton.Text = "Wait";
-            RefreshButton.Enabled = true;
-            RefreshButton.Text = "Refresh";
+            
             for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
             {
                 Character character = logic.SelectCharInfo(i);
@@ -397,6 +395,7 @@ namespace FANTASY4YOU
             }
             CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
 
+            RefreshButton.Enabled = true;
         }
         
 

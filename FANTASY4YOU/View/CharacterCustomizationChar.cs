@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,10 @@ namespace FANTASY4YOU
         LogicController logic = new LogicController();
         public int characterNumberSelectedToCustomize;
         //Characters characters = new Characters();
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         public CharacterCustomizationChar()
         {
@@ -25,7 +29,11 @@ namespace FANTASY4YOU
 
         private void CharacterCustomization_Load(object sender, EventArgs e)
         {
-            StrenghtPanel.Location = new Point(0,0);
+            WindowTopBar.BackColor = Color.FromArgb(190, Color.Black);
+            CharNamePannel.BackColor  = Color.FromArgb(165, Color.Black);
+            StrenghtPanel.BackColor = Color.FromArgb(165, Color.Black);
+            BackgroundPannel.BackColor= Color.FromArgb(165,Color.Black);
+            StrenghtPanel.Location = new Point(0, 28);
             int charNum = User.CharSelected;
             Character character = logic.SelectCharInfo(charNum);
             CharacterNameCustomizeTextbox.Text = character.CharacterName;
@@ -57,7 +65,7 @@ namespace FANTASY4YOU
         {
             StrenghtPanel.Visible = false;
 
-            CharNamePannel.Location = new Point(0, 0);
+            CharNamePannel.Location = new Point(0, 28);
             CharNamePannel.Visible = true;
             
         }
@@ -75,7 +83,7 @@ namespace FANTASY4YOU
         {
             CharNamePannel.Visible = false;
 
-            BackgroundPannel.Location = new Point(75, 50);
+            BackgroundPannel.Location = new Point(0, 28);
             BackgroundPannel.Visible = true;
             
         }
@@ -116,6 +124,22 @@ namespace FANTASY4YOU
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
