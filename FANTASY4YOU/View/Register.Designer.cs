@@ -44,10 +44,10 @@ namespace FANTASY4YOU
             this.RegisterPanel = new System.Windows.Forms.Panel();
             this.RegisterButton = new ePOSOne.btnProduct.Button_WOC();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.RegisterPanel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -234,7 +234,7 @@ namespace FANTASY4YOU
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.iconButton1);
+            this.WindowTopBar.Controls.Add(this.HelperPanel);
             this.WindowTopBar.Controls.Add(this.iconButton2);
             this.WindowTopBar.Controls.Add(this.MinimizeForm);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
@@ -243,29 +243,6 @@ namespace FANTASY4YOU
             this.WindowTopBar.Size = new System.Drawing.Size(485, 43);
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.Snow;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 26;
-            this.iconButton1.Location = new System.Drawing.Point(391, -6);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(44, 65);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.TabStop = false;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -334,6 +311,14 @@ namespace FANTASY4YOU
             this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
             // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(391, -6);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(44, 65);
+            this.HelperPanel.TabIndex = 3;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -373,8 +358,8 @@ namespace FANTASY4YOU
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton MinimizeForm;
         private FontAwesome.Sharp.IconButton CloseFormButton;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private ePOSOne.btnProduct.Button_WOC RegisterButton;
+        private Panel HelperPanel;
     }
 }

@@ -27,6 +27,25 @@ namespace FANTASY4YOU
             InitializeComponent();
         }
 
+        int originalExStyle = -1;
+        bool enableFormLevelDoubleBuffering = true;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                if (originalExStyle == -1)
+                    originalExStyle = base.CreateParams.ExStyle;
+
+                CreateParams cp = base.CreateParams;
+                if (enableFormLevelDoubleBuffering)
+                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
+                else
+                    cp.ExStyle = originalExStyle;
+
+                return cp;
+            }
+        }
         private void MainInterface_Load(object sender, EventArgs e)
         {
             WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
@@ -74,9 +93,10 @@ namespace FANTASY4YOU
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void MinimizeForm_Click(object sender, EventArgs e)
+        private void PanelHelper_MouseDown(object sender, MouseEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

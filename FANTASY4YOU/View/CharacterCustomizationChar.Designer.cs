@@ -67,10 +67,10 @@ namespace FANTASY4YOU
             this.CharacterDexterityDexterityLabel = new System.Windows.Forms.Label();
             this.CharacterStrenghtStrenghtLabel = new System.Windows.Forms.Label();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.BackgroundPannel.SuspendLayout();
             this.CharNamePannel.SuspendLayout();
             this.StrenghtPanel.SuspendLayout();
@@ -387,7 +387,11 @@ namespace FANTASY4YOU
             // 
             // CharacterBackgroundCustomizeButton
             // 
+            this.CharacterBackgroundCustomizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterBackgroundCustomizeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CharacterBackgroundCustomizeButton.FlatAppearance.BorderSize = 0;
+            this.CharacterBackgroundCustomizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.CharacterBackgroundCustomizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CharacterBackgroundCustomizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CharacterBackgroundCustomizeButton.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.CharacterBackgroundCustomizeButton.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -398,14 +402,9 @@ namespace FANTASY4YOU
             this.CharacterBackgroundCustomizeButton.Name = "CharacterBackgroundCustomizeButton";
             this.CharacterBackgroundCustomizeButton.Size = new System.Drawing.Size(85, 71);
             this.CharacterBackgroundCustomizeButton.TabIndex = 35;
-            this.CharacterBackgroundCustomizeButton.UseVisualStyleBackColor = true;
-            this.CharacterBackgroundCustomizeButton.Click += new System.EventHandler(this.CharacterBackgroundCustomizeButton_Click);
-            this.CharacterBackgroundCustomizeButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            this.CharacterBackgroundCustomizeButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            this.CharacterBackgroundCustomizeButton.FlatAppearance.BorderSize = 0;
-            this.CharacterBackgroundCustomizeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CharacterBackgroundCustomizeButton.TabStop = false;
-            this.CharacterBackgroundCustomizeButton.BackColor = Color.Transparent;
+            this.CharacterBackgroundCustomizeButton.UseVisualStyleBackColor = false;
+            this.CharacterBackgroundCustomizeButton.Click += new System.EventHandler(this.CharacterBackgroundCustomizeButton_Click);
             // 
             // CharNamePannel
             // 
@@ -432,7 +431,11 @@ namespace FANTASY4YOU
             // 
             // UpdateCharacterDetailsButton2
             // 
+            this.UpdateCharacterDetailsButton2.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateCharacterDetailsButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.UpdateCharacterDetailsButton2.FlatAppearance.BorderSize = 0;
+            this.UpdateCharacterDetailsButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.UpdateCharacterDetailsButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.UpdateCharacterDetailsButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateCharacterDetailsButton2.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.UpdateCharacterDetailsButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -443,14 +446,9 @@ namespace FANTASY4YOU
             this.UpdateCharacterDetailsButton2.Name = "UpdateCharacterDetailsButton2";
             this.UpdateCharacterDetailsButton2.Size = new System.Drawing.Size(85, 71);
             this.UpdateCharacterDetailsButton2.TabIndex = 31;
-            this.UpdateCharacterDetailsButton2.UseVisualStyleBackColor = true;
-            this.UpdateCharacterDetailsButton2.Click += new System.EventHandler(this.UpdateCharacterDetailsButton2_Click);
-            this.UpdateCharacterDetailsButton2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            this.UpdateCharacterDetailsButton2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            this.UpdateCharacterDetailsButton2.FlatAppearance.BorderSize = 0;
-            this.UpdateCharacterDetailsButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.UpdateCharacterDetailsButton2.TabStop = false;
-            this.UpdateCharacterDetailsButton2.BackColor = Color.Transparent;
+            this.UpdateCharacterDetailsButton2.UseVisualStyleBackColor = false;
+            this.UpdateCharacterDetailsButton2.Click += new System.EventHandler(this.UpdateCharacterDetailsButton2_Click);
             // 
             // StrenghtPanel
             // 
@@ -476,7 +474,11 @@ namespace FANTASY4YOU
             // 
             // UpdateCharacterDetailsButton
             // 
+            this.UpdateCharacterDetailsButton.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateCharacterDetailsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.UpdateCharacterDetailsButton.FlatAppearance.BorderSize = 0;
+            this.UpdateCharacterDetailsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.UpdateCharacterDetailsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.UpdateCharacterDetailsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateCharacterDetailsButton.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.UpdateCharacterDetailsButton.IconChar = FontAwesome.Sharp.IconChar.Save;
@@ -487,14 +489,9 @@ namespace FANTASY4YOU
             this.UpdateCharacterDetailsButton.Name = "UpdateCharacterDetailsButton";
             this.UpdateCharacterDetailsButton.Size = new System.Drawing.Size(85, 71);
             this.UpdateCharacterDetailsButton.TabIndex = 32;
-            this.UpdateCharacterDetailsButton.UseVisualStyleBackColor = true;
-            this.UpdateCharacterDetailsButton.Click += new System.EventHandler(this.UpdateCharacterDetailsButton_Click);
-            this.UpdateCharacterDetailsButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            this.UpdateCharacterDetailsButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            this.UpdateCharacterDetailsButton.FlatAppearance.BorderSize = 0;
-            this.UpdateCharacterDetailsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.UpdateCharacterDetailsButton.TabStop = false;
-            this.UpdateCharacterDetailsButton.BackColor = Color.Transparent;
+            this.UpdateCharacterDetailsButton.UseVisualStyleBackColor = false;
+            this.UpdateCharacterDetailsButton.Click += new System.EventHandler(this.UpdateCharacterDetailsButton_Click);
             // 
             // CharacterDexterityDexterityLabel
             // 
@@ -523,7 +520,7 @@ namespace FANTASY4YOU
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.iconButton1);
+            this.WindowTopBar.Controls.Add(this.HelperPanel);
             this.WindowTopBar.Controls.Add(this.iconButton2);
             this.WindowTopBar.Controls.Add(this.MinimizeForm);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
@@ -532,29 +529,6 @@ namespace FANTASY4YOU
             this.WindowTopBar.Size = new System.Drawing.Size(528, 28);
             this.WindowTopBar.TabIndex = 38;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton1.IconColor = System.Drawing.Color.Snow;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 26;
-            this.iconButton1.Location = new System.Drawing.Point(458, -3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(39, 41);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.TabStop = false;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -623,6 +597,14 @@ namespace FANTASY4YOU
             this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
             // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(458, -3);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(39, 41);
+            this.HelperPanel.TabIndex = 3;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
+            // 
             // CharacterCustomizationChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -688,10 +670,10 @@ namespace FANTASY4YOU
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton MinimizeForm;
         private FontAwesome.Sharp.IconButton CloseFormButton;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton UpdateCharacterDetailsButton2;
         private FontAwesome.Sharp.IconButton UpdateCharacterDetailsButton;
         private FontAwesome.Sharp.IconButton CharacterBackgroundCustomizeButton;
+        private Panel HelperPanel;
     }
 }

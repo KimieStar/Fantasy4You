@@ -79,10 +79,10 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel5 = new System.Windows.Forms.Label();
             this.CharacterNamePannelLabel5 = new System.Windows.Forms.Label();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.MinimizeFormButton = new FontAwesome.Sharp.IconButton();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.CreateCharacterButton = new FontAwesome.Sharp.IconButton();
             this.RefreshButton = new FontAwesome.Sharp.IconButton();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.CharacterPannel1.SuspendLayout();
             this.CharacterPannel2.SuspendLayout();
             this.CharacterPannel3.SuspendLayout();
@@ -732,36 +732,13 @@ namespace FANTASY4YOU
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.MinimizeFormButton);
+            this.WindowTopBar.Controls.Add(this.HelperPanel);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTopBar.Name = "WindowTopBar";
             this.WindowTopBar.Size = new System.Drawing.Size(1001, 32);
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // MinimizeFormButton
-            // 
-            this.MinimizeFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeFormButton.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeFormButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MinimizeFormButton.FlatAppearance.BorderSize = 0;
-            this.MinimizeFormButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeFormButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeFormButton.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.MinimizeFormButton.IconColor = System.Drawing.Color.Snow;
-            this.MinimizeFormButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MinimizeFormButton.IconSize = 26;
-            this.MinimizeFormButton.Location = new System.Drawing.Point(931, -2);
-            this.MinimizeFormButton.Name = "MinimizeFormButton";
-            this.MinimizeFormButton.Size = new System.Drawing.Size(36, 37);
-            this.MinimizeFormButton.TabIndex = 22;
-            this.MinimizeFormButton.TabStop = false;
-            this.MinimizeFormButton.UseVisualStyleBackColor = false;
-            this.MinimizeFormButton.Click += new System.EventHandler(this.MinimizeFormButton_Click);
             // 
             // CloseFormButton
             // 
@@ -822,6 +799,14 @@ namespace FANTASY4YOU
             this.RefreshButton.TabIndex = 23;
             this.RefreshButton.UseVisualStyleBackColor = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(931, -2);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(36, 37);
+            this.HelperPanel.TabIndex = 23;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
             // 
             // Characters
             // 
@@ -907,7 +892,6 @@ namespace FANTASY4YOU
         private Button OpenCharacterDisplay5;
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton CloseFormButton;
-        private FontAwesome.Sharp.IconButton MinimizeFormButton;
         private FontAwesome.Sharp.IconButton CharacterCustomizationButton1;
         private FontAwesome.Sharp.IconButton CharacterCustomizationButton2;
         private FontAwesome.Sharp.IconButton CharacterCustomizationButton3;
@@ -915,5 +899,6 @@ namespace FANTASY4YOU
         private FontAwesome.Sharp.IconButton CharacterCustomizationButton5;
         private FontAwesome.Sharp.IconButton CreateCharacterButton;
         private FontAwesome.Sharp.IconButton RefreshButton;
+        private Panel HelperPanel;
     }
 }

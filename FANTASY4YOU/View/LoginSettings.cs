@@ -24,6 +24,26 @@ namespace FANTASY4YOU
             InitializeComponent();
         }
 
+        int originalExStyle = -1;
+        bool enableFormLevelDoubleBuffering = true;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                if (originalExStyle == -1)
+                    originalExStyle = base.CreateParams.ExStyle;
+
+                CreateParams cp = base.CreateParams;
+                if (enableFormLevelDoubleBuffering)
+                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
+                else
+                    cp.ExStyle = originalExStyle;
+
+                return cp;
+            }
+        }
+
         private void LoginSettings_Load(object sender, EventArgs e)
         {
             WindowTopBar.BackColor = Color.FromArgb(100, Color.Black);

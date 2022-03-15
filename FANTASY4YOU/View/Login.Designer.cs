@@ -41,14 +41,14 @@ namespace FANTASY4YOU
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DontHaveAnAccountLabel = new System.Windows.Forms.LinkLabel();
             this.LoginButton = new ePOSOne.btnProduct.Button_WOC();
-            this.LoginPanel = new System.Windows.Forms.Panel();
             this.RefreshButton = new FontAwesome.Sharp.IconButton();
             this.LoginSettingsButton = new FontAwesome.Sharp.IconButton();
             this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.WindowTopBar = new System.Windows.Forms.Panel();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
-            this.LoginPanel.SuspendLayout();
+            this.LoginPanel = new System.Windows.Forms.Panel();
             this.WindowTopBar.SuspendLayout();
+            this.LoginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -122,7 +122,7 @@ namespace FANTASY4YOU
             this.ShowPassword.FlatAppearance.BorderSize = 0;
             this.ShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ShowPassword.Location = new System.Drawing.Point(488, 225);
+            this.ShowPassword.Location = new System.Drawing.Point(470, 224);
             this.ShowPassword.Name = "ShowPassword";
             this.ShowPassword.Size = new System.Drawing.Size(29, 23);
             this.ShowPassword.TabIndex = 9;
@@ -137,7 +137,7 @@ namespace FANTASY4YOU
             this.HidePassword.FlatAppearance.BorderSize = 0;
             this.HidePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HidePassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.HidePassword.Location = new System.Drawing.Point(488, 225);
+            this.HidePassword.Location = new System.Drawing.Point(470, 225);
             this.HidePassword.Name = "HidePassword";
             this.HidePassword.Size = new System.Drawing.Size(29, 23);
             this.HidePassword.TabIndex = 10;
@@ -210,28 +210,6 @@ namespace FANTASY4YOU
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // LoginPanel
-            // 
-            this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
-            this.LoginPanel.Controls.Add(this.RefreshButton);
-            this.LoginPanel.Controls.Add(this.LoginSettingsButton);
-            this.LoginPanel.Controls.Add(this.UsernameTextbox);
-            this.LoginPanel.Controls.Add(this.LoginButton);
-            this.LoginPanel.Controls.Add(this.WelcomeLabel);
-            this.LoginPanel.Controls.Add(this.WelcomeLabel2);
-            this.LoginPanel.Controls.Add(this.UsernameLabel);
-            this.LoginPanel.Controls.Add(this.DontHaveAnAccountLabel);
-            this.LoginPanel.Controls.Add(this.PasswordLabel);
-            this.LoginPanel.Controls.Add(this.checkBox1);
-            this.LoginPanel.Controls.Add(this.PasswordTextbox);
-            this.LoginPanel.Controls.Add(this.PleaseWaitLabel);
-            this.LoginPanel.Controls.Add(this.ShowPassword);
-            this.LoginPanel.Controls.Add(this.HidePassword);
-            this.LoginPanel.Location = new System.Drawing.Point(0, 25);
-            this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(760, 424);
-            this.LoginPanel.TabIndex = 19;
-            // 
             // RefreshButton
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -247,9 +225,9 @@ namespace FANTASY4YOU
             this.RefreshButton.IconColor = System.Drawing.Color.SandyBrown;
             this.RefreshButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RefreshButton.IconSize = 29;
-            this.RefreshButton.Location = new System.Drawing.Point(680, 388);
+            this.RefreshButton.Location = new System.Drawing.Point(669, 365);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(37, 36);
+            this.RefreshButton.Size = new System.Drawing.Size(50, 75);
             this.RefreshButton.TabIndex = 20;
             this.RefreshButton.TabStop = false;
             this.RefreshButton.UseVisualStyleBackColor = false;
@@ -270,9 +248,9 @@ namespace FANTASY4YOU
             this.LoginSettingsButton.IconColor = System.Drawing.Color.SandyBrown;
             this.LoginSettingsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginSettingsButton.IconSize = 29;
-            this.LoginSettingsButton.Location = new System.Drawing.Point(721, 388);
+            this.LoginSettingsButton.Location = new System.Drawing.Point(710, 365);
             this.LoginSettingsButton.Name = "LoginSettingsButton";
-            this.LoginSettingsButton.Size = new System.Drawing.Size(37, 36);
+            this.LoginSettingsButton.Size = new System.Drawing.Size(50, 75);
             this.LoginSettingsButton.TabIndex = 19;
             this.LoginSettingsButton.TabStop = false;
             this.LoginSettingsButton.UseVisualStyleBackColor = false;
@@ -335,11 +313,33 @@ namespace FANTASY4YOU
             this.CloseFormButton.UseVisualStyleBackColor = false;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
             // 
+            // LoginPanel
+            // 
+            this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
+            this.LoginPanel.Controls.Add(this.LoginSettingsButton);
+            this.LoginPanel.Controls.Add(this.RefreshButton);
+            this.LoginPanel.Controls.Add(this.PasswordLabel);
+            this.LoginPanel.Controls.Add(this.checkBox1);
+            this.LoginPanel.Controls.Add(this.DontHaveAnAccountLabel);
+            this.LoginPanel.Controls.Add(this.UsernameTextbox);
+            this.LoginPanel.Controls.Add(this.PasswordTextbox);
+            this.LoginPanel.Controls.Add(this.WelcomeLabel);
+            this.LoginPanel.Controls.Add(this.UsernameLabel);
+            this.LoginPanel.Controls.Add(this.LoginButton);
+            this.LoginPanel.Controls.Add(this.PleaseWaitLabel);
+            this.LoginPanel.Controls.Add(this.HidePassword);
+            this.LoginPanel.Controls.Add(this.WelcomeLabel2);
+            this.LoginPanel.Controls.Add(this.ShowPassword);
+            this.LoginPanel.Location = new System.Drawing.Point(0, 24);
+            this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Size = new System.Drawing.Size(760, 426);
+            this.LoginPanel.TabIndex = 21;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::FANTASY4YOU.Properties.Resources.starter1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 448);
@@ -354,9 +354,9 @@ namespace FANTASY4YOU
             this.Text = "Fantasy4You";
             this.TransparencyKey = System.Drawing.Color.LimeGreen;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.WindowTopBar.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            this.WindowTopBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -374,11 +374,11 @@ namespace FANTASY4YOU
         private CheckBox checkBox1;
         private LinkLabel DontHaveAnAccountLabel;
         private ePOSOne.btnProduct.Button_WOC LoginButton;
-        private Panel LoginPanel;
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton CloseFormButton;
         private FontAwesome.Sharp.IconButton LoginSettingsButton;
         private FontAwesome.Sharp.IconButton RefreshButton;
         private FontAwesome.Sharp.IconButton MinimizeForm;
+        private Panel LoginPanel;
     }
 }

@@ -37,7 +37,6 @@
             this.usernameL = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.PanelHelper = new System.Windows.Forms.Panel();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.MainPanel = new System.Windows.Forms.Panel();
@@ -128,7 +127,6 @@
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.MinimizeForm);
             this.WindowTopBar.Controls.Add(this.PanelHelper);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
@@ -137,35 +135,13 @@
             this.WindowTopBar.TabIndex = 20;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
             // 
-            // MinimizeForm
-            // 
-            this.MinimizeForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeForm.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeForm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MinimizeForm.FlatAppearance.BorderSize = 0;
-            this.MinimizeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeForm.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.MinimizeForm.IconColor = System.Drawing.Color.Snow;
-            this.MinimizeForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MinimizeForm.IconSize = 26;
-            this.MinimizeForm.Location = new System.Drawing.Point(1169, -1);
-            this.MinimizeForm.Name = "MinimizeForm";
-            this.MinimizeForm.Size = new System.Drawing.Size(41, 41);
-            this.MinimizeForm.TabIndex = 3;
-            this.MinimizeForm.TabStop = false;
-            this.MinimizeForm.UseVisualStyleBackColor = false;
-            this.MinimizeForm.Click += new System.EventHandler(this.MinimizeForm_Click);
-            // 
             // PanelHelper
             // 
-            this.PanelHelper.Location = new System.Drawing.Point(1119, 3);
+            this.PanelHelper.Location = new System.Drawing.Point(1169, -1);
             this.PanelHelper.Name = "PanelHelper";
-            this.PanelHelper.Size = new System.Drawing.Size(36, 100);
+            this.PanelHelper.Size = new System.Drawing.Size(41, 41);
             this.PanelHelper.TabIndex = 2;
+            this.PanelHelper.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHelper_MouseDown);
             // 
             // CloseFormButton
             // 
@@ -294,6 +270,5 @@
         private FontAwesome.Sharp.IconButton YourCharactersButton;
         private FontAwesome.Sharp.IconButton comingSoonButton2;
         private FontAwesome.Sharp.IconButton comingSoonButton1;
-        private FontAwesome.Sharp.IconButton MinimizeForm;
     }
 }

@@ -35,8 +35,8 @@ namespace FANTASY4YOU
             this.GladLabel = new System.Windows.Forms.Label();
             this.WelcomePannel = new System.Windows.Forms.Panel();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.WelcomePannel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -91,36 +91,13 @@ namespace FANTASY4YOU
             // WindowTopBar
             // 
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.MinimizeForm);
+            this.WindowTopBar.Controls.Add(this.HelperPanel);
             this.WindowTopBar.Controls.Add(this.CloseFormButton);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTopBar.Name = "WindowTopBar";
             this.WindowTopBar.Size = new System.Drawing.Size(802, 33);
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // MinimizeForm
-            // 
-            this.MinimizeForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeForm.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeForm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MinimizeForm.FlatAppearance.BorderSize = 0;
-            this.MinimizeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeForm.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.MinimizeForm.IconColor = System.Drawing.Color.Snow;
-            this.MinimizeForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MinimizeForm.IconSize = 26;
-            this.MinimizeForm.Location = new System.Drawing.Point(724, -5);
-            this.MinimizeForm.Name = "MinimizeForm";
-            this.MinimizeForm.Size = new System.Drawing.Size(39, 43);
-            this.MinimizeForm.TabIndex = 3;
-            this.MinimizeForm.TabStop = false;
-            this.MinimizeForm.UseVisualStyleBackColor = false;
-            this.MinimizeForm.Click += new System.EventHandler(this.MinimizeForm_Click);
             // 
             // CloseFormButton
             // 
@@ -144,6 +121,14 @@ namespace FANTASY4YOU
             this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
+            // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(724, -5);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(39, 43);
+            this.HelperPanel.TabIndex = 22;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
             // 
             // WelcomeScreen
             // 
@@ -177,6 +162,6 @@ namespace FANTASY4YOU
         private Panel WelcomePannel;
         private Panel WindowTopBar;
         private FontAwesome.Sharp.IconButton CloseFormButton;
-        private FontAwesome.Sharp.IconButton MinimizeForm;
+        private Panel HelperPanel;
     }
 }
