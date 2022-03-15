@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FANTASY4YOU;
@@ -53,7 +54,7 @@ namespace FANTASY4YOU
             CharNamePannel.BackColor  = Color.FromArgb(165, Color.Black);
             StrenghtPanel.BackColor = Color.FromArgb(165, Color.Black);
             BackgroundPannel.BackColor= Color.FromArgb(165,Color.Black);
-            StrenghtPanel.Location = new Point(0, 28);
+            CharNamePannel.Location = new Point(0, 28);
             int charNum = User.CharSelected;
             Character character = logic.SelectCharInfo(charNum);
             CharacterNameCustomizeTextbox.Text = character.CharacterName;
@@ -74,37 +75,84 @@ namespace FANTASY4YOU
 
         private void UpdateCharacterDetailsButton_Click(object sender, EventArgs e)
         {
-            logic.UpdateCharacterDetails(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
-            Int32.Parse(CharacterDexterityTextbox.Text), Int32.Parse(CharacterConstitutionTextbox.Text),
-            Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text)); ;
-            MessageBox.Show("Success!");
+            if (!Regex.IsMatch(CharacterStrenghtTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Strenght can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterDexterityTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Dexterity can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterConstitutionTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Constitution can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterIntelligenceTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Intelligence can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterWisdomTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Wisdom can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterCharismaTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Charisma can be only a number");
+            }
+            else
+            {
+                logic.UpdateCharacterDetails(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
+                Int32.Parse(CharacterDexterityTextbox.Text), Int32.Parse(CharacterConstitutionTextbox.Text),
+                Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text)); ;
+                MessageBox.Show("Success!");
+            }
+            
             
         }
 
-        private void MoreCustomizations_Click(object sender, EventArgs e)
+        private void MoreCustomizationsToBackground_Click(object sender, EventArgs e)
         {
             StrenghtPanel.Visible = false;
-
-            CharNamePannel.Location = new Point(0, 28);
-            CharNamePannel.Visible = true;
+            
+            BackgroundPannel.Location = new Point(0, 28);
+            BackgroundPannel.Visible = true;
             
         }
 
         private void UpdateCharacterDetailsButton2_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(CharacterNameCustomizeTextbox.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Character name can be only letters");
+            }
+            else if (!Regex.IsMatch(CharacterLevelCustomizeTextbox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Level can be only a number");
+            }
+            else if (!Regex.IsMatch(CharacterXpCustomizeTextBox.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Xp can only be a number");
+            }
+            else if (Int32.Parse(CharacterLevelCustomizeTextbox.Text) > 20)
+            {
+                MessageBox.Show("Level 20 is the max level.");
+            }
+            else
+            {
+                logic.UpdateCharacterDetails2(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
+                Int32.Parse(CharacterLevelCustomizeTextbox.Text), CharacterRaceCustomizeCombobox.Text,
+                Int32.Parse(CharacterXpCustomizeTextBox.Text), CharacterAlignmentCustomizeCombobox.Text);
+                MessageBox.Show("Success!");
+            }
             
-            logic.UpdateCharacterDetails2(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
-            Int32.Parse(CharacterLevelCustomizeTextbox.Text), CharacterRaceCustomizeCombobox.Text,
-            Int32.Parse(CharacterXpCustomizeTextBox.Text), CharacterAlignmentCustomizeCombobox.Text);
-            MessageBox.Show("Success!");
         }
 
-        private void MoreCustomizations2_Click(object sender, EventArgs e)
+        private void MoreCustomizationsToCharName_Click(object sender, EventArgs e)
         {
-            CharNamePannel.Visible = false;
+            BackgroundPannel.Visible = false;
 
-            BackgroundPannel.Location = new Point(0, 28);
-            BackgroundPannel.Visible = true;
+            CharNamePannel.Location = new Point(0, 28);
+            CharNamePannel.Visible = true;
             
         }
 
@@ -114,10 +162,10 @@ namespace FANTASY4YOU
             MessageBox.Show("Success!");
         }
 
-        private void MoreCustomizations3_Click(object sender, EventArgs e)
+        private void MoreCustomizationsToSrenght_Click(object sender, EventArgs e)
         {
-            BackgroundPannel.Visible = false;
-
+            CharNamePannel.Visible = false;
+            StrenghtPanel.Location = new Point(0, 28);
             StrenghtPanel.Visible = true;
         }
 
@@ -160,6 +208,11 @@ namespace FANTASY4YOU
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void CharacterBackgroundCustomizeTextbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -79,10 +79,10 @@ namespace FANTASY4YOU
             this.CharacterLevelLevelLabel5 = new System.Windows.Forms.Label();
             this.CharacterNamePannelLabel5 = new System.Windows.Forms.Label();
             this.WindowTopBar = new System.Windows.Forms.Panel();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.CreateCharacterButton = new FontAwesome.Sharp.IconButton();
             this.RefreshButton = new FontAwesome.Sharp.IconButton();
-            this.HelperPanel = new System.Windows.Forms.Panel();
             this.CharacterPannel1.SuspendLayout();
             this.CharacterPannel2.SuspendLayout();
             this.CharacterPannel3.SuspendLayout();
@@ -740,6 +740,14 @@ namespace FANTASY4YOU
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
             // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(931, -2);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(36, 37);
+            this.HelperPanel.TabIndex = 23;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
+            // 
             // CloseFormButton
             // 
             this.CloseFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -800,14 +808,6 @@ namespace FANTASY4YOU
             this.RefreshButton.UseVisualStyleBackColor = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // HelperPanel
-            // 
-            this.HelperPanel.Location = new System.Drawing.Point(931, -2);
-            this.HelperPanel.Name = "HelperPanel";
-            this.HelperPanel.Size = new System.Drawing.Size(36, 37);
-            this.HelperPanel.TabIndex = 23;
-            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
-            // 
             // Characters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -827,6 +827,7 @@ namespace FANTASY4YOU
             this.Controls.Add(this.NumberOfCharactersLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Characters";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Characters";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Characters_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -245,6 +245,7 @@
             this.Controls.Add(this.WindowTopBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainInterface";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainInterface";
             this.Load += new System.EventHandler(this.MainInterface_Load);
             this.WindowTopBar.ResumeLayout(false);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using FANTASY4YOU;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 
 namespace FANTASY4YOU
 {
@@ -52,32 +53,12 @@ namespace FANTASY4YOU
             HelperPanel.BackColor = Color.FromArgb(165, Color.Black);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UsernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmailTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             string usr = UsernameTextBox.Text;
             string pwd = PasswordTextBox.Text;
             string email = EmailTextBox.Text;
-            //TO BE REMOVED//string dbusernamecheck = log.SelectUsername(usr);
             bool usernameCheck = logic.CheckIfUsernameExists(usr);
 
 
@@ -90,7 +71,11 @@ namespace FANTASY4YOU
             }
             else if (usr != "" || pwd != "")
             {
-                if (usernameCheck == false)
+                if (!Regex.IsMatch(usr, @"^[a-zA-Z]+$"))
+                {
+                    MessageBox.Show("Username can be only Letters");
+                }
+                else if (usernameCheck == false)
                 {
                     if (RememberMeCheckBox.Checked == true)
                     {
@@ -152,5 +137,6 @@ namespace FANTASY4YOU
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
     }
 }

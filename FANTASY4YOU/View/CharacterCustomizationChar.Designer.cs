@@ -40,7 +40,7 @@ namespace FANTASY4YOU
             this.CharacterDexterityTextbox = new System.Windows.Forms.TextBox();
             this.CharacterWisdomTextbox = new System.Windows.Forms.TextBox();
             this.CharacterCharismaTextbox = new System.Windows.Forms.TextBox();
-            this.MoreCustomizations = new System.Windows.Forms.Button();
+            this.MoreCustomizationsToBackground = new System.Windows.Forms.Button();
             this.CharacterXpCustomizeTextBox = new System.Windows.Forms.TextBox();
             this.CharacterLevelCustomizeTextbox = new System.Windows.Forms.TextBox();
             this.CharacterNameCustomizeTextbox = new System.Windows.Forms.TextBox();
@@ -54,10 +54,10 @@ namespace FANTASY4YOU
             this.CharacterClassCustomizeTextbox = new System.Windows.Forms.ComboBox();
             this.CharacterRaceCustomizeCombobox = new System.Windows.Forms.ComboBox();
             this.CharacterAlignmentCustomizeCombobox = new System.Windows.Forms.ComboBox();
-            this.MoreCustomizations2 = new System.Windows.Forms.Button();
+            this.MoreCustomizationsToSrenght = new System.Windows.Forms.Button();
             this.CharacterBackgroundCustomizeLabel = new System.Windows.Forms.Label();
             this.CharacterBackgroundCustomizeTextbox = new System.Windows.Forms.TextBox();
-            this.MoreCustomizations3 = new System.Windows.Forms.Button();
+            this.MoreCustomizationsToCharName = new System.Windows.Forms.Button();
             this.BackgroundPannel = new System.Windows.Forms.Panel();
             this.CharacterBackgroundCustomizeButton = new FontAwesome.Sharp.IconButton();
             this.CharNamePannel = new System.Windows.Forms.Panel();
@@ -67,10 +67,8 @@ namespace FANTASY4YOU
             this.CharacterDexterityDexterityLabel = new System.Windows.Forms.Label();
             this.CharacterStrenghtStrenghtLabel = new System.Windows.Forms.Label();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.MinimizeForm = new FontAwesome.Sharp.IconButton();
-            this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.HelperPanel = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.BackgroundPannel.SuspendLayout();
             this.CharNamePannel.SuspendLayout();
             this.StrenghtPanel.SuspendLayout();
@@ -129,6 +127,7 @@ namespace FANTASY4YOU
             // CharacterStrenghtTextbox
             // 
             this.CharacterStrenghtTextbox.Location = new System.Drawing.Point(173, 17);
+            this.CharacterStrenghtTextbox.MaxLength = 2;
             this.CharacterStrenghtTextbox.Name = "CharacterStrenghtTextbox";
             this.CharacterStrenghtTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterStrenghtTextbox.TabIndex = 6;
@@ -137,6 +136,7 @@ namespace FANTASY4YOU
             // CharacterIntelligenceTextbox
             // 
             this.CharacterIntelligenceTextbox.Location = new System.Drawing.Point(214, 206);
+            this.CharacterIntelligenceTextbox.MaxLength = 2;
             this.CharacterIntelligenceTextbox.Name = "CharacterIntelligenceTextbox";
             this.CharacterIntelligenceTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterIntelligenceTextbox.TabIndex = 7;
@@ -145,6 +145,7 @@ namespace FANTASY4YOU
             // CharacterConstitutionTextbox
             // 
             this.CharacterConstitutionTextbox.Location = new System.Drawing.Point(224, 139);
+            this.CharacterConstitutionTextbox.MaxLength = 2;
             this.CharacterConstitutionTextbox.Name = "CharacterConstitutionTextbox";
             this.CharacterConstitutionTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterConstitutionTextbox.TabIndex = 8;
@@ -153,6 +154,7 @@ namespace FANTASY4YOU
             // CharacterDexterityTextbox
             // 
             this.CharacterDexterityTextbox.Location = new System.Drawing.Point(178, 76);
+            this.CharacterDexterityTextbox.MaxLength = 2;
             this.CharacterDexterityTextbox.Name = "CharacterDexterityTextbox";
             this.CharacterDexterityTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterDexterityTextbox.TabIndex = 9;
@@ -161,6 +163,7 @@ namespace FANTASY4YOU
             // CharacterWisdomTextbox
             // 
             this.CharacterWisdomTextbox.Location = new System.Drawing.Point(172, 271);
+            this.CharacterWisdomTextbox.MaxLength = 2;
             this.CharacterWisdomTextbox.Name = "CharacterWisdomTextbox";
             this.CharacterWisdomTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterWisdomTextbox.TabIndex = 10;
@@ -169,26 +172,28 @@ namespace FANTASY4YOU
             // CharacterCharismaTextbox
             // 
             this.CharacterCharismaTextbox.Location = new System.Drawing.Point(184, 332);
+            this.CharacterCharismaTextbox.MaxLength = 2;
             this.CharacterCharismaTextbox.Name = "CharacterCharismaTextbox";
             this.CharacterCharismaTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterCharismaTextbox.TabIndex = 11;
             this.CharacterCharismaTextbox.TabStop = false;
             // 
-            // MoreCustomizations
+            // MoreCustomizationsToBackground
             // 
-            this.MoreCustomizations.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MoreCustomizations.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.MoreCustomizations.Location = new System.Drawing.Point(483, 132);
-            this.MoreCustomizations.Name = "MoreCustomizations";
-            this.MoreCustomizations.Size = new System.Drawing.Size(34, 67);
-            this.MoreCustomizations.TabIndex = 13;
-            this.MoreCustomizations.Text = ">";
-            this.MoreCustomizations.UseVisualStyleBackColor = true;
-            this.MoreCustomizations.Click += new System.EventHandler(this.MoreCustomizations_Click);
+            this.MoreCustomizationsToBackground.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MoreCustomizationsToBackground.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.MoreCustomizationsToBackground.Location = new System.Drawing.Point(483, 132);
+            this.MoreCustomizationsToBackground.Name = "MoreCustomizationsToBackground";
+            this.MoreCustomizationsToBackground.Size = new System.Drawing.Size(34, 67);
+            this.MoreCustomizationsToBackground.TabIndex = 13;
+            this.MoreCustomizationsToBackground.Text = ">";
+            this.MoreCustomizationsToBackground.UseVisualStyleBackColor = true;
+            this.MoreCustomizationsToBackground.Click += new System.EventHandler(this.MoreCustomizationsToBackground_Click);
             // 
             // CharacterXpCustomizeTextBox
             // 
             this.CharacterXpCustomizeTextBox.Location = new System.Drawing.Point(89, 272);
+            this.CharacterXpCustomizeTextBox.MaxLength = 6;
             this.CharacterXpCustomizeTextBox.Name = "CharacterXpCustomizeTextBox";
             this.CharacterXpCustomizeTextBox.Size = new System.Drawing.Size(136, 23);
             this.CharacterXpCustomizeTextBox.TabIndex = 24;
@@ -197,6 +202,7 @@ namespace FANTASY4YOU
             // CharacterLevelCustomizeTextbox
             // 
             this.CharacterLevelCustomizeTextbox.Location = new System.Drawing.Point(137, 144);
+            this.CharacterLevelCustomizeTextbox.MaxLength = 2;
             this.CharacterLevelCustomizeTextbox.Name = "CharacterLevelCustomizeTextbox";
             this.CharacterLevelCustomizeTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterLevelCustomizeTextbox.TabIndex = 22;
@@ -328,17 +334,17 @@ namespace FANTASY4YOU
             this.CharacterAlignmentCustomizeCombobox.Size = new System.Drawing.Size(136, 23);
             this.CharacterAlignmentCustomizeCombobox.TabIndex = 28;
             // 
-            // MoreCustomizations2
+            // MoreCustomizationsToSrenght
             // 
-            this.MoreCustomizations2.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MoreCustomizations2.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.MoreCustomizations2.Location = new System.Drawing.Point(483, 132);
-            this.MoreCustomizations2.Name = "MoreCustomizations2";
-            this.MoreCustomizations2.Size = new System.Drawing.Size(34, 67);
-            this.MoreCustomizations2.TabIndex = 30;
-            this.MoreCustomizations2.Text = ">";
-            this.MoreCustomizations2.UseVisualStyleBackColor = true;
-            this.MoreCustomizations2.Click += new System.EventHandler(this.MoreCustomizations2_Click);
+            this.MoreCustomizationsToSrenght.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MoreCustomizationsToSrenght.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.MoreCustomizationsToSrenght.Location = new System.Drawing.Point(483, 132);
+            this.MoreCustomizationsToSrenght.Name = "MoreCustomizationsToSrenght";
+            this.MoreCustomizationsToSrenght.Size = new System.Drawing.Size(34, 67);
+            this.MoreCustomizationsToSrenght.TabIndex = 30;
+            this.MoreCustomizationsToSrenght.Text = ">";
+            this.MoreCustomizationsToSrenght.UseVisualStyleBackColor = true;
+            this.MoreCustomizationsToSrenght.Click += new System.EventHandler(this.MoreCustomizationsToSrenght_Click);
             // 
             // CharacterBackgroundCustomizeLabel
             // 
@@ -346,7 +352,7 @@ namespace FANTASY4YOU
             this.CharacterBackgroundCustomizeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterBackgroundCustomizeLabel.Font = new System.Drawing.Font("Old London", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CharacterBackgroundCustomizeLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.CharacterBackgroundCustomizeLabel.Location = new System.Drawing.Point(137, 94);
+            this.CharacterBackgroundCustomizeLabel.Location = new System.Drawing.Point(143, 67);
             this.CharacterBackgroundCustomizeLabel.Name = "CharacterBackgroundCustomizeLabel";
             this.CharacterBackgroundCustomizeLabel.Size = new System.Drawing.Size(223, 48);
             this.CharacterBackgroundCustomizeLabel.TabIndex = 31;
@@ -354,32 +360,34 @@ namespace FANTASY4YOU
             // 
             // CharacterBackgroundCustomizeTextbox
             // 
-            this.CharacterBackgroundCustomizeTextbox.Location = new System.Drawing.Point(142, 145);
+            this.CharacterBackgroundCustomizeTextbox.Location = new System.Drawing.Point(123, 138);
             this.CharacterBackgroundCustomizeTextbox.Multiline = true;
             this.CharacterBackgroundCustomizeTextbox.Name = "CharacterBackgroundCustomizeTextbox";
             this.CharacterBackgroundCustomizeTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CharacterBackgroundCustomizeTextbox.Size = new System.Drawing.Size(265, 93);
             this.CharacterBackgroundCustomizeTextbox.TabIndex = 32;
+            this.CharacterBackgroundCustomizeTextbox.TextChanged += new System.EventHandler(this.CharacterBackgroundCustomizeTextbox_TextChanged);
             // 
-            // MoreCustomizations3
+            // MoreCustomizationsToCharName
             // 
-            this.MoreCustomizations3.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MoreCustomizations3.Location = new System.Drawing.Point(483, 132);
-            this.MoreCustomizations3.Name = "MoreCustomizations3";
-            this.MoreCustomizations3.Size = new System.Drawing.Size(34, 67);
-            this.MoreCustomizations3.TabIndex = 34;
-            this.MoreCustomizations3.Text = ">";
-            this.MoreCustomizations3.UseVisualStyleBackColor = true;
-            this.MoreCustomizations3.Click += new System.EventHandler(this.MoreCustomizations3_Click);
+            this.MoreCustomizationsToCharName.Font = new System.Drawing.Font("Old London", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MoreCustomizationsToCharName.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.MoreCustomizationsToCharName.Location = new System.Drawing.Point(483, 132);
+            this.MoreCustomizationsToCharName.Name = "MoreCustomizationsToCharName";
+            this.MoreCustomizationsToCharName.Size = new System.Drawing.Size(34, 67);
+            this.MoreCustomizationsToCharName.TabIndex = 34;
+            this.MoreCustomizationsToCharName.Text = ">";
+            this.MoreCustomizationsToCharName.UseVisualStyleBackColor = true;
+            this.MoreCustomizationsToCharName.Click += new System.EventHandler(this.MoreCustomizationsToCharName_Click);
             // 
             // BackgroundPannel
             // 
             this.BackgroundPannel.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeButton);
             this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeLabel);
-            this.BackgroundPannel.Controls.Add(this.MoreCustomizations3);
+            this.BackgroundPannel.Controls.Add(this.MoreCustomizationsToCharName);
             this.BackgroundPannel.Controls.Add(this.CharacterBackgroundCustomizeTextbox);
-            this.BackgroundPannel.Location = new System.Drawing.Point(2, 44);
+            this.BackgroundPannel.Location = new System.Drawing.Point(233, 192);
             this.BackgroundPannel.Name = "BackgroundPannel";
             this.BackgroundPannel.Size = new System.Drawing.Size(534, 424);
             this.BackgroundPannel.TabIndex = 35;
@@ -398,7 +406,7 @@ namespace FANTASY4YOU
             this.CharacterBackgroundCustomizeButton.IconColor = System.Drawing.Color.DarkGoldenrod;
             this.CharacterBackgroundCustomizeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CharacterBackgroundCustomizeButton.IconSize = 60;
-            this.CharacterBackgroundCustomizeButton.Location = new System.Drawing.Point(230, 254);
+            this.CharacterBackgroundCustomizeButton.Location = new System.Drawing.Point(219, 246);
             this.CharacterBackgroundCustomizeButton.Name = "CharacterBackgroundCustomizeButton";
             this.CharacterBackgroundCustomizeButton.Size = new System.Drawing.Size(85, 71);
             this.CharacterBackgroundCustomizeButton.TabIndex = 35;
@@ -418,16 +426,15 @@ namespace FANTASY4YOU
             this.CharNamePannel.Controls.Add(this.CharacterClassCustomizeTextbox);
             this.CharNamePannel.Controls.Add(this.CharacterAlignmentCustomizeLabel);
             this.CharNamePannel.Controls.Add(this.CharacterNameCustomizeLabel);
-            this.CharNamePannel.Controls.Add(this.MoreCustomizations2);
+            this.CharNamePannel.Controls.Add(this.MoreCustomizationsToSrenght);
             this.CharNamePannel.Controls.Add(this.CharacterClassCustomizeLabel);
             this.CharNamePannel.Controls.Add(this.CharacterLevelCustomizeLabel);
             this.CharNamePannel.Controls.Add(this.CharacterRaceCustomizeLabel);
             this.CharNamePannel.Controls.Add(this.CharacterXpCustomizeLabel);
-            this.CharNamePannel.Location = new System.Drawing.Point(12, 34);
+            this.CharNamePannel.Location = new System.Drawing.Point(79, 240);
             this.CharNamePannel.Name = "CharNamePannel";
             this.CharNamePannel.Size = new System.Drawing.Size(531, 427);
             this.CharNamePannel.TabIndex = 36;
-            this.CharNamePannel.Visible = false;
             // 
             // UpdateCharacterDetailsButton2
             // 
@@ -462,15 +469,16 @@ namespace FANTASY4YOU
             this.StrenghtPanel.Controls.Add(this.CharacterStrenghtTextbox);
             this.StrenghtPanel.Controls.Add(this.CharacterConstitutionConstitutionLabel);
             this.StrenghtPanel.Controls.Add(this.CharacterDexterityDexterityLabel);
-            this.StrenghtPanel.Controls.Add(this.MoreCustomizations);
+            this.StrenghtPanel.Controls.Add(this.MoreCustomizationsToBackground);
             this.StrenghtPanel.Controls.Add(this.CharacterStrenghtStrenghtLabel);
             this.StrenghtPanel.Controls.Add(this.CharacterIntelligenceIntelligenceLabel);
             this.StrenghtPanel.Controls.Add(this.CharacterCharismaCharismaLabel);
             this.StrenghtPanel.Controls.Add(this.CharacterWisdomWisdomLabel);
-            this.StrenghtPanel.Location = new System.Drawing.Point(448, 75);
+            this.StrenghtPanel.Location = new System.Drawing.Point(12, 44);
             this.StrenghtPanel.Name = "StrenghtPanel";
             this.StrenghtPanel.Size = new System.Drawing.Size(534, 424);
             this.StrenghtPanel.TabIndex = 37;
+            this.StrenghtPanel.Visible = false;
             // 
             // UpdateCharacterDetailsButton
             // 
@@ -522,13 +530,19 @@ namespace FANTASY4YOU
             this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
             this.WindowTopBar.Controls.Add(this.HelperPanel);
             this.WindowTopBar.Controls.Add(this.iconButton2);
-            this.WindowTopBar.Controls.Add(this.MinimizeForm);
-            this.WindowTopBar.Controls.Add(this.CloseFormButton);
             this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
             this.WindowTopBar.Name = "WindowTopBar";
             this.WindowTopBar.Size = new System.Drawing.Size(528, 28);
             this.WindowTopBar.TabIndex = 38;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
+            // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(458, -3);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(39, 41);
+            this.HelperPanel.TabIndex = 3;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
             // 
             // iconButton2
             // 
@@ -553,58 +567,6 @@ namespace FANTASY4YOU
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // MinimizeForm
-            // 
-            this.MinimizeForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeForm.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeForm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MinimizeForm.FlatAppearance.BorderSize = 0;
-            this.MinimizeForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.MinimizeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeForm.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.MinimizeForm.IconColor = System.Drawing.Color.Snow;
-            this.MinimizeForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MinimizeForm.IconSize = 26;
-            this.MinimizeForm.Location = new System.Drawing.Point(701, 0);
-            this.MinimizeForm.Name = "MinimizeForm";
-            this.MinimizeForm.Size = new System.Drawing.Size(358, 3);
-            this.MinimizeForm.TabIndex = 0;
-            this.MinimizeForm.TabStop = false;
-            this.MinimizeForm.UseVisualStyleBackColor = false;
-            // 
-            // CloseFormButton
-            // 
-            this.CloseFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseFormButton.BackColor = System.Drawing.Color.Transparent;
-            this.CloseFormButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CloseFormButton.FlatAppearance.BorderSize = 0;
-            this.CloseFormButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.CloseFormButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.CloseFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseFormButton.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.CloseFormButton.IconColor = System.Drawing.Color.Snow;
-            this.CloseFormButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CloseFormButton.IconSize = 40;
-            this.CloseFormButton.Location = new System.Drawing.Point(730, -1);
-            this.CloseFormButton.Name = "CloseFormButton";
-            this.CloseFormButton.Size = new System.Drawing.Size(358, 3);
-            this.CloseFormButton.TabIndex = 0;
-            this.CloseFormButton.TabStop = false;
-            this.CloseFormButton.UseVisualStyleBackColor = false;
-            // 
-            // HelperPanel
-            // 
-            this.HelperPanel.Location = new System.Drawing.Point(458, -3);
-            this.HelperPanel.Name = "HelperPanel";
-            this.HelperPanel.Size = new System.Drawing.Size(39, 41);
-            this.HelperPanel.TabIndex = 3;
-            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
-            // 
             // CharacterCustomizationChar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -612,12 +574,13 @@ namespace FANTASY4YOU
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(529, 452);
-            this.Controls.Add(this.BackgroundPannel);
-            this.Controls.Add(this.CharNamePannel);
             this.Controls.Add(this.StrenghtPanel);
+            this.Controls.Add(this.CharNamePannel);
+            this.Controls.Add(this.BackgroundPannel);
             this.Controls.Add(this.WindowTopBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CharacterCustomizationChar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "/";
             this.Load += new System.EventHandler(this.CharacterCustomization_Load);
             this.BackgroundPannel.ResumeLayout(false);
@@ -642,7 +605,7 @@ namespace FANTASY4YOU
         private TextBox CharacterDexterityTextbox;
         private TextBox CharacterWisdomTextbox;
         private TextBox CharacterCharismaTextbox;
-        private Button MoreCustomizations;
+        private Button MoreCustomizationsToBackground;
         private TextBox CharacterXpCustomizeTextBox;
         private TextBox CharacterLevelCustomizeTextbox;
         private TextBox CharacterNameCustomizeTextbox;
@@ -658,18 +621,16 @@ namespace FANTASY4YOU
         private ComboBox CharacterRaceCustomizeCombobox;
         private ComboBox comboBox1;
         private ComboBox CharacterAlignmentCustomizeCombobox;
-        private Button MoreCustomizations2;
+        private Button MoreCustomizationsToSrenght;
         private Label CharacterBackgroundCustomizeLabel;
         private TextBox CharacterBackgroundCustomizeTextbox;
-        private Button MoreCustomizations3;
+        private Button MoreCustomizationsToCharName;
         private Panel BackgroundPannel;
         private Panel CharNamePannel;
         private Panel StrenghtPanel;
         private Label CharacterDexterityDexterityLabel;
         private Label CharacterStrenghtStrenghtLabel;
         private Panel WindowTopBar;
-        private FontAwesome.Sharp.IconButton MinimizeForm;
-        private FontAwesome.Sharp.IconButton CloseFormButton;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton UpdateCharacterDetailsButton2;
         private FontAwesome.Sharp.IconButton UpdateCharacterDetailsButton;

@@ -35,8 +35,8 @@ namespace FANTASY4YOU
             this.GladLabel = new System.Windows.Forms.Label();
             this.WelcomePannel = new System.Windows.Forms.Panel();
             this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.HelperPanel = new System.Windows.Forms.Panel();
+            this.CloseFormButton = new FontAwesome.Sharp.IconButton();
             this.WelcomePannel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,14 @@ namespace FANTASY4YOU
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
             // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(724, -5);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(39, 43);
+            this.HelperPanel.TabIndex = 22;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
+            // 
             // CloseFormButton
             // 
             this.CloseFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -122,14 +130,6 @@ namespace FANTASY4YOU
             this.CloseFormButton.UseVisualStyleBackColor = false;
             this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
             // 
-            // HelperPanel
-            // 
-            this.HelperPanel.Location = new System.Drawing.Point(724, -5);
-            this.HelperPanel.Name = "HelperPanel";
-            this.HelperPanel.Size = new System.Drawing.Size(39, 43);
-            this.HelperPanel.TabIndex = 22;
-            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
-            // 
             // WelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -144,6 +144,7 @@ namespace FANTASY4YOU
             this.MinimizeBox = false;
             this.Name = "WelcomeScreen";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WelcomeScreen_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

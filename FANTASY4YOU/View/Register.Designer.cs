@@ -44,10 +44,10 @@ namespace FANTASY4YOU
             this.RegisterPanel = new System.Windows.Forms.Panel();
             this.RegisterButton = new ePOSOne.btnProduct.Button_WOC();
             this.WindowTopBar = new System.Windows.Forms.Panel();
+            this.HelperPanel = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.MinimizeForm = new FontAwesome.Sharp.IconButton();
             this.CloseFormButton = new FontAwesome.Sharp.IconButton();
-            this.HelperPanel = new System.Windows.Forms.Panel();
             this.RegisterPanel.SuspendLayout();
             this.WindowTopBar.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,6 @@ namespace FANTASY4YOU
             this.UsernameTextBox.Size = new System.Drawing.Size(211, 23);
             this.UsernameTextBox.TabIndex = 1;
             this.UsernameTextBox.TabStop = false;
-            this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
             // 
             // PasswordTextBox
             // 
@@ -81,7 +80,6 @@ namespace FANTASY4YOU
             this.PasswordTextBox.TabIndex = 2;
             this.PasswordTextBox.TabStop = false;
             this.PasswordTextBox.UseSystemPasswordChar = true;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // EmailTextBox
             // 
@@ -90,7 +88,6 @@ namespace FANTASY4YOU
             this.EmailTextBox.Size = new System.Drawing.Size(211, 23);
             this.EmailTextBox.TabIndex = 3;
             this.EmailTextBox.TabStop = false;
-            this.EmailTextBox.TextChanged += new System.EventHandler(this.EmailTextBox_TextChanged);
             // 
             // label2
             // 
@@ -230,6 +227,7 @@ namespace FANTASY4YOU
             this.RegisterButton.Text = "Register";
             this.RegisterButton.TextColor = System.Drawing.Color.White;
             this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // WindowTopBar
             // 
@@ -243,6 +241,14 @@ namespace FANTASY4YOU
             this.WindowTopBar.Size = new System.Drawing.Size(485, 43);
             this.WindowTopBar.TabIndex = 21;
             this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
+            // 
+            // HelperPanel
+            // 
+            this.HelperPanel.Location = new System.Drawing.Point(391, -6);
+            this.HelperPanel.Name = "HelperPanel";
+            this.HelperPanel.Size = new System.Drawing.Size(44, 65);
+            this.HelperPanel.TabIndex = 3;
+            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
             // 
             // iconButton2
             // 
@@ -310,14 +316,6 @@ namespace FANTASY4YOU
             this.CloseFormButton.TabIndex = 0;
             this.CloseFormButton.TabStop = false;
             this.CloseFormButton.UseVisualStyleBackColor = false;
-            // 
-            // HelperPanel
-            // 
-            this.HelperPanel.Location = new System.Drawing.Point(391, -6);
-            this.HelperPanel.Name = "HelperPanel";
-            this.HelperPanel.Size = new System.Drawing.Size(44, 65);
-            this.HelperPanel.TabIndex = 3;
-            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
             // 
             // Register
             // 

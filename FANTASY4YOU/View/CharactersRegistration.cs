@@ -1,4 +1,7 @@
 using FANTASY4YOU;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+
 namespace FANTASY4YOU
 {
     public partial class CharacterRegistration : Form
@@ -11,7 +14,10 @@ namespace FANTASY4YOU
         {
             InitializeComponent();
         }
-
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         int originalExStyle = -1;
         bool enableFormLevelDoubleBuffering = true;
 
@@ -31,31 +37,21 @@ namespace FANTASY4YOU
                 return cp;
             }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void CreateCharacter_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string characterName1 = characterNameTextBox.Text;
-            string levelTextBox = levelBox.Text;
-            string xpTextbox = xpTextBox.Text;
-            string backgroundText = backgroundTextBox.Text;
-            
             if (characterNameTextBox.Text == "" || classComboBox.Text == "" || levelBox.Text == "" || raceComboBox.Text == "" || backgroundTextBox.Text == "" || xpTextBox.Text == "" || alignmentComboBox.Text == "")
             {
                 MessageBox.Show("Please fill in your character specifications");
             }
-            else if (logic.CheckCharacterNameExistForUser(characterName1) == true)
+            else if (logic.CheckCharacterNameExistForUser(characterNameTextBox.Text) == true)
             {
                 MessageBox.Show("You already have character with that name");
             }
-            else if (logic.CheckIfTextBoxOnlyNumbers(levelTextBox) == false)
+            else if (!Regex.IsMatch(levelBox.Text, @"^\d+$"))
             {
                 MessageBox.Show("Level can be only a number");
             }
-            else if (logic.CheckIfTextBoxOnlyNumbers(xpTextbox) == false)
+            else if (!Regex.IsMatch(xpTextBox.Text, @"^\d+$"))
             {
                 MessageBox.Show("Xp can only be a number");
             }
@@ -63,9 +59,21 @@ namespace FANTASY4YOU
             {
                 MessageBox.Show("You cannot create more Characters. You need to upgade to premium account.");
             }
+            else if (Int32.Parse(levelBox.Text) > 20)
+            {
+                MessageBox.Show("Level 20 is the max level.");
+            }
+            else if (Int32.Parse(xpTextBox.Text) > 5000)
+            {
+                MessageBox.Show("You can start with max of 5000 experience points");
+            }
+            else if (!Regex.IsMatch(characterNameTextBox.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("Character Name can be only be letters");
+            }
             else if (characterNameTextBox.Text != "" || classComboBox.Text != "" || levelBox.Text != "" || raceComboBox.Text != "" || backgroundTextBox.Text != "" || xpTextBox.Text != "" || alignmentComboBox.Text != "")
             {
-                string characterName = characterNameTextBox.Text;
+                string chName = characterNameTextBox.Text;
                 string classs = classComboBox.Text;
                 int level = Int32.Parse(levelBox.Text);
                 string race = raceComboBox.Text;
@@ -73,25 +81,34 @@ namespace FANTASY4YOU
                 int xpPoints = Int32.Parse(xpTextBox.Text);
                 string alignment = alignmentComboBox.Text;
 
-                logic.InsertCharacterDetails(characterName, classs, level, race, backgroundStory, xpPoints, alignment);
+                logic.InsertCharacterDetails(chName, classs, level, race, backgroundStory, xpPoints, alignment);
                 MessageBox.Show("Character succefully created. Enjoy!");
             }
         
          }
-
-        private void characterNameTextBox_TextChanged(object sender, EventArgs e)
+        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
         {
-
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void CharactersRegistration_Load(object sender, EventArgs e)
+        private void CloseFormButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void HelperPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void CharacterRegistration_Load(object sender, EventArgs e)
         {
 
+            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
+            CharacterCreationPanel.BackColor = Color.FromArgb(125, Color.Black);
+            HelperPanel.BackColor = Color.Transparent;
         }
     }
 }
