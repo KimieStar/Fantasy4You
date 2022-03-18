@@ -44,18 +44,13 @@ namespace FANTASY4YOU
             this.XpLabel = new System.Windows.Forms.Label();
             this.AlignmentLabel = new System.Windows.Forms.Label();
             this.alignmentComboBox = new System.Windows.Forms.ComboBox();
-            this.HelperPanel = new System.Windows.Forms.Panel();
-            this.CloseFormButton = new FontAwesome.Sharp.IconButton();
-            this.WindowTopBar = new System.Windows.Forms.Panel();
-            this.CharacterCreationPanel = new System.Windows.Forms.Panel();
             this.CreateCharacter = new ePOSOne.btnProduct.Button_WOC();
-            this.WindowTopBar.SuspendLayout();
-            this.CharacterCreationPanel.SuspendLayout();
+            this.RegisterCharacterLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // characterNameTextBox
             // 
-            this.characterNameTextBox.Location = new System.Drawing.Point(448, 93);
+            this.characterNameTextBox.Location = new System.Drawing.Point(459, 108);
             this.characterNameTextBox.Name = "characterNameTextBox";
             this.characterNameTextBox.Size = new System.Drawing.Size(121, 23);
             this.characterNameTextBox.TabIndex = 0;
@@ -66,10 +61,20 @@ namespace FANTASY4YOU
             this.classComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.classComboBox.FormattingEnabled = true;
             this.classComboBox.Items.AddRange(new object[] {
-            "Class1",
-            "Class2",
-            "Class3"});
-            this.classComboBox.Location = new System.Drawing.Point(448, 141);
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Monk",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "Artificer"});
+            this.classComboBox.Location = new System.Drawing.Point(459, 156);
             this.classComboBox.Name = "classComboBox";
             this.classComboBox.Size = new System.Drawing.Size(121, 23);
             this.classComboBox.TabIndex = 1;
@@ -77,7 +82,7 @@ namespace FANTASY4YOU
             // 
             // levelBox
             // 
-            this.levelBox.Location = new System.Drawing.Point(448, 183);
+            this.levelBox.Location = new System.Drawing.Point(459, 198);
             this.levelBox.MaxLength = 2;
             this.levelBox.Name = "levelBox";
             this.levelBox.Size = new System.Drawing.Size(66, 23);
@@ -90,7 +95,7 @@ namespace FANTASY4YOU
             this.CharacterNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.CharacterNameLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CharacterNameLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.CharacterNameLabel.Location = new System.Drawing.Point(256, 85);
+            this.CharacterNameLabel.Location = new System.Drawing.Point(267, 100);
             this.CharacterNameLabel.Name = "CharacterNameLabel";
             this.CharacterNameLabel.Size = new System.Drawing.Size(186, 31);
             this.CharacterNameLabel.TabIndex = 3;
@@ -102,7 +107,7 @@ namespace FANTASY4YOU
             this.ClassLabel.BackColor = System.Drawing.Color.Transparent;
             this.ClassLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ClassLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.ClassLabel.Location = new System.Drawing.Point(358, 131);
+            this.ClassLabel.Location = new System.Drawing.Point(369, 146);
             this.ClassLabel.Name = "ClassLabel";
             this.ClassLabel.Size = new System.Drawing.Size(84, 31);
             this.ClassLabel.TabIndex = 4;
@@ -114,7 +119,7 @@ namespace FANTASY4YOU
             this.LevelLabel.BackColor = System.Drawing.Color.Transparent;
             this.LevelLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LevelLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.LevelLabel.Location = new System.Drawing.Point(367, 175);
+            this.LevelLabel.Location = new System.Drawing.Point(378, 190);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(80, 31);
             this.LevelLabel.TabIndex = 5;
@@ -125,10 +130,18 @@ namespace FANTASY4YOU
             this.raceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.raceComboBox.FormattingEnabled = true;
             this.raceComboBox.Items.AddRange(new object[] {
-            "Race1",
-            "Race2",
-            "Race3"});
-            this.raceComboBox.Location = new System.Drawing.Point(448, 227);
+            "Dragonborn",
+            "Dwarf",
+            "Elf",
+            "Half-Elf",
+            "Halfling",
+            "Human",
+            "Fairy",
+            "Owlin",
+            "Kobold",
+            "Tortle",
+            "Shifter"});
+            this.raceComboBox.Location = new System.Drawing.Point(459, 242);
             this.raceComboBox.Name = "raceComboBox";
             this.raceComboBox.Size = new System.Drawing.Size(121, 23);
             this.raceComboBox.TabIndex = 6;
@@ -140,7 +153,7 @@ namespace FANTASY4YOU
             this.RaceLabel.BackColor = System.Drawing.Color.Transparent;
             this.RaceLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RaceLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.RaceLabel.Location = new System.Drawing.Point(367, 217);
+            this.RaceLabel.Location = new System.Drawing.Point(378, 232);
             this.RaceLabel.Name = "RaceLabel";
             this.RaceLabel.Size = new System.Drawing.Size(75, 31);
             this.RaceLabel.TabIndex = 7;
@@ -148,7 +161,7 @@ namespace FANTASY4YOU
             // 
             // backgroundTextBox
             // 
-            this.backgroundTextBox.Location = new System.Drawing.Point(448, 372);
+            this.backgroundTextBox.Location = new System.Drawing.Point(459, 387);
             this.backgroundTextBox.Multiline = true;
             this.backgroundTextBox.Name = "backgroundTextBox";
             this.backgroundTextBox.Size = new System.Drawing.Size(263, 94);
@@ -161,7 +174,7 @@ namespace FANTASY4YOU
             this.BackgroundLabel.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BackgroundLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.BackgroundLabel.Location = new System.Drawing.Point(299, 362);
+            this.BackgroundLabel.Location = new System.Drawing.Point(310, 377);
             this.BackgroundLabel.Name = "BackgroundLabel";
             this.BackgroundLabel.Size = new System.Drawing.Size(143, 31);
             this.BackgroundLabel.TabIndex = 9;
@@ -169,7 +182,7 @@ namespace FANTASY4YOU
             // 
             // xpTextBox
             // 
-            this.xpTextBox.Location = new System.Drawing.Point(448, 273);
+            this.xpTextBox.Location = new System.Drawing.Point(459, 288);
             this.xpTextBox.MaxLength = 4;
             this.xpTextBox.Name = "xpTextBox";
             this.xpTextBox.Size = new System.Drawing.Size(66, 23);
@@ -182,7 +195,7 @@ namespace FANTASY4YOU
             this.XpLabel.BackColor = System.Drawing.Color.Transparent;
             this.XpLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.XpLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.XpLabel.Location = new System.Drawing.Point(380, 265);
+            this.XpLabel.Location = new System.Drawing.Point(391, 280);
             this.XpLabel.Name = "XpLabel";
             this.XpLabel.Size = new System.Drawing.Size(62, 31);
             this.XpLabel.TabIndex = 11;
@@ -194,7 +207,7 @@ namespace FANTASY4YOU
             this.AlignmentLabel.BackColor = System.Drawing.Color.Transparent;
             this.AlignmentLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AlignmentLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.AlignmentLabel.Location = new System.Drawing.Point(315, 313);
+            this.AlignmentLabel.Location = new System.Drawing.Point(326, 328);
             this.AlignmentLabel.Name = "AlignmentLabel";
             this.AlignmentLabel.Size = new System.Drawing.Size(127, 31);
             this.AlignmentLabel.TabIndex = 13;
@@ -205,79 +218,20 @@ namespace FANTASY4YOU
             this.alignmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.alignmentComboBox.FormattingEnabled = true;
             this.alignmentComboBox.Items.AddRange(new object[] {
-            "Alignment1",
-            "Alignment2",
-            "Alignment3"});
-            this.alignmentComboBox.Location = new System.Drawing.Point(448, 321);
+            "Lawful Good",
+            "Neutral Good",
+            "Chaotic Good",
+            "Lawful Neutral",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Lawful Evil",
+            "Neutral Evil",
+            "Chaotic Evil"});
+            this.alignmentComboBox.Location = new System.Drawing.Point(459, 336);
             this.alignmentComboBox.Name = "alignmentComboBox";
             this.alignmentComboBox.Size = new System.Drawing.Size(121, 23);
             this.alignmentComboBox.TabIndex = 14;
             this.alignmentComboBox.TabStop = false;
-            // 
-            // HelperPanel
-            // 
-            this.HelperPanel.Location = new System.Drawing.Point(1037, -4);
-            this.HelperPanel.Name = "HelperPanel";
-            this.HelperPanel.Size = new System.Drawing.Size(37, 37);
-            this.HelperPanel.TabIndex = 25;
-            this.HelperPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HelperPanel_MouseDown);
-            // 
-            // CloseFormButton
-            // 
-            this.CloseFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseFormButton.BackColor = System.Drawing.Color.Transparent;
-            this.CloseFormButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CloseFormButton.FlatAppearance.BorderSize = 0;
-            this.CloseFormButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.CloseFormButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.CloseFormButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseFormButton.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.CloseFormButton.IconColor = System.Drawing.Color.Snow;
-            this.CloseFormButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CloseFormButton.IconSize = 49;
-            this.CloseFormButton.Location = new System.Drawing.Point(1066, -6);
-            this.CloseFormButton.Name = "CloseFormButton";
-            this.CloseFormButton.Size = new System.Drawing.Size(52, 50);
-            this.CloseFormButton.TabIndex = 24;
-            this.CloseFormButton.TabStop = false;
-            this.CloseFormButton.UseVisualStyleBackColor = false;
-            this.CloseFormButton.Click += new System.EventHandler(this.CloseFormButton_Click);
-            // 
-            // WindowTopBar
-            // 
-            this.WindowTopBar.BackColor = System.Drawing.Color.IndianRed;
-            this.WindowTopBar.Controls.Add(this.HelperPanel);
-            this.WindowTopBar.Controls.Add(this.CloseFormButton);
-            this.WindowTopBar.Location = new System.Drawing.Point(0, 0);
-            this.WindowTopBar.Name = "WindowTopBar";
-            this.WindowTopBar.Size = new System.Drawing.Size(1109, 31);
-            this.WindowTopBar.TabIndex = 0;
-            this.WindowTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WindowTopBar_MouseDown);
-            // 
-            // CharacterCreationPanel
-            // 
-            this.CharacterCreationPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CharacterCreationPanel.Controls.Add(this.CreateCharacter);
-            this.CharacterCreationPanel.Controls.Add(this.raceComboBox);
-            this.CharacterCreationPanel.Controls.Add(this.characterNameTextBox);
-            this.CharacterCreationPanel.Controls.Add(this.classComboBox);
-            this.CharacterCreationPanel.Controls.Add(this.alignmentComboBox);
-            this.CharacterCreationPanel.Controls.Add(this.levelBox);
-            this.CharacterCreationPanel.Controls.Add(this.AlignmentLabel);
-            this.CharacterCreationPanel.Controls.Add(this.CharacterNameLabel);
-            this.CharacterCreationPanel.Controls.Add(this.XpLabel);
-            this.CharacterCreationPanel.Controls.Add(this.ClassLabel);
-            this.CharacterCreationPanel.Controls.Add(this.xpTextBox);
-            this.CharacterCreationPanel.Controls.Add(this.LevelLabel);
-            this.CharacterCreationPanel.Controls.Add(this.BackgroundLabel);
-            this.CharacterCreationPanel.Controls.Add(this.RaceLabel);
-            this.CharacterCreationPanel.Controls.Add(this.backgroundTextBox);
-            this.CharacterCreationPanel.Location = new System.Drawing.Point(0, 28);
-            this.CharacterCreationPanel.Name = "CharacterCreationPanel";
-            this.CharacterCreationPanel.Size = new System.Drawing.Size(1109, 633);
-            this.CharacterCreationPanel.TabIndex = 16;
             // 
             // CreateCharacter
             // 
@@ -290,7 +244,7 @@ namespace FANTASY4YOU
             this.CreateCharacter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CreateCharacter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateCharacter.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CreateCharacter.Location = new System.Drawing.Point(448, 493);
+            this.CreateCharacter.Location = new System.Drawing.Point(459, 508);
             this.CreateCharacter.Name = "CreateCharacter";
             this.CreateCharacter.OnHoverBackColor = System.Drawing.Color.Transparent;
             this.CreateCharacter.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -304,6 +258,18 @@ namespace FANTASY4YOU
             this.CreateCharacter.UseVisualStyleBackColor = false;
             this.CreateCharacter.Click += new System.EventHandler(this.CreateCharacter_Click);
             // 
+            // RegisterCharacterLabel
+            // 
+            this.RegisterCharacterLabel.AutoSize = true;
+            this.RegisterCharacterLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterCharacterLabel.Font = new System.Drawing.Font("Old London", 40.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RegisterCharacterLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.RegisterCharacterLabel.Location = new System.Drawing.Point(344, 14);
+            this.RegisterCharacterLabel.Name = "RegisterCharacterLabel";
+            this.RegisterCharacterLabel.Size = new System.Drawing.Size(387, 61);
+            this.RegisterCharacterLabel.TabIndex = 20;
+            this.RegisterCharacterLabel.Text = "Register Character";
+            // 
             // CharacterRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -311,17 +277,32 @@ namespace FANTASY4YOU
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1108, 658);
-            this.Controls.Add(this.WindowTopBar);
-            this.Controls.Add(this.CharacterCreationPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.RegisterCharacterLabel);
+            this.Controls.Add(this.CreateCharacter);
+            this.Controls.Add(this.raceComboBox);
+            this.Controls.Add(this.CharacterNameLabel);
+            this.Controls.Add(this.characterNameTextBox);
+            this.Controls.Add(this.backgroundTextBox);
+            this.Controls.Add(this.classComboBox);
+            this.Controls.Add(this.RaceLabel);
+            this.Controls.Add(this.alignmentComboBox);
+            this.Controls.Add(this.BackgroundLabel);
+            this.Controls.Add(this.levelBox);
+            this.Controls.Add(this.LevelLabel);
+            this.Controls.Add(this.AlignmentLabel);
+            this.Controls.Add(this.xpTextBox);
+            this.Controls.Add(this.ClassLabel);
+            this.Controls.Add(this.XpLabel);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CharacterRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CharactersRegistration";
+            this.Text = "Fantasy4You";
             this.Load += new System.EventHandler(this.CharacterRegistration_Load);
-            this.WindowTopBar.ResumeLayout(false);
-            this.CharacterCreationPanel.ResumeLayout(false);
-            this.CharacterCreationPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -341,10 +322,7 @@ namespace FANTASY4YOU
         private Label XpLabel;
         private Label AlignmentLabel;
         private ComboBox alignmentComboBox;
-        private Panel HelperPanel;
-        private FontAwesome.Sharp.IconButton CloseFormButton;
-        private Panel WindowTopBar;
-        private Panel CharacterCreationPanel;
         private ePOSOne.btnProduct.Button_WOC CreateCharacter;
+        private Label RegisterCharacterLabel;
     }
 }

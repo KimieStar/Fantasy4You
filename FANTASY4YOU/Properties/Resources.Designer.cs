@@ -63,9 +63,59 @@ namespace FANTASY4YOU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap color_29465B {
+        internal static System.Drawing.Bitmap CharactersBackgroound1Panel {
             get {
-                object obj = ResourceManager.GetObject("color_29465B", resourceCulture);
+                object obj = ResourceManager.GetObject("CharactersBackgroound1Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CharactersBackgroound2Panel {
+            get {
+                object obj = ResourceManager.GetObject("CharactersBackgroound2Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CharactersBackgroound3Panel {
+            get {
+                object obj = ResourceManager.GetObject("CharactersBackgroound3Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CharactersBackgroound4Panel {
+            get {
+                object obj = ResourceManager.GetObject("CharactersBackgroound4Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CharactersBackgroound5Panel {
+            get {
+                object obj = ResourceManager.GetObject("CharactersBackgroound5Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CharactersBackground0Panel {
+            get {
+                object obj = ResourceManager.GetObject("CharactersBackground0Panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -87,26 +137,6 @@ namespace FANTASY4YOU.Properties {
             get {
                 object obj = ResourceManager.GetObject("Combust_Free_Trial1", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gear_vector_graphics_glyph_icon_260nw_1505448758_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("gear-vector-graphics-glyph-icon-260nw-1505448758-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap starter1 {
-            get {
-                object obj = ResourceManager.GetObject("starter1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

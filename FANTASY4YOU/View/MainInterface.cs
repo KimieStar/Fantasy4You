@@ -13,57 +13,42 @@ namespace FANTASY4YOU
 {
     public partial class MainInterface : Form
     {
-        LogicController logic = new LogicController();
         Thread characters;
         DatabaseController connection = new DatabaseController();
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        Thread login;
+        UserAccount userAccount = new UserAccount();
 
         public MainInterface()
         {
             InitializeComponent();
         }
 
-        int originalExStyle = -1;
-        bool enableFormLevelDoubleBuffering = true;
-
         protected override CreateParams CreateParams
         {
             get
             {
-                if (originalExStyle == -1)
-                    originalExStyle = base.CreateParams.ExStyle;
-
-                CreateParams cp = base.CreateParams;
-                if (enableFormLevelDoubleBuffering)
-                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
-                else
-                    cp.ExStyle = originalExStyle;
-
-                return cp;
+                var parms = base.CreateParams;
+                parms.Style &= ~0x02000000;  // Turn off WS_CLIPCHILDREN
+                return parms;
             }
         }
+
+
         private void MainInterface_Load(object sender, EventArgs e)
         {
-            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
-            MainPanel.BackColor = Color.FromArgb(125, Color.Black);
             YourCharactersLabel.BackColor = Color.Transparent;
             comingsoonLabel1.BackColor = Color.Transparent;
             comingsoonLabel2.BackColor = Color.Transparent;
             UsernameLabel.BackColor = Color.Transparent;
             IdLabel.BackColor = Color.Transparent;
             usernameL.BackColor = Color.Transparent;
-            PanelHelper.BackColor = Color.Transparent;
             IdL.BackColor = Color.Transparent;
             comingSoonButton1.BackColor = Color.Transparent;
             comingSoonButton2.BackColor = Color.Transparent;
             string uname = User.Username;
             usernameL.Text = uname;
 
-            int id = logic.SelectUserId();
+            int id = connection.SelectUserIdFromDB();
 
 
             IdL.Text = id.ToString();
@@ -82,21 +67,31 @@ namespace FANTASY4YOU
             Application.Run(new Characters());
         }
 
-        private void CloseFormButton_Click(object sender, EventArgs e)
+        private void LogoutButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            login = new Thread(OpenLogin);
+            login.SetApartmentState(ApartmentState.STA);
+            login.Start();
+            this.Close();
         }
 
-        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
+        private void OpenLogin(object? obj)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            Application.Run(new Login());
         }
 
-        private void PanelHelper_MouseDown(object sender, MouseEventArgs e)
+        private void AccountView_Click(object sender, EventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            userAccount.ShowDialog();
+            if (User.DeleteUser == 1)
+            {
+                User.DeleteUser = 0;
+                login = new Thread(OpenLogin);
+                login.SetApartmentState(ApartmentState.STA);
+                login.Start();
+                this.Close();
+            }
+
         }
     }
 }

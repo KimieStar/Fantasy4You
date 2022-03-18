@@ -12,10 +12,12 @@ namespace FANTASY4YOU
         private static string password;
         private static bool isUserNew;
         private static int charSelected;
+        private static int deleteUser = 0;
 
         public static string Username { get => username; set => username = value; }
         public static string Password { get => password; set => password = value; }
         public static bool IsUserNew { get => isUserNew; set => isUserNew = value; }
         public static int CharSelected { get => charSelected; set => charSelected = value; }
+        public static int DeleteUser { get => deleteUser; set => deleteUser = value; }
     }
 }

@@ -11,75 +11,54 @@ namespace FANTASY4YOU
 {
     public partial class Characters : Form
     {
-        LogicController logic = new LogicController();
         CharacterCustomizationChar customization = new CharacterCustomizationChar(); 
         CharacterDisplayer characterDisplayer;
         Thread registerCharacter;
         Thread mainInerface;
         DatabaseController connection = new DatabaseController();
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        
         public Characters()
         {
             InitializeComponent();
         }
 
-        int originalExStyle = -1;
-        bool enableFormLevelDoubleBuffering = true;
-
         protected override CreateParams CreateParams
         {
             get
             {
-                if (originalExStyle == -1)
-                    originalExStyle = base.CreateParams.ExStyle;
-
-                CreateParams cp = base.CreateParams;
-                if (enableFormLevelDoubleBuffering)
-                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
-                else
-                    cp.ExStyle = originalExStyle;
-
-                return cp;
+                var parms = base.CreateParams;
+                parms.Style &= ~0x02000000;  // Turn off WS_CLIPCHILDREN
+                return parms;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
-            HelperPanel.BackColor = Color.FromArgb(165, Color.Black);
-            CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
-            CharacterPannel1.BackColor = Color.FromArgb(165, Color.Black);
-            CharacterPannel2.BackColor = Color.FromArgb(165, Color.Black);
-            CharacterPannel3.BackColor = Color.FromArgb(165, Color.Black);
-            CharacterPannel4.BackColor = Color.FromArgb(165, Color.Black);
-            CharacterPannel5.BackColor = Color.FromArgb(165, Color.Black);
+            CharactersNumbers.Text = connection.NumberOfCharactersCreated().ToString();
             NumberOfCharactersLabel.BackColor = Color.FromArgb(165, Color.Black);
             CharactersNumbers.BackColor = Color.FromArgb(165, Color.Black);
 
             //Character name labels
-            for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() + 1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterNamePannelLabel1.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel1.Text = character.CharacterName;
                         break;
                     case 2:
-                        CharacterNamePannelLabel2.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel2.Text = character.CharacterName;
                         break;
                     case 3:
-                        CharacterNamePannelLabel3.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel3.Text = character.CharacterName;
                         break;
                     case 4:
-                        CharacterNamePannelLabel4.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel4.Text = character.CharacterName;
                         break;
                     case 5:
-                        CharacterNamePannelLabel5.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel5.Text = character.CharacterName;
                         break;
                 }
             }
@@ -87,151 +66,382 @@ namespace FANTASY4YOU
 
             //Character Level Label
 
-            for (int i = 0; i < logic.NumberOfCharactersCreated() +1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() +1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterLevelPannelLabel1.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel1.Text = character.CharacterLevel.ToString();
                         break;
                     case 2:
-                        CharacterLevelPannelLabel2.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel2.Text = character.CharacterLevel.ToString();
                         break;
                     case 3:
-                        CharacterLevelPannelLabel3.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel3.Text = character.CharacterLevel.ToString();
                         break;
                     case 4:
-                        CharacterLevelPannelLabel4.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel4.Text = character.CharacterLevel.ToString();
                         break;
                     case 5:
-                        CharacterLevelPannelLabel5.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel5.Text = character.CharacterLevel.ToString();
                         break;
                 }
             }
 
             //Character Race Label
-            for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() + 1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterRacePannelLabel1.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel1.Text = character.CharacterRace;
                         break;
                     case 2:
-                        CharacterRacePannelLabel2.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel2.Text = character.CharacterRace;
                         break;
                     case 3:
-                        CharacterRacePannelLabel3.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel3.Text = character.CharacterRace;
                         break;
                     case 4:
-                        CharacterRacePannelLabel4.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel4.Text = character.CharacterRace;
                         break;
                     case 5:
-                        CharacterRacePannelLabel5.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel5.Text = character.CharacterRace;
                         break;
                 }
             }
 
 
-            switch (logic.NumberOfCharactersCreated())
+            switch (connection.NumberOfCharactersCreated())
             {
                 case 0:
-                    CharacterPannel1.Visible = false;
-                    CharacterPannel2.Visible = false;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackground0Panel);
+                    CharacterNameNameLabel1.Visible = false;
+                    CharacterLevelLevelLabel1.Visible = false;
+                    CharacterRaceRaceLabel1.Visible = false;
+                    CharacterRacePicBoxLabel1.Visible = false;
+                    CharacterLevelPicBoxLabel1.Visible = false;
+                    CharacterNamePicBoxLabel1.Visible = false;
+                    OpenCharacterDisplay1.Visible = false;
+                    CharacterCustomizationButton1.Visible = false;
 
-                    CharacterNamePannelLabel1.Visible = false;
-                    CharacterNamePannelLabel2.Visible = false;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = false;
+                    CharacterLevelLevelLabel2.Visible = false;
+                    CharacterRaceRaceLabel2.Visible = false;
+                    CharacterRacePicBoxLabel2.Visible = false;
+                    CharacterLevelPicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    OpenCharacterDisplay2.Visible = false;
+                    CharacterCustomizationButton2.Visible = false;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 1:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = false;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound1Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = false;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = false;
+                    CharacterLevelLevelLabel2.Visible = false;
+                    CharacterRaceRaceLabel2.Visible = false;
+                    CharacterRacePicBoxLabel2.Visible = false;
+                    CharacterLevelPicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    OpenCharacterDisplay2.Visible = false;
+                    CharacterCustomizationButton2.Visible = false;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 2:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound2Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 3:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound3Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
-                    break ;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    break;
                 case 4:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = true;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound4Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = true;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = true;
+                    CharacterLevelLevelLabel4.Visible = true;
+                    CharacterRaceRaceLabel4.Visible = true;
+                    CharacterRacePicBoxLabel4.Visible = true;
+                    CharacterLevelPicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    OpenCharacterDisplay4.Visible = true;
+                    CharacterCustomizationButton4.Visible = true;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 5:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = true;
-                    CharacterPannel5.Visible = true;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound5Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = true;
-                    CharacterNamePannelLabel5.Visible = true;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = true;
+                    CharacterLevelLevelLabel4.Visible = true;
+                    CharacterRaceRaceLabel4.Visible = true;
+                    CharacterRacePicBoxLabel4.Visible = true;
+                    CharacterLevelPicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    OpenCharacterDisplay4.Visible = true;
+                    CharacterCustomizationButton4.Visible = true;
+
+                    CharacterNameNameLabel5.Visible = true;
+                    CharacterLevelLevelLabel5.Visible = true;
+                    CharacterRaceRaceLabel5.Visible = true;
+                    CharacterRacePicBoxLabel5.Visible = true;
+                    CharacterLevelPicBoxLabel5.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = true;
+                    OpenCharacterDisplay5.Visible = true;
+                    CharacterCustomizationButton5.Visible = true;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = true;
                     break;
 
-                    
+
             }
-            
-        }
-
-        private void timer1_Tick(object? sender, EventArgs e)
-        {
-            Form1_Load(sender, EventArgs.Empty);
-        }
-
-        private void NumberOfCharactersLabel_Click(object sender, EventArgs e)
-        {
 
         }
+
 
         private void CreateCharacterButton_Click(object sender, EventArgs e)
         {
@@ -246,35 +456,30 @@ namespace FANTASY4YOU
             Application.Run(new CharacterRegistration());
         }
 
-        private void CharactersNumbers_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             RefreshButton.Enabled = false;
             
-            for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() + 1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterNamePannelLabel1.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel1.Text = character.CharacterName;
                         break;
                     case 2:
-                        CharacterNamePannelLabel2.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel2.Text = character.CharacterName;
                         break;
                     case 3:
-                        CharacterNamePannelLabel3.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel3.Text = character.CharacterName;
                         break;
                     case 4:
-                        CharacterNamePannelLabel4.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel4.Text = character.CharacterName;
                         break;
                     case 5:
-                        CharacterNamePannelLabel5.Text = character.CharacterName;
+                        CharacterNamePicBoxLabel5.Text = character.CharacterName;
                         break;
                 }
             }
@@ -282,148 +487,383 @@ namespace FANTASY4YOU
 
             //Character Level Label
 
-            for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() + 1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterLevelPannelLabel1.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel1.Text = character.CharacterLevel.ToString();
                         break;
                     case 2:
-                        CharacterLevelPannelLabel2.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel2.Text = character.CharacterLevel.ToString();
                         break;
                     case 3:
-                        CharacterLevelPannelLabel3.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel3.Text = character.CharacterLevel.ToString();
                         break;
                     case 4:
-                        CharacterLevelPannelLabel4.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel4.Text = character.CharacterLevel.ToString();
                         break;
                     case 5:
-                        CharacterLevelPannelLabel5.Text = character.CharacterLevel.ToString();
+                        CharacterLevelPicBoxLabel5.Text = character.CharacterLevel.ToString();
                         break;
                 }
             }
 
             //Character Race Label
-            for (int i = 0; i < logic.NumberOfCharactersCreated() + 1; i++)
+            for (int i = 0; i < connection.NumberOfCharactersCreated() + 1; i++)
             {
-                Character character = logic.SelectCharInfo(i);
+                Character character = connection.SelectCharInfo(i);
 
                 switch (i)
                 {
                     case 1:
-                        CharacterRacePannelLabel1.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel1.Text = character.CharacterRace;
                         break;
                     case 2:
-                        CharacterRacePannelLabel2.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel2.Text = character.CharacterRace;
                         break;
                     case 3:
-                        CharacterRacePannelLabel3.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel3.Text = character.CharacterRace;
                         break;
                     case 4:
-                        CharacterRacePannelLabel4.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel4.Text = character.CharacterRace;
                         break;
                     case 5:
-                        CharacterRacePannelLabel5.Text = character.CharacterRace;
+                        CharacterRacePicBoxLabel5.Text = character.CharacterRace;
                         break;
                 }
             }
 
-            switch (logic.NumberOfCharactersCreated())
+            switch (connection.NumberOfCharactersCreated())
             {
                 case 0:
-                    CharacterPannel1.Visible = false;
-                    CharacterPannel2.Visible = false;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackground0Panel);
+                    CharacterNameNameLabel1.Visible = false;
+                    CharacterLevelLevelLabel1.Visible = false;
+                    CharacterRaceRaceLabel1.Visible = false;
+                    CharacterRacePicBoxLabel1.Visible = false;
+                    CharacterLevelPicBoxLabel1.Visible = false;
+                    CharacterNamePicBoxLabel1.Visible = false;
+                    OpenCharacterDisplay1.Visible = false;
+                    CharacterCustomizationButton1.Visible = false;
 
-                    CharacterNamePannelLabel1.Visible = false;
-                    CharacterNamePannelLabel2.Visible = false;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = false;
+                    CharacterLevelLevelLabel2.Visible = false;
+                    CharacterRaceRaceLabel2.Visible = false;
+                    CharacterRacePicBoxLabel2.Visible = false;
+                    CharacterLevelPicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    OpenCharacterDisplay2.Visible = false;
+                    CharacterCustomizationButton2.Visible = false;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 1:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = false;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound1Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = false;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = false;
+                    CharacterLevelLevelLabel2.Visible = false;
+                    CharacterRaceRaceLabel2.Visible = false;
+                    CharacterRacePicBoxLabel2.Visible = false;
+                    CharacterLevelPicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    OpenCharacterDisplay2.Visible = false;
+                    CharacterCustomizationButton2.Visible = false;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 2:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = false;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound2Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = false;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = false;
+                    CharacterLevelLevelLabel3.Visible = false;
+                    CharacterRaceRaceLabel3.Visible = false;
+                    CharacterRacePicBoxLabel3.Visible = false;
+                    CharacterLevelPicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    OpenCharacterDisplay3.Visible = false;
+                    CharacterCustomizationButton3.Visible = false;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 3:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = false;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound3Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = false;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = false;
+                    CharacterLevelLevelLabel4.Visible = false;
+                    CharacterRaceRaceLabel4.Visible = false;
+                    CharacterRacePicBoxLabel4.Visible = false;
+                    CharacterLevelPicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    OpenCharacterDisplay4.Visible = false;
+                    CharacterCustomizationButton4.Visible = false;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 4:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = true;
-                    CharacterPannel5.Visible = false;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound4Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = true;
-                    CharacterNamePannelLabel5.Visible = false;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = true;
+                    CharacterLevelLevelLabel4.Visible = true;
+                    CharacterRaceRaceLabel4.Visible = true;
+                    CharacterRacePicBoxLabel4.Visible = true;
+                    CharacterLevelPicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    OpenCharacterDisplay4.Visible = true;
+                    CharacterCustomizationButton4.Visible = true;
+
+                    CharacterNameNameLabel5.Visible = false;
+                    CharacterLevelLevelLabel5.Visible = false;
+                    CharacterRaceRaceLabel5.Visible = false;
+                    CharacterRacePicBoxLabel5.Visible = false;
+                    CharacterLevelPicBoxLabel5.Visible = false;
+                    CharacterNamePicBoxLabel5.Visible = false;
+                    OpenCharacterDisplay5.Visible = false;
+                    CharacterCustomizationButton5.Visible = false;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = false;
                     break;
                 case 5:
-                    CharacterPannel1.Visible = true;
-                    CharacterPannel2.Visible = true;
-                    CharacterPannel3.Visible = true;
-                    CharacterPannel4.Visible = true;
-                    CharacterPannel5.Visible = true;
+                    this.BackgroundImage = new Bitmap(Properties.Resources.CharactersBackgroound5Panel);
+                    CharacterNameNameLabel1.Visible = true;
+                    CharacterLevelLevelLabel1.Visible = true;
+                    CharacterRaceRaceLabel1.Visible = true;
+                    CharacterRacePicBoxLabel1.Visible = true;
+                    CharacterLevelPicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    OpenCharacterDisplay1.Visible = true;
+                    CharacterCustomizationButton1.Visible = true;
 
-                    CharacterNamePannelLabel1.Visible = true;
-                    CharacterNamePannelLabel2.Visible = true;
-                    CharacterNamePannelLabel3.Visible = true;
-                    CharacterNamePannelLabel4.Visible = true;
-                    CharacterNamePannelLabel5.Visible = true;
+                    CharacterNameNameLabel2.Visible = true;
+                    CharacterLevelLevelLabel2.Visible = true;
+                    CharacterRaceRaceLabel2.Visible = true;
+                    CharacterRacePicBoxLabel2.Visible = true;
+                    CharacterLevelPicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    OpenCharacterDisplay2.Visible = true;
+                    CharacterCustomizationButton2.Visible = true;
+
+                    CharacterNameNameLabel3.Visible = true;
+                    CharacterLevelLevelLabel3.Visible = true;
+                    CharacterRaceRaceLabel3.Visible = true;
+                    CharacterRacePicBoxLabel3.Visible = true;
+                    CharacterLevelPicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    OpenCharacterDisplay3.Visible = true;
+                    CharacterCustomizationButton3.Visible = true;
+
+                    CharacterNameNameLabel4.Visible = true;
+                    CharacterLevelLevelLabel4.Visible = true;
+                    CharacterRaceRaceLabel4.Visible = true;
+                    CharacterRacePicBoxLabel4.Visible = true;
+                    CharacterLevelPicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    OpenCharacterDisplay4.Visible = true;
+                    CharacterCustomizationButton4.Visible = true;
+
+                    CharacterNameNameLabel5.Visible = true;
+                    CharacterLevelLevelLabel5.Visible = true;
+                    CharacterRaceRaceLabel5.Visible = true;
+                    CharacterRacePicBoxLabel5.Visible = true;
+                    CharacterLevelPicBoxLabel5.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = true;
+                    OpenCharacterDisplay5.Visible = true;
+                    CharacterCustomizationButton5.Visible = true;
+
+                    CharacterNamePicBoxLabel1.Visible = true;
+                    CharacterNamePicBoxLabel2.Visible = true;
+                    CharacterNamePicBoxLabel3.Visible = true;
+                    CharacterNamePicBoxLabel4.Visible = true;
+                    CharacterNamePicBoxLabel5.Visible = true;
                     break;
 
 
             }
-            CharactersNumbers.Text = logic.NumberOfCharactersCreated().ToString();
+            CharactersNumbers.Text = connection.NumberOfCharactersCreated().ToString();
 
             RefreshButton.Enabled = true;
         }
         
-
-        private void CharacterPannel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void CharacterCustomizationButton1_Click(object sender, EventArgs e)
         {
@@ -501,32 +941,9 @@ namespace FANTASY4YOU
             characterDisplayer = new CharacterDisplayer();
             characterDisplayer.ShowDialog();
         }
-
-        private void CharacterNamePannelLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void CloseFormButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void HelperPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
