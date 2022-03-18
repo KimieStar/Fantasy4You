@@ -16,12 +16,8 @@ namespace FANTASY4YOU
     public partial class CharacterCustomizationChar : Form
     {
         LogicController logic = new LogicController();
+        DatabaseController connection = new DatabaseController();
         public int characterNumberSelectedToCustomize;
-        //Characters characters = new Characters();
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         public CharacterCustomizationChar()
         {
@@ -49,14 +45,12 @@ namespace FANTASY4YOU
         }
         private void CharacterCustomization_Load(object sender, EventArgs e)
         {
-            WindowTopBar.BackColor = Color.FromArgb(190, Color.Black);
-            HelperPanel.BackColor = Color.FromArgb(190, Color.Black);
             CharNamePannel.BackColor  = Color.FromArgb(165, Color.Black);
             StrenghtPanel.BackColor = Color.FromArgb(165, Color.Black);
             BackgroundPannel.BackColor= Color.FromArgb(165,Color.Black);
-            CharNamePannel.Location = new Point(0, 28);
+            CharNamePannel.Location = new Point(0,0);
             int charNum = User.CharSelected;
-            Character character = logic.SelectCharInfo(charNum);
+            Character character = connection.SelectCharInfo(charNum);
             CharacterNameCustomizeTextbox.Text = character.CharacterName;
             CharacterClassCustomizeTextbox.Text = character.CharacterClass;
             CharacterLevelCustomizeTextbox.Text = character.CharacterLevel.ToString();
@@ -101,7 +95,7 @@ namespace FANTASY4YOU
             }
             else
             {
-                logic.UpdateCharacterDetails(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
+                connection.UpdateCharacterDetails(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
                 Int32.Parse(CharacterDexterityTextbox.Text), Int32.Parse(CharacterConstitutionTextbox.Text),
                 Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text)); ;
                 MessageBox.Show("Success!");
@@ -112,10 +106,22 @@ namespace FANTASY4YOU
 
         private void MoreCustomizationsToBackground_Click(object sender, EventArgs e)
         {
-            StrenghtPanel.Visible = false;
-            
-            BackgroundPannel.Location = new Point(0, 28);
-            BackgroundPannel.Visible = true;
+            if (CharacterStrenghtTextbox.Text == "" || CharacterDexterityTextbox.Text == "" || CharacterConstitutionTextbox.Text == "" || CharacterIntelligenceTextbox.Text == "" || CharacterWisdomTextbox.Text == "" || CharacterCharismaTextbox.Text == "")
+            {
+                MessageBox.Show("Do not leave empty spaces");
+            }
+            else if (logic.CheckIfInfoHasBeenSaved2(User.CharSelected, Int32.Parse(CharacterStrenghtTextbox.Text),
+                Int32.Parse(CharacterDexterityTextbox.Text), Int32.Parse(CharacterConstitutionTextbox.Text),
+                Int32.Parse(CharacterIntelligenceTextbox.Text), Int32.Parse(CharacterWisdomTextbox.Text), Int32.Parse(CharacterCharismaTextbox.Text)) == true)
+                {
+                    StrenghtPanel.Visible = false;
+                    BackgroundPannel.Location = new Point(0, 0);
+                    BackgroundPannel.Visible = true;
+                }
+            else
+            {
+                MessageBox.Show("You have not saved your info!");
+            }
             
         }
 
@@ -124,6 +130,10 @@ namespace FANTASY4YOU
             if (!Regex.IsMatch(CharacterNameCustomizeTextbox.Text, @"^[a-zA-Z]+$"))
             {
                 MessageBox.Show("Character name can be only letters");
+            }
+            else if (CharacterNameCustomizeTextbox.TextLength > 20)
+            {
+                MessageBox.Show("Username can be only 20 letters!");
             }
             else if (!Regex.IsMatch(CharacterLevelCustomizeTextbox.Text, @"^\d+$"))
             {
@@ -139,7 +149,7 @@ namespace FANTASY4YOU
             }
             else
             {
-                logic.UpdateCharacterDetails2(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
+                connection.UpdateCharacterDetails2(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
                 Int32.Parse(CharacterLevelCustomizeTextbox.Text), CharacterRaceCustomizeCombobox.Text,
                 Int32.Parse(CharacterXpCustomizeTextBox.Text), CharacterAlignmentCustomizeCombobox.Text);
                 MessageBox.Show("Success!");
@@ -149,70 +159,49 @@ namespace FANTASY4YOU
 
         private void MoreCustomizationsToCharName_Click(object sender, EventArgs e)
         {
-            BackgroundPannel.Visible = false;
+            if (CharacterBackgroundCustomizeTextbox.Text == "")
+            {
+                MessageBox.Show("Do not leave empty spaces");
+            }
+            else if (logic.CheckIfInfoHasBeenSaved3(User.CharSelected, CharacterBackgroundCustomizeTextbox.Text) == true)
+            {
+                BackgroundPannel.Visible = false;
+                CharNamePannel.Location = new Point(0, 0);
+                CharNamePannel.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("You have not saved your info!");
+            }
 
-            CharNamePannel.Location = new Point(0, 28);
-            CharNamePannel.Visible = true;
             
         }
 
         private void CharacterBackgroundCustomizeButton_Click(object sender, EventArgs e)
         {
-            logic.UpdateCharacterDetails3(User.CharSelected, CharacterBackgroundCustomizeTextbox.Text);
+            connection.UpdateCharacterDetails3(User.CharSelected, CharacterBackgroundCustomizeTextbox.Text);
             MessageBox.Show("Success!");
         }
 
         private void MoreCustomizationsToSrenght_Click(object sender, EventArgs e)
         {
-            CharNamePannel.Visible = false;
-            StrenghtPanel.Location = new Point(0, 28);
-            StrenghtPanel.Visible = true;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CharacterConstitutionConstitutionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void HelperPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void CharacterBackgroundCustomizeTextbox_TextChanged(object sender, EventArgs e)
-        {
-
+            if (CharacterNameCustomizeTextbox.Text == "" || CharacterClassCustomizeTextbox.Text == "" || CharacterLevelCustomizeTextbox.Text == "" || CharacterRaceCustomizeCombobox.Text == "" || CharacterXpCustomizeTextBox.Text == "" || CharacterAlignmentCustomizeCombobox.Text == "")
+            {
+                MessageBox.Show("Do not leave empty spaces");
+            }
+           else if (logic.CheckIfInfoHasBeenSaved1(User.CharSelected, CharacterNameCustomizeTextbox.Text, CharacterClassCustomizeTextbox.Text,
+                Int32.Parse(CharacterLevelCustomizeTextbox.Text), CharacterRaceCustomizeCombobox.Text,
+                Int32.Parse(CharacterXpCustomizeTextBox.Text), CharacterAlignmentCustomizeCombobox.Text) == true)
+            {
+                CharNamePannel.Visible = false;
+                StrenghtPanel.Location = new Point(0, 0);
+                StrenghtPanel.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("You have not saved your info!");
+            }
+            
         }
     }
 }

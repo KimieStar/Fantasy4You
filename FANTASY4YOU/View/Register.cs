@@ -14,11 +14,7 @@ namespace FANTASY4YOU
     {
 
         LogicController logic = new LogicController();
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        bool check;
+        DatabaseController connection = new DatabaseController();
 
 
         public Register()
@@ -26,31 +22,18 @@ namespace FANTASY4YOU
             InitializeComponent();
         }
 
-        int originalExStyle = -1;
-        bool enableFormLevelDoubleBuffering = true;
-
         protected override CreateParams CreateParams
         {
             get
             {
-                if (originalExStyle == -1)
-                    originalExStyle = base.CreateParams.ExStyle;
-
-                CreateParams cp = base.CreateParams;
-                if (enableFormLevelDoubleBuffering)
-                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
-                else
-                    cp.ExStyle = originalExStyle;
-
-                return cp;
+                var parms = base.CreateParams;
+                parms.Style &= ~0x02000000;  // Turn off WS_CLIPCHILDREN
+                return parms;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            RegisterPanel.BackColor = Color.FromArgb(125, Color.Black);
-            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
-            HelperPanel.BackColor = Color.FromArgb(165, Color.Black);
         }
 
         
@@ -59,7 +42,7 @@ namespace FANTASY4YOU
             string usr = UsernameTextBox.Text;
             string pwd = PasswordTextBox.Text;
             string email = EmailTextBox.Text;
-            bool usernameCheck = logic.CheckIfUsernameExists(usr);
+            bool usernameCheck = connection.CheckIfUsernameExists(usr);
 
 
 
@@ -75,6 +58,14 @@ namespace FANTASY4YOU
                 {
                     MessageBox.Show("Username can be only Letters");
                 }
+                else if (usr.Length > 20)
+                {
+                    MessageBox.Show("Username can be only 20 letters long!");
+                }
+                else if (pwd.Length < 5)
+                {
+                    MessageBox.Show("Your password is too short");
+                }
                 else if (usernameCheck == false)
                 {
                     if (RememberMeCheckBox.Checked == true)
@@ -87,7 +78,7 @@ namespace FANTASY4YOU
                     }
 
                     
-                    logic.InsertUsernameAndPasswordIntoDB(usr, pwd, email);
+                    connection.InsertUsernameAndPasswordIntoDB(usr, pwd, email);
                     MessageBox.Show("Registration Complete!");
                     this.Close();
 
@@ -103,11 +94,6 @@ namespace FANTASY4YOU
             }
         }
 
-        private void RememberMeCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ShowPasswordButton_Click(object sender, EventArgs e)
         {
             PasswordTextBox.UseSystemPasswordChar = false;
@@ -120,22 +106,6 @@ namespace FANTASY4YOU
             PasswordTextBox.UseSystemPasswordChar = true;
             ShowPasswordButton.Visible = true;
             HidePasswordButton.Visible = false;
-        }
-
-        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void HelperPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
     }

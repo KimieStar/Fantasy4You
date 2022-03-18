@@ -14,86 +14,10 @@ namespace FANTASY4YOU
     {
         DatabaseController connection = new DatabaseController();
         FileNames_And_Paths importantInfo = new FileNames_And_Paths();
-
-        //Has NunitTest
-        public int SelectUserId()
-        {
-            string username = User.Username;
-            int id= connection.SelectUserIdFromDB(username);
-            return id;
-
-        }
-
-        //Cannot be tested
-        public void InsertCharacterDetails(string characterName, string classs, int level, string race, string backgroundStory, int xpPoints, string alignment)
-        {
-            int numberOfCharacter = NumberOfCharactersCreated();
-            int characterNumber = 0;
-            switch (numberOfCharacter)
-            {
-                case 0:
-                    characterNumber = 1;
-                    break;
-                case 1:
-                    characterNumber = 2;
-                    break;
-                case 2:
-                    characterNumber = 3;
-                    break;
-                case 3:
-                    characterNumber = 4;
-                    break;
-                case 4:
-                    characterNumber = 5;
-                    break;
-                //case 5:
-                //    characterNumber = 5;
-                //    break;
-            }
-
-            string username = User.Username;
-            connection.InsertCharacterDetails(username, characterName, classs, level, race, backgroundStory, xpPoints, alignment, characterNumber);
-        }
-
-        public void UpdateCharacterDetails(int chNumber, int strenght, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
-        {
-            int id = SelectUserId();
-            connection.UpdateCharacterDetails(chNumber, id, strenght, dexterity, constitution, intelligence, wisdom, charisma);
-        }
-
-        public void UpdateCharacterDetails2(int chNumber, string chName, string classs, int level, string race, int xp, string alignment)
-        {
-            int id = SelectUserId();
-            connection.UpdateCharacterDetails2(chNumber, id, chName, classs, level, race, xp, alignment);
-        }
-
-        public void UpdateCharacterDetails3(int chNumber,string background)
-        {
-            int id = SelectUserId();
-            connection.UpdateCharacterDetails3(chNumber, id, background);
-        }
-
-        //Cannot be tested
-        public void SavePassword(string password)
-        {
-            string path = importantInfo.Path;
-            string fileName = importantInfo.fileName;
-            var roaming = importantInfo.roamingpath;
-            var newdir = (roaming + path);
-            Directory.CreateDirectory(newdir);
-            var newfilepath = Path.Combine(newdir, fileName);
-            var filename1 = File.Create(newfilepath);
-            var sw = new StreamWriter(filename1);
-            sw.WriteLine(password);
-            sw.Close();
-        }
-        public Character SelectCharInfo(int characterNumber)
-        {
-            string username = User.Username;
-            Character character = connection.SelectCharInfo(username,characterNumber);
-            return character;
-        }
-        //Cannot be tested
+        
+        /// <summary>
+        /// Saving the user credentials to a local file.
+        /// </summary>
         public void SaveCredentialsToFile(string username,string password)
         {
             string path = importantInfo.Path;
@@ -125,41 +49,9 @@ namespace FANTASY4YOU
             
         }
 
-        //Has NunitTest
-        public int NumberOfCharactersCreated()
-       {
-           int id = SelectUserId();
-           int numbersOfCharacters;
-           numbersOfCharacters = connection.NumberOfCharactersCreated(id);
-           return numbersOfCharacters;
-       }
-
-        //Has NunitTest
-        public string ReadUsernameFromUsernameFile()
-        {
-            string username = null;
-            string path = importantInfo.Path;
-            string fileName = importantInfo.UsernameFilename;
-            var roamingDirectory = importantInfo.roamingpath;
-            var newDirPath = (roamingDirectory + path);
-            Directory.CreateDirectory(newDirPath);
-            var newFilePath = Path.Combine(newDirPath, fileName);
-            var sr = new StreamReader(newFilePath);
-            
-            try
-            {
-                string line = sr.ReadLine();
-                username = line;
-                sr.Close();
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return username;
-        }
-
-        //Has NunitTest
+        /// <summary>
+        /// Reading username from local file.
+        /// </summary>
         public string ReadUsernameFromCredentialsFile()
         {
             string username = null;
@@ -181,7 +73,9 @@ namespace FANTASY4YOU
             return username;
         }
 
-        //Has NunitTest
+        /// <summary>
+        /// Reading password from local file.
+        /// </summary>
         public string ReadPasswordFromCredentialsFile()
         {
             string password = null;
@@ -208,18 +102,22 @@ namespace FANTASY4YOU
 
         }
 
-        //Cannot be tested
-        public void DeleteSavedCredentialsFiles()
+        /// <summary>
+        /// Deleting local file with credentials.
+        /// </summary>
+        public void DeleteSavedCredentialsFile()
         {
            
             var credentialPath = (importantInfo.crdPath);
             var usernamePath = (importantInfo.uidPath);
 
             File.Delete(credentialPath);
-            File.Delete(usernamePath);
         }
 
-        //Cannot be tested
+        /// <summary>
+        /// Checking if a local file with credentials exist.
+        /// </summary>
+        /// <returns></returns>
         public bool CheckIfCredentialsFileExist()
         {
             if (File.Exists(importantInfo.crdPath))
@@ -232,49 +130,53 @@ namespace FANTASY4YOU
             }
         }
 
-        //Cannot be tested
-        public void InsertUsernameAndPasswordIntoDB(string username,string password, string email)
+        /// <summary>
+        /// Checking wether the user has saved the information for their character before moving on
+        /// </summary>
+        public bool CheckIfInfoHasBeenSaved1(int charNum,string characterName,string classs, int level,string race,int xp,string alignment)
         {
-            connection.InsertUsernameAndPasswordIntoDB(username,password, email);
-        }
-
-        //Has NunitTest
-        public bool CheckIfUsernameExists(string username)
-        {
-            bool check = connection.CheckIfUsernameExists(username);
-            return check;
-        }
-
-        //Has NunitTest
-        public bool CheckCharacterNameExistForUser(string characterName)
-        {
-            string username = User.Username;
-            int id = connection.SelectUserIdFromDB(username);
-            bool check = connection.CheckCharacterNameExistForUser(characterName, id);
-            return check;
-        }
-
-        //Has NunitTest
-        public bool CheckUserCredentials(string username, string password)
-        {
-            bool checkCred = connection.CheckUserCredentials(username, password);
-            return checkCred;
-            
-        }
-
-        public bool CheckIfTextBoxOnlyNumbers(string textBoxText)
-        {
-            bool chk = false;
-
-            if (Int32.TryParse(textBoxText, out int value))
+            Character character = connection.SelectCharInfo(charNum);
+            if (characterName == character.CharacterName && classs == character.CharacterClass && level == character.CharacterLevel && race == character.CharacterRace && xp == character.CharacterXp && alignment == character.CharacterAlignment)
             {
-                chk = true;
+                return true;
             }
             else
             {
-                chk = false;
+                return false;
             }
-            return chk;
         }
+
+        /// <summary>
+        /// Checking wether the user has saved the information for their character before moving on
+        /// </summary>
+        public bool CheckIfInfoHasBeenSaved2(int charNum, int strenght, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        {
+            Character character = connection.SelectCharInfo(charNum);
+            if (strenght == character.CharacterStrenght && dexterity == character.CharacterDexterity && constitution == character.CharacterConstitution && intelligence == character.CharacterIntelligence && wisdom == character.CharacterWisdom && charisma == character.CharacterCharisma)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Checking wether the user has saved the information for their character before moving on
+        /// </summary>
+        public bool CheckIfInfoHasBeenSaved3(int charNum, string background)
+        {
+            Character character = connection.SelectCharInfo(charNum);
+            if (background == character.CharacterBackgroundStory)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

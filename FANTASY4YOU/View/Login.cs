@@ -15,43 +15,25 @@ namespace FANTASY4YOU
     {
 
         LogicController logic = new LogicController();
-        // LoginSettings LoginSettings = new LoginSettings();
         LoginSettings LoginSettings = new LoginSettings();
         DatabaseController connection = new DatabaseController();
         Thread Register;
         Thread MainInterface;
         Thread Welcome;
         bool checkCredentialsExist;
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-
-
-        public Login()
-        {
-            InitializeComponent();
-        }
-
-        int originalExStyle = -1;
-        bool enableFormLevelDoubleBuffering = true;
-
         protected override CreateParams CreateParams
         {
             get
             {
-                if (originalExStyle == -1)
-                    originalExStyle = base.CreateParams.ExStyle;
-
-                CreateParams cp = base.CreateParams;
-                if (enableFormLevelDoubleBuffering)
-                    cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
-                else
-                    cp.ExStyle = originalExStyle;
-
-                return cp;
+                var parms = base.CreateParams;
+                parms.Style &= ~0x02000000;  // Turn off WS_CLIPCHILDREN
+                return parms;
             }
+        }
+
+        public Login()
+        {
+            InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,10 +53,6 @@ namespace FANTASY4YOU
                 UsernameTextbox.Text = null;
                 PasswordTextbox.Text = null;
             }
-
-           
-            LoginPanel.BackColor = Color.FromArgb(125, Color.Black);
-            WindowTopBar.BackColor = Color.FromArgb(165, Color.Black);
 
 
         }
@@ -115,7 +93,7 @@ namespace FANTASY4YOU
             {
                 
                 PleaseWaitLabel.Visible = true;
-                if (logic.CheckUserCredentials(usr, pwd) == true)
+                if (connection.CheckUserCredentials(usr, pwd) == true)
                 {
 
                     if (checkBox1.Checked == true)
@@ -163,11 +141,6 @@ namespace FANTASY4YOU
         {
             Application.Run(new WelcomeScreen());
         }
-        
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void DontHaveAnAccountLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -203,23 +176,6 @@ namespace FANTASY4YOU
         private void LoginSettingsButton_Click(object sender, EventArgs e)
         {
             LoginSettings.ShowDialog();
-        }
-        private void WindowTopBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void CloseFormButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void MinimizeForm_Click(object sender, EventArgs e)
-        {
-            
-            this.WindowState = FormWindowState.Minimized;
-
         }
 
         
