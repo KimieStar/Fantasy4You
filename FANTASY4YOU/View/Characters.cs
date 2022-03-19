@@ -32,7 +32,7 @@ namespace FANTASY4YOU
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Characters_Load(object sender, EventArgs e)
         {
             CharactersNumbers.Text = connection.NumberOfCharactersCreated().ToString();
             NumberOfCharactersLabel.BackColor = Color.FromArgb(165, Color.Black);

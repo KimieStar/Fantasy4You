@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccount));
-            this.label1 = new System.Windows.Forms.Label();
+            this.AccountLabel = new System.Windows.Forms.Label();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NumberOfcharacters = new System.Windows.Forms.Label();
@@ -40,17 +40,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // AccountLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Old London", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label1.Location = new System.Drawing.Point(247, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 60);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account";
+            this.AccountLabel.AutoSize = true;
+            this.AccountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AccountLabel.Font = new System.Drawing.Font("Old London", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AccountLabel.ForeColor = System.Drawing.Color.BurlyWood;
+            this.AccountLabel.Location = new System.Drawing.Point(247, 9);
+            this.AccountLabel.Name = "AccountLabel";
+            this.AccountLabel.Size = new System.Drawing.Size(170, 60);
+            this.AccountLabel.TabIndex = 0;
+            this.AccountLabel.Text = "Account";
             // 
             // UsernameLabel
             // 
@@ -172,10 +172,11 @@
             this.Controls.Add(this.NumberOfcharacters);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AccountLabel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserAccount";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
             this.Load += new System.EventHandler(this.UserAccount_Load);
@@ -187,7 +188,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label AccountLabel;
         private Label UsernameLabel;
         private PictureBox pictureBox1;
         private Label NumberOfcharacters;

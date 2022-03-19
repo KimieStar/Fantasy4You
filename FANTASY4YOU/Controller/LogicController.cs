@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FANTASY4YOU;
-
+using System.Net;
+using System.Net.Mail;
+using System.Data;
 
 namespace FANTASY4YOU
     
@@ -177,6 +179,51 @@ namespace FANTASY4YOU
                 return false;
             }
         }
+
+        public void SendEmail(string userEmail, int code)
+        {
+            const string p = "s!3P3Hm6xACbTo#DcRP3c?5Ls5cXc8$Acm@QdN?J";
+
+            MailMessage message = new MailMessage();
+            SmtpClient smtp = new SmtpClient();
+
+            message.From = new MailAddress("fantasy4you.recovery@gmail.com");
+
+
+            message.To.Add(new MailAddress(userEmail));
+            message.Subject = "Password Recovery";
+            message.Body = "This is your recovery code :" +code;
+
+            smtp.Port = 587;
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential("fantasy4you.recovery@gmail.com", p);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Send(message);
+            
+
+        }
+
+       // public bool CheckIfEmailExists(string enterdEmail)
+       // {
+       //     DataTable dt = connection.SelectUserEmail();
+       //     bool chk = false;
+       //     foreach (DataRow dr in dt.Rows)
+       //     {
+       //         foreach (DataColumn dc in dt.Columns)
+       //         {
+       //             if (enterdEmail == dr[dc].ToString())
+       //             {
+       //                 chk = true;
+       //             }
+       //             else
+       //             {
+       //                 chk = false;
+       //             }
+       //         }
+       //     }
+       // }
 
     }
 }

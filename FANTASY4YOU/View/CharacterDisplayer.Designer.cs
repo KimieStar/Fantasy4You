@@ -30,45 +30,45 @@ namespace FANTASY4YOU
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharacterDisplayer));
-            this.chNumTest = new System.Windows.Forms.Label();
+            this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.CharacterName = new System.Windows.Forms.Label();
             this.CharacterClass = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.CharacterClassLabel = new System.Windows.Forms.Label();
             this.CharacterLevel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.CharacterLevelLabel = new System.Windows.Forms.Label();
             this.CharacterRace = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.CharacterRaceLabel = new System.Windows.Forms.Label();
             this.CharacterXp = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.CharacterXpLabel = new System.Windows.Forms.Label();
             this.CharacterWisdom = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.CharacterWisdomLabel = new System.Windows.Forms.Label();
             this.CharacterIntelligence = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.CharacterIntelligenceLabel = new System.Windows.Forms.Label();
             this.CharacterConstitution = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.CharacterConstitutionLabel = new System.Windows.Forms.Label();
             this.CharacterDexterity = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.CharacterDexterityLabel = new System.Windows.Forms.Label();
             this.CharacterStrenght = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.CharacterStrenghtLabel = new System.Windows.Forms.Label();
             this.CharacterCharisma = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.CharacterCharismaLabel = new System.Windows.Forms.Label();
             this.CharacterAlignment = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.CharacterAlignmentLabel = new System.Windows.Forms.Label();
+            this.CharacterBackgroundLabel = new System.Windows.Forms.Label();
             this.CharacterBackground = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // chNumTest
+            // CharacterNameLabel
             // 
-            this.chNumTest.AutoSize = true;
-            this.chNumTest.BackColor = System.Drawing.Color.Transparent;
-            this.chNumTest.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chNumTest.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.chNumTest.Location = new System.Drawing.Point(123, 22);
-            this.chNumTest.Name = "chNumTest";
-            this.chNumTest.Size = new System.Drawing.Size(169, 31);
-            this.chNumTest.TabIndex = 0;
-            this.chNumTest.Text = "Character name:";
+            this.CharacterNameLabel.AutoSize = true;
+            this.CharacterNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterNameLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterNameLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterNameLabel.Location = new System.Drawing.Point(123, 22);
+            this.CharacterNameLabel.Name = "CharacterNameLabel";
+            this.CharacterNameLabel.Size = new System.Drawing.Size(169, 31);
+            this.CharacterNameLabel.TabIndex = 0;
+            this.CharacterNameLabel.Text = "Character name:";
             // 
             // CharacterName
             // 
@@ -94,17 +94,17 @@ namespace FANTASY4YOU
             this.CharacterClass.TabIndex = 3;
             this.CharacterClass.Text = "class";
             // 
-            // label3
+            // CharacterClassLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label3.Location = new System.Drawing.Point(221, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Class:";
+            this.CharacterClassLabel.AutoSize = true;
+            this.CharacterClassLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterClassLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterClassLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterClassLabel.Location = new System.Drawing.Point(221, 60);
+            this.CharacterClassLabel.Name = "CharacterClassLabel";
+            this.CharacterClassLabel.Size = new System.Drawing.Size(75, 31);
+            this.CharacterClassLabel.TabIndex = 2;
+            this.CharacterClassLabel.Text = "Class:";
             // 
             // CharacterLevel
             // 
@@ -118,17 +118,17 @@ namespace FANTASY4YOU
             this.CharacterLevel.TabIndex = 5;
             this.CharacterLevel.Text = "0";
             // 
-            // label5
+            // CharacterLevelLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label5.Location = new System.Drawing.Point(221, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 31);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Level:";
+            this.CharacterLevelLabel.AutoSize = true;
+            this.CharacterLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterLevelLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterLevelLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterLevelLabel.Location = new System.Drawing.Point(221, 103);
+            this.CharacterLevelLabel.Name = "CharacterLevelLabel";
+            this.CharacterLevelLabel.Size = new System.Drawing.Size(71, 31);
+            this.CharacterLevelLabel.TabIndex = 4;
+            this.CharacterLevelLabel.Text = "Level:";
             // 
             // CharacterRace
             // 
@@ -142,17 +142,17 @@ namespace FANTASY4YOU
             this.CharacterRace.TabIndex = 7;
             this.CharacterRace.Text = "race";
             // 
-            // label7
+            // CharacterRaceLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label7.Location = new System.Drawing.Point(221, 143);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 31);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Race:";
+            this.CharacterRaceLabel.AutoSize = true;
+            this.CharacterRaceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterRaceLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterRaceLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterRaceLabel.Location = new System.Drawing.Point(221, 143);
+            this.CharacterRaceLabel.Name = "CharacterRaceLabel";
+            this.CharacterRaceLabel.Size = new System.Drawing.Size(66, 31);
+            this.CharacterRaceLabel.TabIndex = 6;
+            this.CharacterRaceLabel.Text = "Race:";
             // 
             // CharacterXp
             // 
@@ -166,17 +166,17 @@ namespace FANTASY4YOU
             this.CharacterXp.TabIndex = 9;
             this.CharacterXp.Text = "0";
             // 
-            // label9
+            // CharacterXpLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label9.Location = new System.Drawing.Point(241, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 31);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Xp:";
+            this.CharacterXpLabel.AutoSize = true;
+            this.CharacterXpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterXpLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterXpLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterXpLabel.Location = new System.Drawing.Point(241, 186);
+            this.CharacterXpLabel.Name = "CharacterXpLabel";
+            this.CharacterXpLabel.Size = new System.Drawing.Size(46, 31);
+            this.CharacterXpLabel.TabIndex = 8;
+            this.CharacterXpLabel.Text = "Xp:";
             // 
             // CharacterWisdom
             // 
@@ -190,17 +190,17 @@ namespace FANTASY4YOU
             this.CharacterWisdom.TabIndex = 19;
             this.CharacterWisdom.Text = "0";
             // 
-            // label11
+            // CharacterWisdomLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label11.Location = new System.Drawing.Point(483, 186);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 31);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Wisdom:";
+            this.CharacterWisdomLabel.AutoSize = true;
+            this.CharacterWisdomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterWisdomLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterWisdomLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterWisdomLabel.Location = new System.Drawing.Point(483, 186);
+            this.CharacterWisdomLabel.Name = "CharacterWisdomLabel";
+            this.CharacterWisdomLabel.Size = new System.Drawing.Size(104, 31);
+            this.CharacterWisdomLabel.TabIndex = 18;
+            this.CharacterWisdomLabel.Text = "Wisdom:";
             // 
             // CharacterIntelligence
             // 
@@ -214,17 +214,17 @@ namespace FANTASY4YOU
             this.CharacterIntelligence.TabIndex = 17;
             this.CharacterIntelligence.Text = "0";
             // 
-            // label13
+            // CharacterIntelligenceLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label13.Location = new System.Drawing.Point(457, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 31);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Intelligence:";
+            this.CharacterIntelligenceLabel.AutoSize = true;
+            this.CharacterIntelligenceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterIntelligenceLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterIntelligenceLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterIntelligenceLabel.Location = new System.Drawing.Point(457, 149);
+            this.CharacterIntelligenceLabel.Name = "CharacterIntelligenceLabel";
+            this.CharacterIntelligenceLabel.Size = new System.Drawing.Size(130, 31);
+            this.CharacterIntelligenceLabel.TabIndex = 16;
+            this.CharacterIntelligenceLabel.Text = "Intelligence:";
             // 
             // CharacterConstitution
             // 
@@ -238,17 +238,17 @@ namespace FANTASY4YOU
             this.CharacterConstitution.TabIndex = 15;
             this.CharacterConstitution.Text = "0";
             // 
-            // label15
+            // CharacterConstitutionLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label15.Location = new System.Drawing.Point(452, 106);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(135, 31);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Constitution:";
+            this.CharacterConstitutionLabel.AutoSize = true;
+            this.CharacterConstitutionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterConstitutionLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterConstitutionLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterConstitutionLabel.Location = new System.Drawing.Point(452, 106);
+            this.CharacterConstitutionLabel.Name = "CharacterConstitutionLabel";
+            this.CharacterConstitutionLabel.Size = new System.Drawing.Size(135, 31);
+            this.CharacterConstitutionLabel.TabIndex = 14;
+            this.CharacterConstitutionLabel.Text = "Constitution:";
             // 
             // CharacterDexterity
             // 
@@ -262,17 +262,17 @@ namespace FANTASY4YOU
             this.CharacterDexterity.TabIndex = 13;
             this.CharacterDexterity.Text = "0";
             // 
-            // label17
+            // CharacterDexterityLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label17.Location = new System.Drawing.Point(479, 63);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(108, 31);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Dexterity:";
+            this.CharacterDexterityLabel.AutoSize = true;
+            this.CharacterDexterityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterDexterityLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterDexterityLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterDexterityLabel.Location = new System.Drawing.Point(479, 63);
+            this.CharacterDexterityLabel.Name = "CharacterDexterityLabel";
+            this.CharacterDexterityLabel.Size = new System.Drawing.Size(108, 31);
+            this.CharacterDexterityLabel.TabIndex = 12;
+            this.CharacterDexterityLabel.Text = "Dexterity:";
             // 
             // CharacterStrenght
             // 
@@ -286,17 +286,17 @@ namespace FANTASY4YOU
             this.CharacterStrenght.TabIndex = 11;
             this.CharacterStrenght.Text = "0";
             // 
-            // label19
+            // CharacterStrenghtLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label19.Location = new System.Drawing.Point(482, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(105, 31);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Strenght:";
+            this.CharacterStrenghtLabel.AutoSize = true;
+            this.CharacterStrenghtLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterStrenghtLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterStrenghtLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterStrenghtLabel.Location = new System.Drawing.Point(482, 22);
+            this.CharacterStrenghtLabel.Name = "CharacterStrenghtLabel";
+            this.CharacterStrenghtLabel.Size = new System.Drawing.Size(105, 31);
+            this.CharacterStrenghtLabel.TabIndex = 10;
+            this.CharacterStrenghtLabel.Text = "Strenght:";
             // 
             // CharacterCharisma
             // 
@@ -310,17 +310,17 @@ namespace FANTASY4YOU
             this.CharacterCharisma.TabIndex = 23;
             this.CharacterCharisma.Text = "0";
             // 
-            // label21
+            // CharacterCharismaLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label21.Location = new System.Drawing.Point(475, 229);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 31);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "Charisma:";
+            this.CharacterCharismaLabel.AutoSize = true;
+            this.CharacterCharismaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterCharismaLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterCharismaLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterCharismaLabel.Location = new System.Drawing.Point(475, 229);
+            this.CharacterCharismaLabel.Name = "CharacterCharismaLabel";
+            this.CharacterCharismaLabel.Size = new System.Drawing.Size(112, 31);
+            this.CharacterCharismaLabel.TabIndex = 22;
+            this.CharacterCharismaLabel.Text = "Charisma:";
             // 
             // CharacterAlignment
             // 
@@ -334,29 +334,29 @@ namespace FANTASY4YOU
             this.CharacterAlignment.TabIndex = 21;
             this.CharacterAlignment.Text = "alignment";
             // 
-            // label23
+            // CharacterAlignmentLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label23.Location = new System.Drawing.Point(169, 230);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(118, 31);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Alignment:";
+            this.CharacterAlignmentLabel.AutoSize = true;
+            this.CharacterAlignmentLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterAlignmentLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterAlignmentLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterAlignmentLabel.Location = new System.Drawing.Point(169, 230);
+            this.CharacterAlignmentLabel.Name = "CharacterAlignmentLabel";
+            this.CharacterAlignmentLabel.Size = new System.Drawing.Size(118, 31);
+            this.CharacterAlignmentLabel.TabIndex = 20;
+            this.CharacterAlignmentLabel.Text = "Alignment:";
             // 
-            // label25
+            // CharacterBackgroundLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label25.Location = new System.Drawing.Point(90, 315);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(134, 31);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Background:";
+            this.CharacterBackgroundLabel.AutoSize = true;
+            this.CharacterBackgroundLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CharacterBackgroundLabel.Font = new System.Drawing.Font("Old London", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacterBackgroundLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.CharacterBackgroundLabel.Location = new System.Drawing.Point(90, 315);
+            this.CharacterBackgroundLabel.Name = "CharacterBackgroundLabel";
+            this.CharacterBackgroundLabel.Size = new System.Drawing.Size(134, 31);
+            this.CharacterBackgroundLabel.TabIndex = 24;
+            this.CharacterBackgroundLabel.Text = "Background:";
             // 
             // CharacterBackground
             // 
@@ -380,30 +380,30 @@ namespace FANTASY4YOU
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 485);
-            this.Controls.Add(this.chNumTest);
+            this.Controls.Add(this.CharacterClass);
+            this.Controls.Add(this.CharacterNameLabel);
             this.Controls.Add(this.CharacterBackground);
             this.Controls.Add(this.CharacterName);
             this.Controls.Add(this.CharacterDexterity);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.CharacterBackgroundLabel);
+            this.Controls.Add(this.CharacterDexterityLabel);
+            this.Controls.Add(this.CharacterClassLabel);
+            this.Controls.Add(this.CharacterConstitutionLabel);
             this.Controls.Add(this.CharacterCharisma);
             this.Controls.Add(this.CharacterStrenght);
-            this.Controls.Add(this.CharacterClass);
             this.Controls.Add(this.CharacterConstitution);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.CharacterCharismaLabel);
+            this.Controls.Add(this.CharacterStrenghtLabel);
+            this.Controls.Add(this.CharacterLevelLabel);
+            this.Controls.Add(this.CharacterIntelligenceLabel);
             this.Controls.Add(this.CharacterAlignment);
             this.Controls.Add(this.CharacterXp);
             this.Controls.Add(this.CharacterLevel);
             this.Controls.Add(this.CharacterIntelligence);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.CharacterAlignmentLabel);
+            this.Controls.Add(this.CharacterXpLabel);
+            this.Controls.Add(this.CharacterRaceLabel);
+            this.Controls.Add(this.CharacterWisdomLabel);
             this.Controls.Add(this.CharacterWisdom);
             this.Controls.Add(this.CharacterRace);
             this.DoubleBuffered = true;
@@ -411,6 +411,7 @@ namespace FANTASY4YOU
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CharacterDisplayer";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
             this.Load += new System.EventHandler(this.CharacterDisplayer_Load);
@@ -421,31 +422,31 @@ namespace FANTASY4YOU
 
         #endregion
 
-        private Label chNumTest;
+        private Label CharacterNameLabel;
         private Label CharacterName;
         private Label CharacterClass;
-        private Label label3;
+        private Label CharacterClassLabel;
         private Label CharacterLevel;
-        private Label label5;
+        private Label CharacterLevelLabel;
         private Label CharacterRace;
-        private Label label7;
+        private Label CharacterRaceLabel;
         private Label CharacterXp;
-        private Label label9;
+        private Label CharacterXpLabel;
         private Label CharacterWisdom;
-        private Label label11;
+        private Label CharacterWisdomLabel;
         private Label CharacterIntelligence;
-        private Label label13;
+        private Label CharacterIntelligenceLabel;
         private Label CharacterConstitution;
-        private Label label15;
+        private Label CharacterConstitutionLabel;
         private Label CharacterDexterity;
-        private Label label17;
+        private Label CharacterDexterityLabel;
         private Label CharacterStrenght;
-        private Label label19;
+        private Label CharacterStrenghtLabel;
         private Label CharacterCharisma;
-        private Label label21;
+        private Label CharacterCharismaLabel;
         private Label CharacterAlignment;
-        private Label label23;
-        private Label label25;
+        private Label CharacterAlignmentLabel;
+        private Label CharacterBackgroundLabel;
         private TextBox CharacterBackground;
     }
 }

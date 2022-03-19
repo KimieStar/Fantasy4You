@@ -31,13 +31,13 @@ namespace FANTASY4YOU
             {
                 MessageBox.Show("Please fill in your character specifications");
             }
-            else if (!Regex.IsMatch(characterNameTextBox.Text, @"^[a-zA-Z]+$"))
+            else if (!Regex.IsMatch(characterNameTextBox.Text, @"^[a-zA-Z\s_]+$"))
             {
                 MessageBox.Show("Character Name can be only be letters");
             }
-            else if (characterNameTextBox.TextLength > 20)
+            else if (characterNameTextBox.TextLength > 12)
             {
-                MessageBox.Show("Username can be only 20 letters long");
+                MessageBox.Show("Username can be only 12 letters long");
             }
             else if (connection.CheckCharacterNameExistForUser(characterNameTextBox.Text) == true)
             {
@@ -79,8 +79,5 @@ namespace FANTASY4YOU
             }
         
          }
-        private void CharacterRegistration_Load(object sender, EventArgs e)
-        {
-        }
     }
 }

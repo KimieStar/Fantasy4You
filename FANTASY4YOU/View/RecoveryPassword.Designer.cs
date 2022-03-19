@@ -1,6 +1,6 @@
 ﻿namespace FANTASY4YOU
 {
-    partial class ChangePassword
+    partial class RecoveryPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoveryPassword));
             this.ChangePasswordLabel = new System.Windows.Forms.Label();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.CurrentPasswordLabel = new System.Windows.Forms.Label();
+            this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.ConfirmPassword = new System.Windows.Forms.Label();
             this.newPasswordTextBox = new System.Windows.Forms.TextBox();
             this.NewPasswordLabel = new System.Windows.Forms.Label();
             this.ChangePasswordButton = new ePOSOne.btnProduct.Button_WOC();
@@ -49,25 +49,25 @@
             this.ChangePasswordLabel.TabIndex = 0;
             this.ChangePasswordLabel.Text = "Change Password";
             // 
-            // passwordTextBox
+            // confirmPasswordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(228, 122);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(139, 23);
-            this.passwordTextBox.TabIndex = 10;
-            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(228, 122);
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(139, 23);
+            this.confirmPasswordTextBox.TabIndex = 10;
+            this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // CurrentPasswordLabel
+            // ConfirmPassword
             // 
-            this.CurrentPasswordLabel.AutoSize = true;
-            this.CurrentPasswordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CurrentPasswordLabel.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CurrentPasswordLabel.ForeColor = System.Drawing.Color.BurlyWood;
-            this.CurrentPasswordLabel.Location = new System.Drawing.Point(31, 114);
-            this.CurrentPasswordLabel.Name = "CurrentPasswordLabel";
-            this.CurrentPasswordLabel.Size = new System.Drawing.Size(199, 31);
-            this.CurrentPasswordLabel.TabIndex = 9;
-            this.CurrentPasswordLabel.Text = "Current Password:";
+            this.ConfirmPassword.AutoSize = true;
+            this.ConfirmPassword.BackColor = System.Drawing.Color.Transparent;
+            this.ConfirmPassword.Font = new System.Drawing.Font("Old London", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ConfirmPassword.ForeColor = System.Drawing.Color.BurlyWood;
+            this.ConfirmPassword.Location = new System.Drawing.Point(31, 114);
+            this.ConfirmPassword.Name = "ConfirmPassword";
+            this.ConfirmPassword.Size = new System.Drawing.Size(195, 31);
+            this.ConfirmPassword.TabIndex = 9;
+            this.ConfirmPassword.Text = "ConfirmPassword:";
             // 
             // newPasswordTextBox
             // 
@@ -114,24 +114,24 @@
             this.ChangePasswordButton.UseVisualStyleBackColor = false;
             this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
             // 
-            // ChangePassword
+            // RecoveryPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(452, 217);
+            this.Controls.Add(this.confirmPasswordTextBox);
             this.Controls.Add(this.ChangePasswordButton);
             this.Controls.Add(this.newPasswordTextBox);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.CurrentPasswordLabel);
+            this.Controls.Add(this.ConfirmPassword);
             this.Controls.Add(this.NewPasswordLabel);
             this.Controls.Add(this.ChangePasswordLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ChangePassword";
+            this.Name = "RecoveryPassword";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
@@ -143,8 +143,8 @@
         #endregion
 
         private Label ChangePasswordLabel;
-        private TextBox passwordTextBox;
-        private Label CurrentPasswordLabel;
+        private TextBox confirmPasswordTextBox;
+        private Label ConfirmPassword;
         private TextBox newPasswordTextBox;
         private Label NewPasswordLabel;
         private ePOSOne.btnProduct.Button_WOC ChangePasswordButton;

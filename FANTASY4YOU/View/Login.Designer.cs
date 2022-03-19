@@ -39,11 +39,12 @@ namespace FANTASY4YOU
             this.ShowPassword = new System.Windows.Forms.Button();
             this.HidePassword = new System.Windows.Forms.Button();
             this.PleaseWaitLabel = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.RememberMeLabel = new System.Windows.Forms.CheckBox();
             this.DontHaveAnAccountLabel = new System.Windows.Forms.LinkLabel();
             this.LoginButton = new ePOSOne.btnProduct.Button_WOC();
             this.RefreshButton = new FontAwesome.Sharp.IconButton();
             this.LoginSettingsButton = new FontAwesome.Sharp.IconButton();
+            this.forgotPasswordButton = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -153,17 +154,17 @@ namespace FANTASY4YOU
             this.PleaseWaitLabel.Text = "Please Wait...";
             this.PleaseWaitLabel.Visible = false;
             // 
-            // checkBox1
+            // RememberMeLabel
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.ForeColor = System.Drawing.Color.SandyBrown;
-            this.checkBox1.Location = new System.Drawing.Point(157, 297);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 19);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "Remember Me";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.RememberMeLabel.AutoSize = true;
+            this.RememberMeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RememberMeLabel.ForeColor = System.Drawing.Color.SandyBrown;
+            this.RememberMeLabel.Location = new System.Drawing.Point(157, 297);
+            this.RememberMeLabel.Name = "RememberMeLabel";
+            this.RememberMeLabel.Size = new System.Drawing.Size(104, 19);
+            this.RememberMeLabel.TabIndex = 13;
+            this.RememberMeLabel.Text = "Remember Me";
+            this.RememberMeLabel.UseVisualStyleBackColor = false;
             // 
             // DontHaveAnAccountLabel
             // 
@@ -250,6 +251,20 @@ namespace FANTASY4YOU
             this.LoginSettingsButton.UseVisualStyleBackColor = false;
             this.LoginSettingsButton.Click += new System.EventHandler(this.LoginSettingsButton_Click);
             // 
+            // forgotPasswordButton
+            // 
+            this.forgotPasswordButton.AutoSize = true;
+            this.forgotPasswordButton.BackColor = System.Drawing.Color.Transparent;
+            this.forgotPasswordButton.ForeColor = System.Drawing.Color.Coral;
+            this.forgotPasswordButton.LinkColor = System.Drawing.Color.SandyBrown;
+            this.forgotPasswordButton.Location = new System.Drawing.Point(502, 235);
+            this.forgotPasswordButton.Name = "forgotPasswordButton";
+            this.forgotPasswordButton.Size = new System.Drawing.Size(100, 15);
+            this.forgotPasswordButton.TabIndex = 21;
+            this.forgotPasswordButton.TabStop = true;
+            this.forgotPasswordButton.Text = "Forgot password?";
+            this.forgotPasswordButton.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPasswordButton_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -258,12 +273,13 @@ namespace FANTASY4YOU
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 448);
+            this.Controls.Add(this.forgotPasswordButton);
             this.Controls.Add(this.LoginSettingsButton);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.ShowPassword);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.RememberMeLabel);
             this.Controls.Add(this.WelcomeLabel2);
             this.Controls.Add(this.DontHaveAnAccountLabel);
             this.Controls.Add(this.HidePassword);
@@ -282,7 +298,7 @@ namespace FANTASY4YOU
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
             this.TransparencyKey = System.Drawing.Color.LimeGreen;
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,10 +314,11 @@ namespace FANTASY4YOU
         private Button ShowPassword;
         private Button HidePassword;
         private Label PleaseWaitLabel;
-        private CheckBox checkBox1;
+        private CheckBox RememberMeLabel;
         private LinkLabel DontHaveAnAccountLabel;
         private ePOSOne.btnProduct.Button_WOC LoginButton;
         private FontAwesome.Sharp.IconButton LoginSettingsButton;
         private FontAwesome.Sharp.IconButton RefreshButton;
+        private LinkLabel forgotPasswordButton;
     }
 }

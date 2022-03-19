@@ -719,10 +719,11 @@ namespace FANTASY4YOU
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Characters";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Characters_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Characters_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

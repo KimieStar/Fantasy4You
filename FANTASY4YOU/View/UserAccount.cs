@@ -64,6 +64,34 @@ namespace FANTASY4YOU {
             if (confirmResult == DialogResult.Yes)
             {
                 User.DeleteUser = 1;
+                switch (connection.NumberOfCharactersCreated())
+                {
+                    case 1:
+                        connection.DeleteCharacter(1);   
+                        break;
+                    case 2:
+                        connection.DeleteCharacter(1);
+                        connection.DeleteCharacter(2);
+                        break;
+                    case 3:
+                        connection.DeleteCharacter(1);
+                        connection.DeleteCharacter(2);
+                        connection.DeleteCharacter(3);
+                        break;
+                    case 4:
+                        connection.DeleteCharacter(1);
+                        connection.DeleteCharacter(2);
+                        connection.DeleteCharacter(3);
+                        connection.DeleteCharacter(4);
+                        break;
+                    case 5:
+                        connection.DeleteCharacter(1);
+                        connection.DeleteCharacter(2);
+                        connection.DeleteCharacter(3);
+                        connection.DeleteCharacter(4);
+                        connection.DeleteCharacter(5);
+                        break;
+                }
                 connection.DeleteUserAccount();
                 this.Close();
             }

@@ -31,7 +31,7 @@ namespace FANTASY4YOU
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginSettings));
             this.ClearCacheButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RestartLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ClearCacheButton
@@ -44,16 +44,16 @@ namespace FANTASY4YOU
             this.ClearCacheButton.UseVisualStyleBackColor = true;
             this.ClearCacheButton.Click += new System.EventHandler(this.ClearCacheButton_Click);
             // 
-            // label1
+            // RestartLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(13, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "(The App will restart!)";
+            this.RestartLabel.AutoSize = true;
+            this.RestartLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RestartLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.RestartLabel.Location = new System.Drawing.Point(13, 69);
+            this.RestartLabel.Name = "RestartLabel";
+            this.RestartLabel.Size = new System.Drawing.Size(119, 15);
+            this.RestartLabel.TabIndex = 1;
+            this.RestartLabel.Text = "(The App will restart!)";
             // 
             // LoginSettings
             // 
@@ -62,7 +62,7 @@ namespace FANTASY4YOU
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(261, 113);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RestartLabel);
             this.Controls.Add(this.ClearCacheButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -81,6 +81,6 @@ namespace FANTASY4YOU
         #endregion
 
         private Button ClearCacheButton;
-        private Label label1;
+        private Label RestartLabel;
     }
 }

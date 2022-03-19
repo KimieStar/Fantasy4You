@@ -8,6 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Collections.Specialized;
 using FANTASY4YOU;
+using System.Data;
 
 namespace FANTASY4YOU
 {
@@ -692,10 +693,49 @@ namespace FANTASY4YOU
         /// </summary>
         public void DeleteUserAccount()
         {
-            string query = "DELETE FROM userinfo where id=@id";
+            string query = "DELETE FROM userinfo where id=@id;Alter table userinfo drop id;alter table userinfo add id int not null auto_increment first, add primary key (id);";
             int id = SelectUserIdFromDB();
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@id", id);
+            if (this.OpenConnection() == true)
+            {
+                cmd.ExecuteNonQuery();
+            }
+            else if (this.OpenConnection() == false)
+            {
+                OpenCon();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable SelectUserEmail()
+        {
+            string query = "Select email from userinfo;";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            if (this.OpenConnection() == true)
+            {
+                cmd.ExecuteNonQuery();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            else if (this.OpenConnection() == false)
+            {
+                OpenCon();
+                cmd.ExecuteNonQuery();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            return dt;
+        }
+
+        public void RecoverPassword(string pass, string userEmail)
+        {
+            //string? query = ConfigurationManager.AppSettings.Get("ChangePasswordQuery");
+            string query = "UPDATE userinfo SET password = @password WHERE email = @email;";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@password", pass);
+            cmd.Parameters.AddWithValue("@email", userEmail);
             if (this.OpenConnection() == true)
             {
                 cmd.ExecuteNonQuery();

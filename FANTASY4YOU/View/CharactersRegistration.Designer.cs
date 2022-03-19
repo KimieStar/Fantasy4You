@@ -51,6 +51,7 @@ namespace FANTASY4YOU
             // characterNameTextBox
             // 
             this.characterNameTextBox.Location = new System.Drawing.Point(459, 108);
+            this.characterNameTextBox.MaxLength = 12;
             this.characterNameTextBox.Name = "characterNameTextBox";
             this.characterNameTextBox.Size = new System.Drawing.Size(121, 23);
             this.characterNameTextBox.TabIndex = 0;
@@ -298,9 +299,9 @@ namespace FANTASY4YOU
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CharacterRegistration";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
-            this.Load += new System.EventHandler(this.CharacterRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

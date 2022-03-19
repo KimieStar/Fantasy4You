@@ -27,7 +27,7 @@ namespace FANTASY4YOU
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             welcomeLabel.BackColor = Color.Transparent;
             nameLabel.BackColor = Color.Transparent;

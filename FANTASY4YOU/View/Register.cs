@@ -32,10 +32,6 @@ namespace FANTASY4YOU
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
         
         private void RegisterButton_Click(object sender, EventArgs e)
         {
@@ -54,11 +50,11 @@ namespace FANTASY4YOU
             }
             else if (usr != "" || pwd != "")
             {
-                if (!Regex.IsMatch(usr, @"^[a-zA-Z]+$"))
+                if (!Regex.IsMatch(usr, @"^[a-zA-Z\s_]+$"))
                 {
                     MessageBox.Show("Username can be only Letters");
                 }
-                else if (usr.Length > 20)
+                else if (usr.Length > 15)
                 {
                     MessageBox.Show("Username can be only 20 letters long!");
                 }

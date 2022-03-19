@@ -17,6 +17,7 @@ namespace FANTASY4YOU
         LogicController logic = new LogicController();
         LoginSettings LoginSettings = new LoginSettings();
         DatabaseController connection = new DatabaseController();
+        UserFrogotPassword forgotPassword = new UserFrogotPassword();
         Thread Register;
         Thread MainInterface;
         Thread Welcome;
@@ -36,7 +37,7 @@ namespace FANTASY4YOU
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
             
             checkCredentialsExist = logic.CheckIfCredentialsFileExist();
@@ -96,7 +97,7 @@ namespace FANTASY4YOU
                 if (connection.CheckUserCredentials(usr, pwd) == true)
                 {
 
-                    if (checkBox1.Checked == true)
+                    if (RememberMeLabel.Checked == true)
                     {
                         logic.SaveCredentialsToFile(usr, pwd);
                     }
@@ -178,8 +179,10 @@ namespace FANTASY4YOU
             LoginSettings.ShowDialog();
         }
 
-        
-
+        private void forgotPasswordButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotPassword.ShowDialog();
+        }
     }
 
     

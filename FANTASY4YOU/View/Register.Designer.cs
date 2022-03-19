@@ -30,31 +30,31 @@ namespace FANTASY4YOU
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            this.label1 = new System.Windows.Forms.Label();
+            this.RegisterLabel = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.EmailLabel = new System.Windows.Forms.Label();
             this.RememberMeCheckBox = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.JoinUpLabel = new System.Windows.Forms.Label();
             this.ShowPasswordButton = new System.Windows.Forms.Button();
             this.HidePasswordButton = new System.Windows.Forms.Button();
             this.RegisterButton = new ePOSOne.btnProduct.Button_WOC();
             this.SuspendLayout();
             // 
-            // label1
+            // RegisterLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Old London", 44.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label1.Location = new System.Drawing.Point(123, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 68);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Register";
+            this.RegisterLabel.AutoSize = true;
+            this.RegisterLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterLabel.Font = new System.Drawing.Font("Old London", 44.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RegisterLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.RegisterLabel.Location = new System.Drawing.Point(123, 26);
+            this.RegisterLabel.Name = "RegisterLabel";
+            this.RegisterLabel.Size = new System.Drawing.Size(221, 68);
+            this.RegisterLabel.TabIndex = 0;
+            this.RegisterLabel.Text = "Register";
             // 
             // UsernameTextBox
             // 
@@ -81,44 +81,44 @@ namespace FANTASY4YOU
             this.EmailTextBox.TabIndex = 3;
             this.EmailTextBox.TabStop = false;
             // 
-            // label2
+            // UsernameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Old London", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label2.Location = new System.Drawing.Point(32, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 38);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Username :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLabel.Font = new System.Drawing.Font("Old London", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UsernameLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.UsernameLabel.Location = new System.Drawing.Point(32, 206);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(154, 38);
+            this.UsernameLabel.TabIndex = 4;
+            this.UsernameLabel.Text = "Username :";
+            this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // PasswordLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Old London", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label3.Location = new System.Drawing.Point(34, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 38);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Password :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordLabel.Font = new System.Drawing.Font("Old London", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PasswordLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.PasswordLabel.Location = new System.Drawing.Point(34, 249);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(151, 38);
+            this.PasswordLabel.TabIndex = 5;
+            this.PasswordLabel.Text = "Password :";
+            this.PasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // EmailLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Old London", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label4.Location = new System.Drawing.Point(13, 299);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 28);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email (optional) :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EmailLabel.Font = new System.Drawing.Font("Old London", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmailLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.EmailLabel.Location = new System.Drawing.Point(13, 299);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(171, 28);
+            this.EmailLabel.TabIndex = 6;
+            this.EmailLabel.Text = "Email (optional) :";
+            this.EmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RememberMeCheckBox
             // 
@@ -133,17 +133,17 @@ namespace FANTASY4YOU
             this.RememberMeCheckBox.Text = "Rememebr me";
             this.RememberMeCheckBox.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // JoinUpLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Old London", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label5.Location = new System.Drawing.Point(94, 119);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(296, 45);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Join up on the fun!";
+            this.JoinUpLabel.AutoSize = true;
+            this.JoinUpLabel.BackColor = System.Drawing.Color.Transparent;
+            this.JoinUpLabel.Font = new System.Drawing.Font("Old London", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.JoinUpLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.JoinUpLabel.Location = new System.Drawing.Point(94, 119);
+            this.JoinUpLabel.Name = "JoinUpLabel";
+            this.JoinUpLabel.Size = new System.Drawing.Size(296, 45);
+            this.JoinUpLabel.TabIndex = 9;
+            this.JoinUpLabel.Text = "Join up on the fun!";
             // 
             // ShowPasswordButton
             // 
@@ -208,25 +208,25 @@ namespace FANTASY4YOU
             this.ClientSize = new System.Drawing.Size(482, 529);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.EmailTextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RegisterLabel);
             this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.UsernameTextBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.HidePasswordButton);
             this.Controls.Add(this.RememberMeCheckBox);
             this.Controls.Add(this.ShowPasswordButton);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.JoinUpLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Register";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,15 +234,15 @@ namespace FANTASY4YOU
 
         #endregion
 
-        private Label label1;
+        private Label RegisterLabel;
         private TextBox UsernameTextBox;
         private TextBox PasswordTextBox;
         private TextBox EmailTextBox;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label UsernameLabel;
+        private Label PasswordLabel;
+        private Label EmailLabel;
         private CheckBox RememberMeCheckBox;
-        private Label label5;
+        private Label JoinUpLabel;
         private Button ShowPasswordButton;
         private Button HidePasswordButton;
         private ePOSOne.btnProduct.Button_WOC RegisterButton;

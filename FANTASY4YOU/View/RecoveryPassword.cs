@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace FANTASY4YOU
 {
-    public partial class ChangePassword : Form
+    public partial class RecoveryPassword : Form
     {
         DatabaseController databaseController = new DatabaseController();
         Thread Login;
-        public ChangePassword()
+        public RecoveryPassword()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace FANTASY4YOU
            {
                MessageBox.Show("Please input your new password!");
            }
-           else if (passwordTextBox.Text == "")
+           else if (confirmPasswordTextBox.Text == "")
            {
                MessageBox.Show("Please input your current password!");
            }
@@ -55,13 +55,13 @@ namespace FANTASY4YOU
            {
                MessageBox.Show("Your password is too short");
            }
-           else if (passwordTextBox.Text != User.Password)
+           else if (confirmPasswordTextBox.Text != newPasswordTextBox.Text)
            {
-               MessageBox.Show("Incorrect password!");
+               MessageBox.Show("Passwords do not match!");
            }
            else
            {
-                databaseController.ChangePassword(newPasswordTextBox.Text);
+                databaseController.RecoverPassword(newPasswordTextBox.Text, User.RecoveryEmail);
                 Login = new Thread(OpenLoginForm);
                 Login.SetApartmentState(ApartmentState.STA);
                 Login.Start();
@@ -73,5 +73,6 @@ namespace FANTASY4YOU
         {
             Application.Run(new Login());
         }
+
     }
 }

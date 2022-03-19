@@ -206,6 +206,7 @@ namespace FANTASY4YOU
             // CharacterNameCustomizeTextbox
             // 
             this.CharacterNameCustomizeTextbox.Location = new System.Drawing.Point(282, 38);
+            this.CharacterNameCustomizeTextbox.MaxLength = 12;
             this.CharacterNameCustomizeTextbox.Name = "CharacterNameCustomizeTextbox";
             this.CharacterNameCustomizeTextbox.Size = new System.Drawing.Size(136, 23);
             this.CharacterNameCustomizeTextbox.TabIndex = 20;
@@ -558,6 +559,7 @@ namespace FANTASY4YOU
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CharacterCustomizationChar";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fantasy4You";
             this.Load += new System.EventHandler(this.CharacterCustomization_Load);
