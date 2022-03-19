@@ -62,6 +62,33 @@ namespace FANTASY4YOU
                 {
                     MessageBox.Show("Your password is too short");
                 }
+                else if (email == "")
+                {
+                    var confirmResult = MessageBox.Show("Note that if you register without Email, if you forget your password you will not be able to recover it??",
+                                        "Continue?!",
+                                        MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        if (usernameCheck == false)
+                        {
+                            if (RememberMeCheckBox.Checked == true)
+                            {
+                                logic.SaveCredentialsToFile(usr, pwd);
+                            }
+                            else
+                            {
+                                string no;
+                            }
+
+
+                            connection.InsertUsernameAndPasswordIntoDB(usr, pwd, email);
+                            MessageBox.Show("Registration Complete!");
+                            this.Close();
+
+
+                        }
+                    }
+                }
                 else if (usernameCheck == false)
                 {
                     if (RememberMeCheckBox.Checked == true)
