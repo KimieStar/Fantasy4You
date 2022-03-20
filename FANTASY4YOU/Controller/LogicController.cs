@@ -179,7 +179,9 @@ namespace FANTASY4YOU
                 return false;
             }
         }
-
+        /// <summary>
+        /// Sends email to the user with a code for recovery
+        /// </summary>
         public void SendEmail(string userEmail, int code)
         {
             const string p = "s!3P3Hm6xACbTo#DcRP3c?5Ls5cXc8$Acm@QdN?J";
@@ -204,26 +206,6 @@ namespace FANTASY4YOU
             
 
         }
-
-       // public bool CheckIfEmailExists(string enterdEmail)
-       // {
-       //     DataTable dt = connection.SelectUserEmail();
-       //     bool chk = false;
-       //     foreach (DataRow dr in dt.Rows)
-       //     {
-       //         foreach (DataColumn dc in dt.Columns)
-       //         {
-       //             if (enterdEmail == dr[dc].ToString())
-       //             {
-       //                 chk = true;
-       //             }
-       //             else
-       //             {
-       //                 chk = false;
-       //             }
-       //         }
-       //     }
-       // }
 
     }
 }

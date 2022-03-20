@@ -707,7 +707,9 @@ namespace FANTASY4YOU
                 cmd.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Creating datatable that is filled with all the emails in the database
+        /// </summary>
         public DataTable SelectUserEmail()
         {
             string query = "Select email from userinfo;";
@@ -728,7 +730,9 @@ namespace FANTASY4YOU
             }
             return dt;
         }
-
+        /// <summary>
+        /// Changes the user password via the Recovery Password Form
+        /// </summary>
         public void RecoverPassword(string pass, string userEmail)
         {
             //string? query = ConfigurationManager.AppSettings.Get("ChangePasswordQuery");
